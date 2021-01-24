@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var doneQuestButton: UIButton!
     @IBOutlet weak var changeQuestButton: UIButton!
     @IBOutlet weak var deleteQuestButton: UIButton!
+    @IBOutlet weak var getQuestButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         titleLabel.text = "Freetime Quest"
         questTitleLabel.text = "Посетить музей"
         doneQuestButton.setTitle("Готово", for: .normal)
@@ -30,10 +31,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func doneQuestTapped(_ sender: UIButton) {
+        print("Готово")
     }
     @IBAction func changeQuestTapped(_ sender: UIButton) {
+        print("Поменять")
     }
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
+        print("Удалить")
+    }
+    @IBAction func getQuestTapped(_ sender: UIButton) {
+        print("Получить")
     }
     
 }
