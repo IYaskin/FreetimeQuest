@@ -17,17 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-r7-JB7">
-                                <rect key="frame" x="20" y="54" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freetime Quest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-r7-JB7">
+                                <rect key="frame" x="20" y="54" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wa-6Z-zNc">
-                                <rect key="frame" x="40" y="130" width="334" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="40" y="142" width="334" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V3j-NZ-T1U">
+                                        <rect key="frame" x="0.0" y="90" width="334" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sH-KC-H4l">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="doneQuestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RlW-VG-0td"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdp-cZ-P9P">
+                                                <rect key="frame" x="111.5" y="0.0" width="111" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="changeQuestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhf-PU-rlk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpl-xi-yDr">
+                                                <rect key="frame" x="222.5" y="0.0" width="111.5" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="deleteQuestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXP-OC-ghP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0HV-vV-OOa"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsw-eP-RAU">
+                                        <rect key="frame" x="20" y="30" width="294" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="rl3-Po-cPt"/>
+                                    <constraint firstItem="Fsw-eP-RAU" firstAttribute="top" secondItem="8Wa-6Z-zNc" secondAttribute="top" constant="30" id="2N9-AH-Edz"/>
+                                    <constraint firstItem="Fsw-eP-RAU" firstAttribute="centerX" secondItem="8Wa-6Z-zNc" secondAttribute="centerX" id="BDt-sK-Q0i"/>
+                                    <constraint firstItem="V3j-NZ-T1U" firstAttribute="centerX" secondItem="8Wa-6Z-zNc" secondAttribute="centerX" id="hRy-TP-qMK"/>
+                                    <constraint firstItem="V3j-NZ-T1U" firstAttribute="top" secondItem="Fsw-eP-RAU" secondAttribute="bottom" constant="30" id="jxH-At-VD7"/>
+                                    <constraint firstItem="V3j-NZ-T1U" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" id="mHv-QL-SB3"/>
+                                    <constraint firstItem="Fsw-eP-RAU" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" constant="20" id="n0e-jM-RXi"/>
+                                    <constraint firstAttribute="bottom" secondItem="V3j-NZ-T1U" secondAttribute="bottom" id="uAW-Ug-3bx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -43,7 +86,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonsStackView" destination="V3j-NZ-T1U" id="vv7-DE-DqY"/>
+                        <outlet property="changeQuestButton" destination="rdp-cZ-P9P" id="C8P-QJ-P6q"/>
+                        <outlet property="deleteQuestButton" destination="jpl-xi-yDr" id="Ghb-QX-l6S"/>
+                        <outlet property="doneQuestButton" destination="8sH-KC-H4l" id="l6M-Yc-A67"/>
                         <outlet property="questBgView" destination="8Wa-6Z-zNc" id="JC0-kY-7rg"/>
+                        <outlet property="questTitleLabel" destination="Fsw-eP-RAU" id="wdl-g4-quA"/>
                         <outlet property="titleLabel" destination="a1v-r7-JB7" id="W55-Kn-2Mf"/>
                     </connections>
                 </viewController>
@@ -53,8 +101,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
