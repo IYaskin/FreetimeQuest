@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeQuestButton: UIButton!
     @IBOutlet weak var deleteQuestButton: UIButton!
     @IBOutlet weak var getQuestButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
@@ -27,7 +28,9 @@ class ViewController: UIViewController {
         doneQuestButton.setTitle("Готово", for: .normal)
         changeQuestButton.setTitle("Поменять", for: .normal)
         deleteQuestButton.setTitle("Удалить", for: .normal)
-        
+        getQuestButton.setTitle("Взять квест", for: .normal)
+        getQuestButton.backgroundColor = .black
+        getQuestButton.tintColor = .yellow
     }
 
     @IBAction func doneQuestTapped(_ sender: UIButton) {
@@ -41,6 +44,7 @@ class ViewController: UIViewController {
     }
     @IBAction func getQuestTapped(_ sender: UIButton) {
         print("Получить")
+        getQuestButton.isHidden = true
     }
     
 }

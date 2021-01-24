@@ -84,15 +84,33 @@
                                     <constraint firstAttribute="bottom" secondItem="V3j-NZ-T1U" secondAttribute="bottom" id="uAW-Ug-3bx"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGE-3o-Hy2">
+                                <rect key="frame" x="20" y="302" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-4J-a7R">
+                                <rect key="frame" x="0.0" y="342" width="414" height="554"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rGE-3o-Hy2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="22B-uV-r6Q"/>
+                            <constraint firstItem="YRw-4J-a7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AzK-xM-XPA"/>
                             <constraint firstItem="a1v-r7-JB7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ck1-mY-XSE"/>
+                            <constraint firstItem="rGE-3o-Hy2" firstAttribute="top" secondItem="8Wa-6Z-zNc" secondAttribute="bottom" constant="20" id="GdK-Tg-fr9"/>
                             <constraint firstItem="a1v-r7-JB7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L0o-vA-slj"/>
+                            <constraint firstItem="YRw-4J-a7R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mmk-4h-dKO"/>
+                            <constraint firstItem="YRw-4J-a7R" firstAttribute="top" secondItem="rGE-3o-Hy2" secondAttribute="bottom" constant="19.5" id="Ted-UK-orc"/>
                             <constraint firstItem="8Wa-6Z-zNc" firstAttribute="top" secondItem="a1v-r7-JB7" secondAttribute="bottom" constant="40" id="Wsw-Il-coi"/>
                             <constraint firstItem="8Wa-6Z-zNc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a2V-hF-pTs"/>
                             <constraint firstItem="a1v-r7-JB7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aJU-xz-03q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGE-3o-Hy2" secondAttribute="trailing" constant="20" id="d2p-1L-MRO"/>
+                            <constraint firstAttribute="bottom" secondItem="YRw-4J-a7R" secondAttribute="bottom" id="g4h-rD-MEA"/>
                             <constraint firstItem="8Wa-6Z-zNc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nyY-qf-YKN"/>
                         </constraints>
                     </view>
@@ -104,6 +122,7 @@
                         <outlet property="getQuestButton" destination="3oT-Jk-wmC" id="FO6-Se-MUT"/>
                         <outlet property="questBgView" destination="8Wa-6Z-zNc" id="JC0-kY-7rg"/>
                         <outlet property="questTitleLabel" destination="Fsw-eP-RAU" id="wdl-g4-quA"/>
+                        <outlet property="tableView" destination="YRw-4J-a7R" id="Tf5-tn-3yJ"/>
                         <outlet property="titleLabel" destination="a1v-r7-JB7" id="W55-Kn-2Mf"/>
                     </connections>
                 </viewController>
@@ -113,6 +132,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
