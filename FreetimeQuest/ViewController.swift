@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var quests = Quest.quests().compactMap { (quest) -> Quest? in
+        if !quest.isDone && !quest.isDeleted {
+            return quest
+        } else {
+            return nil
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +43,13 @@ class ViewController: UIViewController {
         doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
         getQuestButton.backgroundColor = .black
         getQuestButton.tintColor = .yellow
+        
     }
     
     @IBAction func getQuestTapped(_ sender: UIButton) {
         print("Получить")
         getQuestButton.isHidden = true
+        setRandomQuest()
     }
 
     @IBAction func doneQuestTapped(_ sender: UIButton) {
@@ -48,9 +57,17 @@ class ViewController: UIViewController {
     }
     @IBAction func changeQuestTapped(_ sender: UIButton) {
         print("Поменять")
+        setRandomQuest()
     }
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
         print("Удалить")
+    }
+    
+    func setRandomQuest() {
+        guard let randomQuest = quests.randomElement() else{
+            return
+        }
+        questTitleLabel.text = randomQuest.title
     }
     
 }
