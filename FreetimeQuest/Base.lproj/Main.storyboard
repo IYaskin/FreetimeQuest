@@ -119,6 +119,7 @@
                         <outlet property="changeQuestButton" destination="rdp-cZ-P9P" id="C8P-QJ-P6q"/>
                         <outlet property="deleteQuestButton" destination="jpl-xi-yDr" id="Ghb-QX-l6S"/>
                         <outlet property="doneQuestButton" destination="8sH-KC-H4l" id="l6M-Yc-A67"/>
+                        <outlet property="doneQuestsLabel" destination="rGE-3o-Hy2" id="pbV-QF-e4b"/>
                         <outlet property="getQuestButton" destination="3oT-Jk-wmC" id="FO6-Se-MUT"/>
                         <outlet property="questBgView" destination="8Wa-6Z-zNc" id="JC0-kY-7rg"/>
                         <outlet property="questTitleLabel" destination="Fsw-eP-RAU" id="wdl-g4-quA"/>

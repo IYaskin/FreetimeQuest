@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var questBgView: UIView!
     @IBOutlet weak var questTitleLabel: UILabel!
     @IBOutlet weak var buttonsStackView: UIStackView!
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeQuestButton: UIButton!
     @IBOutlet weak var deleteQuestButton: UIButton!
     @IBOutlet weak var getQuestButton: UIButton!
+    
+    @IBOutlet weak var doneQuestsLabel: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -29,8 +33,14 @@ class ViewController: UIViewController {
         changeQuestButton.setTitle("Поменять", for: .normal)
         deleteQuestButton.setTitle("Удалить", for: .normal)
         getQuestButton.setTitle("Взять квест", for: .normal)
+        doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
         getQuestButton.backgroundColor = .black
         getQuestButton.tintColor = .yellow
+    }
+    
+    @IBAction func getQuestTapped(_ sender: UIButton) {
+        print("Получить")
+        getQuestButton.isHidden = true
     }
 
     @IBAction func doneQuestTapped(_ sender: UIButton) {
@@ -41,10 +51,6 @@ class ViewController: UIViewController {
     }
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
         print("Удалить")
-    }
-    @IBAction func getQuestTapped(_ sender: UIButton) {
-        print("Получить")
-        getQuestButton.isHidden = true
     }
     
 }
