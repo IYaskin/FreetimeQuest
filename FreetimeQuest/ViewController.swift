@@ -23,38 +23,78 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var quests = Quest.quests().compactMap { (quest) -> Quest? in
-        if !quest.isDone && !quest.isDeleted {
-            return quest
-        } else {
-            return nil
-        }
+    var quests: [Quest] {
+        return getQuests()
     }
+    
+    func getQuests() -> [Quest] {
+        let quests = Quest.quests().compactMap { (quest) -> Quest? in
+            if !quest.isDone && !quest.isDeleted {
+                return quest
+            } else {
+                return nil
+            }
+        }
+        return quests
+    }
+    
+    var currentQuest: Quest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleLabel.text = "Freetime Quest"
         questTitleLabel.text = "Посетить музей"
+        
         doneQuestButton.setTitle("Готово", for: .normal)
         changeQuestButton.setTitle("Поменять", for: .normal)
         deleteQuestButton.setTitle("Удалить", for: .normal)
-        getQuestButton.setTitle("Взять квест", for: .normal)
-        doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
-        getQuestButton.backgroundColor = .black
-        getQuestButton.tintColor = .yellow
         
+        getQuestButton.backgroundColor = .black
+        getQuestButton.setTitle("Взять квест", for: .normal)
+        getQuestButton.tintColor = .yellow
+        getQuestButton.setTitle("Поздравляю! Вы прошли все квесты!", for: .disabled)
+        getQuestButton.setTitleColor(.green, for: .disabled)
+        
+        doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
+        
+        clearQuests()
+        
+//        if quests.isEmpty {
+//            getQuestButton.isEnabled = false
+//        }
+    }
+    
+    private func clearQuests() {
+        Quest.quests().forEach {
+            $0.isDone = false
+        }
     }
     
     @IBAction func getQuestTapped(_ sender: UIButton) {
         print("Получить")
-        getQuestButton.isHidden = true
-        setRandomQuest()
+        print(quests.map({ (quest) -> String in
+            return quest.title
+        }))
+        if quests.isEmpty {
+            getQuestButton.isEnabled = false
+            buttonsStackView.isUserInteractionEnabled = false
+        } else {
+            getQuestButton.isHidden = true
+            setRandomQuest()
+        }
     }
 
     @IBAction func doneQuestTapped(_ sender: UIButton) {
         print("Готово")
+        currentQuest?.isCurrent = false
+        currentQuest?.isDone = true
+
+        questTitleLabel.text = ""
+        questBgView.backgroundColor = .white
+        getQuestButton.isHidden = false
     }
+    
     @IBAction func changeQuestTapped(_ sender: UIButton) {
         print("Поменять")
         setRandomQuest()
@@ -68,7 +108,9 @@ class ViewController: UIViewController {
             return
         }
         questTitleLabel.text = randomQuest.title
+        currentQuest = randomQuest
     }
+    
     
 }
 

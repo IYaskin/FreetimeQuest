@@ -15,6 +15,7 @@ class Quest {
     
     lazy var isDoneKey = key + "isDone"
     lazy var isDeletedKey = key + "isDeleted"
+    lazy var isCurrentKey = key + "isCurrent"
     
     init(title: String,
          key: String,
@@ -45,4 +46,14 @@ class Quest {
                 UserDefaults.standard.set(newValue, forKey: isDeletedKey)
             }
         }
+    
+    var isCurrent: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: isCurrentKey)
+        }
+        set {
+                UserDefaults.standard.set(newValue, forKey: isCurrentKey)
+            }
+        }
+
 }
