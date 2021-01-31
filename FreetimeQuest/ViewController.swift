@@ -23,33 +23,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    func getQuests() -> [Quest] {
-        let quests = Quest.quests().compactMap { (quest) -> Quest? in
-            if !quest.isDone && !quest.isDeleted {
-                return quest
-            } else {
-                return nil
-            }
-        }
-        return quests
-    }
-    
     var currentQuest: Quest?
-    func getCurrentQuest() -> Quest?  {
-        var quest: Quest?
-        getQuests().forEach {
-            if $0.isCurrent,
-               !$0.isDone,
-               !$0.isDeleted{
-                quest = $0
-            }
-        }
-        return quest
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
+        clearQuests()
+        setCurrentQuestIfNeeded()
+        
+        printInfo()
+    }
+    
+    func configureUI() {
         questBgView.layer.cornerRadius = 30
         
         titleLabel.text = "Freetime Quest"
@@ -66,15 +52,15 @@ class ViewController: UIViewController {
         getQuestButton.setTitleColor(.green, for: .disabled)
         getQuestButton.layer.cornerRadius = 30
         
-        doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
-        
-        clearQuests()
-        setCurrentQuestIfNeeded()
-        
-        printInfo()
-//        if quests.isEmpty {
-//            getQuestButton.isEnabled = false
-//        }
+        doneQuestsLabel.text = ""
+        updateDoneQuestsLabel()
+    }
+    
+    func updateDoneQuestsLabel() {
+        let doneQuestsCount = getDoneQuests().count
+        let notDeletedQuests = getNotDeletedQuests().count
+        doneQuestsLabel.text = "Выполнено \(doneQuestsCount) из \(notDeletedQuests) квестов"
+
     }
     
     func setCurrentQuestIfNeeded() {
@@ -126,7 +112,7 @@ class ViewController: UIViewController {
 
         printInfo()
         print("---Готово---\n")
-
+        updateDoneQuestsLabel()
     }
     
     @IBAction func changeQuestTapped(_ sender: UIButton) {
@@ -154,6 +140,7 @@ class ViewController: UIViewController {
 
         printInfo()
         print("---Удалить---")
+        updateDoneQuestsLabel()
     }
     
     func setRandomQuest() {
