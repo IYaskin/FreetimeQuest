@@ -15,6 +15,7 @@
 		84544F8825BDCF50000683FC /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8725BDCF50000683FC /* Quest.swift */; };
 		84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* QuestType.swift */; };
 		84544F8F25BDD850000683FC /* QuestsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8E25BDD850000683FC /* QuestsList.swift */; };
+		8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456106E25C6FBC7000840CA /* ViewController+Prints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		84544F8725BDCF50000683FC /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		84544F8A25BDD0E9000683FC /* QuestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestType.swift; sourceTree = "<group>"; };
 		84544F8E25BDD850000683FC /* QuestsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestsList.swift; sourceTree = "<group>"; };
+		8456106E25C6FBC7000840CA /* ViewController+Prints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Prints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
 				84544F8D25BDD840000683FC /* Quest */,
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
+				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				84544F8825BDCF50000683FC /* Quest.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */,
+				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
