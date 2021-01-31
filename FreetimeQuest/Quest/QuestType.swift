@@ -15,8 +15,6 @@ enum QuestType {
     case adventure
 }
 
-//Colors
-
 extension QuestType {
     var bgColor: UIColor {
         switch self {

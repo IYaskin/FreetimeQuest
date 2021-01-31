@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var questBgView: UIView!
     @IBOutlet weak var questTitleLabel: UILabel!
     @IBOutlet weak var buttonsStackView: UIStackView!
@@ -18,9 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var changeQuestButton: UIButton!
     @IBOutlet weak var deleteQuestButton: UIButton!
     @IBOutlet weak var getQuestButton: UIButton!
-    
     @IBOutlet weak var doneQuestsLabel: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var currentQuest: Quest?
@@ -71,15 +68,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func clearQuests() {
-        Quest.quests().forEach {
-            $0.isDone = false
-            $0.isDeleted = false
-            $0.isCurrent = false
-        }
-    }
-    
-    
     @IBAction func getQuestTapped(_ sender: UIButton) {
         print("\n---Получить---")
         printInfo()
@@ -127,6 +115,7 @@ class ViewController: UIViewController {
         printInfo()
         print("---Поменять---\n")
     }
+    
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
         print("---Удалить---")
         printInfo()

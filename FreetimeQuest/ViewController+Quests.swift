@@ -54,4 +54,12 @@ extension ViewController {
         return quest
     }
 
+    func clearQuests() {
+        Quest.quests().forEach {
+            $0.isDone = false
+            $0.isDeleted = false
+            $0.isCurrent = false
+        }
+    }
+
 }
