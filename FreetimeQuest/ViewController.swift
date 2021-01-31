@@ -50,6 +50,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        questBgView.layer.cornerRadius = 30
+        
         titleLabel.text = "Freetime Quest"
         questTitleLabel.text = "Посетить музей"
         
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
         getQuestButton.tintColor = .yellow
         getQuestButton.setTitle("Поздравляю! Вы прошли все квесты!", for: .disabled)
         getQuestButton.setTitleColor(.green, for: .disabled)
+        getQuestButton.layer.cornerRadius = 30
         
         doneQuestsLabel.text = "Выполнено 0 из 100 квестов"
         
@@ -119,7 +122,6 @@ class ViewController: UIViewController {
         currentQuest = nil
 
         questTitleLabel.text = ""
-        questBgView.backgroundColor = .white
         getQuestButton.isHidden = false
 
         printInfo()
@@ -150,6 +152,7 @@ class ViewController: UIViewController {
         randomQuest.isCurrent = true
         currentQuest = randomQuest
         questTitleLabel.text = randomQuest.title
+        questBgView.backgroundColor = randomQuest.type.bgColor
     }
     
     
