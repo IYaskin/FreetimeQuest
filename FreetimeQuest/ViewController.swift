@@ -143,6 +143,17 @@ class ViewController: UIViewController {
     }
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
         print("---Удалить---")
+        printInfo()
+        
+        currentQuest?.isCurrent = false
+        currentQuest?.isDeleted = true
+        currentQuest = nil
+
+        questTitleLabel.text = ""
+        getQuestButton.isHidden = false
+
+        printInfo()
+        print("---Удалить---")
     }
     
     func setRandomQuest() {
