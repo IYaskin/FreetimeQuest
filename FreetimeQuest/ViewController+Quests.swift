@@ -42,6 +42,14 @@ extension ViewController {
         return quests
     }
 
+    func getDoneQuestsFilteredByTime() -> [Quest] {
+        print(getDoneQuests().count)
+        let quests = getDoneQuests().sorted {
+            $0.date < $1.date
+        }
+        return quests
+    }
+
     func getCurrentQuest() -> Quest?  {
         var quest: Quest?
         getQuests().forEach {

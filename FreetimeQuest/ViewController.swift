@@ -102,6 +102,8 @@ class ViewController: UIViewController {
 
         currentQuest?.isCurrent = false
         currentQuest?.isDone = true
+        
+        currentQuest?.date = Date().timeIntervalSince1970
         currentQuest = nil
 
         questTitleLabel.text = ""
@@ -110,6 +112,7 @@ class ViewController: UIViewController {
         printInfo()
         print("---Готово---\n")
         updateDoneQuestsLabel()
+        tableView.reloadData()
     }
     
     @IBAction func changeQuestTapped(_ sender: UIButton) {

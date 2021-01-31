@@ -57,9 +57,9 @@ class Quest {
             }
         }
     
-    var date: Int {
+    var date: Double {
         get {
-            return UserDefaults.standard.integer(forKey: DateKey)
+            return UserDefaults.standard.double(forKey: DateKey)
         }
         set {
                 UserDefaults.standard.set(newValue, forKey: DateKey)
