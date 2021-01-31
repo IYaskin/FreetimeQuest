@@ -18,21 +18,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var deleteQuestButton: UIButton!
     @IBOutlet weak var getQuestButton: UIButton!
     @IBOutlet weak var doneQuestsLabel: UILabel!
+    @IBOutlet weak var numberQuestLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var currentQuest: Quest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureUI()
         clearQuests()
         setCurrentQuestIfNeeded()
-        
+
+        configureUI()
         printInfo()
     }
     
     func configureUI() {
+        tableView.dataSource = self
         questBgView.layer.cornerRadius = 30
         
         titleLabel.text = "Freetime Quest"
@@ -51,13 +52,21 @@ class ViewController: UIViewController {
         
         doneQuestsLabel.text = ""
         updateDoneQuestsLabel()
+        updateNumberQuestsLabel()
     }
     
     func updateDoneQuestsLabel() {
         let doneQuestsCount = getDoneQuests().count
         let notDeletedQuests = getNotDeletedQuests().count
         doneQuestsLabel.text = "Выполнено \(doneQuestsCount) из \(notDeletedQuests) квестов"
-
+    }
+    
+    func updateNumberQuestsLabel() {
+        if let currentQuest = currentQuest {
+            numberQuestLabel.text = "№\(currentQuest.number)"
+        } else {
+            numberQuestLabel.text = ""
+        }
     }
     
     func setCurrentQuestIfNeeded() {
@@ -140,6 +149,7 @@ class ViewController: UIViewController {
         currentQuest = randomQuest
         questTitleLabel.text = randomQuest.title
         questBgView.backgroundColor = randomQuest.type.bgColor
+        updateNumberQuestsLabel()
     }
     
     

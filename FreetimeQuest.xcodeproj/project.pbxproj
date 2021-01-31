@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */; };
+		8411DC2D25C73DF5001CD30B /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */; };
 		8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */; };
 		8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE2025BDBC0F00814F81 /* ViewController.swift */; };
 		8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2225BDBC0F00814F81 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Quests.swift"; sourceTree = "<group>"; };
+		8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
 		8450FE1925BDBC0F00814F81 /* FreetimeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreetimeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450FE2025BDBC0F00814F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
 				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
 				8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */,
+				8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				84544F8825BDCF50000683FC /* Quest.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */,
 				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
+				8411DC2D25C73DF5001CD30B /* ViewController+TableView.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

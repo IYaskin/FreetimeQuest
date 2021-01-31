@@ -16,6 +16,7 @@ class Quest {
     lazy var isDoneKey = key + "isDone"
     lazy var isDeletedKey = key + "isDeleted"
     lazy var isCurrentKey = key + "isCurrent"
+    lazy var DateKey = key + "Date"
     
     init(title: String,
          key: String,
@@ -53,6 +54,15 @@ class Quest {
         }
         set {
                 UserDefaults.standard.set(newValue, forKey: isCurrentKey)
+            }
+        }
+    
+    var date: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: DateKey)
+        }
+        set {
+                UserDefaults.standard.set(newValue, forKey: DateKey)
             }
         }
 

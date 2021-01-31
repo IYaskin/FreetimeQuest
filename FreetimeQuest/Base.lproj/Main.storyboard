@@ -68,20 +68,29 @@
                                             <action selector="getQuestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9d-wJ-WlG"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anc-ep-bHQ">
+                                        <rect key="frame" x="15" y="15" width="304" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstItem="3oT-Jk-wmC" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" id="14H-RA-jh1"/>
                                     <constraint firstAttribute="width" secondItem="8Wa-6Z-zNc" secondAttribute="height" multiplier="5:3" id="2KE-jx-byS"/>
                                     <constraint firstItem="Fsw-eP-RAU" firstAttribute="top" secondItem="8Wa-6Z-zNc" secondAttribute="top" constant="30" id="2N9-AH-Edz"/>
+                                    <constraint firstAttribute="trailing" secondItem="anc-ep-bHQ" secondAttribute="trailing" constant="15" id="8xu-CC-49y"/>
                                     <constraint firstItem="Fsw-eP-RAU" firstAttribute="centerX" secondItem="8Wa-6Z-zNc" secondAttribute="centerX" id="BDt-sK-Q0i"/>
                                     <constraint firstItem="3oT-Jk-wmC" firstAttribute="centerY" secondItem="8Wa-6Z-zNc" secondAttribute="centerY" id="Sdv-T2-YOi"/>
                                     <constraint firstItem="3oT-Jk-wmC" firstAttribute="centerX" secondItem="8Wa-6Z-zNc" secondAttribute="centerX" id="Y9l-R2-tVF"/>
+                                    <constraint firstItem="anc-ep-bHQ" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" constant="15" id="cM3-H0-o60"/>
                                     <constraint firstItem="V3j-NZ-T1U" firstAttribute="centerX" secondItem="8Wa-6Z-zNc" secondAttribute="centerX" id="hRy-TP-qMK"/>
                                     <constraint firstItem="V3j-NZ-T1U" firstAttribute="top" secondItem="Fsw-eP-RAU" secondAttribute="bottom" constant="30" id="jxH-At-VD7"/>
                                     <constraint firstItem="V3j-NZ-T1U" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" id="mHv-QL-SB3"/>
                                     <constraint firstItem="3oT-Jk-wmC" firstAttribute="top" secondItem="8Wa-6Z-zNc" secondAttribute="top" id="mrT-dC-ach"/>
                                     <constraint firstItem="Fsw-eP-RAU" firstAttribute="leading" secondItem="8Wa-6Z-zNc" secondAttribute="leading" constant="20" id="n0e-jM-RXi"/>
+                                    <constraint firstItem="anc-ep-bHQ" firstAttribute="top" secondItem="8Wa-6Z-zNc" secondAttribute="top" constant="15" id="nkc-WO-f3U"/>
                                     <constraint firstAttribute="bottom" secondItem="V3j-NZ-T1U" secondAttribute="bottom" id="uAW-Ug-3bx"/>
                                 </constraints>
                             </view>
@@ -122,6 +131,7 @@
                         <outlet property="doneQuestButton" destination="8sH-KC-H4l" id="l6M-Yc-A67"/>
                         <outlet property="doneQuestsLabel" destination="rGE-3o-Hy2" id="pbV-QF-e4b"/>
                         <outlet property="getQuestButton" destination="3oT-Jk-wmC" id="FO6-Se-MUT"/>
+                        <outlet property="numberQuestLabel" destination="anc-ep-bHQ" id="aTD-d1-Bkl"/>
                         <outlet property="questBgView" destination="8Wa-6Z-zNc" id="JC0-kY-7rg"/>
                         <outlet property="questTitleLabel" destination="Fsw-eP-RAU" id="wdl-g4-quA"/>
                         <outlet property="tableView" destination="YRw-4J-a7R" id="Tf5-tn-3yJ"/>
