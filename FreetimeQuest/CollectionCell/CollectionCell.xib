@@ -29,6 +29,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztH-8q-Mrj">
                                 <rect key="frame" x="8" y="52" width="470" height="299"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wa-qC-9ky">
                                 <rect key="frame" x="450.5" y="0.0" width="35.5" height="17"/>
@@ -36,6 +37,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srv-8n-KOe">
+                                <rect key="frame" x="143" y="101.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="F1b-Jw-qK0"/>
+                                    <constraint firstAttribute="height" constant="200" id="tuZ-UC-wnq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="photoButton:" destination="f4y-6p-g9E" eventType="touchUpInside" id="mB8-fB-vny"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
@@ -45,9 +57,11 @@
                             <constraint firstItem="ztH-8q-Mrj" firstAttribute="top" secondItem="fX4-I9-puD" secondAttribute="bottom" constant="8" symbolic="YES" id="J2p-At-QZN"/>
                             <constraint firstAttribute="bottom" secondItem="ztH-8q-Mrj" secondAttribute="bottom" id="ZHY-wU-cnC"/>
                             <constraint firstItem="ztH-8q-Mrj" firstAttribute="leading" secondItem="J28-Ti-dv8" secondAttribute="leading" constant="8" id="akB-Xg-taF"/>
+                            <constraint firstItem="Srv-8n-KOe" firstAttribute="centerX" secondItem="ztH-8q-Mrj" secondAttribute="centerX" id="hQD-vS-H0O"/>
                             <constraint firstItem="fX4-I9-puD" firstAttribute="leading" secondItem="J28-Ti-dv8" secondAttribute="leading" constant="20" id="ouQ-jl-hdf"/>
                             <constraint firstItem="fX4-I9-puD" firstAttribute="centerX" secondItem="J28-Ti-dv8" secondAttribute="centerX" id="qBF-SA-gfN"/>
                             <constraint firstAttribute="trailing" secondItem="ztH-8q-Mrj" secondAttribute="trailing" constant="8" id="sat-8E-MU5"/>
+                            <constraint firstItem="Srv-8n-KOe" firstAttribute="centerY" secondItem="ztH-8q-Mrj" secondAttribute="centerY" id="yGf-OB-9c9"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -16,6 +16,8 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
+        cell.presentingViewController = self
+
         let quest = getDoneQuestsFilteredByTime()[indexPath.row]
         cell.titleLabel.text = quest.title
         
