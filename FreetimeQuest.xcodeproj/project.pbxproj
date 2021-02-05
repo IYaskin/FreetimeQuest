@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */; };
-		8411DC2D25C73DF5001CD30B /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */; };
+		8411DC2D25C73DF5001CD30B /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */; };
+		8445523525CD5C6D002585D2 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445523425CD5C6D002585D2 /* CollectionCell.swift */; };
+		8445523825CD5C7B002585D2 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8445523725CD5C7B002585D2 /* CollectionCell.xib */; };
 		8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */; };
 		8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE2025BDBC0F00814F81 /* ViewController.swift */; };
 		8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2225BDBC0F00814F81 /* Main.storyboard */; };
@@ -22,7 +24,9 @@
 
 /* Begin PBXFileReference section */
 		8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Quests.swift"; sourceTree = "<group>"; };
-		8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
+		8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		8445523425CD5C6D002585D2 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		8445523725CD5C7B002585D2 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		8450FE1925BDBC0F00814F81 /* FreetimeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreetimeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450FE2025BDBC0F00814F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8445523325CD5C4A002585D2 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				8445523425CD5C6D002585D2 /* CollectionCell.swift */,
+				8445523725CD5C7B002585D2 /* CollectionCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		8450FE1025BDBC0F00814F81 = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +81,11 @@
 			children = (
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
 				84544F8D25BDD840000683FC /* Quest */,
+				8445523325CD5C4A002585D2 /* CollectionCell */,
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
 				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
 				8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */,
-				8411DC2C25C73DF5001CD30B /* ViewController+TableView.swift */,
+				8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
@@ -150,6 +164,7 @@
 				8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */,
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
+				8445523825CD5C7B002585D2 /* CollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,11 +177,12 @@
 			files = (
 				84544F8F25BDD850000683FC /* QuestsList.swift in Sources */,
 				8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */,
+				8445523525CD5C6D002585D2 /* CollectionCell.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				84544F8825BDCF50000683FC /* Quest.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */,
 				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
-				8411DC2D25C73DF5001CD30B /* ViewController+TableView.swift in Sources */,
+				8411DC2D25C73DF5001CD30B /* ViewController+CollectionView.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

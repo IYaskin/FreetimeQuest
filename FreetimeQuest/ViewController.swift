@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var getQuestButton: UIButton!
     @IBOutlet weak var doneQuestsLabel: UILabel!
     @IBOutlet weak var numberQuestLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var currentQuest: Quest?
 
@@ -33,7 +33,10 @@ class ViewController: UIViewController {
     }
     
     func configureUI() {
-        tableView.dataSource = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "CollectionCell", bundle: nil),
+                                forCellWithReuseIdentifier: "CollectionCell")
         questBgView.layer.cornerRadius = 30
         
         titleLabel.text = "Freetime Quest"
@@ -112,7 +115,7 @@ class ViewController: UIViewController {
         printInfo()
         print("---Готово---\n")
         updateDoneQuestsLabel()
-        tableView.reloadData()
+        collectionView.reloadData()
     }
     
     @IBAction func changeQuestTapped(_ sender: UIButton) {
