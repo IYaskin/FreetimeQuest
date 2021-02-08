@@ -19,6 +19,12 @@ class CollectionCell: UICollectionViewCell {
         }
     }
 
+    weak var quest: Quest? {
+        didSet {
+            updateUI()
+        }
+    }
+    
     private var imagePicker = ImagePickerService()
 
     override func awakeFromNib() {
@@ -33,8 +39,30 @@ class CollectionCell: UICollectionViewCell {
         dateLabel.text = nil
     }
     
-    func configureUI() {
+    private func configureUI() {
         imagePicker.delegate = self
+    }
+    
+    private func updateUI() {
+        guard let quest = quest else {
+            titleLabel.text = ""
+            dateLabel.text = ""
+            imageView.image = nil
+            return
+        }
+
+        if let imageData = quest.imageData,
+           let image = UIImage(data: imageData) {
+            imageView.image = image
+        }
+        
+        titleLabel.text = quest.title
+        
+        let df = DateFormatter()
+        df.dateFormat = "dd.MM.yyyy"
+        let date = Date(timeIntervalSince1970: quest.date)
+        let strDate = df.string(from: date)
+        dateLabel.text = strDate
     }
     
     @IBAction func photoButton(_ sender: UIButton) {
@@ -103,11 +131,9 @@ extension CollectionCell: ImagePickerServiceDelegate {
                             fileURL: URL,
                             fileName: String) {
         imageView.image = image
-//        guard let image = UIImage.scale(image, bySideValue: 1000) else {
-//            assertionFailure("can't scale image")
-//            return
-//        }
-//        proccessingSlotPhotoReport(fileURL, image: image)
+        if let imageData = image.jpegData(compressionQuality: 1) {
+            quest?.imageData = imageData
+        }
     }
 
     func imagePickerService(_ service: ImagePickerService, finishWith error: String) {

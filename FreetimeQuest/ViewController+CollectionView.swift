@@ -19,16 +19,7 @@ extension ViewController: UICollectionViewDataSource {
         cell.presentingViewController = self
 
         let quest = getDoneQuestsFilteredByTime()[indexPath.row]
-        cell.titleLabel.text = quest.title
-        
-        let df = DateFormatter()
-        df.dateFormat = "dd.MM.yyyy"
-        let date = Date(timeIntervalSince1970: quest.date)
-        let strDate = df.string(from: date)
-        
-        cell.dateLabel.text = strDate
-        
-        print(quest.title + strDate)
+        cell.quest = quest
         
         return cell
 

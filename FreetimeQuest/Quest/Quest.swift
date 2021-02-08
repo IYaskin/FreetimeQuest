@@ -16,7 +16,8 @@ class Quest {
     lazy var isDoneKey = key + "isDone"
     lazy var isDeletedKey = key + "isDeleted"
     lazy var isCurrentKey = key + "isCurrent"
-    lazy var DateKey = key + "Date"
+    lazy var dateKey = key + "date"
+    lazy var imageDataKey = key + "imageData"
     
     init(title: String,
          key: String,
@@ -59,11 +60,21 @@ class Quest {
     
     var date: Double {
         get {
-            return UserDefaults.standard.double(forKey: DateKey)
+            return UserDefaults.standard.double(forKey: dateKey)
         }
         set {
-                UserDefaults.standard.set(newValue, forKey: DateKey)
+                UserDefaults.standard.set(newValue, forKey: dateKey)
             }
         }
+    
+    var imageData: Data? {
+        get {
+            return UserDefaults.standard.data(forKey: imageDataKey)
+        }
+        set {
+                UserDefaults.standard.set(newValue, forKey: imageDataKey)
+            }
+        }
+
 
 }
