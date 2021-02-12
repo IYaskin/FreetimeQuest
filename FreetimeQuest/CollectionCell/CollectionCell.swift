@@ -12,6 +12,7 @@ class CollectionCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var photoButton: UIButton!
     
     weak var presentingViewController: UIViewController? {
         didSet {
@@ -37,10 +38,12 @@ class CollectionCell: UICollectionViewCell {
         titleLabel.text = nil
         imageView.image = nil
         dateLabel.text = nil
+        quest = nil
     }
     
     private func configureUI() {
         imagePicker.delegate = self
+        photoButton.setImage(UIImage(named: "camera"), for: .normal)
     }
     
     private func updateUI() {
@@ -53,7 +56,10 @@ class CollectionCell: UICollectionViewCell {
 
         if let imageData = quest.imageData,
            let image = UIImage(data: imageData) {
+            photoButton.isHidden = true
             imageView.image = image
+        } else {
+            photoButton.isHidden = false
         }
         
         titleLabel.text = quest.title
@@ -119,6 +125,33 @@ class CollectionCell: UICollectionViewCell {
     private func openPhotoLibrary() {
         imagePicker.presentImagePicker(.photoLibrary)
     }
+    
+    func printUserDefaults() {
+        
+        let uselessKeysArray = ["AKLastIDMSEnvironment",
+                                "AppleLanguages",
+                                "AddingEmojiKeybordHandled",
+                                "NSLanguages",
+                                "PKKeychainVersionKey",
+                                "AppleKeyboards",
+                                "AppleKeyboardsExpanded",
+                                "AppleLanguagesDidMigrate",
+                                "AppleITunesStoreItemKinds",
+                                "NSInterfaceStyle",
+                                "PKLogNotificationServiceResponsesKey",
+                                "ApplePasscodeKeyboards",
+                                "NSAllowsDefaultLineBreakStrategy"]
+        
+        print("---------------------------------------------------------------------")
+        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+            if !uselessKeysArray.contains(key) {
+                print("\(key) = \(value) \n")
+            }
+        }
+        print("---------------------------------------------------------------------")
+
+    }
+
 
     
 }
@@ -131,8 +164,10 @@ extension CollectionCell: ImagePickerServiceDelegate {
                             fileURL: URL,
                             fileName: String) {
         imageView.image = image
+        photoButton.isHidden = true
         if let imageData = image.jpegData(compressionQuality: 1) {
             quest?.imageData = imageData
+            //printUserDefaults()
         }
     }
 

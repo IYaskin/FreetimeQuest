@@ -76,6 +76,7 @@
             <connections>
                 <outlet property="dateLabel" destination="5wa-qC-9ky" id="WPH-qc-8pF"/>
                 <outlet property="imageView" destination="ztH-8q-Mrj" id="eOo-k9-ShY"/>
+                <outlet property="photoButton" destination="Srv-8n-KOe" id="E75-yW-PeD"/>
                 <outlet property="titleLabel" destination="fX4-I9-puD" id="Cgx-KT-VsH"/>
             </connections>
             <point key="canvasLocation" x="173.91304347826087" y="128.90625"/>

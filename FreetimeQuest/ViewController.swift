@@ -26,10 +26,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //clearQuests()
+        //resetDefaults()
+        printUserDefaults()
         setCurrentQuestIfNeeded()
 
         configureUI()
         printInfo()
+    }
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
     }
     
     func configureUI() {
@@ -95,7 +105,7 @@ class ViewController: UIViewController {
         
         printInfo()
         print("---Получить---\n")
-
+        printUserDefaults()
     }
     
 
@@ -116,6 +126,7 @@ class ViewController: UIViewController {
         print("---Готово---\n")
         updateDoneQuestsLabel()
         collectionView.reloadData()
+        printUserDefaults()
     }
     
     @IBAction func changeQuestTapped(_ sender: UIButton) {
@@ -129,6 +140,7 @@ class ViewController: UIViewController {
         
         printInfo()
         print("---Поменять---\n")
+        printUserDefaults()
     }
     
     @IBAction func deleteQuestTapped(_ sender: UIButton) {
@@ -145,6 +157,7 @@ class ViewController: UIViewController {
         printInfo()
         print("---Удалить---")
         updateDoneQuestsLabel()
+        printUserDefaults()
     }
     
     func setRandomQuest() {

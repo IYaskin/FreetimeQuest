@@ -43,7 +43,6 @@ extension ViewController {
     }
 
     func getDoneQuestsFilteredByTime() -> [Quest] {
-        print(getDoneQuests().count)
         let quests = getDoneQuests().sorted {
             $0.date < $1.date
         }

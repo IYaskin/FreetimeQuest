@@ -10,7 +10,6 @@ import UIKit
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(getDoneQuestsFilteredByTime().count)
         return getDoneQuestsFilteredByTime().count
     }
     
@@ -20,7 +19,6 @@ extension ViewController: UICollectionViewDataSource {
 
         let quest = getDoneQuestsFilteredByTime()[indexPath.row]
         cell.quest = quest
-        
         return cell
 
     }
