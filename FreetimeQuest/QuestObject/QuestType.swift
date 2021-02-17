@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum QuestType {
+enum QuestType: Int {
     case good
     case goOut
     case social

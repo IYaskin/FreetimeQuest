@@ -12,6 +12,11 @@ class CoreDataManager {
     
     var container: NSPersistentContainer!
     
+    static let shared = CoreDataManager()
+    
+    private init() {}
+
+    
     func saveQuest(title: String) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -23,13 +28,11 @@ class CoreDataManager {
         let entity = NSEntityDescription.entity(forEntityName: "Quest",
                                                 in: managedContext)!
         
-        let person = NSManagedObject(entity: entity,
+        let quest = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
         
-        // 3
-        person.setValue(title, forKeyPath: "title")
+        quest.setValue(title, forKeyPath: "title")
         
-        // 4
         do {
             try managedContext.save()
             print("Saved: \(title)")
@@ -38,21 +41,20 @@ class CoreDataManager {
         }
     }
     
-    func getQuests() -> [Quest] {
+    func getQuests() -> [QuestObject] {
 
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
             return []
         }
-        var quests: [Quest] = []
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Quest")
+        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
         
-        //3
         do {
-            var questsObjects = try managedContext.fetch(fetchRequest)
-            return quests
+            let questsObjects = try managedContext.fetch(fetchRequest)
+            
+            return questsObjects
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
             return []
