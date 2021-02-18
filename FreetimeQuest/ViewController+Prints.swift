@@ -28,12 +28,17 @@ extension ViewController {
 //        }
 //    }
 //    
-//    func printQuests() {
-//        print("Оставшиеся квесты:")
-//        print(getQuests().map({ (quest) -> String in
-//            return quest.title
-//        }))
-//    }
+    func printQuests() {
+        print("Оставшиеся квесты:")
+        CoreDataManager.shared.getQuests().forEach { (quest) in
+            print("---")
+            print("Quest = \(quest.title!)")
+            print("id = \(quest.id)")
+            print("type = \(quest.type)")
+            print("---")
+        }
+        print("-------------------")
+    }
 //    
 //    func printUserDefaults() {
 //        

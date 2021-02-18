@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     }
     
     func configureUI() {
-
+//        CoreDataManager.shared.saveQuest(title: "1 квест",
+//                                         id: 1,
+//                                         type: 1)
+        
     }
     
 }

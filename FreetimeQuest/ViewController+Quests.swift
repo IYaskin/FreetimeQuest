@@ -9,16 +9,9 @@ import Foundation
 
 extension ViewController {
     
-//    func getQuests() -> [Quest] {
-//        let quests = Quest.quests().compactMap { (quest) -> Quest? in
-//            if !quest.isDone && !quest.isDeleted {
-//                return quest
-//            } else {
-//                return nil
-//            }
-//        }
-//        return quests
-//    }
+    func getQuests() -> [QuestObject] {
+        return CoreDataManager.shared.getQuests()
+    }
 //    
 //    func getDoneQuests() -> [Quest] {
 //        let quests = Quest.quests().compactMap { (quest) -> Quest? in
