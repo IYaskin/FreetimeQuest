@@ -17,30 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freetime Quest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-r7-JB7">
-                                <rect key="frame" x="20" y="54" width="374" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSf-Xc-JfH" customClass="CategoryView" customModule="FreetimeQuest" customModuleProvider="target">
-                                <rect key="frame" x="20" y="140" width="374" height="166"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-Ug-K7t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW9-Di-07M">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="IvP-to-h1Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="YxY-ug-XjC"/>
-                                    <constraint firstAttribute="height" constant="166" id="lln-fz-Tfr"/>
+                                    <constraint firstItem="QP4-Es-O06" firstAttribute="width" secondItem="wW9-Di-07M" secondAttribute="width" id="3py-sF-Utg"/>
+                                    <constraint firstItem="wW9-Di-07M" firstAttribute="bottom" secondItem="V1x-kC-25n" secondAttribute="bottom" id="A2i-Bj-rYs"/>
+                                    <constraint firstItem="wW9-Di-07M" firstAttribute="leading" secondItem="V1x-kC-25n" secondAttribute="leading" id="ZPX-nj-m68"/>
+                                    <constraint firstItem="wW9-Di-07M" firstAttribute="top" secondItem="V1x-kC-25n" secondAttribute="top" id="dNm-mi-xrz"/>
+                                    <constraint firstItem="wW9-Di-07M" firstAttribute="centerY" secondItem="V1x-kC-25n" secondAttribute="centerY" id="lKc-p5-pUl"/>
+                                    <constraint firstItem="wW9-Di-07M" firstAttribute="trailing" secondItem="V1x-kC-25n" secondAttribute="trailing" id="ymh-F1-ijD"/>
                                 </constraints>
-                            </view>
+                                <viewLayoutGuide key="contentLayoutGuide" id="V1x-kC-25n"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QP4-Es-O06"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="a1v-r7-JB7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ck1-mY-XSE"/>
-                            <constraint firstItem="a1v-r7-JB7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L0o-vA-slj"/>
-                            <constraint firstItem="zSf-Xc-JfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lt7-gK-Fas"/>
-                            <constraint firstItem="zSf-Xc-JfH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OCI-E4-8Ij"/>
-                            <constraint firstItem="a1v-r7-JB7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aJU-xz-03q"/>
-                            <constraint firstItem="zSf-Xc-JfH" firstAttribute="top" secondItem="a1v-r7-JB7" secondAttribute="bottom" constant="38" id="yNB-QX-TER"/>
+                            <constraint firstItem="S3e-Ug-K7t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ohl-In-9KJ"/>
+                            <constraint firstItem="S3e-Ug-K7t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RTr-ry-IFq"/>
+                            <constraint firstAttribute="bottom" secondItem="S3e-Ug-K7t" secondAttribute="bottom" id="tnZ-Jx-DHD"/>
+                            <constraint firstItem="S3e-Ug-K7t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="whw-8e-kKC"/>
                         </constraints>
                     </view>
                 </viewController>
