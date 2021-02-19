@@ -62,7 +62,8 @@ class CoreDataManager {
 
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
         
-        let predicate = NSPredicate(format: "category == %i", "\(category.rawValue)»")
+        let predicate = NSPredicate(format: "category == \(category.rawValue)")
+
         let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]

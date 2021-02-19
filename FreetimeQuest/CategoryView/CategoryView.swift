@@ -49,15 +49,27 @@ class CategoryView: UIView {
     
     public func configureWith(category: Category) {
         self.fetchedResultsController = CoreDataManager.shared.fetchedResultsController(category)
+        do {
+            try fetchedResultsController?.performFetch()
+        } catch {
+            print(error)
+        }
 
         contentView.backgroundColor = category.bgColor
         titleLabel.text = category.title
         descriptionLabel.text = category.description
         
+        if let sections = fetchedResultsController?.sections {
+            print("Category = \(category.title) = \(category.rawValue)")
+            print("Sections = \(sections.count)")
+            print("Objects = \(sections[0].objects?.count)")
+            
+        }
+
         fetchedResultsController?.fetchedObjects?.forEach({ (quest) in
             print(quest.title)
         })
-        
+        print("--------")
 //        switch category {
 //        case .good:
 //            titleLabel.text = "Добро"
