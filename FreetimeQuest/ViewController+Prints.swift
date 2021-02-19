@@ -34,7 +34,11 @@ extension ViewController {
             print("---")
             print("Quest = \(quest.title!)")
             print("id = \(quest.id)")
-            print("type = \(quest.type)")
+            if let category = Category(rawValue: Int(quest.type)) {
+                print("type = \(category.title) - \(quest.type)")
+            } else {
+                print("type = \(quest.type)")
+            }
             print("---")
         }
         print("-------------------")

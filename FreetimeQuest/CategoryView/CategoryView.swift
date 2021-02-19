@@ -10,7 +10,12 @@ import UIKit
 class CategoryView: UIView {
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    
+    private var coreData = CoreDataManager.shared
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,10 +35,34 @@ class CategoryView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tableViewHeightConstraint.constant = 100
+        
+        configureUI()
     }
     
-    public func configureWith() {
-
+    private func configureUI() {
+        contentView.layer.cornerRadius = 20
+        tableViewHeightConstraint.constant = 200
+    }
+    
+    public func configureWith(category: Category) {
+        contentView.backgroundColor = category.bgColor
+        titleLabel.text = category.title
+        descriptionLabel.text = category.description
+        
+//        switch category {
+//        case .good:
+//            titleLabel.text = "Добро"
+//        case .goOut:
+//            titleLabel.text = "Выход в свет"
+//            descriptionLabel.text = "А че дома делать?"
+//        case .social:
+//            titleLabel.text = "Социализация"
+//        case .brain:
+//            titleLabel.text = "Мозг"
+//        case .adventure:
+//            titleLabel.text = "Приключения"
+//        }
+        
+        
     }
 }

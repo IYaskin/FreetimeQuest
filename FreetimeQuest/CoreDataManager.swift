@@ -47,8 +47,7 @@ class CoreDataManager {
     
     func getQuests() -> [QuestObject] {
 
-        guard let appDelegate =
-                UIApplication.shared.delegate as? AppDelegate else {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []
         }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -63,6 +62,25 @@ class CoreDataManager {
             return []
         }
     }
+    
+//    func getCategoryQuests(category: Category) -> [QuestObject] {
+//
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+//            return []
+//        }
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        
+//        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
+//        
+//        do {
+//            let questsObjects = try managedContext.fetch(fetchRequest)
+//            return questsObjects
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//            return []
+//        }
+//    }
+
 
 
 }
