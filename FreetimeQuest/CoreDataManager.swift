@@ -10,35 +10,36 @@ import CoreData
 
 class CoreDataManager {
     
+    private let entityName = "QuestObject"
+    private let keyForSort = "id"
+    
     var container: NSPersistentContainer!
+    var viewContext: NSManagedObjectContext!
     
     static let shared = CoreDataManager()
     
-    private init() {}
+    private init() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.container = appDelegate.persistentContainer
+        self.viewContext = container.viewContext
+    }
 
     
     func saveQuest(title: String,
                    id: Int,
-                   type: Int) {
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "QuestObject",
-                                                in: managedContext)!
+                   category: Int) {
+        let entity = NSEntityDescription.entity(forEntityName: entityName,
+                                                in: viewContext)!
         
         let quest = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
+                                     insertInto: viewContext)
         
         quest.setValue(title, forKeyPath: "title")
         quest.setValue(id, forKeyPath: "id")
-        quest.setValue(type, forKeyPath: "type")
+        quest.setValue(category, forKeyPath: "category")
 
         do {
-            try managedContext.save()
+            try viewContext.save()
             print("Saved: \(title)")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
@@ -46,16 +47,10 @@ class CoreDataManager {
     }
     
     func getQuests() -> [QuestObject] {
-
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return []
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
         
         do {
-            let questsObjects = try managedContext.fetch(fetchRequest)
+            let questsObjects = try viewContext.fetch(fetchRequest)
             return questsObjects
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -63,24 +58,34 @@ class CoreDataManager {
         }
     }
     
-//    func getCategoryQuests(category: Category) -> [QuestObject] {
-//
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            return []
-//        }
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        
-//        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
-//        
-//        do {
-//            let questsObjects = try managedContext.fetch(fetchRequest)
-//            return questsObjects
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//            return []
-//        }
-//    }
+    func fetchedResultsController(_ category: Category) -> NSFetchedResultsController<QuestObject> {
 
+        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
+        
+        let predicate = NSPredicate(format: "category == %i", "\(category.rawValue)»")
+        let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.predicate = predicate
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: viewContext,
+                                                                  sectionNameKeyPath: nil,
+                                                                  cacheName: nil)
+        return fetchedResultsController
+    }
 
+    func deleteQuests() {
+        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
+
+        fetchRequest.returnsObjectsAsFaults = false
+            do {
+                let results = try viewContext.fetch(fetchRequest)
+                for object in results {
+                    viewContext.delete(object)
+                }
+            } catch let error {
+                print("Detele all data in QuestObject error :", error)
+            }
+    }
 
 }

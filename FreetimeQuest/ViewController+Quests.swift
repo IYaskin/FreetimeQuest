@@ -12,6 +12,11 @@ extension ViewController {
     func getQuests() -> [QuestObject] {
         return CoreDataManager.shared.getQuests()
     }
+    
+    func deleteQuests() {
+        return CoreDataManager.shared.deleteQuests()
+    }
+
 //    
 //    func getDoneQuests() -> [Quest] {
 //        let quests = Quest.quests().compactMap { (quest) -> Quest? in

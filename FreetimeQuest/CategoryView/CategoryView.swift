@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoryView: UIView {
     
@@ -16,6 +17,8 @@ class CategoryView: UIView {
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     private var coreData = CoreDataManager.shared
+    
+    private var fetchedResultsController: NSFetchedResultsController<QuestObject>?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,9 +48,15 @@ class CategoryView: UIView {
     }
     
     public func configureWith(category: Category) {
+        self.fetchedResultsController = CoreDataManager.shared.fetchedResultsController(category)
+
         contentView.backgroundColor = category.bgColor
         titleLabel.text = category.title
         descriptionLabel.text = category.description
+        
+        fetchedResultsController?.fetchedObjects?.forEach({ (quest) in
+            print(quest.title)
+        })
         
 //        switch category {
 //        case .good:

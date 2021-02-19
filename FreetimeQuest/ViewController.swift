@@ -18,10 +18,27 @@ class ViewController: UIViewController {
     }
     
     func configureUI() {
-//        CoreDataManager.shared.saveQuest(title: "1 квест",
+//        CoreDataManager.shared.saveQuest(title: "Посетить музей",
 //                                         id: 1,
-//                                         type: 1)
+//                                         category: Category.goOut.rawValue)
+//        CoreDataManager.shared.saveQuest(title: "Посетить театр",
+//                                         id: 1,
+//                                         category: Category.goOut.rawValue)
+//        CoreDataManager.shared.saveQuest(title: "Посетить оперу",
+//                                         id: 1,
+//                                         category: Category.goOut.rawValue)
+//
+//        CoreDataManager.shared.saveQuest(title: "Посадить растение",
+//                                         id: 1,
+//                                         category: Category.brain.rawValue)
+//
+//        CoreDataManager.shared.saveQuest(title: "Сделать татуировку",
+//                                         id: 1,
+//                                         category: Category.adventure.rawValue)
+
+        //deleteQuests()
         printQuests()
+        
         stackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
         let goOutView = CategoryView()
         goOutView.configureWith(category: .goOut)

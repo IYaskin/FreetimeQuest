@@ -34,12 +34,11 @@ extension ViewController {
             print("---")
             print("Quest = \(quest.title!)")
             print("id = \(quest.id)")
-            if let category = Category(rawValue: Int(quest.type)) {
-                print("type = \(category.title) - \(quest.type)")
+            if let category = Category(rawValue: Int(quest.category)) {
+                print("category = \(category.title) - \(quest.category)")
             } else {
-                print("type = \(quest.type)")
+                print("category = \(quest.category)")
             }
-            print("---")
         }
         print("-------------------")
     }
