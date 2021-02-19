@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryView" customModule="FreetimeQuest" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="I2m-HW-I9u"/>
+                <outlet property="tableViewHeightConstraint" destination="sfC-8E-ofm" id="ZgD-Vq-OBV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,8 +33,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-Ug-Fgi">
-                    <rect key="frame" x="20" y="131" width="408" height="463"/>
+                    <rect key="frame" x="20" y="131" width="408" height="443"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="443" id="sfC-8E-ofm"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -44,7 +48,7 @@
                 <constraint firstItem="6SP-Ug-Fgi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="63G-zj-gea"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6SP-Ug-Fgi" secondAttribute="trailing" constant="20" id="6nE-4O-Zr7"/>
                 <constraint firstItem="6SP-Ug-Fgi" firstAttribute="top" secondItem="fZP-9H-M1y" secondAttribute="bottom" constant="17.5" id="fIu-VF-2WN"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6SP-Ug-Fgi" secondAttribute="bottom" id="mMh-eV-RFQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6SP-Ug-Fgi" secondAttribute="bottom" constant="20" id="mMh-eV-RFQ"/>
                 <constraint firstItem="fZP-9H-M1y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="qta-tP-raJ"/>
                 <constraint firstItem="6SP-Ug-Fgi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vss-RQ-zzH"/>
                 <constraint firstItem="Xgx-TB-8tJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="w0e-ea-lry"/>

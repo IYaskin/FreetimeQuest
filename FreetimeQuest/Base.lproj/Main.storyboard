@@ -20,21 +20,25 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-Ug-K7t">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW9-Di-07M">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1000" id="IvP-to-h1Z"/>
-                                        </constraints>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VTg-fa-pFi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDA-B0-YcJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QP4-Es-O06" firstAttribute="width" secondItem="wW9-Di-07M" secondAttribute="width" id="3py-sF-Utg"/>
-                                    <constraint firstItem="wW9-Di-07M" firstAttribute="bottom" secondItem="V1x-kC-25n" secondAttribute="bottom" id="A2i-Bj-rYs"/>
-                                    <constraint firstItem="wW9-Di-07M" firstAttribute="leading" secondItem="V1x-kC-25n" secondAttribute="leading" id="ZPX-nj-m68"/>
-                                    <constraint firstItem="wW9-Di-07M" firstAttribute="top" secondItem="V1x-kC-25n" secondAttribute="top" id="dNm-mi-xrz"/>
-                                    <constraint firstItem="wW9-Di-07M" firstAttribute="centerY" secondItem="V1x-kC-25n" secondAttribute="centerY" id="lKc-p5-pUl"/>
-                                    <constraint firstItem="wW9-Di-07M" firstAttribute="trailing" secondItem="V1x-kC-25n" secondAttribute="trailing" id="ymh-F1-ijD"/>
+                                    <constraint firstItem="VTg-fa-pFi" firstAttribute="leading" secondItem="V1x-kC-25n" secondAttribute="leading" id="SEh-kt-ufW"/>
+                                    <constraint firstItem="VTg-fa-pFi" firstAttribute="trailing" secondItem="V1x-kC-25n" secondAttribute="trailing" id="SZg-PT-ugd"/>
+                                    <constraint firstItem="QP4-Es-O06" firstAttribute="width" secondItem="VTg-fa-pFi" secondAttribute="width" id="a2t-LI-m7y"/>
+                                    <constraint firstItem="VTg-fa-pFi" firstAttribute="top" secondItem="V1x-kC-25n" secondAttribute="top" id="dx3-O0-oUR"/>
+                                    <constraint firstItem="VTg-fa-pFi" firstAttribute="bottom" secondItem="V1x-kC-25n" secondAttribute="bottom" id="tx2-Cc-aji"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="V1x-kC-25n"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="QP4-Es-O06"/>
@@ -49,6 +53,9 @@
                             <constraint firstItem="S3e-Ug-K7t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="whw-8e-kKC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackView" destination="VTg-fa-pFi" id="ond-N9-aZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,8 +63,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +21,12 @@ class ViewController: UIViewController {
 //        CoreDataManager.shared.saveQuest(title: "1 квест",
 //                                         id: 1,
 //                                         type: 1)
-        
+        stackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
+
+        let view = CategoryView()
+
+        stackView.addArrangedSubview(view)
+
     }
     
 }

@@ -10,6 +10,7 @@ import UIKit
 class CategoryView: UIView {
     
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +30,7 @@ class CategoryView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+        tableViewHeightConstraint.constant = 100
     }
     
     public func configureWith() {
