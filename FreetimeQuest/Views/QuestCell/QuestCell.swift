@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestCell: UITableViewCell {
+class QuestCell: SwipeTableViewCell {
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgView: UIImageView!

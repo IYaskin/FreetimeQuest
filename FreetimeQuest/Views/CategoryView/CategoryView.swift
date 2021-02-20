@@ -100,10 +100,34 @@ extension CategoryView: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestCell.reuseID) as? QuestCell else {
             return UITableViewCell()
         }
+        
+        cell.delegate = self
+        
         let quest = frc.object(at: indexPath)
         cell.configureWithQuest(quest)
 
         return cell
+    }
+    
+    
+}
+
+extension CategoryView: SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView,
+                   editActionsForRowAt indexPath: IndexPath,
+                   for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            // handle action by updating model with deletion
+        }
+
+        // customize the action appearance
+        //deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction]
+
     }
     
     

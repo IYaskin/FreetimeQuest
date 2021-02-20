@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */; };
+		8414891925E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890125E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift */; };
+		8414891A25E13DB200C31ED8 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890225E13DB200C31ED8 /* SwipeAnimator.swift */; };
+		8414891B25E13DB200C31ED8 /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890325E13DB200C31ED8 /* SwipeCollectionViewCell+Display.swift */; };
+		8414891C25E13DB200C31ED8 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890425E13DB200C31ED8 /* Swipeable.swift */; };
+		8414891D25E13DB200C31ED8 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890525E13DB200C31ED8 /* SwipeAccessibilityCustomAction.swift */; };
+		8414891E25E13DB200C31ED8 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890625E13DB200C31ED8 /* SwipeActionButton.swift */; };
+		8414891F25E13DB200C31ED8 /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890725E13DB200C31ED8 /* SwipeTransitionLayout.swift */; };
+		8414892025E13DB200C31ED8 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890825E13DB200C31ED8 /* SwipeAction.swift */; };
+		8414892125E13DB200C31ED8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890925E13DB200C31ED8 /* Extensions.swift */; };
+		8414892225E13DB200C31ED8 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890A25E13DB200C31ED8 /* SwipeController.swift */; };
+		8414892325E13DB200C31ED8 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890B25E13DB200C31ED8 /* SwipeFeedback.swift */; };
+		8414892425E13DB200C31ED8 /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890C25E13DB200C31ED8 /* SwipeActionTransitioning.swift */; };
+		8414892525E13DB200C31ED8 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890D25E13DB200C31ED8 /* SwipeCollectionViewCellDelegate.swift */; };
+		8414892625E13DB200C31ED8 /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890E25E13DB200C31ED8 /* SwipeTableViewCell+Display.swift */; };
+		8414892725E13DB200C31ED8 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414890F25E13DB200C31ED8 /* SwipeOptions.swift */; };
+		8414892825E13DB200C31ED8 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891025E13DB200C31ED8 /* SwipeCollectionViewCell+Accessibility.swift */; };
+		8414892925E13DB200C31ED8 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891125E13DB200C31ED8 /* SwipeCollectionViewCell.swift */; };
+		8414892A25E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891225E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift */; };
+		8414892B25E13DB200C31ED8 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891325E13DB200C31ED8 /* SwipeExpansionStyle.swift */; };
+		8414892C25E13DB200C31ED8 /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891425E13DB200C31ED8 /* SwipeExpanding.swift */; };
+		8414892E25E13DB200C31ED8 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891625E13DB200C31ED8 /* SwipeActionsView.swift */; };
+		8414892F25E13DB200C31ED8 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414891825E13DB200C31ED8 /* SwipeTableViewCell.swift */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
 		84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2325E111510060EDE5 /* UIImage+Extension.swift */; };
 		84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2925E111ED0060EDE5 /* QuestCell.swift */; };
@@ -27,6 +49,29 @@
 
 /* Begin PBXFileReference section */
 		8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Quests.swift"; sourceTree = "<group>"; };
+		8414890125E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		8414890225E13DB200C31ED8 /* SwipeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeAnimator.swift; sourceTree = "<group>"; };
+		8414890325E13DB200C31ED8 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
+		8414890425E13DB200C31ED8 /* Swipeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
+		8414890525E13DB200C31ED8 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
+		8414890625E13DB200C31ED8 /* SwipeActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionButton.swift; sourceTree = "<group>"; };
+		8414890725E13DB200C31ED8 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		8414890825E13DB200C31ED8 /* SwipeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		8414890925E13DB200C31ED8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8414890A25E13DB200C31ED8 /* SwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
+		8414890B25E13DB200C31ED8 /* SwipeFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeFeedback.swift; sourceTree = "<group>"; };
+		8414890C25E13DB200C31ED8 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		8414890D25E13DB200C31ED8 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		8414890E25E13DB200C31ED8 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		8414890F25E13DB200C31ED8 /* SwipeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeOptions.swift; sourceTree = "<group>"; };
+		8414891025E13DB200C31ED8 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		8414891125E13DB200C31ED8 /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8414891225E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		8414891325E13DB200C31ED8 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		8414891425E13DB200C31ED8 /* SwipeExpanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeExpanding.swift; sourceTree = "<group>"; };
+		8414891625E13DB200C31ED8 /* SwipeActionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionsView.swift; sourceTree = "<group>"; };
+		8414891725E13DB200C31ED8 /* SwipeCellKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCellKit.h; sourceTree = "<group>"; };
+		8414891825E13DB200C31ED8 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewCell.swift; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84507A2325E111510060EDE5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		84507A2925E111ED0060EDE5 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
@@ -59,6 +104,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8414890025E13DB200C31ED8 /* SwipeCellKit */ = {
+			isa = PBXGroup;
+			children = (
+				8414890125E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift */,
+				8414890225E13DB200C31ED8 /* SwipeAnimator.swift */,
+				8414890325E13DB200C31ED8 /* SwipeCollectionViewCell+Display.swift */,
+				8414890425E13DB200C31ED8 /* Swipeable.swift */,
+				8414890525E13DB200C31ED8 /* SwipeAccessibilityCustomAction.swift */,
+				8414890625E13DB200C31ED8 /* SwipeActionButton.swift */,
+				8414890725E13DB200C31ED8 /* SwipeTransitionLayout.swift */,
+				8414890825E13DB200C31ED8 /* SwipeAction.swift */,
+				8414890925E13DB200C31ED8 /* Extensions.swift */,
+				8414890A25E13DB200C31ED8 /* SwipeController.swift */,
+				8414890B25E13DB200C31ED8 /* SwipeFeedback.swift */,
+				8414890C25E13DB200C31ED8 /* SwipeActionTransitioning.swift */,
+				8414890D25E13DB200C31ED8 /* SwipeCollectionViewCellDelegate.swift */,
+				8414890E25E13DB200C31ED8 /* SwipeTableViewCell+Display.swift */,
+				8414890F25E13DB200C31ED8 /* SwipeOptions.swift */,
+				8414891025E13DB200C31ED8 /* SwipeCollectionViewCell+Accessibility.swift */,
+				8414891125E13DB200C31ED8 /* SwipeCollectionViewCell.swift */,
+				8414891225E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift */,
+				8414891325E13DB200C31ED8 /* SwipeExpansionStyle.swift */,
+				8414891425E13DB200C31ED8 /* SwipeExpanding.swift */,
+				8414891625E13DB200C31ED8 /* SwipeActionsView.swift */,
+				8414891725E13DB200C31ED8 /* SwipeCellKit.h */,
+				8414891825E13DB200C31ED8 /* SwipeTableViewCell.swift */,
+			);
+			path = SwipeCellKit;
+			sourceTree = "<group>";
+		};
 		84507A1D25E10F4A0060EDE5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +217,7 @@
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
 				8455583825DDAAF40026F66D /* CoreDataModel.xcdatamodeld */,
 				8450FE2A25BDBC1000814F81 /* Info.plist */,
+				8414890025E13DB200C31ED8 /* SwipeCellKit */,
 			);
 			path = FreetimeQuest;
 			sourceTree = "<group>";
@@ -237,16 +313,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8414892B25E13DB200C31ED8 /* SwipeExpansionStyle.swift in Sources */,
+				8414892F25E13DB200C31ED8 /* SwipeTableViewCell.swift in Sources */,
 				8452D7FB25DE4AC10035D4D8 /* CoreDataModel.xcdatamodeld in Sources */,
 				8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */,
+				8414892525E13DB200C31ED8 /* SwipeCollectionViewCellDelegate.swift in Sources */,
+				8414891B25E13DB200C31ED8 /* SwipeCollectionViewCell+Display.swift in Sources */,
+				8414892E25E13DB200C31ED8 /* SwipeActionsView.swift in Sources */,
+				8414892C25E13DB200C31ED8 /* SwipeExpanding.swift in Sources */,
+				8414892025E13DB200C31ED8 /* SwipeAction.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
+				8414891A25E13DB200C31ED8 /* SwipeAnimator.swift in Sources */,
+				8414892925E13DB200C31ED8 /* SwipeCollectionViewCell.swift in Sources */,
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* Category.swift in Sources */,
+				8414892225E13DB200C31ED8 /* SwipeController.swift in Sources */,
+				8414892825E13DB200C31ED8 /* SwipeCollectionViewCell+Accessibility.swift in Sources */,
+				8414891C25E13DB200C31ED8 /* Swipeable.swift in Sources */,
+				8414891D25E13DB200C31ED8 /* SwipeAccessibilityCustomAction.swift in Sources */,
+				8414892325E13DB200C31ED8 /* SwipeFeedback.swift in Sources */,
+				8414892425E13DB200C31ED8 /* SwipeActionTransitioning.swift in Sources */,
 				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
 				84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
+				8414891F25E13DB200C31ED8 /* SwipeTransitionLayout.swift in Sources */,
+				8414892A25E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift in Sources */,
+				8414892125E13DB200C31ED8 /* Extensions.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
+				8414891E25E13DB200C31ED8 /* SwipeActionButton.swift in Sources */,
+				8414891925E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift in Sources */,
+				8414892725E13DB200C31ED8 /* SwipeOptions.swift in Sources */,
+				8414892625E13DB200C31ED8 /* SwipeTableViewCell+Display.swift in Sources */,
 				8452D80625DE52090035D4D8 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

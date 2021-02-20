@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-7T-s5u">
-                        <rect key="frame" x="0.0" y="0.0" width="488" height="80"/>
+                        <rect key="frame" x="0.0" y="5" width="488" height="80"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="CrN-9t-EYv">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -26,9 +26,9 @@
                                     <constraint firstAttribute="width" constant="80" id="y7i-9h-lcg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-wj-N4v">
-                                <rect key="frame" x="106" y="5" width="372" height="70"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-wj-N4v">
+                                <rect key="frame" x="100" y="5" width="378" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,20 +40,20 @@
                             <constraint firstAttribute="trailing" secondItem="ovi-wj-N4v" secondAttribute="trailing" constant="10" id="Lkv-7n-e9s"/>
                             <constraint firstAttribute="height" constant="80" id="dP9-Bo-XKP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="5" id="gJH-rI-AnC"/>
-                            <constraint firstItem="ovi-wj-N4v" firstAttribute="leading" secondItem="CrN-9t-EYv" secondAttribute="trailing" constant="26" id="gvX-A4-7lP"/>
+                            <constraint firstItem="ovi-wj-N4v" firstAttribute="leading" secondItem="CrN-9t-EYv" secondAttribute="trailing" constant="20" id="gvX-A4-7lP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="centerY" secondItem="Pz7-7T-s5u" secondAttribute="centerY" id="lYH-ge-fEj"/>
                             <constraint firstItem="CrN-9t-EYv" firstAttribute="leading" secondItem="Pz7-7T-s5u" secondAttribute="leading" id="qHa-6N-xwp"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Pz7-7T-s5u" firstAttribute="top" secondItem="d3s-jd-FCT" secondAttribute="top" id="Nk8-Gh-umK"/>
+                    <constraint firstItem="Pz7-7T-s5u" firstAttribute="top" secondItem="d3s-jd-FCT" secondAttribute="top" constant="5" id="Nk8-Gh-umK"/>
                     <constraint firstAttribute="trailing" secondItem="Pz7-7T-s5u" secondAttribute="trailing" id="OG7-CN-XZD"/>
                     <constraint firstItem="Pz7-7T-s5u" firstAttribute="leading" secondItem="d3s-jd-FCT" secondAttribute="leading" id="dQI-0G-ynS"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Pz7-7T-s5u" secondAttribute="bottom" constant="10" id="kO9-c7-9FF"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Pz7-7T-s5u" secondAttribute="bottom" constant="5" id="kO9-c7-9FF"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="1" green="0.22492888799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bgView" destination="Pz7-7T-s5u" id="wbN-gj-BUb"/>
                 <outlet property="imgView" destination="CrN-9t-EYv" id="xQu-Ex-hd1"/>
