@@ -36,6 +36,8 @@ class CategoryView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         
         tableView.dataSource = self
+        tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
+                                  forCellReuseIdentifier: QuestCell.reuseID)
         
         addSubview(contentView)
         contentView.frame = bounds
@@ -67,7 +69,7 @@ class CategoryView: UIView {
     
     private func updateTableViewHeight() {
         if let cellsCount = fetchedResultsController?.fetchedObjects?.count {
-            tableViewHeightConstraint.constant = 50 * CGFloat(cellsCount)
+            tableViewHeightConstraint.constant = 90 * CGFloat(cellsCount)
         }
     }
 }
@@ -94,12 +96,12 @@ extension CategoryView: UITableViewDataSource {
         guard let frc = fetchedResultsController else {
             return UITableViewCell()
         }
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: nil)
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestCell.reuseID) as? QuestCell else {
+            return UITableViewCell()
+        }
         let quest = frc.object(at: indexPath)
-        
-        cell.textLabel?.text = quest.title ?? "-no title-"
-        cell.detailTextLabel?.text = "\(quest.id)"
+        cell.configureWithQuest(quest)
 
         return cell
     }

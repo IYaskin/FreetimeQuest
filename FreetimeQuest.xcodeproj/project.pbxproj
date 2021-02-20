@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
+		84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2325E111510060EDE5 /* UIImage+Extension.swift */; };
+		84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2925E111ED0060EDE5 /* QuestCell.swift */; };
+		84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84507A2D25E111F70060EDE5 /* QuestCell.xib */; };
 		8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */; };
 		8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE2025BDBC0F00814F81 /* ViewController.swift */; };
 		8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2225BDBC0F00814F81 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Quests.swift"; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		84507A2325E111510060EDE5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		84507A2925E111ED0060EDE5 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
+		84507A2D25E111F70060EDE5 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
 		8450FE1925BDBC0F00814F81 /* FreetimeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreetimeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450FE2025BDBC0F00814F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 		84507A1F25E10F550060EDE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84507A2825E111D90060EDE5 /* QuestCell */,
 				8452D80425DE51E40035D4D8 /* CategoryView */,
 			);
 			path = Views;
@@ -89,6 +96,23 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		84507A2625E111560060EDE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84507A2325E111510060EDE5 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84507A2825E111D90060EDE5 /* QuestCell */ = {
+			isa = PBXGroup;
+			children = (
+				84507A2925E111ED0060EDE5 /* QuestCell.swift */,
+				84507A2D25E111F70060EDE5 /* QuestCell.xib */,
+			);
+			path = QuestCell;
+			sourceTree = "<group>";
+		};
 		8450FE1025BDBC0F00814F81 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
+				84507A2625E111560060EDE5 /* Extensions */,
 				84507A1D25E10F4A0060EDE5 /* Services */,
 				84507A1F25E10F550060EDE5 /* Views */,
 				84507A2025E10F5C0060EDE5 /* Model */,
@@ -201,6 +226,7 @@
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
 				8452D80925DE52180035D4D8 /* CategoryView.xib in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
+				84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +243,9 @@
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* Category.swift in Sources */,
 				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
+				84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
+				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 				8452D80625DE52090035D4D8 /* CategoryView.swift in Sources */,
 			);
