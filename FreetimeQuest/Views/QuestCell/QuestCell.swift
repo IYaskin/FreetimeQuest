@@ -31,6 +31,7 @@ class QuestCell: SwipeTableViewCell {
     }
     
     func configureUI() {
+        delegate = self
 //        selectionStyle = .none
 //        backgroundColor = .clear
         bgView.layer.cornerRadius = 10
@@ -42,5 +43,28 @@ class QuestCell: SwipeTableViewCell {
         titleLabel.text = quest.title
     }
     
+}
+
+extension QuestCell: SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView,
+                   editActionsForRowAt indexPath: IndexPath,
+                   for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let doneAction = SwipeAction(style: .default, title: nil) { action, indexPath in
+            print("done")
+        }
+
+        let deleteAction = SwipeAction(style: .default, title: nil) { action, indexPath in
+            print("delete")
+        }
+
+        doneAction.image = UIImage(named: "done")
+        deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction, doneAction]
+
+    }
     
 }
