@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         //deleteQuests()
         //printQuests()
         
+        stackView.layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        
         stackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
         let goOutView = CategoryView()
         goOutView.configureWith(category: .goOut)
