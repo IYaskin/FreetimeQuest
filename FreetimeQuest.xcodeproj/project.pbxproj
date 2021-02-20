@@ -53,6 +53,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84507A1D25E10F4A0060EDE5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8455583C25DDAC020026F66D /* CoreDataManager.swift */,
+				8444244125CD7507003ED6AC /* ImagePicker.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84507A1F25E10F550060EDE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8452D80425DE51E40035D4D8 /* CategoryView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84507A2025E10F5C0060EDE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8455584425DDB60C0026F66D /* QuestObject */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84507A2225E10F9A0060EDE5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
+				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
+				8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */,
+				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		8450FE1025BDBC0F00814F81 = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
-				8455583C25DDAC020026F66D /* CoreDataManager.swift */,
-				8444244125CD7507003ED6AC /* ImagePicker.swift */,
-				8452D80425DE51E40035D4D8 /* CategoryView */,
-				8455584425DDB60C0026F66D /* QuestObject */,
-				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
-				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
-				8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */,
-				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
+				84507A1D25E10F4A0060EDE5 /* Services */,
+				84507A1F25E10F550060EDE5 /* Views */,
+				84507A2025E10F5C0060EDE5 /* Model */,
+				84507A2225E10F9A0060EDE5 /* VC */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
 				8455583825DDAAF40026F66D /* CoreDataModel.xcdatamodeld */,
