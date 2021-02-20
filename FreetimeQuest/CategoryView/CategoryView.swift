@@ -35,6 +35,8 @@ class CategoryView: UIView {
                         bundle: Bundle(for: type(of: self)))
         nib.instantiate(withOwner: self, options: nil)
         
+        tableView.dataSource = self
+        
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -44,7 +46,7 @@ class CategoryView: UIView {
     
     private func configureUI() {
         contentView.layer.cornerRadius = 20
-        tableViewHeightConstraint.constant = 200
+        tableViewHeightConstraint.constant = 0
     }
     
     public func configureWith(category: Category) {
@@ -59,31 +61,48 @@ class CategoryView: UIView {
         titleLabel.text = category.title
         descriptionLabel.text = category.description
         
-        if let sections = fetchedResultsController?.sections {
-            print("Category = \(category.title) = \(category.rawValue)")
-            print("Sections = \(sections.count)")
-            print("Objects = \(sections[0].objects?.count)")
-            
-        }
-
-        fetchedResultsController?.fetchedObjects?.forEach({ (quest) in
-            print(quest.title)
-        })
-        print("--------")
-//        switch category {
-//        case .good:
-//            titleLabel.text = "Добро"
-//        case .goOut:
-//            titleLabel.text = "Выход в свет"
-//            descriptionLabel.text = "А че дома делать?"
-//        case .social:
-//            titleLabel.text = "Социализация"
-//        case .brain:
-//            titleLabel.text = "Мозг"
-//        case .adventure:
-//            titleLabel.text = "Приключения"
-//        }
-        
+        updateTableViewHeight()
         
     }
+    
+    private func updateTableViewHeight() {
+        if let cellsCount = fetchedResultsController?.fetchedObjects?.count {
+            tableViewHeightConstraint.constant = 50 * CGFloat(cellsCount)
+        }
+    }
+}
+
+extension CategoryView: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let frc = fetchedResultsController,
+              let sections = frc.sections else {
+            return 0
+        }
+        return sections.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let frc = fetchedResultsController,
+              let sections = frc.sections else {
+            return 0
+        }
+        return sections[section].numberOfObjects
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let frc = fetchedResultsController else {
+            return UITableViewCell()
+        }
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: nil)
+        
+        let quest = frc.object(at: indexPath)
+        
+        cell.textLabel?.text = quest.title ?? "-no title-"
+        cell.detailTextLabel?.text = "\(quest.id)"
+
+        return cell
+    }
+    
+    
 }
