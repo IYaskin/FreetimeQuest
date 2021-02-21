@@ -45,6 +45,9 @@
 		84544F8B25BDD0E9000683FC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* Category.swift */; };
 		8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583C25DDAC020026F66D /* CoreDataManager.swift */; };
 		8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456106E25C6FBC7000840CA /* ViewController+Prints.swift */; };
+		8458E84525E25B9A00C233B6 /* TaskTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84425E25B9A00C233B6 /* TaskTracker.swift */; };
+		8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84825E2607C00C233B6 /* UIView+Alert.swift */; };
+		8458E84C25E2619600C233B6 /* UIApplication+TopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84B25E2619600C233B6 /* UIApplication+TopVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,9 @@
 		8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8456106E25C6FBC7000840CA /* ViewController+Prints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Prints.swift"; sourceTree = "<group>"; };
+		8458E84425E25B9A00C233B6 /* TaskTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTracker.swift; sourceTree = "<group>"; };
+		8458E84825E2607C00C233B6 /* UIView+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Alert.swift"; sourceTree = "<group>"; };
+		8458E84B25E2619600C233B6 /* UIApplication+TopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				84507A2325E111510060EDE5 /* UIImage+Extension.swift */,
+				8458E84825E2607C00C233B6 /* UIView+Alert.swift */,
+				8458E84B25E2619600C233B6 /* UIApplication+TopVC.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 		8450FE1B25BDBC0F00814F81 /* FreetimeQuest */ = {
 			isa = PBXGroup;
 			children = (
+				8458E84425E25B9A00C233B6 /* TaskTracker.swift */,
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
 				84507A2625E111560060EDE5 /* Extensions */,
 				84507A1D25E10F4A0060EDE5 /* Services */,
@@ -334,9 +343,11 @@
 				8414892325E13DB200C31ED8 /* SwipeFeedback.swift in Sources */,
 				8414892425E13DB200C31ED8 /* SwipeActionTransitioning.swift in Sources */,
 				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
+				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
 				84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
+				8458E84C25E2619600C233B6 /* UIApplication+TopVC.swift in Sources */,
 				8414891F25E13DB200C31ED8 /* SwipeTransitionLayout.swift in Sources */,
 				8414892A25E13DB200C31ED8 /* SwipeTableViewCell+Accessibility.swift in Sources */,
 				8414892125E13DB200C31ED8 /* Extensions.swift in Sources */,
@@ -344,6 +355,7 @@
 				8414891E25E13DB200C31ED8 /* SwipeActionButton.swift in Sources */,
 				8414891925E13DB200C31ED8 /* SwipeTableViewCellDelegate.swift in Sources */,
 				8414892725E13DB200C31ED8 /* SwipeOptions.swift in Sources */,
+				8458E84525E25B9A00C233B6 /* TaskTracker.swift in Sources */,
 				8414892625E13DB200C31ED8 /* SwipeTableViewCell+Display.swift in Sources */,
 				8452D80625DE52090035D4D8 /* CategoryView.swift in Sources */,
 			);

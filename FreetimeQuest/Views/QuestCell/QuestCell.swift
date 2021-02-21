@@ -57,7 +57,15 @@ extension QuestCell: SwipeTableViewCellDelegate {
         }
 
         let deleteAction = SwipeAction(style: .default, title: nil) { action, indexPath in
-            print("delete")
+            self.showAlert(title: "Удалить квест?",
+                      message: "Отменить данное действие невозможно",
+                      okButtonTitle: "Удалить",
+                      okAction: {_ in
+                        print("удалить квест = \(self.quest?.title)")
+                      },
+                      cancelButtonTitle: "Отмена") {_ in
+                print("отмена удаления квест = \(self.quest?.title)")
+            }
         }
 
         doneAction.image = UIImage(named: "done")
