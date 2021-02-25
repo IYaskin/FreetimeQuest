@@ -54,17 +54,30 @@ extension QuestCell: SwipeTableViewCellDelegate {
 
         let doneAction = SwipeAction(style: .default, title: nil) { action, indexPath in
             print("done")
+            self.showAlert(title: "Выполнить квест?",
+                           message: nil,
+                           okButtonTitle: "Выполнить",
+                           okAction: {_ in
+                            print("выполнить квест = \(self.quest?.title)")
+                            tableView.hideSwipeCell()
+                           },
+                           cancelButtonTitle: "Отмена") {_ in
+                print("отмена выполнения квест = \(self.quest?.title)")
+                tableView.hideSwipeCell()
+            }
         }
 
         let deleteAction = SwipeAction(style: .default, title: nil) { action, indexPath in
             self.showAlert(title: "Удалить квест?",
-                      message: "Отменить данное действие невозможно",
-                      okButtonTitle: "Удалить",
-                      okAction: {_ in
-                        print("удалить квест = \(self.quest?.title)")
-                      },
-                      cancelButtonTitle: "Отмена") {_ in
+                           message: nil,
+                           okButtonTitle: "Удалить",
+                           okAction: {_ in
+                            print("удалить квест = \(self.quest?.title)")
+                            tableView.hideSwipeCell()
+                           },
+                           cancelButtonTitle: "Отмена") {_ in
                 print("отмена удаления квест = \(self.quest?.title)")
+                tableView.hideSwipeCell()
             }
         }
 
@@ -75,4 +88,15 @@ extension QuestCell: SwipeTableViewCellDelegate {
 
     }
     
+//    func tableView(_ tableView: UITableView,
+//                   editActionsOptionsForRowAt indexPath: IndexPath,
+//                   for orientation: SwipeActionsOrientation) -> SwipeOptions {
+//        var options = SwipeOptions()
+//        options.expansionStyle = .destructive
+//        options.transitionStyle = .border
+//        return options
+//    }
+    
 }
+
+
