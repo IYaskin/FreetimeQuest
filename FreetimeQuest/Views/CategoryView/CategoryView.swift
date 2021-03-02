@@ -36,6 +36,7 @@ class CategoryView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
                                   forCellReuseIdentifier: QuestCell.reuseID)
         
@@ -49,10 +50,12 @@ class CategoryView: UIView {
     private func configureUI() {
         contentView.layer.cornerRadius = 20
         tableViewHeightConstraint.constant = 0
+        tableView.backgroundColor = .clear
     }
     
     public func configureWith(category: Category) {
         self.fetchedResultsController = CoreDataManager.shared.fetchedResultsController(category)
+        self.fetchedResultsController?.delegate = self
         do {
             try fetchedResultsController?.performFetch()
         } catch {
@@ -64,14 +67,15 @@ class CategoryView: UIView {
         descriptionLabel.text = category.description
         
         updateTableViewHeight()
-        
     }
     
     private func updateTableViewHeight() {
         if let cellsCount = fetchedResultsController?.fetchedObjects?.count {
-            tableViewHeightConstraint.constant = 90 * CGFloat(cellsCount)
+            print(cellsCount)
+            self.tableViewHeightConstraint.constant = 90 * CGFloat(cellsCount)
         }
     }
+    
 }
 
 extension CategoryView: UITableViewDataSource {
@@ -102,9 +106,65 @@ extension CategoryView: UITableViewDataSource {
         }
         
         let quest = frc.object(at: indexPath)
-        cell.configureWithQuest(quest)
+        cell.configure(title: quest.title)
 
         return cell
     }
     
+}
+
+extension CategoryView: UITableViewDelegate {
+        
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let doneAction = UIContextualAction(style: .destructive, title: "Done") { (action, view, handler) in
+            print("Done Action Tapped")
+        }
+        doneAction.backgroundColor = .green
+
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+
+            if let quest = self.fetchedResultsController?.object(at: indexPath) {
+                CoreDataManager.shared.deleteQuest(quest)
+            }
+
+            print("Delete Action Tapped")
+        }
+        deleteAction.backgroundColor = .red
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, doneAction])
+
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+
+    }
+}
+
+extension CategoryView: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+        
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+        
 }

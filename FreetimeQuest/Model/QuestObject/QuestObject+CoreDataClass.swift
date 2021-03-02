@@ -21,5 +21,5 @@ public class QuestObject: NSManagedObject {
         self.init(entity: entity!,
                   insertIntoManagedObjectContext: CoreDataManager.shared.managedObjectContext)
     }
-
+    
 }

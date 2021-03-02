@@ -18,7 +18,10 @@ class ViewController: UIViewController {
     }
     
     func configureUI() {
-        //addQuests
+//        deleteQuests()
+        addQuests()
+//        addQuests()
+//        addQuests()
         //deleteQuests()
         //printQuests()
         

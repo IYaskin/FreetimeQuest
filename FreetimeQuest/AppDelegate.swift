@@ -27,6 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return container
     }()
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        CoreDataManager.shared.saveContext()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        CoreDataManager.shared.saveContext()
+    }
 
 }
 
