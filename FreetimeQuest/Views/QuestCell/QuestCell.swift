@@ -24,7 +24,7 @@ class QuestCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = nil
-        imgView.image = nil
+//        imgView.image = nil
     }
     
     func configureUI() {

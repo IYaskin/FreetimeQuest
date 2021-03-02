@@ -53,19 +53,16 @@ class CoreDataManager {
         }
     }
     
-    func fetchedResultsController(_ category: Category) -> NSFetchedResultsController<QuestObject> {
+    func questFRC() -> NSFetchedResultsController<QuestObject> {
 
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
-        
-        let predicate = NSPredicate(format: "category == \(category.rawValue)")
 
         let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
-        fetchRequest.predicate = predicate
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: viewContext,
-                                                                  sectionNameKeyPath: nil,
+                                                                  sectionNameKeyPath: "category",
                                                                   cacheName: nil)
         return fetchedResultsController
     }
