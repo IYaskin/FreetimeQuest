@@ -30,7 +30,8 @@ class QuestCell: UITableViewCell {
     
     func configureUI() {
         selectionStyle = .none
-        bgView.layer.cornerRadius = 10
+        bgView.backgroundColor = .clear
+        cellView.layer.cornerRadius = 10
     }
     
     func configure(title: String?,
@@ -39,7 +40,7 @@ class QuestCell: UITableViewCell {
         
         if let category = Category(rawValue: category) {
             titleLabel.textColor = category.textColor
-            bgView.backgroundColor = category.bgColor
+//            bgView.backgroundColor = category.bgColor
             cellView.backgroundColor = category.cellColor
         }
 

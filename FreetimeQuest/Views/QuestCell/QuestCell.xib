@@ -13,7 +13,7 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestCell" rowHeight="165" id="Fuv-Tw-RbN" customClass="QuestCell" customModule="FreetimeQuest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="488" height="165"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fuv-Tw-RbN" id="d3s-jd-FCT">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fuv-Tw-RbN" id="d3s-jd-FCT">
                 <rect key="frame" x="0.0" y="0.0" width="488" height="165"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -50,7 +50,7 @@
                     <constraint firstItem="Pz7-7T-s5u" firstAttribute="top" secondItem="d3s-jd-FCT" secondAttribute="top" constant="5" id="Nk8-Gh-umK"/>
                     <constraint firstAttribute="trailing" secondItem="Pz7-7T-s5u" secondAttribute="trailing" constant="20" id="OG7-CN-XZD"/>
                     <constraint firstItem="Pz7-7T-s5u" firstAttribute="leading" secondItem="d3s-jd-FCT" secondAttribute="leading" constant="20" id="dQI-0G-ynS"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Pz7-7T-s5u" secondAttribute="bottom" constant="5" id="kO9-c7-9FF"/>
+                    <constraint firstAttribute="bottom" secondItem="Pz7-7T-s5u" secondAttribute="bottom" constant="5" id="kO9-c7-9FF"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

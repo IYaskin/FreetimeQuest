@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+extension UIViewController {
     
     func showAlert(title: String,
                        message: String?,
@@ -28,9 +28,9 @@ extension UIView {
                                          style: .default,
                                          handler: cancelAction)
         alert.addAction(cancelAction)
-        UIApplication.topViewController()?.present(alert,
-                                                   animated: true,
-                                                   completion: nil)
+        present(alert,
+                animated: true,
+                completion: nil)
     }
 
 }

@@ -93,20 +93,40 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        let doneAction = UIContextualAction(style: .normal, title: "Done") { (action, view, handler) in
-            print("Done Action Tapped")
-        }
-        doneAction.backgroundColor = .green
-
-
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
-
+        let doneAction = UIContextualAction(style: .destructive, title: "Готово") { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
-            self.coreData.deleteQuest(quest)
-
-            print("Delete Action Tapped")
+            let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
+            self.showAlert(title: "Выполнить задание\n\(title) ?",
+                           message: nil,
+                           okButtonTitle: "Готово",
+                           okAction: { _ in
+                            self.coreData.deleteQuest(quest)
+                           },
+                           cancelButtonTitle: "Отмена") { _ in
+                handler(true)
+            }
         }
-        deleteAction.backgroundColor = .red
+        doneAction.backgroundColor = .systemYellow
+        doneAction.image = UIImage(named: "done")
+
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { (action, view, handler) in
+            let quest = self.fetchedResultsController.object(at: indexPath)
+            let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
+            
+            self.showAlert(title: "Удалить задание\n\(title) ?",
+                           message: nil,
+                           okButtonTitle: "Удалить",
+                           okAction: { _ in
+                            self.coreData.deleteQuest(quest)
+                           },
+                           cancelButtonTitle: "Отмена") { _ in
+                handler(true)
+            }
+        }
+        
+        deleteAction.backgroundColor = .systemYellow
+        deleteAction.image = UIImage(named: "delete")
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction, doneAction])
 
         configuration.performsFirstActionWithFullSwipe = false
@@ -127,13 +147,7 @@ extension ViewController: NSFetchedResultsControllerDelegate {
                     for type: NSFetchedResultsChangeType,
                     newIndexPath: IndexPath?) {
         switch type {
-//        case .insert:
-//            print("insert")
-//            if let indexPath = indexPath {
-//            tableView.insertRows(at: [indexPath], with: .automatic)
-//            }
         case .delete:
-            print("delete")
             if let indexPath = indexPath {
                 if tableView.numberOfRows(inSection: indexPath.section) == 1 {
                     tableView.deleteSections([indexPath.section], with: .automatic)
@@ -141,19 +155,6 @@ extension ViewController: NSFetchedResultsControllerDelegate {
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                 }
             }
-//        case .update:
-//            print("update")
-//            if let indexPath = indexPath {
-//                let cell = tableView.cellForRow(at: indexPath) as! QuestCell
-//                cell.configure(title: "fuuuck", category: 0)
-//            }
-//        case .move:
-//            print("move")
-//            if let indexPath = indexPath,
-//               let newIndexPath = newIndexPath {
-//                tableView.deleteRows(at: [indexPath], with: .automatic)
-//                tableView.insertRows(at: [newIndexPath], with: .automatic)
-//            }
         default:
             break
         }
