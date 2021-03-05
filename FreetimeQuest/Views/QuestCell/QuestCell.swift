@@ -28,6 +28,7 @@ class QuestCell: UITableViewCell {
     }
     
     func configureUI() {
+        selectionStyle = .none
         bgView.layer.cornerRadius = 10
     }
     

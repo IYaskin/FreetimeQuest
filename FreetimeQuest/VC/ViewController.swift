@@ -74,12 +74,19 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let section = Int(fetchedResultsController.sectionIndexTitles[section]),
-           let category = Category(rawValue: section) {
-            return category.description
+    func tableView( _ tableView: UITableView,
+                            viewForHeaderInSection section: Int) -> UIView? {
+        if let category = Int(fetchedResultsController.sectionIndexTitles[section]) {
+            let header = CategoryHeader()
+            header.configureWith(category: category)
+            return header
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
     }
             
     func tableView(_ tableView: UITableView,
