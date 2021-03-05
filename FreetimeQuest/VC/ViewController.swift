@@ -65,7 +65,8 @@ extension ViewController: UITableViewDataSource {
         }
         
         let quest = fetchedResultsController.object(at: indexPath)
-        cell.configure(title: quest.title)
+        cell.configure(title: quest.title,
+                       category: Int(quest.category))
 
         return cell
     }
@@ -126,11 +127,11 @@ extension ViewController: NSFetchedResultsControllerDelegate {
                     for type: NSFetchedResultsChangeType,
                     newIndexPath: IndexPath?) {
         switch type {
-        case .insert:
-            print("insert")
-            if let indexPath = indexPath {
-            tableView.insertRows(at: [indexPath], with: .automatic)
-            }
+//        case .insert:
+//            print("insert")
+//            if let indexPath = indexPath {
+//            tableView.insertRows(at: [indexPath], with: .automatic)
+//            }
         case .delete:
             print("delete")
             if let indexPath = indexPath {
@@ -140,19 +141,19 @@ extension ViewController: NSFetchedResultsControllerDelegate {
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                 }
             }
-        case .update:
-            print("update")
-            if let indexPath = indexPath {
-                let cell = tableView.cellForRow(at: indexPath) as! QuestCell
-                cell.configure(title: "fuuuck")
-            }
-        case .move:
-            print("move")
-            if let indexPath = indexPath,
-               let newIndexPath = newIndexPath {
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            }
+//        case .update:
+//            print("update")
+//            if let indexPath = indexPath {
+//                let cell = tableView.cellForRow(at: indexPath) as! QuestCell
+//                cell.configure(title: "fuuuck", category: 0)
+//            }
+//        case .move:
+//            print("move")
+//            if let indexPath = indexPath,
+//               let newIndexPath = newIndexPath {
+//                tableView.deleteRows(at: [indexPath], with: .automatic)
+//                tableView.insertRows(at: [newIndexPath], with: .automatic)
+//            }
         default:
             break
         }

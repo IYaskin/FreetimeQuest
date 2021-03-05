@@ -55,7 +55,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="bgView" destination="Pz7-7T-s5u" id="wbN-gj-BUb"/>
+                <outlet property="bgView" destination="d3s-jd-FCT" id="dnh-Oo-GEJ"/>
+                <outlet property="cellView" destination="Pz7-7T-s5u" id="rJd-kR-OkF"/>
+                <outlet property="contentView" destination="d3s-jd-FCT" id="BYw-E4-IBg"/>
                 <outlet property="imgView" destination="CrN-9t-EYv" id="xQu-Ex-hd1"/>
                 <outlet property="titleLabel" destination="ovi-wj-N4v" id="Im2-88-ckC"/>
             </connections>

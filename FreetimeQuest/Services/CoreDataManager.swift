@@ -11,7 +11,6 @@ import CoreData
 class CoreDataManager {
     
     private let entityName = "QuestObject"
-    private let keyForSort = "id"
     
     let container: NSPersistentContainer!
     let viewContext: NSManagedObjectContext!
@@ -57,9 +56,10 @@ class CoreDataManager {
 
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
 
-        let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: true)
+        let sectionDescriptor = NSSortDescriptor(key: "category", ascending: true)
+        let idDescriptor = NSSortDescriptor(key: "id", ascending: true)
         
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.sortDescriptors = [sectionDescriptor, idDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: viewContext,
                                                                   sectionNameKeyPath: "category",

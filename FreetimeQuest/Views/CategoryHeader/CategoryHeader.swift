@@ -35,12 +35,14 @@ class CategoryHeader: UIView {
     }
     
     private func configureUI() {
-
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.black.cgColor
     }
 
     public func configureWith(category: Int) {
         if let category = Category(rawValue: category) {
             titleLabel.text = category.title
+            contentView.backgroundColor = category.bgColor
         }
     }
     

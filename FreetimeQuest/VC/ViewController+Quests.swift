@@ -22,18 +22,18 @@ extension ViewController {
                                          id: 1,
                                          category: Category.goOut.rawValue)
         CoreDataManager.shared.saveQuest(title: "Посетить театр",
-                                         id: 1,
+                                         id: 2,
                                          category: Category.goOut.rawValue)
         CoreDataManager.shared.saveQuest(title: "Посетить оперу",
-                                         id: 1,
+                                         id: 3,
                                          category: Category.goOut.rawValue)
         
         CoreDataManager.shared.saveQuest(title: "Посадить растение",
-                                         id: 1,
+                                         id: 4,
                                          category: Category.brain.rawValue)
         
         CoreDataManager.shared.saveQuest(title: "Сделать татуировку",
-                                         id: 1,
+                                         id: 5,
                                          category: Category.adventure.rawValue)
     }
 

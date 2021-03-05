@@ -12,6 +12,7 @@ class QuestCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
     static let nibName = "QuestCell"
     static let reuseID = "QuestCell"
@@ -32,8 +33,16 @@ class QuestCell: UITableViewCell {
         bgView.layer.cornerRadius = 10
     }
     
-    func configure(title: String?) {
+    func configure(title: String?,
+                   category: Int) {
         titleLabel.text = title
+        
+        if let category = Category(rawValue: category) {
+            titleLabel.textColor = category.textColor
+            bgView.backgroundColor = category.bgColor
+            cellView.backgroundColor = category.cellColor
+        }
+
     }
     
 }
