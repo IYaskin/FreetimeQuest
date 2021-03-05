@@ -101,9 +101,10 @@ extension ViewController: UITableViewDelegate {
                            okButtonTitle: "Готово",
                            okAction: { _ in
                             self.coreData.deleteQuest(quest)
+                            handler(true)
                            },
                            cancelButtonTitle: "Отмена") { _ in
-                handler(true)
+                handler(false)
             }
         }
         doneAction.backgroundColor = .systemYellow
@@ -119,9 +120,10 @@ extension ViewController: UITableViewDelegate {
                            okButtonTitle: "Удалить",
                            okAction: { _ in
                             self.coreData.deleteQuest(quest)
+                            handler(true)
                            },
                            cancelButtonTitle: "Отмена") { _ in
-                handler(true)
+                handler(false)
             }
         }
         

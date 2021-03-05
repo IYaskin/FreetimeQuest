@@ -18,10 +18,10 @@ extension ViewController {
     }
 
     func addQuests() {
-        CoreDataManager.shared.saveQuest(title: "Посетить музей",
+        CoreDataManager.shared.saveQuest(title: "Посетить музей Посетить музей Посетить музей",
                                          id: 1,
                                          category: Category.goOut.rawValue)
-        CoreDataManager.shared.saveQuest(title: "Посетить театр",
+        CoreDataManager.shared.saveQuest(title: "Посетить театр Посетить театр",
                                          id: 2,
                                          category: Category.goOut.rawValue)
         CoreDataManager.shared.saveQuest(title: "Посетить оперу",
