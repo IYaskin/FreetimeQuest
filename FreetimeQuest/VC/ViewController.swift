@@ -93,7 +93,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        let doneAction = UIContextualAction(style: .destructive, title: "Готово") { (action, view, handler) in
+        let doneAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
             let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
             self.showAlert(title: "Выполнить задание\n\(title) ?",
@@ -108,10 +108,16 @@ extension ViewController: UITableViewDelegate {
             }
         }
         doneAction.backgroundColor = .systemYellow
-        doneAction.image = UIImage(named: "done")
+        
+        let doneImage = UIImage(named: "check")!
+        let doneResizedImage = doneImage.resizeImageWith(newSize: CGSize(width: 32,
+                                                                         height: 32))
+        let doneCGImage = doneResizedImage.cgImage
+        if let cgImage =  doneCGImage {
+            doneAction.image = ImageWithoutRender(cgImage: cgImage, scale: 1, orientation: .up)
+        }
 
-
-        let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { (action, view, handler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
             let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
             
@@ -128,7 +134,16 @@ extension ViewController: UITableViewDelegate {
         }
         
         deleteAction.backgroundColor = .systemYellow
-        deleteAction.image = UIImage(named: "delete")
+
+        let deleteImage = UIImage(named: "close")!
+        
+        let deleteResizedImage = deleteImage.resizeImageWith(newSize: CGSize(width: 23,
+                                                                         height: 23))
+        let deleteCGImage = deleteResizedImage.cgImage
+        if let cgImage =  deleteCGImage {
+            deleteAction.image = ImageWithoutRender(cgImage: cgImage, scale: 1, orientation: .up)
+        }
+
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction, doneAction])
 
         configuration.performsFirstActionWithFullSwipe = false
