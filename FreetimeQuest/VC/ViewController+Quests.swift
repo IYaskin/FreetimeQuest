@@ -9,10 +9,6 @@ import Foundation
 
 extension ViewController {
     
-    func getQuests() -> [QuestObject] {
-        return CoreDataManager.shared.getQuests()
-    }
-    
     func deleteQuests() {
         return CoreDataManager.shared.deleteQuests()
     }
