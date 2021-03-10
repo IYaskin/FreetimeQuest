@@ -18,13 +18,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        firstLaunchCheck()
         configureUI()
     }
     
-    func configureUI() {
-        addQuests()
+    func firstLaunchCheck() {
+        print("isBaseQuestsSet = \(UserDefaultsManager.shared.isBaseQuestsSet)")
+        guard !UserDefaultsManager.shared.isBaseQuestsSet else {
+            return
+        }
         
+        GoOutQuests.addQuests()
+        BrainQuests.addQuests()
+        GoodQuests.addQuests()
+        SocialQuests.addQuests()
+        AdventureQuests.addQuests()
+        
+        UserDefaultsManager.shared.isBaseQuestsSet = true
+    }
+    
+    func configureUI() {        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),

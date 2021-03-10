@@ -8,11 +8,12 @@
 import UIKit
 
 enum Category: Int {
-    case good
     case goOut
+    case adventure
     case social
     case brain
-    case adventure
+    case good
+
 }
 
 extension Category {
