@@ -27,14 +27,28 @@ class ViewController: UIViewController {
         guard !UserDefaultsManager.shared.isBaseQuestsSet else {
             return
         }
+        UserDefaultsManager.shared.allQuestsCount = 0
+        UserDefaultsManager.shared.doneQuestsCount = 0
+        
+        var quests = 0
         
         FreetimeQuest.addHeader()
         GoOutQuests.addQuests()
+        quests += GoOutQuests.questsCount
+
         BrainQuests.addQuests()
+        quests += BrainQuests.questsCount
+
         GoodQuests.addQuests()
+        quests += GoodQuests.questsCount
+
         SocialQuests.addQuests()
+        quests += SocialQuests.questsCount
+
         AdventureQuests.addQuests()
-        
+        quests += AdventureQuests.questsCount
+
+        UserDefaultsManager.shared.allQuestsCount = quests
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
@@ -122,12 +136,16 @@ extension ViewController: UITableViewDelegate {
 
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 0 {
+            return false
+        }
+        return true
+    }
             
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        if indexPath.section == 0 {
-            return nil
-        }
 
         let doneAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)

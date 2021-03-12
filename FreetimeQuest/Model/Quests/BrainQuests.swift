@@ -8,7 +8,8 @@
 import Foundation
 
 class BrainQuests {
-    
+    static let questsCount = 8
+
     static func addQuests() {
         
         CoreDataManager.shared.saveQuest(title: "Сыграть в шахматы",

@@ -35,15 +35,15 @@ class FreetimeQuestCell: UITableViewCell {
         
         progressView.tintColor = .systemTeal
         progressView.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.2)
-        progressView.layer.cornerRadius = 2
+        //progressView.layer.cornerRadius = 2
     }
     
     func configure() {
         let stars = 15
         starsLabel.text = "\(stars)☆"
         
-        let doneQuests = 10
-        let maxQuests = 60
+        let doneQuests = UserDefaultsManager.shared.doneQuestsCount
+        let maxQuests = UserDefaultsManager.shared.allQuestsCount
         doneQuestsLabel.text = "Выполнено \(doneQuests) из \(maxQuests)"
         
         let progress: Float = Float(doneQuests) / Float(maxQuests)

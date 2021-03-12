@@ -23,6 +23,30 @@ class UserDefaultsManager {
         set {
             UserDefaults.standard.set(newValue, forKey: "isBaseQuestsSet")
         }
+        
     }
+    
+    var allQuestsCount: Int {
+        
+        get {
+            UserDefaults.standard.integer(forKey: "allQuestsCount")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "allQuestsCount")
+        }
+    }
+
+    var doneQuestsCount: Int {
+        
+        get {
+            UserDefaults.standard.integer(forKey: "doneQuestsCount")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "doneQuestsCount")
+        }
+    }
+
 
 }

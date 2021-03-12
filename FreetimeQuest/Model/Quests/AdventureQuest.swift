@@ -9,6 +9,8 @@ import Foundation
 
 class AdventureQuests {
     
+    static let questsCount = 10
+
     static func addQuests() {
         
         CoreDataManager.shared.saveQuest(title: "Встретить рассвет",
