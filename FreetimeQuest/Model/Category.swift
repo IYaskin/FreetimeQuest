@@ -8,6 +8,7 @@
 import UIKit
 
 enum Category: Int {
+    case freetimeQuest
     case goOut
     case adventure
     case social
@@ -20,6 +21,8 @@ extension Category {
     
     var bgColor: UIColor {
         switch self {
+        case .freetimeQuest:
+            return .yellow
         case .good:
             return .lightGray
         case .goOut:
@@ -35,6 +38,8 @@ extension Category {
     
     var cellColor: UIColor {
         switch self {
+        case .freetimeQuest:
+            return .white
         case .good:
             return .gray
         case .goOut:
@@ -50,6 +55,8 @@ extension Category {
     
     var textColor: UIColor {
         switch self {
+        case .freetimeQuest:
+            return .black
         case .good:
             return .white
         case .goOut:
@@ -65,6 +72,8 @@ extension Category {
     
     var title: String {
         switch self {
+        case .freetimeQuest:
+            return "Freetime Quest"
         case .good:
             return "Добро"
         case .goOut:

@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             return
         }
         
+        FreetimeQuest.addHeader()
         GoOutQuests.addQuests()
         BrainQuests.addQuests()
         GoodQuests.addQuests()
@@ -42,6 +43,9 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
                                   forCellReuseIdentifier: QuestCell.reuseID)
+        tableView.register(UINib.init(nibName: FreetimeQuestCell.nibName, bundle: nil),
+                                  forCellReuseIdentifier: FreetimeQuestCell.reuseID)
+
         tableView.backgroundColor = .clear
 
         fetchedResultsController.delegate = self
@@ -73,6 +77,13 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: FreetimeQuestCell.reuseID) as? FreetimeQuestCell {
+                return cell
+            }
+            return UITableViewCell()
+        }
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestCell.reuseID) as? QuestCell else {
             return UITableViewCell()
         }
@@ -90,6 +101,10 @@ extension ViewController: UITableViewDelegate {
     
     func tableView( _ tableView: UITableView,
                             viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            return nil
+        }
+
         if let category = Int(fetchedResultsController.sectionIndexTitles[section]) {
             let header = CategoryHeader()
             header.configureWith(category: category)
@@ -100,11 +115,18 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
                    heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        }
+
         return 60
     }
             
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if indexPath.section == 0 {
+            return nil
+        }
 
         let doneAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
