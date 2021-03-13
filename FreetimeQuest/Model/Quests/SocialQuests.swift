@@ -9,8 +9,6 @@ import Foundation
 
 class SocialQuests {
     
-    static let questsCount = 7
-    
     static func addQuests() {
         
         CoreDataManager.shared.saveQuest(title: "Улыбнуться прохожему",

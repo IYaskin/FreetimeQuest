@@ -8,9 +8,7 @@
 import Foundation
 
 class GoOutQuests {
-    
-    static let questsCount = 20
-    
+        
     static func addQuests() {
         
         CoreDataManager.shared.saveQuest(title: "Музей",

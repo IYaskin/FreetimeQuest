@@ -37,6 +37,10 @@ class CoreDataManager {
         quest.setValue(id, forKeyPath: "id")
         quest.setValue(category, forKeyPath: "category")
         
+        if category != Category.freetimeQuest.rawValue {
+            UserDefaultsManager.shared.allQuestsCount += 1
+        }
+
         saveContext()
     }
     
@@ -76,6 +80,9 @@ class CoreDataManager {
             for object in results {
                 self.viewContext.delete(object)
             }
+            UserDefaultsManager.shared.isBaseQuestsSet = false
+            UserDefaultsManager.shared.allQuestsCount = 0
+            UserDefaultsManager.shared.doneQuestsCount = 0
         } catch let error {
             print("Detele all data in QuestObject error :", error)
         }
@@ -83,8 +90,15 @@ class CoreDataManager {
         saveContext()
     }
     
+    func doneQuest(_ quest: QuestObject) {
+        viewContext.delete(quest)
+        UserDefaultsManager.shared.doneQuestsCount += 1
+        saveContext()
+    }
+    
     func deleteQuest(_ quest: QuestObject) {
         viewContext.delete(quest)
+        UserDefaultsManager.shared.allQuestsCount -= 1
         saveContext()
     }
     

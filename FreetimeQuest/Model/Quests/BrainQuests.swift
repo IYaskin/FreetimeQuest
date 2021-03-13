@@ -8,7 +8,6 @@
 import Foundation
 
 class BrainQuests {
-    static let questsCount = 8
 
     static func addQuests() {
         

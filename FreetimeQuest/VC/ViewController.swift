@@ -30,25 +30,18 @@ class ViewController: UIViewController {
         UserDefaultsManager.shared.allQuestsCount = 0
         UserDefaultsManager.shared.doneQuestsCount = 0
         
-        var quests = 0
-        
         FreetimeQuest.addHeader()
+
         GoOutQuests.addQuests()
-        quests += GoOutQuests.questsCount
 
         BrainQuests.addQuests()
-        quests += BrainQuests.questsCount
 
         GoodQuests.addQuests()
-        quests += GoodQuests.questsCount
 
         SocialQuests.addQuests()
-        quests += SocialQuests.questsCount
 
         AdventureQuests.addQuests()
-        quests += AdventureQuests.questsCount
 
-        UserDefaultsManager.shared.allQuestsCount = quests
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
@@ -154,7 +147,7 @@ extension ViewController: UITableViewDelegate {
                            message: nil,
                            okButtonTitle: "Готово",
                            okAction: { _ in
-                            self.coreData.deleteQuest(quest)
+                            self.coreData.doneQuest(quest)
                             handler(true)
                            },
                            cancelButtonTitle: "Отмена") { _ in
@@ -225,6 +218,9 @@ extension ViewController: NSFetchedResultsControllerDelegate {
                 } else {
                     tableView.deleteRows(at: [indexPath], with: .automatic)
                 }
+            }
+            if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? FreetimeQuestCell {
+                cell.configure()
             }
         default:
             break

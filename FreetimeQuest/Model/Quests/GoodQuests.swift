@@ -9,8 +9,6 @@ import Foundation
 
 class GoodQuests {
     
-    static let questsCount = 6
-    
     static func addQuests() {
         
         CoreDataManager.shared.saveQuest(title: "Помочь донести пакет",
