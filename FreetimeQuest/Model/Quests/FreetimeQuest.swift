@@ -12,6 +12,7 @@ class FreetimeQuest {
     static func addHeader() {
         CoreDataManager.shared.saveQuest(title: "Freetime Quest",
                                          id: 1,
-                                         category: Category.freetimeQuest.rawValue)
+                                         category: Category.freetimeQuest.rawValue,
+                                         stars: 0)
     }
 }

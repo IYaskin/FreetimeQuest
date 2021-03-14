@@ -26,7 +26,8 @@ class CoreDataManager {
     
     func saveQuest(title: String,
                    id: Int,
-                   category: Int) {
+                   category: Int,
+                   stars: Int) {
         let entity = NSEntityDescription.entity(forEntityName: self.entityName,
                                                 in: self.viewContext)!
         
@@ -36,6 +37,7 @@ class CoreDataManager {
         quest.setValue(title, forKeyPath: "title")
         quest.setValue(id, forKeyPath: "id")
         quest.setValue(category, forKeyPath: "category")
+        quest.setValue(stars, forKeyPath: "stars")
         
         if category != Category.freetimeQuest.rawValue {
             UserDefaultsManager.shared.allQuestsCount += 1

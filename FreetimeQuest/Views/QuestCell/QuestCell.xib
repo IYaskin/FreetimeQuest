@@ -27,22 +27,51 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-wj-N4v">
-                                <rect key="frame" x="100" y="5" width="338" height="70"/>
+                                <rect key="frame" x="100" y="5" width="300" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-BO-vea">
+                                <rect key="frame" x="410" y="5" width="30" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-Aq-Kss">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="22.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkZ-DC-yW7">
+                                        <rect key="frame" x="0.0" y="22.5" width="30" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grL-hj-pMb">
+                                        <rect key="frame" x="0.0" y="44.5" width="30" height="22.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="pkb-5x-CSG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="CrN-9t-EYv" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" id="17O-Er-R4d"/>
+                            <constraint firstAttribute="trailing" secondItem="jQl-BO-vea" secondAttribute="trailing" constant="8" id="8wk-md-BZo"/>
                             <constraint firstAttribute="bottom" secondItem="CrN-9t-EYv" secondAttribute="bottom" id="DPI-rm-Gp9"/>
-                            <constraint firstAttribute="trailing" secondItem="ovi-wj-N4v" secondAttribute="trailing" constant="10" id="Lkv-7n-e9s"/>
+                            <constraint firstAttribute="bottom" secondItem="jQl-BO-vea" secondAttribute="bottom" constant="8" id="WeD-A1-mHJ"/>
                             <constraint firstAttribute="height" constant="80" id="dP9-Bo-XKP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="5" id="gJH-rI-AnC"/>
+                            <constraint firstItem="jQl-BO-vea" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="5" id="gP7-X7-Lum"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="leading" secondItem="CrN-9t-EYv" secondAttribute="trailing" constant="20" id="gvX-A4-7lP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="centerY" secondItem="Pz7-7T-s5u" secondAttribute="centerY" id="lYH-ge-fEj"/>
                             <constraint firstItem="CrN-9t-EYv" firstAttribute="leading" secondItem="Pz7-7T-s5u" secondAttribute="leading" id="qHa-6N-xwp"/>
+                            <constraint firstItem="jQl-BO-vea" firstAttribute="leading" secondItem="ovi-wj-N4v" secondAttribute="trailing" constant="10" id="rqe-s0-M8Z"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -58,7 +87,10 @@
                 <outlet property="bgView" destination="d3s-jd-FCT" id="dnh-Oo-GEJ"/>
                 <outlet property="cellView" destination="Pz7-7T-s5u" id="rJd-kR-OkF"/>
                 <outlet property="contentView" destination="d3s-jd-FCT" id="BYw-E4-IBg"/>
+                <outlet property="firstStarLabel" destination="grL-hj-pMb" id="xuW-EK-tIg"/>
                 <outlet property="imgView" destination="CrN-9t-EYv" id="xQu-Ex-hd1"/>
+                <outlet property="secondStarLabel" destination="bkZ-DC-yW7" id="XlX-Up-msO"/>
+                <outlet property="thirdStarLabel" destination="cdu-Aq-Kss" id="NMn-hc-5rm"/>
                 <outlet property="titleLabel" destination="ovi-wj-N4v" id="Im2-88-ckC"/>
             </connections>
             <point key="canvasLocation" x="-50.724637681159422" y="-51.897321428571423"/>

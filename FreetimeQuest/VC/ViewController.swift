@@ -98,7 +98,8 @@ extension ViewController: UITableViewDataSource {
         
         let quest = fetchedResultsController.object(at: indexPath)
         cell.configure(title: quest.title,
-                       category: Int(quest.category))
+                       category: Int(quest.category),
+                       stars: Int(quest.stars))
 
         return cell
     }
