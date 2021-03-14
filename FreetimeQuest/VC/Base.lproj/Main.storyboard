@@ -33,7 +33,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Irq-ck-7wk">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="zVj-J4-jgg"/>
-                        <barButtonItem key="leftBarButtonItem" title="+ Квесты" id="TlN-v2-cXu"/>
+                        <barButtonItem key="leftBarButtonItem" title="+ Квесты" id="TlN-v2-cXu">
+                            <connections>
+                                <action selector="leftBarButtonTapped:" destination="BYZ-38-t0r" id="72b-FM-TL9"/>
+                                <segue destination="Uij-mI-oXY" kind="presentation" id="6ly-xI-Gsb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="К воспоминаниям" id="kIO-Dy-q05">
                             <connections>
                                 <segue destination="qHO-wj-Rho" kind="show" id="elc-FB-DGs"/>
@@ -47,6 +52,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="75.669642857142847"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="qSv-ht-BKY">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGq-fj-O0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Uij-mI-oXY" customClass="CategoryViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pkq-1e-8vD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVo-dw-omE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kWZ-A9-WtP" appends="YES" id="Wjk-Z4-0NV"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L2I-mG-IGU"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VVo-dw-omE" secondAttribute="bottom" id="3rF-6m-JU9"/>
+                            <constraint firstItem="VVo-dw-omE" firstAttribute="trailing" secondItem="L2I-mG-IGU" secondAttribute="trailing" id="ST1-cV-Ulw"/>
+                            <constraint firstItem="VVo-dw-omE" firstAttribute="top" secondItem="Pkq-1e-8vD" secondAttribute="top" id="V5Z-qD-HfD"/>
+                            <constraint firstItem="VVo-dw-omE" firstAttribute="leading" secondItem="L2I-mG-IGU" secondAttribute="leading" id="xQX-TL-SKx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="VVo-dw-omE" id="VqO-dc-KII"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="kWZ-A9-WtP">
+                    <connections>
+                        <action selector="greyAreaTapped:" destination="Uij-mI-oXY" id="o4x-0m-2x6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1789.8550724637682" y="517.63392857142856"/>
         </scene>
         <!--Memory View Controller-->
         <scene sceneID="94t-tx-ajs">
@@ -62,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW7-h1-Flg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="76"/>
+            <point key="canvasLocation" x="1793" y="-172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MlL-yc-hf9">

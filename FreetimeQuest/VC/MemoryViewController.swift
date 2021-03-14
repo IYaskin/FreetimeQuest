@@ -10,6 +10,7 @@ import UIKit
 class MemoryViewController: UIViewController {
 
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        
     }
 }
