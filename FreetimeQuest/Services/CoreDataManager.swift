@@ -93,8 +93,9 @@ class CoreDataManager {
     }
     
     func doneQuest(_ quest: QuestObject) {
-        viewContext.delete(quest)
         UserDefaultsManager.shared.doneQuestsCount += 1
+        UserDefaultsManager.shared.starsCount += Int(quest.stars)
+        viewContext.delete(quest)
         saveContext()
     }
     

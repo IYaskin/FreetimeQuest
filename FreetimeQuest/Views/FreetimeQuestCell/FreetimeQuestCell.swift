@@ -16,6 +16,7 @@ class FreetimeQuestCell: UITableViewCell {
     @IBOutlet weak var doneQuestsLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var starsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()
@@ -34,8 +35,8 @@ class FreetimeQuestCell: UITableViewCell {
     }
     
     func configure() {
-//        let stars = 15
-//        starsLabel.text = "\(stars)☆"
+        let stars = UserDefaultsManager.shared.starsCount
+        starsLabel.text = "★\(stars)"
         
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount

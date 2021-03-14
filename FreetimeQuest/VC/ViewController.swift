@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         }
         UserDefaultsManager.shared.allQuestsCount = 0
         UserDefaultsManager.shared.doneQuestsCount = 0
-        
+        UserDefaultsManager.shared.starsCount = 0
+
         FreetimeQuest.addHeader()
 
         GoOutQuests.addQuests()

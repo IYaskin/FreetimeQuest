@@ -47,6 +47,17 @@ class UserDefaultsManager {
             UserDefaults.standard.set(newValue, forKey: "doneQuestsCount")
         }
     }
+    
+    var starsCount: Int {
+        
+        get {
+            UserDefaults.standard.integer(forKey: "starsCount")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "starsCount")
+        }
+    }
 
 
 }

@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="height" constant="10" id="sUC-RN-Hwx"/>
                                 </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3D-VS-vpU">
-                                <rect key="frame" x="20" y="82" width="513" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3D-VS-vpU">
+                                <rect key="frame" x="20" y="82" width="444" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,15 +37,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGW-so-xi8">
+                                <rect key="frame" x="474" y="82" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nj7-0m-P1A" firstAttribute="top" secondItem="Y3D-VS-vpU" secondAttribute="bottom" constant="16" id="2tK-qs-prH"/>
                             <constraint firstAttribute="trailing" secondItem="V9j-Hv-UsG" secondAttribute="trailing" constant="20" id="36Z-IN-IBj"/>
+                            <constraint firstItem="KGW-so-xi8" firstAttribute="leading" secondItem="Y3D-VS-vpU" secondAttribute="trailing" constant="10" id="8WP-7u-pNv"/>
+                            <constraint firstItem="KGW-so-xi8" firstAttribute="centerY" secondItem="Y3D-VS-vpU" secondAttribute="centerY" id="9IU-0e-VB7"/>
                             <constraint firstItem="V9j-Hv-UsG" firstAttribute="leading" secondItem="bgh-Ec-WRL" secondAttribute="leading" constant="20" id="D0x-2j-njh"/>
                             <constraint firstItem="Y3D-VS-vpU" firstAttribute="leading" secondItem="bgh-Ec-WRL" secondAttribute="leading" constant="20" id="Ezt-AQ-nf9"/>
                             <constraint firstAttribute="trailing" secondItem="nj7-0m-P1A" secondAttribute="trailing" constant="20" id="JRM-ew-yZu"/>
-                            <constraint firstAttribute="trailing" secondItem="Y3D-VS-vpU" secondAttribute="trailing" constant="20" id="Sdv-Km-fjP"/>
+                            <constraint firstAttribute="trailing" secondItem="KGW-so-xi8" secondAttribute="trailing" constant="20" id="JsA-gI-qlC"/>
                             <constraint firstItem="nj7-0m-P1A" firstAttribute="leading" secondItem="bgh-Ec-WRL" secondAttribute="leading" constant="20" id="eWP-cF-MW5"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nj7-0m-P1A" secondAttribute="bottom" constant="8" id="fSb-lW-aqE"/>
                             <constraint firstItem="V9j-Hv-UsG" firstAttribute="top" secondItem="bgh-Ec-WRL" secondAttribute="top" constant="20" id="jaU-Uo-kqn"/>
@@ -65,6 +73,7 @@
             <connections>
                 <outlet property="doneQuestsLabel" destination="Y3D-VS-vpU" id="bKO-l9-daE"/>
                 <outlet property="progressView" destination="nj7-0m-P1A" id="rKd-sP-Zgt"/>
+                <outlet property="starsLabel" destination="KGW-so-xi8" id="dE9-rY-p9J"/>
                 <outlet property="titleLabel" destination="V9j-Hv-UsG" id="dLP-At-CiW"/>
             </connections>
             <point key="canvasLocation" x="-151.44927536231884" y="-74.330357142857139"/>
