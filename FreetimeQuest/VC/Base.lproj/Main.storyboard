@@ -32,8 +32,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Irq-ck-7wk">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="zVj-J4-jgg"/>
                         <barButtonItem key="leftBarButtonItem" title="+ Квесты" id="TlN-v2-cXu"/>
-                        <barButtonItem key="rightBarButtonItem" title="К воспоминаниям" id="kIO-Dy-q05"/>
+                        <barButtonItem key="rightBarButtonItem" title="К воспоминаниям" id="kIO-Dy-q05">
+                            <connections>
+                                <segue destination="qHO-wj-Rho" kind="show" id="elc-FB-DGs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gw9-RA-I3D" id="ET2-KH-kkD"/>
@@ -42,6 +47,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="75.669642857142847"/>
+        </scene>
+        <!--Memory View Controller-->
+        <scene sceneID="94t-tx-ajs">
+            <objects>
+                <viewController id="qHO-wj-Rho" customClass="MemoryViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IK5-rY-exC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="j3B-df-thZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vhx-sa-r3E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vW7-h1-Flg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MlL-yc-hf9">
