@@ -13,9 +13,6 @@ class FreetimeQuestCell: UITableViewCell {
     static let reuseID = "FreetimeQuestCell"
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var starsLabel: UILabel!
-    @IBOutlet weak var addQuestsButton: UIButton!
-    @IBOutlet weak var galleryButton: UIButton!
     @IBOutlet weak var doneQuestsLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -30,8 +27,6 @@ class FreetimeQuestCell: UITableViewCell {
         backgroundColor = .clear
         
         titleLabel.text = "Freetime Quest"
-        addQuestsButton.setTitle("Добавить квесты", for: .normal)
-        galleryButton.setTitle("Открыть галерею", for: .normal)
         
         progressView.tintColor = .systemTeal
         progressView.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.2)
@@ -39,8 +34,8 @@ class FreetimeQuestCell: UITableViewCell {
     }
     
     func configure() {
-        let stars = 15
-        starsLabel.text = "\(stars)☆"
+//        let stars = 15
+//        starsLabel.text = "\(stars)☆"
         
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount

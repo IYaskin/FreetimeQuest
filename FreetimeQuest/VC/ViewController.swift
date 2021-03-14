@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
-    func configureUI() {        
+    func configureUI() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
