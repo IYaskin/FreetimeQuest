@@ -14,7 +14,16 @@ enum Category: Int {
     case brain
     case social
     case good
-
+    
+    // Допы
+    // Раскрепощение
+    // Путешествия
+    // Здоровье
+    // Харизма
+    // Мои квесты
+    // Кухня
+    // Хобби
+    //
 }
 
 extension Category {
