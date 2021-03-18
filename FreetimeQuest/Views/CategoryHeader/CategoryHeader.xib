@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryHeader" customModule="FreetimeQuest" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="YFq-Eg-I0b"/>
+                <outlet property="headerView" destination="FvP-9G-r0I" id="sSN-dO-69v"/>
                 <outlet property="titleLabel" destination="ab7-EX-0Ji" id="5Oj-f5-d1y"/>
             </connections>
         </placeholder>

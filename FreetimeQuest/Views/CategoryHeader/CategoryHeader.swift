@@ -10,6 +10,7 @@ import UIKit
 class CategoryHeader: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
     override init(frame: CGRect) {
@@ -42,7 +43,8 @@ class CategoryHeader: UIView {
     public func configureWith(category: Int) {
         if let category = Category(rawValue: category) {
             titleLabel.text = category.title
-            contentView.backgroundColor = category.bgColor
+            titleLabel.textColor = category.headerTextColor
+            headerView.backgroundColor = category.headerColor
         }
     }
     

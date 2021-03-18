@@ -11,41 +11,24 @@ enum Category: Int {
     case freetimeQuest
     case goOut
     case adventure
-    case social
     case brain
+    case social
     case good
 
 }
 
 extension Category {
-    
-    var bgColor: UIColor {
-        switch self {
-        case .freetimeQuest:
-            return .yellow
-        case .good:
-            return .lightGray
-        case .goOut:
-            return UIColor.orange.withAlphaComponent(0.5)
-        case .social:
-            return UIColor.blue.withAlphaComponent(0.5)
-        case .brain:
-            return UIColor.gray.withAlphaComponent(0.5)
-        case .adventure:
-            return UIColor.red.withAlphaComponent(0.5)
-        }
-    }
-    
+        
     var cellColor: UIColor {
         switch self {
         case .freetimeQuest:
             return .white
         case .good:
-            return .gray
+            return .lightGray
         case .goOut:
             return .orange
         case .social:
-            return .blue
+            return .purple
         case .brain:
             return .gray
         case .adventure:
@@ -58,7 +41,7 @@ extension Category {
         case .freetimeQuest:
             return .black
         case .good:
-            return .white
+            return .black
         case .goOut:
             return .white
         case .social:
@@ -77,7 +60,7 @@ extension Category {
         case .good:
             return "Добро"
         case .goOut:
-            return "Выход в свет"
+            return "Посетить места"
         case .social:
             return "Социализация"
         case .brain:
@@ -86,5 +69,40 @@ extension Category {
             return "Приключения"
         }
     }
+    
+    var headerTextColor: UIColor {
+        switch self {
+        case .freetimeQuest:
+            return .black
+        case .good:
+            return .black
+        case .goOut:
+            return .black
+        case .social:
+            return .white
+        case .brain:
+            return .white
+        case .adventure:
+            return .black
+        }
+    }
+    
+    var headerColor: UIColor {
+        switch self {
+        case .freetimeQuest:
+            return .white
+        case .good:
+            return .lightGray
+        case .goOut:
+            return .orange
+        case .social:
+            return .purple
+        case .brain:
+            return .gray
+        case .adventure:
+            return .red
+        }
+    }
+
 
 }
