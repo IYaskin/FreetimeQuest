@@ -60,7 +60,7 @@ class UserDefaultsManager {
     }
     
     // AdditionalQuests
-    
+
     var isHobbyQuestsSet: Bool {
         
         get {
@@ -69,6 +69,66 @@ class UserDefaultsManager {
         
         set {
             UserDefaults.standard.set(newValue, forKey: "isHobbyQuestsSet")
+        }
+        
+    }
+    
+    var isTravelingQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isTravelingQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isTravelingQuestsSet")
+        }
+        
+    }
+    
+    var isHealthQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isHealthQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isHealthQuestsSet")
+        }
+        
+    }
+
+    var isLiberationQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isLiberationQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isLiberationQuestsSet")
+        }
+        
+    }
+    
+    var isCharismaQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isCharismaQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isCharismaQuestsSet")
+        }
+        
+    }
+
+    var isFoodQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isFoodQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isFoodQuestsSet")
         }
         
     }

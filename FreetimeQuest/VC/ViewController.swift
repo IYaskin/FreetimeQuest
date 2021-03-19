@@ -129,12 +129,10 @@ extension ViewController: UITableViewDelegate {
             return nil
         }
 
-        if let category = Int(fetchedResultsController.sectionIndexTitles[section]) {
-            let header = CategoryHeader()
-            header.configureWith(category: category)
-            return header
-        }
-        return nil
+        let category = fetchedResultsController.object(at: IndexPath(row: 0, section: section)).category
+        let header = CategoryHeader()
+        header.configureWith(category: Int(category))
+        return header
     }
     
     func tableView(_ tableView: UITableView,

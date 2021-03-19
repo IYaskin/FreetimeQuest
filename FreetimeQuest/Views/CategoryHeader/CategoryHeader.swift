@@ -42,9 +42,10 @@ class CategoryHeader: UIView {
 
     public func configureWith(category: Int) {
         if let category = Category(rawValue: category) {
+            print(category.title)
             titleLabel.text = category.title
             titleLabel.textColor = category.headerTextColor
-            headerView.backgroundColor = category.headerColor
+            headerView.backgroundColor = category.cellColor
         }
     }
     

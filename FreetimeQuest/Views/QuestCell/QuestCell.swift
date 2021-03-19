@@ -71,6 +71,11 @@ class QuestCell: UITableViewCell {
             titleLabel.textColor = category.textColor
 //            bgView.backgroundColor = category.bgColor
             cellView.backgroundColor = category.cellColor
+            
+            firstStarLabel.textColor = category.textColor
+            secondStarLabel.textColor = category.textColor
+            thirdStarLabel.textColor = category.textColor
+
         }
 
     }

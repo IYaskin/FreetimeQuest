@@ -18,14 +18,12 @@ enum Category: Int {
     
     //Additional
     case hobby
-    // Раскрепощение
-    // Путешествия
-    // Здоровье
-    // Харизма
-    // Мои квесты
-    // Кухня
-    // Хобби
-    //
+    case traveling
+    case health
+    case liberation
+    case charisma
+    case food
+    //Свои квесты
 }
 
 extension Category {
@@ -46,24 +44,24 @@ extension Category {
             return .red
         case .hobby:
             return .brown
+        case .traveling:
+            return .systemTeal
+        case .health:
+            return .green
+        case .liberation:
+            return .systemPink
+        case .charisma:
+            return .black
+        case .food:
+            return .magenta
         }
     }
     
     var textColor: UIColor {
         switch self {
-        case .freetimeQuest:
+        case .freetimeQuest, .good, .health, .goOut, .adventure, .liberation, .food:
             return .black
-        case .good:
-            return .black
-        case .goOut:
-            return .white
-        case .social:
-            return .white
-        case .brain:
-            return .white
-        case .adventure:
-            return .white
-        case .hobby:
+        default:
             return .white
         }
     }
@@ -84,44 +82,44 @@ extension Category {
             return "Приключения"
         case .hobby:
             return "Хобби"
+        case .traveling:
+            return "Путешествия"
+        case .health:
+            return "Здоровье"
+        case .liberation:
+            return "Раскрепощение"
+        case .charisma:
+            return "Харизма"
+        case .food:
+            return "Еда"
         }
     }
     
     var headerTextColor: UIColor {
         switch self {
-        case .freetimeQuest:
+        case .freetimeQuest, .good, .goOut, .adventure, .health, .liberation, .food:
             return .black
-        case .good:
-            return .black
-        case .goOut:
-            return .black
-        case .social:
-            return .white
-        case .brain:
-            return .white
-        case .adventure:
-            return .black
-        case .hobby:
-            return .white
+        default:
+            return.white
         }
     }
     
-    var headerColor: UIColor {
+    var price: Int {
         switch self {
-        case .freetimeQuest:
-            return .white
-        case .good:
-            return .lightGray
-        case .goOut:
-            return .orange
-        case .social:
-            return .purple
-        case .brain:
-            return .gray
-        case .adventure:
-            return .red
         case .hobby:
-            return .brown
+            return 5
+        case .traveling:
+            return 5
+        case .health:
+            return 5
+        case .liberation:
+            return 5
+        case .charisma:
+            return 5
+        case .food:
+            return 5
+        default:
+            return 0
         }
     }
 

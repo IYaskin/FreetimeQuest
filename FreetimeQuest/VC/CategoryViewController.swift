@@ -27,10 +27,6 @@ class CategoryViewController: UIViewController {
         }
         
     }
-    
-    // Prices
-    private let hobbyPrice = 10
-        
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,55 +59,93 @@ class CategoryViewController: UIViewController {
             addButtonToStackView(category: .hobby)
         }
         
+        if !UserDefaultsManager.shared.isTravelingQuestsSet {
+            addButtonToStackView(category: .traveling)
+        }
+        
+        if !UserDefaultsManager.shared.isHealthQuestsSet {
+            addButtonToStackView(category: .health)
+        }
+        
+        if !UserDefaultsManager.shared.isLiberationQuestsSet {
+            addButtonToStackView(category: .liberation)
+        }
+        
+        if !UserDefaultsManager.shared.isCharismaQuestsSet {
+            addButtonToStackView(category: .charisma)
+        }
+        
+        if !UserDefaultsManager.shared.isFoodQuestsSet {
+            addButtonToStackView(category: .food)
+        }
+
+        
         updateTitle()
     }
     
     func addButtonToStackView(category: Category) {
-        let hobbyButton = UIButton()
-        var title = ""
-        var bgColor: UIColor = .white
+        let button = UIButton()
         
-        switch category {
-        case .hobby:
-            title = "+ Хобби ★\(hobbyPrice)"
-            hobbyButton.tag = category.rawValue
-            bgColor = .brown
-        default:
-            break
-        }
-        hobbyButton.setTitle(title, for: .normal)
-        hobbyButton.backgroundColor = bgColor
-        hobbyButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        hobbyButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        stackView.addArrangedSubview(hobbyButton)
+        button.tag = category.rawValue
+        button.setTitle("+ \(category.title) ★\(category.price)", for: .normal)
+        button.setTitleColor(category.textColor, for: .normal)
+        button.backgroundColor = category.cellColor
+        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.layer.cornerRadius = 20
+        stackView.addArrangedSubview(button)
 
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        
-        if sender.tag == Category.hobby.rawValue {
-            
-            showAlert(title: "Купить \(Category.hobby.title) за ★\(hobbyPrice)",
-                      okButtonTitle: "Ок",
-                      okAction: { _ in
-                        self.addCategory()
-                      },
-                      cancelButtonTitle: "Отмена")
-            
-            print("Hobby")
+        guard let category = Category(rawValue: sender.tag) else {
+            return
         }
         
-    }
+        showAlert(title: "Купить \(category.title) за ★\(category.price)",
+                  okButtonTitle: "Ок",
+                  okAction: { _ in
+                    self.addCategory(category)
+                  },
+                  cancelButtonTitle: "Отмена")
+}
     
-    func addCategory() {
-        if starsCount < hobbyPrice {
+    func addCategory(_ category: Category) {
+        if starsCount < category.price {
             showOkAlert(title: "Не хватает звезд :(",
                       message: "Выполните больше квестов, чтобы их заработать",
                       okButtonTitle: "Ок")
         } else {
-            HobbyQuests.addQuests()
-            UserDefaultsManager.shared.isHobbyQuestsSet = true
-            starsCount -= hobbyPrice
+            
+            switch category {
+            case .hobby:
+                HobbyQuests.addQuests()
+                UserDefaultsManager.shared.isHobbyQuestsSet = true
+            case .traveling:
+                TravelingQuests.addQuests()
+                UserDefaultsManager.shared.isTravelingQuestsSet = true
+
+            case .health:
+                HealthQuests.addQuests()
+                UserDefaultsManager.shared.isHealthQuestsSet = true
+
+            case .liberation:
+                LiberationQuests.addQuests()
+                UserDefaultsManager.shared.isLiberationQuestsSet = true
+
+            case .charisma:
+                CharismaQuests.addQuests()
+                UserDefaultsManager.shared.isCharismaQuestsSet = true
+            case .food:
+                FoodQuests.addQuests()
+                UserDefaultsManager.shared.isFoodQuestsSet = true
+
+            default:
+                break
+            }
+            
+            
+            starsCount -= category.price
             configureAdditionalQuestsStackView()
             mainVC?.updateHeader()
             showOkAlert(title: "Квесты добавлены!",
