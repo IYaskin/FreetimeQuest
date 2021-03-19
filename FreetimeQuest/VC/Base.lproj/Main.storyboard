@@ -73,7 +73,7 @@
                                 <rect key="frame" x="40" y="257" width="334" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-ii-uqX">
-                                        <rect key="frame" x="20" y="20" width="294" height="30"/>
+                                        <rect key="frame" x="10" y="20" width="314" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                                     <constraint firstItem="aBA-ya-b95" firstAttribute="top" secondItem="nMZ-ii-uqX" secondAttribute="bottom" constant="10" id="MKo-dP-29l"/>
                                     <constraint firstItem="aBA-ya-b95" firstAttribute="leading" secondItem="kdJ-XQ-Uig" secondAttribute="leading" constant="20" symbolic="YES" id="OLg-Dr-fDp"/>
                                     <constraint firstItem="nMZ-ii-uqX" firstAttribute="centerX" secondItem="kdJ-XQ-Uig" secondAttribute="centerX" id="hAC-vs-RNM"/>
-                                    <constraint firstItem="nMZ-ii-uqX" firstAttribute="leading" secondItem="kdJ-XQ-Uig" secondAttribute="leading" constant="20" id="p9R-10-i9h"/>
+                                    <constraint firstItem="nMZ-ii-uqX" firstAttribute="leading" secondItem="kdJ-XQ-Uig" secondAttribute="leading" constant="10" id="p9R-10-i9h"/>
                                     <constraint firstAttribute="bottom" secondItem="aBA-ya-b95" secondAttribute="bottom" constant="10" id="wcF-a9-dTw"/>
                                 </constraints>
                             </view>
