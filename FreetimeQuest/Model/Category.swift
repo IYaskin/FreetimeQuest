@@ -8,6 +8,7 @@
 import UIKit
 
 enum Category: Int {
+    //Base
     case freetimeQuest
     case goOut
     case adventure
@@ -15,7 +16,8 @@ enum Category: Int {
     case social
     case good
     
-    // Допы
+    //Additional
+    case hobby
     // Раскрепощение
     // Путешествия
     // Здоровье
@@ -42,6 +44,8 @@ extension Category {
             return .gray
         case .adventure:
             return .red
+        case .hobby:
+            return .brown
         }
     }
     
@@ -58,6 +62,8 @@ extension Category {
         case .brain:
             return .white
         case .adventure:
+            return .white
+        case .hobby:
             return .white
         }
     }
@@ -76,6 +82,8 @@ extension Category {
             return "Мозг"
         case .adventure:
             return "Приключения"
+        case .hobby:
+            return "Хобби"
         }
     }
     
@@ -93,6 +101,8 @@ extension Category {
             return .white
         case .adventure:
             return .black
+        case .hobby:
+            return .white
         }
     }
     
@@ -110,6 +120,8 @@ extension Category {
             return .gray
         case .adventure:
             return .red
+        case .hobby:
+            return .brown
         }
     }
 

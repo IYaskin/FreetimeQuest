@@ -58,6 +58,20 @@ class UserDefaultsManager {
             UserDefaults.standard.set(newValue, forKey: "starsCount")
         }
     }
+    
+    // AdditionalQuests
+    
+    var isHobbyQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isHobbyQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isHobbyQuestsSet")
+        }
+        
+    }
 
 
 }

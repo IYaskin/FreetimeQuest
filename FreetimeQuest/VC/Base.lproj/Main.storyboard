@@ -78,7 +78,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-ya-b95">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-ya-b95">
                                         <rect key="frame" x="20" y="58" width="294" height="322"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF8-7A-W0C">
@@ -118,7 +118,7 @@
                     <connections>
                         <outlet property="bgView" destination="VVo-dw-omE" id="VqO-dc-KII"/>
                         <outlet property="contentView" destination="kdJ-XQ-Uig" id="nR3-rG-c1s"/>
-                        <outlet property="stackView" destination="wF8-7A-W0C" id="9aO-Ea-tvP"/>
+                        <outlet property="stackView" destination="aBA-ya-b95" id="zMy-B5-fI1"/>
                         <outlet property="titleLabel" destination="nMZ-ii-uqX" id="WHF-pY-L1f"/>
                     </connections>
                 </viewController>
