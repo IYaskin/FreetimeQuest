@@ -66,6 +66,20 @@ class ViewController: UIViewController {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Category" {
+            if let nextViewController = segue.destination as? CategoryViewController {
+                nextViewController.mainVC = self
+            }
+        }
+    }
+    
+    func updateHeader() {
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? FreetimeQuestCell {
+            cell.configure()
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -208,22 +222,35 @@ extension ViewController: NSFetchedResultsControllerDelegate {
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange sectionInfo: NSFetchedResultsSectionInfo,
+                    atSectionIndex sectionIndex: Int,
+                    for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+        case .delete:
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+        default:
+            return
+        }
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
                     didChange anObject: Any,
                     at indexPath: IndexPath?,
                     for type: NSFetchedResultsChangeType,
                     newIndexPath: IndexPath?) {
         switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+            updateHeader()
         case .delete:
             if let indexPath = indexPath {
-                if tableView.numberOfRows(inSection: indexPath.section) == 1 {
-                    tableView.deleteSections([indexPath.section], with: .automatic)
-                } else {
                     tableView.deleteRows(at: [indexPath], with: .automatic)
-                }
             }
-            if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? FreetimeQuestCell {
-                cell.configure()
-            }
+            updateHeader()
         default:
             break
         }

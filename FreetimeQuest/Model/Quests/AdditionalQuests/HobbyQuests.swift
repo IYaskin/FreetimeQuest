@@ -13,7 +13,7 @@ class HobbyQuests {
         
         CoreDataManager.shared.saveQuest(title: "Сыграть партию в шахматы",
                                          id: 1,
-                                         category: Category.adventure.rawValue,
+                                         category: Category.hobby.rawValue,
                                          stars: 1)
     }
 }

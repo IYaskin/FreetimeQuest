@@ -8,6 +8,8 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
+    
+    weak var mainVC: ViewController?
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var contentView: UIView!
@@ -15,7 +17,15 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     
     private var starsCount: Int {
-        return UserDefaultsManager.shared.starsCount
+        
+        get {
+            return UserDefaultsManager.shared.starsCount
+        }
+        
+        set {
+            UserDefaultsManager.shared.starsCount = newValue
+        }
+        
     }
     
     // Prices
@@ -29,11 +39,18 @@ class CategoryViewController: UIViewController {
     
     func configureUI() {
         bgView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        titleLabel.text = "Добавить квесты ★\(starsCount)"
         contentView.layer.cornerRadius = 20
         contentView.backgroundColor = .systemYellow
         
         configureAdditionalQuestsStackView()
+    }
+    
+    func updateTitle() {
+        if stackView.subviews.count == 0 {
+            titleLabel.text = "Все квесты добавлены!"
+        } else {
+            titleLabel.text = "Добавить квесты ★\(starsCount)"
+        }
     }
     
     func configureAdditionalQuestsStackView() {
@@ -45,6 +62,8 @@ class CategoryViewController: UIViewController {
         if !UserDefaultsManager.shared.isHobbyQuestsSet {
             addButtonToStackView(category: .hobby)
         }
+        
+        updateTitle()
     }
     
     func addButtonToStackView(category: Category) {
@@ -72,18 +91,34 @@ class CategoryViewController: UIViewController {
         
         if sender.tag == Category.hobby.rawValue {
             
-            if starsCount < hobbyPrice {
-                showOkAlert(title: "Не хватает звезд :(",
-                          message: "Выполните больше квестов, чтобы их заработать",
-                          okButtonTitle: "Ок")
-            } else {
-                print("Квесты добавлены!")
-            }
+            showAlert(title: "Купить \(Category.hobby.title) за ★\(hobbyPrice)",
+                      okButtonTitle: "Ок",
+                      okAction: { _ in
+                        self.addCategory()
+                      },
+                      cancelButtonTitle: "Отмена")
+            
             print("Hobby")
         }
         
-        
-        
+    }
+    
+    func addCategory() {
+        if starsCount < hobbyPrice {
+            showOkAlert(title: "Не хватает звезд :(",
+                      message: "Выполните больше квестов, чтобы их заработать",
+                      okButtonTitle: "Ок")
+        } else {
+            HobbyQuests.addQuests()
+            UserDefaultsManager.shared.isHobbyQuestsSet = true
+            starsCount -= hobbyPrice
+            configureAdditionalQuestsStackView()
+            mainVC?.updateHeader()
+            showOkAlert(title: "Квесты добавлены!",
+                        okButtonTitle: "Ок")
+
+        }
+
     }
     
     @IBAction func greyAreaTapped(_ sender: UITapGestureRecognizer) {

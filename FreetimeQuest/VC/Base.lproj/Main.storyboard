@@ -36,7 +36,7 @@
                         <barButtonItem key="leftBarButtonItem" title="+ Квесты" id="TlN-v2-cXu">
                             <connections>
                                 <action selector="leftBarButtonTapped:" destination="BYZ-38-t0r" id="72b-FM-TL9"/>
-                                <segue destination="Uij-mI-oXY" kind="presentation" id="6ly-xI-Gsb"/>
+                                <segue destination="Uij-mI-oXY" kind="presentation" identifier="Category" id="6ly-xI-Gsb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="К воспоминаниям" id="kIO-Dy-q05">
@@ -70,7 +70,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-XQ-Uig">
-                                <rect key="frame" x="40" y="253" width="334" height="400"/>
+                                <rect key="frame" x="40" y="257" width="334" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-ii-uqX">
                                         <rect key="frame" x="20" y="20" width="294" height="30"/>
@@ -79,7 +79,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-ya-b95">
-                                        <rect key="frame" x="20" y="58" width="294" height="322"/>
+                                        <rect key="frame" x="20" y="60" width="294" height="322"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF8-7A-W0C">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="322"/>
@@ -95,11 +95,11 @@
                                 <constraints>
                                     <constraint firstItem="nMZ-ii-uqX" firstAttribute="top" secondItem="kdJ-XQ-Uig" secondAttribute="top" constant="20" id="1le-QK-dBL"/>
                                     <constraint firstItem="aBA-ya-b95" firstAttribute="centerX" secondItem="kdJ-XQ-Uig" secondAttribute="centerX" id="L3z-Rs-MgL"/>
-                                    <constraint firstItem="aBA-ya-b95" firstAttribute="top" secondItem="nMZ-ii-uqX" secondAttribute="bottom" constant="8" symbolic="YES" id="MKo-dP-29l"/>
+                                    <constraint firstItem="aBA-ya-b95" firstAttribute="top" secondItem="nMZ-ii-uqX" secondAttribute="bottom" constant="10" id="MKo-dP-29l"/>
                                     <constraint firstItem="aBA-ya-b95" firstAttribute="leading" secondItem="kdJ-XQ-Uig" secondAttribute="leading" constant="20" symbolic="YES" id="OLg-Dr-fDp"/>
                                     <constraint firstItem="nMZ-ii-uqX" firstAttribute="centerX" secondItem="kdJ-XQ-Uig" secondAttribute="centerX" id="hAC-vs-RNM"/>
                                     <constraint firstItem="nMZ-ii-uqX" firstAttribute="leading" secondItem="kdJ-XQ-Uig" secondAttribute="leading" constant="20" id="p9R-10-i9h"/>
-                                    <constraint firstAttribute="bottom" secondItem="aBA-ya-b95" secondAttribute="bottom" constant="20" symbolic="YES" id="wcF-a9-dTw"/>
+                                    <constraint firstAttribute="bottom" secondItem="aBA-ya-b95" secondAttribute="bottom" constant="10" id="wcF-a9-dTw"/>
                                 </constraints>
                             </view>
                         </subviews>

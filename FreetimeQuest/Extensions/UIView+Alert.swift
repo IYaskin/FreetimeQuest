@@ -10,11 +10,11 @@ import UIKit
 extension UIViewController {
     
     func showAlert(title: String,
-                       message: String?,
+                       message: String? = nil,
                        okButtonTitle: String,
-                       okAction: ((UIAlertAction) -> Void)?,
+                       okAction: ((UIAlertAction) -> Void)? = nil,
                        cancelButtonTitle: String,
-                       cancelAction: ((UIAlertAction) -> Void)?) {
+                       cancelAction: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
@@ -34,7 +34,7 @@ extension UIViewController {
     }
     
     func showOkAlert(title: String,
-                       message: String?,
+                       message: String? = nil,
                        okButtonTitle: String,
                        okAction: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title,
