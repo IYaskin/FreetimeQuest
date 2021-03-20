@@ -65,7 +65,7 @@ class CoreDataManager {
 
         let fetchRequest: NSFetchRequest<MemoryObject> = MemoryObject.fetchRequest()
 
-        let dataDescriptor = NSSortDescriptor(key: "data", ascending: true)
+        let dataDescriptor = NSSortDescriptor(key: "date", ascending: true)
         
         fetchRequest.sortDescriptors = [dataDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
