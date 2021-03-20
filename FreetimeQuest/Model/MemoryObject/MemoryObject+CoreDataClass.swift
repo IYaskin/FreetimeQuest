@@ -1,25 +1,24 @@
 //
-//  QuestObject+CoreDataClass.swift
+//  MemoryObject+CoreDataClass.swift
 //  FreetimeQuest
 //
-//  Created by Igor Yaskin on 17.02.2021.
+//  Created by Igor Yaskin on 20.03.2021.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(QuestObject)
-public class QuestObject: NSManagedObject {
-    
+@objc(MemoryObject)
+public class MemoryObject: NSManagedObject {
     convenience init() {
         // Описание сущности
-        let entity = NSEntityDescription.entity(forEntityName: "QuestObject",
+        let entity = NSEntityDescription.entity(forEntityName: "MemoryObject",
                                                 in: CoreDataManager.shared.viewContext)
    
         // Создание нового объекта
         self.init(entity: entity!,
                   insertInto: CoreDataManager.shared.viewContext)
     }
-    
+
 }

@@ -30,15 +30,18 @@
 		8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2225BDBC0F00814F81 /* Main.storyboard */; };
 		8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2525BDBC1000814F81 /* Assets.xcassets */; };
 		8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */; };
+		8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451B57E2605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift */; };
+		8451B5812605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451B57F2605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift */; };
+		8451B5862605EDB500BD0A65 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8455583825DDAAF40026F66D /* CoreDataModel.xcdatamodeld */; };
+		8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */; };
+		8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */; };
 		84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */; };
 		84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */; };
 		84521B8E25FBA1C1008148DC /* FreetimeQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */; };
 		8452538925FE3F0200884FC4 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452538825FE3F0200884FC4 /* MemoryViewController.swift */; };
 		8452539925FE45F900884FC4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452539825FE45F900884FC4 /* CategoryViewController.swift */; };
-		8452D7FB25DE4AC10035D4D8 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8455583825DDAAF40026F66D /* CoreDataModel.xcdatamodeld */; };
 		84544F8B25BDD0E9000683FC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* Category.swift */; };
 		8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583C25DDAC020026F66D /* CoreDataManager.swift */; };
-		8458E84525E25B9A00C233B6 /* TaskTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84425E25B9A00C233B6 /* TaskTracker.swift */; };
 		8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84825E2607C00C233B6 /* UIView+Alert.swift */; };
 		84E99C2425F38274003A0C12 /* ImageWithoutRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E99C2325F38274003A0C12 /* ImageWithoutRender.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,8 @@
 		8450FE2525BDBC1000814F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450FE2825BDBC1000814F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450FE2A25BDBC1000814F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8451B57E2605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8451B57F2605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetimeQuestCell.swift; sourceTree = "<group>"; };
 		84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreetimeQuestCell.xib; sourceTree = "<group>"; };
 		84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetimeQuest.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		8455583C25DDAC020026F66D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8458E84425E25B9A00C233B6 /* TaskTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTracker.swift; sourceTree = "<group>"; };
 		8458E84825E2607C00C233B6 /* UIView+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Alert.swift"; sourceTree = "<group>"; };
 		84E99C2325F38274003A0C12 /* ImageWithoutRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithoutRender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +169,7 @@
 				84544F8A25BDD0E9000683FC /* Category.swift */,
 				840748D125F961010087F387 /* Quests */,
 				8455584425DDB60C0026F66D /* QuestObject */,
+				8451B57D2605ECF100BD0A65 /* MemoryObject */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,7 +223,6 @@
 		8450FE1B25BDBC0F00814F81 /* FreetimeQuest */ = {
 			isa = PBXGroup;
 			children = (
-				8458E84425E25B9A00C233B6 /* TaskTracker.swift */,
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
 				84507A2625E111560060EDE5 /* Extensions */,
 				84507A1D25E10F4A0060EDE5 /* Services */,
@@ -231,6 +235,15 @@
 				8450FE2A25BDBC1000814F81 /* Info.plist */,
 			);
 			path = FreetimeQuest;
+			sourceTree = "<group>";
+		};
+		8451B57D2605ECF100BD0A65 /* MemoryObject */ = {
+			isa = PBXGroup;
+			children = (
+				8451B57E2605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift */,
+				8451B57F2605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift */,
+			);
+			path = MemoryObject;
 			sourceTree = "<group>";
 		};
 		84521B8625FBA152008148DC /* FreetimeQuestCell */ = {
@@ -324,10 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451B5862605EDB500BD0A65 /* CoreDataModel.xcdatamodeld in Sources */,
+				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
 				84424BF425F0161E003F125A /* CategoryHeader.swift in Sources */,
 				844B12772604F2B7009569D3 /* TravelingQuests.swift in Sources */,
 				8452538925FE3F0200884FC4 /* MemoryViewController.swift in Sources */,
-				8452D7FB25DE4AC10035D4D8 /* CoreDataModel.xcdatamodeld in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				8452539925FE45F900884FC4 /* CategoryViewController.swift in Sources */,
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
@@ -340,16 +354,18 @@
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				844B12802604F356009569D3 /* CharismaQuests.swift in Sources */,
 				844B12722604AFEC009569D3 /* HobbyQuests.swift in Sources */,
+				8451B5812605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift in Sources */,
 				844B127A2604F2F7009569D3 /* HealthQuests.swift in Sources */,
 				84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */,
+				8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */,
 				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
 				840748DA25F966560087F387 /* GoodQuests.swift in Sources */,
+				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
 				844B127D2604F329009569D3 /* LiberationQuests.swift in Sources */,
 				840748DE25F967740087F387 /* SocialQuests.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 				840748D725F964CE0087F387 /* BrainQuests.swift in Sources */,
 				844B12832604F3FF009569D3 /* FoodQuests.swift in Sources */,
-				8458E84525E25B9A00C233B6 /* TaskTracker.swift in Sources */,
 				840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */,
 				84521B8E25FBA1C1008148DC /* FreetimeQuest.swift in Sources */,
 			);

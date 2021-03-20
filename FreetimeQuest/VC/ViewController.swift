@@ -164,8 +164,7 @@ extension ViewController: UITableViewDelegate {
 
         let doneAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
-            let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
-            self.showAlert(title: "Выполнить задание\n\(title) ?",
+            self.showAlert(title: "Выполнить задание\n\(quest.title) ?",
                            message: nil,
                            okButtonTitle: "Готово",
                            okAction: { _ in
@@ -188,9 +187,7 @@ extension ViewController: UITableViewDelegate {
 
         let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
             let quest = self.fetchedResultsController.object(at: indexPath)
-            let title = quest.title != nil ? "\"\(quest.title ?? "")\"" : ""
-            
-            self.showAlert(title: "Удалить задание\n\(title) ?",
+            self.showAlert(title: "Удалить задание\n\(quest.title) ?",
                            message: nil,
                            okButtonTitle: "Удалить",
                            okAction: { _ in

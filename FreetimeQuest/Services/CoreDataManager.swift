@@ -45,19 +45,7 @@ class CoreDataManager {
 
         saveContext()
     }
-    
-    func getQuests() -> [QuestObject] {
-        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
         
-        do {
-            let questsObjects = try viewContext.fetch(fetchRequest)
-            return questsObjects
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            return []
-        }
-    }
-    
     func questFRC() -> NSFetchedResultsController<QuestObject> {
 
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
@@ -69,6 +57,20 @@ class CoreDataManager {
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: viewContext,
                                                                   sectionNameKeyPath: "category",
+                                                                  cacheName: nil)
+        return fetchedResultsController
+    }
+    
+    func memoryFRC() -> NSFetchedResultsController<MemoryObject> {
+
+        let fetchRequest: NSFetchRequest<MemoryObject> = MemoryObject.fetchRequest()
+
+        let dataDescriptor = NSSortDescriptor(key: "data", ascending: true)
+        
+        fetchRequest.sortDescriptors = [dataDescriptor]
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: viewContext,
+                                                                  sectionNameKeyPath: nil,
                                                                   cacheName: nil)
         return fetchedResultsController
     }
