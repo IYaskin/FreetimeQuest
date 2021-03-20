@@ -10,7 +10,8 @@ import CoreData
 
 class CoreDataManager {
     
-    private let entityName = "QuestObject"
+    private let questEntityName = "QuestObject"
+    private let memoryEntityName = "MemoryObject"
     
     let container: NSPersistentContainer!
     let viewContext: NSManagedObjectContext!
@@ -28,7 +29,7 @@ class CoreDataManager {
                    id: Int,
                    category: Int,
                    stars: Int) {
-        let entity = NSEntityDescription.entity(forEntityName: self.entityName,
+        let entity = NSEntityDescription.entity(forEntityName: self.questEntityName,
                                                 in: self.viewContext)!
         
         let quest = NSManagedObject(entity: entity,
@@ -43,6 +44,22 @@ class CoreDataManager {
             UserDefaultsManager.shared.allQuestsCount += 1
         }
 
+        saveContext()
+    }
+    
+    func saveMemory(title: String,
+                    date: Date,
+                    image: Data?) {
+        let entity = NSEntityDescription.entity(forEntityName: self.memoryEntityName,
+                                                in: self.viewContext)!
+        
+        let quest = NSManagedObject(entity: entity,
+                                    insertInto: self.viewContext)
+        
+        quest.setValue(title, forKeyPath: "title")
+        quest.setValue(date, forKeyPath: "date")
+        quest.setValue(image, forKeyPath: "image")
+        
         saveContext()
     }
         
@@ -74,31 +91,19 @@ class CoreDataManager {
                                                                   cacheName: nil)
         return fetchedResultsController
     }
-
-    func deleteQuests() {
-        let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
-        
-        fetchRequest.returnsObjectsAsFaults = false
-        do {
-            let results = try self.viewContext.fetch(fetchRequest)
-            for object in results {
-                self.viewContext.delete(object)
-            }
-            UserDefaultsManager.shared.isBaseQuestsSet = false
-            UserDefaultsManager.shared.allQuestsCount = 0
-            UserDefaultsManager.shared.doneQuestsCount = 0
-        } catch let error {
-            print("Detele all data in QuestObject error :", error)
-        }
-        
-        saveContext()
-    }
     
     func doneQuest(_ quest: QuestObject) {
+        let title = quest.title
+        let date = Date()
+        let image = UIImage(named: "photo")!
         UserDefaultsManager.shared.doneQuestsCount += 1
         UserDefaultsManager.shared.starsCount += Int(quest.stars)
         viewContext.delete(quest)
         saveContext()
+        
+        saveMemory(title: title,
+                   date: date,
+                   image: image.jpegData(compressionQuality: 1))
     }
     
     func deleteQuest(_ quest: QuestObject) {

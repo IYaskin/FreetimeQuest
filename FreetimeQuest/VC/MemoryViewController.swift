@@ -26,10 +26,8 @@ class MemoryViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
-//                                  forCellReuseIdentifier: QuestCell.reuseID)
-//        tableView.register(UINib.init(nibName: FreetimeQuestCell.nibName, bundle: nil),
-//                                  forCellReuseIdentifier: FreetimeQuestCell.reuseID)
+        tableView.register(UINib.init(nibName: MemoryCell.nibName, bundle: nil),
+                                  forCellReuseIdentifier: MemoryCell.reuseID)
 
         tableView.backgroundColor = .clear
 
@@ -62,16 +60,22 @@ extension MemoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestCell.reuseID) as? QuestCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MemoryCell.reuseID) as? MemoryCell else {
             return UITableViewCell()
-//        }
-//
-//        let quest = fetchedResultsController.object(at: indexPath)
-//        cell.configure(title: quest.title,
-//                       category: Int(quest.category),
-//                       stars: Int(quest.stars))
-//
-//        return cell
+        }
+
+        let quest = fetchedResultsController.object(at: indexPath)
+        
+        var image: UIImage?
+        if let imgData = quest.image {
+            image = UIImage(data: imgData)
+        }
+
+        cell.configure(title: quest.title,
+                       date: quest.date,
+                       image: image)
+
+        return cell
     }
     
 }
@@ -79,13 +83,23 @@ extension MemoryViewController: UITableViewDataSource {
 extension MemoryViewController: UITableViewDelegate {
     
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath == IndexPath(row: 0, section: 0) {
-//            return 160
+//    func tableView(_ tableView: UITableView,
+//                   heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        if fetchedResultsController.object(at: indexPath).image == nil {
+//            return 100
 //        }
-        return 90
-
-    }
+//        return 400
+//    }
+//
+//    func tableView(_ tableView: UITableView,
+//                   estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if fetchedResultsController.object(at: indexPath).image == nil {
+//            return 100
+//        }
+//        return 400
+//
+//    }
     
 }
 

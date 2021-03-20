@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     }
     
     func firstLaunchCheck() {
-        print("isBaseQuestsSet = \(UserDefaultsManager.shared.isBaseQuestsSet)")
         guard !UserDefaultsManager.shared.isBaseQuestsSet else {
             return
         }

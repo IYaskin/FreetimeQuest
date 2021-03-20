@@ -35,6 +35,8 @@
 		8451B5862605EDB500BD0A65 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8455583825DDAAF40026F66D /* CoreDataModel.xcdatamodeld */; };
 		8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */; };
 		8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */; };
+		8451B5932605FEEE00BD0A65 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451B5922605FEEE00BD0A65 /* MemoryCell.swift */; };
+		8451B5972605FEF800BD0A65 /* MemoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8451B5962605FEF800BD0A65 /* MemoryCell.xib */; };
 		84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */; };
 		84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */; };
 		84521B8E25FBA1C1008148DC /* FreetimeQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */; };
@@ -74,6 +76,8 @@
 		8450FE2A25BDBC1000814F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8451B57E2605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8451B57F2605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoryObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8451B5922605FEEE00BD0A65 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
+		8451B5962605FEF800BD0A65 /* MemoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoryCell.xib; sourceTree = "<group>"; };
 		84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetimeQuestCell.swift; sourceTree = "<group>"; };
 		84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreetimeQuestCell.xib; sourceTree = "<group>"; };
 		84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetimeQuest.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		84507A1F25E10F550060EDE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8451B5912605FEC500BD0A65 /* MemoryCell */,
 				84521B8625FBA152008148DC /* FreetimeQuestCell */,
 				84424BF225F01603003F125A /* CategoryHeader */,
 				84507A2825E111D90060EDE5 /* QuestCell */,
@@ -246,6 +251,15 @@
 			path = MemoryObject;
 			sourceTree = "<group>";
 		};
+		8451B5912605FEC500BD0A65 /* MemoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				8451B5922605FEEE00BD0A65 /* MemoryCell.swift */,
+				8451B5962605FEF800BD0A65 /* MemoryCell.xib */,
+			);
+			path = MemoryCell;
+			sourceTree = "<group>";
+		};
 		84521B8625FBA152008148DC /* FreetimeQuestCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +339,7 @@
 				84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */,
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
 				84424BF725F01644003F125A /* CategoryHeader.xib in Resources */,
+				8451B5972605FEF800BD0A65 /* MemoryCell.xib in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
 				84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */,
 			);
@@ -341,6 +356,7 @@
 				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
 				84424BF425F0161E003F125A /* CategoryHeader.swift in Sources */,
 				844B12772604F2B7009569D3 /* TravelingQuests.swift in Sources */,
+				8451B5932605FEEE00BD0A65 /* MemoryCell.swift in Sources */,
 				8452538925FE3F0200884FC4 /* MemoryViewController.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				8452539925FE45F900884FC4 /* CategoryViewController.swift in Sources */,
