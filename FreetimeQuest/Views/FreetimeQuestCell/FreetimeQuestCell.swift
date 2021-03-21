@@ -14,8 +14,7 @@ class FreetimeQuestCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var doneQuestsLabel: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
-    
+    @IBOutlet weak var progressBar: CustomProgressBar!
     @IBOutlet weak var starsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +28,8 @@ class FreetimeQuestCell: UITableViewCell {
         
         titleLabel.text = "Freetime Quest"
         
-        progressView.tintColor = .systemTeal
-        progressView.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.2)
-        //progressView.layer.cornerRadius = 2
+        progressBar.backColor = .black
+        progressBar.frontColor = .red
     }
     
     func configure() {
@@ -42,8 +40,8 @@ class FreetimeQuestCell: UITableViewCell {
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
         doneQuestsLabel.text = "Выполнено \(doneQuests) из \(maxQuests)"
         
-        let progress: Float = Float(doneQuests) / Float(maxQuests)
-        progressView.setProgress(progress, animated: true)
+        let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
+        progressBar.progress = progress
     }
     
 }

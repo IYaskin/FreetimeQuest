@@ -16,6 +16,7 @@
 		84424BF425F0161E003F125A /* CategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84424BF325F0161E003F125A /* CategoryHeader.swift */; };
 		84424BF725F01644003F125A /* CategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84424BF625F01644003F125A /* CategoryHeader.xib */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
+		84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84484E692607579D007EF415 /* CustomProgressBar.swift */; };
 		844B12722604AFEC009569D3 /* HobbyQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12712604AFEC009569D3 /* HobbyQuests.swift */; };
 		844B12772604F2B7009569D3 /* TravelingQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12762604F2B7009569D3 /* TravelingQuests.swift */; };
 		844B127A2604F2F7009569D3 /* HealthQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12792604F2F7009569D3 /* HealthQuests.swift */; };
@@ -58,6 +59,7 @@
 		84424BF325F0161E003F125A /* CategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeader.swift; sourceTree = "<group>"; };
 		84424BF625F01644003F125A /* CategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeader.xib; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		84484E692607579D007EF415 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		844B12712604AFEC009569D3 /* HobbyQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyQuests.swift; sourceTree = "<group>"; };
 		844B12762604F2B7009569D3 /* TravelingQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelingQuests.swift; sourceTree = "<group>"; };
 		844B12792604F2F7009569D3 /* HealthQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthQuests.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = CategoryHeader;
 			sourceTree = "<group>";
 		};
+		84484E6826075787007EF415 /* CustomProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				84484E692607579D007EF415 /* CustomProgressBar.swift */,
+			);
+			path = CustomProgressBar;
+			sourceTree = "<group>";
+		};
 		844B126F2604AF8A009569D3 /* BaseQuests */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		84507A1F25E10F550060EDE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84484E6826075787007EF415 /* CustomProgressBar */,
 				8451B5912605FEC500BD0A65 /* MemoryCell */,
 				84521B8625FBA152008148DC /* FreetimeQuestCell */,
 				84424BF225F01603003F125A /* CategoryHeader */,
@@ -383,6 +394,7 @@
 				840748D725F964CE0087F387 /* BrainQuests.swift in Sources */,
 				844B12832604F3FF009569D3 /* FoodQuests.swift in Sources */,
 				840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */,
+				84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */,
 				84521B8E25FBA1C1008148DC /* FreetimeQuest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
