@@ -44,9 +44,7 @@ class ImagePickerService: NSObject {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = type
-        if type == .photoLibrary {
-            picker.allowsEditing = true
-        }
+        picker.allowsEditing = true
         picker.mediaTypes = [selectedMediaType.value]
         presentingViewController?.present(picker, animated: true)
     }

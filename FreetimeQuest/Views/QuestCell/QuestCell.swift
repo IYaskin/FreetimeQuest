@@ -25,13 +25,7 @@ class QuestCell: UITableViewCell {
         super.awakeFromNib()
         configureUI()
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        titleLabel.text = nil
-//        imgView.image = nil
-    }
-    
+        
     func configureUI() {
         selectionStyle = .none
         bgView.backgroundColor = .clear
@@ -69,7 +63,6 @@ class QuestCell: UITableViewCell {
         
         if let category = Category(rawValue: category) {
             titleLabel.textColor = category.textColor
-//            bgView.backgroundColor = category.bgColor
             cellView.backgroundColor = category.cellColor
             
             firstStarLabel.textColor = category.textColor
