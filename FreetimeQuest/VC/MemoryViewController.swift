@@ -40,6 +40,12 @@ class MemoryViewController: UIViewController {
         }
 
     }
+    
+    public func updateCell(image: UIImage?, indexPath: IndexPath) {
+        let quest = fetchedResultsController.object(at: indexPath)
+        quest.image = image?.jpegData(compressionQuality: 1)
+        CoreDataManager.shared.saveContext()
+    }
 }
 
 
@@ -65,16 +71,12 @@ extension MemoryViewController: UITableViewDataSource {
         }
 
         let quest = fetchedResultsController.object(at: indexPath)
-        
-        var image: UIImage?
-        if let imgData = quest.image {
-            image = UIImage(data: imgData)
-        }
 
         cell.configure(title: quest.title,
                        date: quest.date,
-                       image: image)
-
+                       imageData: quest.image)
+        cell.vc = self
+        cell.indexPath = indexPath
         return cell
     }
     
@@ -138,6 +140,16 @@ extension MemoryViewController: NSFetchedResultsControllerDelegate {
             if let indexPath = indexPath {
                     tableView.deleteRows(at: [indexPath], with: .automatic)
             }
+        case .update:
+            if let indexPath = indexPath {
+                let quest = fetchedResultsController.object(at: indexPath)
+                guard let cell = tableView.cellForRow(at: indexPath) as? MemoryCell else { break }
+                
+                cell.configure(title: quest.title,
+                               date: quest.date,
+                               imageData: quest.image)
+            }
+
         default:
             break
         }

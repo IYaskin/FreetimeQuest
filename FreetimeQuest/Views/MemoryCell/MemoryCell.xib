@@ -27,43 +27,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="408" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vBr-Gv-Eol">
-                                                <rect key="frame" x="20" y="0.0" width="318" height="80"/>
+                                                <rect key="frame" x="20" y="0.0" width="288" height="80"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="VNO-rw-GHZ">
-                                                <rect key="frame" x="338" y="0.0" width="50" height="80"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psP-yL-z2y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="28"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w72-wm-qMv">
-                                                        <rect key="frame" x="0.0" y="30" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="b51-6O-0B7"/>
-                                                        </constraints>
-                                                        <state key="normal" image="camera"/>
-                                                    </button>
-                                                </subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w72-wm-qMv">
+                                                <rect key="frame" x="328" y="10" width="60" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="vJD-2d-e7y"/>
+                                                    <constraint firstAttribute="width" constant="60" id="KfV-Cm-6So"/>
+                                                    <constraint firstAttribute="height" constant="60" id="b51-6O-0B7"/>
                                                 </constraints>
-                                            </stackView>
+                                                <state key="normal" image="camera"/>
+                                                <connections>
+                                                    <action selector="cameraButtonTapped:" destination="spv-lI-YBA" eventType="touchUpInside" id="QNh-j1-8aY"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="VNO-rw-GHZ" secondAttribute="bottom" id="2au-X5-4kZ"/>
+                                            <constraint firstItem="w72-wm-qMv" firstAttribute="centerY" secondItem="DCW-e1-HZ7" secondAttribute="centerY" id="B5x-rS-IYL"/>
                                             <constraint firstItem="vBr-Gv-Eol" firstAttribute="leading" secondItem="DCW-e1-HZ7" secondAttribute="leading" constant="20" id="E1h-ZY-x7f"/>
                                             <constraint firstItem="vBr-Gv-Eol" firstAttribute="top" secondItem="DCW-e1-HZ7" secondAttribute="top" id="Sfz-3H-Fj9"/>
-                                            <constraint firstItem="VNO-rw-GHZ" firstAttribute="top" secondItem="DCW-e1-HZ7" secondAttribute="top" id="YK2-VK-vPK"/>
+                                            <constraint firstItem="w72-wm-qMv" firstAttribute="leading" secondItem="vBr-Gv-Eol" secondAttribute="trailing" constant="20" id="b1f-5H-IHt"/>
                                             <constraint firstAttribute="bottom" secondItem="vBr-Gv-Eol" secondAttribute="bottom" id="fJE-My-NVm"/>
+                                            <constraint firstAttribute="trailing" secondItem="w72-wm-qMv" secondAttribute="trailing" constant="20" id="gyq-VF-bxj"/>
                                             <constraint firstAttribute="height" constant="80" id="i6Y-EZ-Coj"/>
-                                            <constraint firstItem="VNO-rw-GHZ" firstAttribute="leading" secondItem="vBr-Gv-Eol" secondAttribute="trailing" id="xkx-wa-Wap"/>
-                                            <constraint firstAttribute="trailing" secondItem="VNO-rw-GHZ" secondAttribute="trailing" constant="20" id="zCQ-IJ-zt2"/>
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-qq-Qq8">
@@ -94,7 +83,6 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bgView" destination="bqG-7f-WW3" id="odP-Mt-diB"/>
-                <outlet property="dateLabel" destination="psP-yL-z2y" id="zKg-IH-TmN"/>
                 <outlet property="imgView" destination="0eU-qq-Qq8" id="3nf-di-Kwy"/>
                 <outlet property="photoButton" destination="w72-wm-qMv" id="Ln1-g6-Mor"/>
                 <outlet property="titleLabel" destination="vBr-Gv-Eol" id="khe-fx-ZZo"/>

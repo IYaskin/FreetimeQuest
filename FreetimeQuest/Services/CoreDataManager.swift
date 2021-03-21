@@ -95,7 +95,6 @@ class CoreDataManager {
     func doneQuest(_ quest: QuestObject) {
         let title = quest.title
         let date = Date()
-        let image = UIImage(named: "photo")!
         UserDefaultsManager.shared.doneQuestsCount += 1
         UserDefaultsManager.shared.starsCount += Int(quest.stars)
         viewContext.delete(quest)
@@ -103,7 +102,7 @@ class CoreDataManager {
         
         saveMemory(title: title,
                    date: date,
-                   image: image.jpegData(compressionQuality: 1))
+                   image: nil)
     }
     
     func deleteQuest(_ quest: QuestObject) {
