@@ -108,4 +108,9 @@ extension MemoryCell: ImagePickerServiceDelegate {
         vc?.updateCell(image: image,
                        indexPath: indexPath)
     }
+    
+    func imagePickerService(_ service: ImagePickerService,
+                            finishWith error: String) {
+        vc?.showOkAlert(title: "Не удалось получить фото :(", okButtonTitle: "Ок")
+    }
 }
