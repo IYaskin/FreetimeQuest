@@ -8,12 +8,12 @@
 import UIKit
 
 protocol ImagePickerServiceDelegate: class {
-    func imagePickerService(_ service: ImagePickerService, finishWith image: UIImage, fileURL: URL, fileName: String)
+    func imagePickerService(_ service: ImagePickerService, finishWith image: UIImage)
     func imagePickerService(_ service: ImagePickerService, finishWith error: String)
 }
 
 extension ImagePickerServiceDelegate {
-    func imagePickerService(_ service: ImagePickerService, finishWith image: UIImage, fileURL: URL, fileName: String) {}
+    func imagePickerService(_ service: ImagePickerService, finishWith image: UIImage) {}
     func imagePickerService(_ service: ImagePickerService, finishWith error: String) {}
 }
 
@@ -27,10 +27,6 @@ class ImagePickerService: NSObject {
             case .video: return "public.movie"
             }
         }
-    }
-    private let fileManager = FileManager.default
-    private var tempDirectory: URL {
-        return fileManager.temporaryDirectory
     }
     private var selectedMediaType: MediaType = .photo
 
@@ -47,17 +43,6 @@ class ImagePickerService: NSObject {
         picker.allowsEditing = true
         picker.mediaTypes = [selectedMediaType.value]
         presentingViewController?.present(picker, animated: true)
-    }
-    
-    private func saveImage(_ image: UIImage) -> (url: URL?, error: Error?) {
-        let imageData = image.jpegData(compressionQuality: 1.0)
-        let fileURL = tempDirectory.appendingPathComponent(String(Date().timeIntervalSince1970) + ".jpg")
-        do {
-            try imageData?.write(to: fileURL)
-            return (fileURL, nil)
-        } catch {
-            return (nil, error)
-        }
     }
 }
 
@@ -77,14 +62,8 @@ extension ImagePickerService: UIImagePickerControllerDelegate {
                         self.delegate?.imagePickerService(self, finishWith: "cantGetMedia")
                         return
                     }
-                    guard let fileURL = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
-                        self.delegate?.imagePickerService(self, finishWith: "cantGetMediaUrl")
-                        return
-                    }
                     self.delegate?.imagePickerService(self,
-                                                      finishWith: image,
-                                                      fileURL: fileURL,
-                                                      fileName: fileURL.lastPathComponent)
+                                                      finishWith: image)
 
                 case .video:
                     return
@@ -95,18 +74,8 @@ extension ImagePickerService: UIImagePickerControllerDelegate {
                     self.delegate?.imagePickerService(self, finishWith: "cantGetMedia")
                     return
                 }
-                let result = self.saveImage(image)
-                if let error = result.error {
-                    self.delegate?.imagePickerService(self, finishWith: "cantGetMediaUrl + \(error.localizedDescription)")
-                    return
-                }
-                if let url = result.url {
-                    self.delegate?.imagePickerService(self,
-                                                      finishWith: image,
-                                                      fileURL: url,
-                                                      fileName: url.lastPathComponent)
-                    return
-                }
+                self.delegate?.imagePickerService(self, finishWith: image)
+                return
             @unknown default:
                 fatalError()
             }

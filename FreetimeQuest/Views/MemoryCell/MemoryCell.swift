@@ -34,7 +34,7 @@ class MemoryCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-//        imgView.image = nil
+        //imgView.image = nil
     }
     
     func configureUI() {
@@ -64,6 +64,7 @@ class MemoryCell: UITableViewCell {
         }
 
     }
+    
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
         let alert = UIAlertController(title: nil,
@@ -99,9 +100,7 @@ class MemoryCell: UITableViewCell {
 
 extension MemoryCell: ImagePickerServiceDelegate {
     func imagePickerService(_ service: ImagePickerService,
-                            finishWith image: UIImage,
-                            fileURL: URL,
-                            fileName: String) {
+                            finishWith image: UIImage) {
         guard let indexPath = indexPath else {
             return
         }

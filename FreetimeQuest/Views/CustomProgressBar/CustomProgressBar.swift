@@ -64,7 +64,7 @@ class CustomProgressBar: UIView {
     }
         
     private func setProgress(animated: Bool) {
-        let newWidth = max(bounds.width * progress, 60)
+        let newWidth = max(bounds.width * progress, 0)
         let setting = {
             self.frontView?.frame.size.width = newWidth
         }

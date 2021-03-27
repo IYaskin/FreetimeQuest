@@ -43,7 +43,7 @@ class MemoryViewController: UIViewController {
     
     public func updateCell(image: UIImage?, indexPath: IndexPath) {
         let quest = fetchedResultsController.object(at: indexPath)
-        quest.image = image?.jpegData(compressionQuality: 1)
+        quest.image = image?.jpegData(compressionQuality: 0.5)
         CoreDataManager.shared.saveContext()
     }
 }
