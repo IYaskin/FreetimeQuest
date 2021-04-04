@@ -47,6 +47,30 @@ class CoreDataManager {
         saveContext()
     }
     
+    func saveMyQuest(title: String) {
+        
+        let category = Category.myQuests.rawValue
+        let star = 0
+        let id = UserDefaultsManager.shared.myQuestsCounter
+        
+        let entity = NSEntityDescription.entity(forEntityName: self.questEntityName,
+                                                in: self.viewContext)!
+        
+        let quest = NSManagedObject(entity: entity,
+                                    insertInto: self.viewContext)
+        
+        quest.setValue(title, forKeyPath: "title")
+        quest.setValue(id, forKeyPath: "id")
+        quest.setValue(category, forKeyPath: "category")
+        quest.setValue(star, forKeyPath: "stars")
+        
+        UserDefaultsManager.shared.allQuestsCount += 1
+        UserDefaultsManager.shared.myQuestsCounter += 1
+        UserDefaultsManager.shared.starsCount -= 1
+
+        saveContext()
+    }
+    
     func saveMemory(title: String,
                     date: Date,
                     image: Data?) {

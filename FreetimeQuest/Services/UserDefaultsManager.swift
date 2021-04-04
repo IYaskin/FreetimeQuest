@@ -59,6 +59,18 @@ class UserDefaultsManager {
         }
     }
     
+    var myQuestsCounter: Int {
+        
+        get {
+            UserDefaults.standard.integer(forKey: "myQuestsCounter")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "myQuestsCounter")
+        }
+    }
+
+    
     // AdditionalQuests
 
     var isGoodQuestsSet: Bool {

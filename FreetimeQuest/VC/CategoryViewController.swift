@@ -42,11 +42,7 @@ class CategoryViewController: UIViewController {
     }
     
     func updateTitle() {
-        if stackView.subviews.count == 0 {
-            titleLabel.text = "Все квесты добавлены!"
-        } else {
-            titleLabel.text = "Добавить квесты ★\(starsCount)"
-        }
+        titleLabel.text = "Добавить квесты ★\(starsCount)"
     }
     
     func configureAdditionalQuestsStackView() {
@@ -55,43 +51,65 @@ class CategoryViewController: UIViewController {
             $0.removeFromSuperview()
         })
         
+        var haveCategories = false
+        
         if !UserDefaultsManager.shared.isGoodQuestsSet {
-            addButtonToStackView(category: .good)
+            haveCategories = true
+            addCategoryButtonToStackView(category: .good)
         }
 
         if !UserDefaultsManager.shared.isHobbyQuestsSet {
-            addButtonToStackView(category: .hobby)
+            haveCategories = true
+            addCategoryButtonToStackView(category: .hobby)
         }
         
         
         if !UserDefaultsManager.shared.isSocialQuestsSet {
-            addButtonToStackView(category: .social)
+            haveCategories = true
+            addCategoryButtonToStackView(category: .social)
         }
         
         if !UserDefaultsManager.shared.isCharismaQuestsSet {
-            addButtonToStackView(category: .charisma)
+            haveCategories = true
+            addCategoryButtonToStackView(category: .charisma)
         }
         
         if !UserDefaultsManager.shared.isAdventureQuestsSet {
-            addButtonToStackView(category: .adventure)
+            haveCategories = true
+            addCategoryButtonToStackView(category: .adventure)
         }
 
+        if !haveCategories {
+            addMyQuestsButtonToStackView()
+        }
         
         updateTitle()
     }
     
-    func addButtonToStackView(category: Category) {
+    func addCategoryButtonToStackView(category: Category) {
         let button = UIButton()
         
         button.tag = category.rawValue
         button.setTitle("+ \(category.title) ★\(category.price)", for: .normal)
         button.setTitleColor(category.textColor, for: .normal)
         button.backgroundColor = category.cellColor
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.layer.cornerRadius = 20
         stackView.addArrangedSubview(button)
 
+    }
+    
+    func addMyQuestsButtonToStackView() {
+        let button = UIButton()
+        
+        button.setTitle("Добавить квест ★1", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        button.addTarget(self, action: #selector(addMyQuest), for: .touchUpInside)
+        button.layer.cornerRadius = 20
+        stackView.addArrangedSubview(button)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -105,7 +123,41 @@ class CategoryViewController: UIViewController {
                     self.addCategory(category)
                   },
                   cancelButtonTitle: "Отмена")
-}
+    }
+    
+    @objc func addMyQuest() {
+        if starsCount == 0 {
+            showOkAlert(title: "Не хватает звезд :(",
+                        message: "Выполните больше квестов, чтобы их заработать",
+                        okButtonTitle: "Ок")
+        } else {
+            
+            let alert = UIAlertController(title: "Введите название квеста:", message: nil, preferredStyle: .alert)
+
+            alert.addTextField { (textField) in
+                //textField.text = ""
+            }
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                guard let text = alert?.textFields?[0].text,
+                      !text.isEmpty else {
+                    self.showOkAlert(title: "Некорректное название :(",
+                                message: nil,
+                                okButtonTitle: "Ок")
+                    return
+                }
+                
+                CoreDataManager.shared.saveMyQuest(title: text)
+                self.updateTitle()
+                self.mainVC?.updateHeader()
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Отмена", style: .default, handler: nil))
+
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
     
     func addCategory(_ category: Category) {
         if starsCount < category.price {
