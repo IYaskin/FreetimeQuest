@@ -55,28 +55,25 @@ class CategoryViewController: UIViewController {
             $0.removeFromSuperview()
         })
         
+        if !UserDefaultsManager.shared.isGoodQuestsSet {
+            addButtonToStackView(category: .good)
+        }
+
         if !UserDefaultsManager.shared.isHobbyQuestsSet {
             addButtonToStackView(category: .hobby)
         }
         
-        if !UserDefaultsManager.shared.isTravelingQuestsSet {
-            addButtonToStackView(category: .traveling)
-        }
         
-        if !UserDefaultsManager.shared.isHealthQuestsSet {
-            addButtonToStackView(category: .health)
-        }
-        
-        if !UserDefaultsManager.shared.isLiberationQuestsSet {
-            addButtonToStackView(category: .liberation)
+        if !UserDefaultsManager.shared.isSocialQuestsSet {
+            addButtonToStackView(category: .social)
         }
         
         if !UserDefaultsManager.shared.isCharismaQuestsSet {
             addButtonToStackView(category: .charisma)
         }
         
-        if !UserDefaultsManager.shared.isFoodQuestsSet {
-            addButtonToStackView(category: .food)
+        if !UserDefaultsManager.shared.isAdventureQuestsSet {
+            addButtonToStackView(category: .adventure)
         }
 
         
@@ -118,27 +115,25 @@ class CategoryViewController: UIViewController {
         } else {
             
             switch category {
+            case .good:
+                GoodQuests.addQuests()
+                UserDefaultsManager.shared.isGoodQuestsSet = true
+
             case .hobby:
                 HobbyQuests.addQuests()
                 UserDefaultsManager.shared.isHobbyQuestsSet = true
-            case .traveling:
-                TravelingQuests.addQuests()
-                UserDefaultsManager.shared.isTravelingQuestsSet = true
 
-            case .health:
-                HealthQuests.addQuests()
-                UserDefaultsManager.shared.isHealthQuestsSet = true
-
-            case .liberation:
-                LiberationQuests.addQuests()
-                UserDefaultsManager.shared.isLiberationQuestsSet = true
+            case .social:
+                SocialQuests.addQuests()
+                UserDefaultsManager.shared.isSocialQuestsSet = true
 
             case .charisma:
                 CharismaQuests.addQuests()
                 UserDefaultsManager.shared.isCharismaQuestsSet = true
-            case .food:
-                FoodQuests.addQuests()
-                UserDefaultsManager.shared.isFoodQuestsSet = true
+
+            case .adventure:
+                AdventureQuests.addQuests()
+                UserDefaultsManager.shared.isAdventureQuestsSet = true
 
             default:
                 break

@@ -33,15 +33,6 @@ class ViewController: UIViewController {
         FreetimeQuest.addHeader()
 
         GoOutQuests.addQuests()
-
-        BrainQuests.addQuests()
-
-        GoodQuests.addQuests()
-
-        SocialQuests.addQuests()
-
-        AdventureQuests.addQuests()
-
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     

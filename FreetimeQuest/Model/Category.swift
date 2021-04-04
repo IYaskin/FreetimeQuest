@@ -11,19 +11,12 @@ enum Category: Int {
     //Base
     case freetimeQuest
     case goOut
-    case adventure
-    case brain
-    case social
     case good
-    
-    //Additional
     case hobby
-    case traveling
-    case health
-    case liberation
+    case social
     case charisma
-    case food
-    //Свои квесты
+    case adventure
+    case myQuests
 }
 
 extension Category {
@@ -32,34 +25,26 @@ extension Category {
         switch self {
         case .freetimeQuest:
             return .white
-        case .good:
-            return .lightGray
         case .goOut:
             return .orange
-        case .social:
-            return .purple
-        case .brain:
-            return .gray
-        case .adventure:
-            return .red
+        case .good:
+            return .lightGray
         case .hobby:
             return .brown
-        case .traveling:
-            return .systemTeal
-        case .health:
-            return .green
-        case .liberation:
-            return .systemPink
+        case .social:
+            return .purple
         case .charisma:
             return .black
-        case .food:
+        case .adventure:
+            return .red
+        case .myQuests:
             return .magenta
         }
     }
     
     var textColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .health, .goOut, .adventure, .liberation, .food:
+        case .freetimeQuest, .good, .goOut, .adventure:
             return .black
         default:
             return .white
@@ -70,34 +55,27 @@ extension Category {
         switch self {
         case .freetimeQuest:
             return "Freetime Quest"
-        case .good:
-            return "Добро"
         case .goOut:
             return "Посетить места"
-        case .social:
-            return "Социализация"
-        case .brain:
-            return "Мозг"
-        case .adventure:
-            return "Приключения"
+        case .good:
+            return "Добро"
         case .hobby:
             return "Хобби"
-        case .traveling:
-            return "Путешествия"
-        case .health:
-            return "Здоровье"
-        case .liberation:
+        case .social:
             return "Раскрепощение"
         case .charisma:
-            return "Харизма"
-        case .food:
-            return "Еда"
+            return "Саморазвитие"
+        case .adventure:
+            return "Приключения"
+        case .myQuests:
+            return "Мои квесты"
+
         }
     }
     
     var headerTextColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .goOut, .adventure, .health, .liberation, .food:
+        case .freetimeQuest, .good, .goOut, .adventure:
             return .black
         default:
             return.white
@@ -106,19 +84,21 @@ extension Category {
     
     var price: Int {
         switch self {
+        case .freetimeQuest:
+            return 0
+        case .goOut:
+            return 0
+        case .good:
+            return 10
         case .hobby:
-            return 5
-        case .traveling:
-            return 5
-        case .health:
-            return 5
-        case .liberation:
-            return 5
+            return 15
+        case .social:
+            return 20
         case .charisma:
-            return 5
-        case .food:
-            return 5
-        default:
+            return 25
+        case .adventure:
+            return 30
+        case .myQuests:
             return 0
         }
     }

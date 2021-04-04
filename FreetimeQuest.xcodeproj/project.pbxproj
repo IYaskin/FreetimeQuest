@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D225F9612C0087F387 /* GoOutQuests.swift */; };
-		840748D725F964CE0087F387 /* BrainQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D625F964CE0087F387 /* BrainQuests.swift */; };
+		840748D725F964CE0087F387 /* HobbyQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D625F964CE0087F387 /* HobbyQuests.swift */; };
 		840748DA25F966560087F387 /* GoodQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D925F966560087F387 /* GoodQuests.swift */; };
 		840748DE25F967740087F387 /* SocialQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748DD25F967740087F387 /* SocialQuests.swift */; };
 		840748E125F969230087F387 /* AdventureQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748E025F969230087F387 /* AdventureQuest.swift */; };
@@ -17,12 +17,7 @@
 		84424BF725F01644003F125A /* CategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84424BF625F01644003F125A /* CategoryHeader.xib */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
 		84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84484E692607579D007EF415 /* CustomProgressBar.swift */; };
-		844B12722604AFEC009569D3 /* HobbyQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12712604AFEC009569D3 /* HobbyQuests.swift */; };
-		844B12772604F2B7009569D3 /* TravelingQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12762604F2B7009569D3 /* TravelingQuests.swift */; };
-		844B127A2604F2F7009569D3 /* HealthQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12792604F2F7009569D3 /* HealthQuests.swift */; };
-		844B127D2604F329009569D3 /* LiberationQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B127C2604F329009569D3 /* LiberationQuests.swift */; };
 		844B12802604F356009569D3 /* CharismaQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B127F2604F356009569D3 /* CharismaQuests.swift */; };
-		844B12832604F3FF009569D3 /* FoodQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B12822604F3FF009569D3 /* FoodQuests.swift */; };
 		84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2325E111510060EDE5 /* UIImage+Extension.swift */; };
 		84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2925E111ED0060EDE5 /* QuestCell.swift */; };
 		84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84507A2D25E111F70060EDE5 /* QuestCell.xib */; };
@@ -51,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		840748D225F9612C0087F387 /* GoOutQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoOutQuests.swift; sourceTree = "<group>"; };
-		840748D625F964CE0087F387 /* BrainQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainQuests.swift; sourceTree = "<group>"; };
+		840748D625F964CE0087F387 /* HobbyQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyQuests.swift; sourceTree = "<group>"; };
 		840748D925F966560087F387 /* GoodQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodQuests.swift; sourceTree = "<group>"; };
 		840748DD25F967740087F387 /* SocialQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialQuests.swift; sourceTree = "<group>"; };
 		840748E025F969230087F387 /* AdventureQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureQuest.swift; sourceTree = "<group>"; };
@@ -60,12 +55,7 @@
 		84424BF625F01644003F125A /* CategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeader.xib; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84484E692607579D007EF415 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
-		844B12712604AFEC009569D3 /* HobbyQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyQuests.swift; sourceTree = "<group>"; };
-		844B12762604F2B7009569D3 /* TravelingQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelingQuests.swift; sourceTree = "<group>"; };
-		844B12792604F2F7009569D3 /* HealthQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthQuests.swift; sourceTree = "<group>"; };
-		844B127C2604F329009569D3 /* LiberationQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiberationQuests.swift; sourceTree = "<group>"; };
 		844B127F2604F356009569D3 /* CharismaQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharismaQuests.swift; sourceTree = "<group>"; };
-		844B12822604F3FF009569D3 /* FoodQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuests.swift; sourceTree = "<group>"; };
 		84507A2325E111510060EDE5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		84507A2925E111ED0060EDE5 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
 		84507A2D25E111F70060EDE5 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
@@ -108,8 +98,13 @@
 		840748D125F961010087F387 /* Quests */ = {
 			isa = PBXGroup;
 			children = (
-				844B126F2604AF8A009569D3 /* BaseQuests */,
-				844B12702604AF99009569D3 /* AdditionalQuests */,
+				84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */,
+				840748D225F9612C0087F387 /* GoOutQuests.swift */,
+				840748D925F966560087F387 /* GoodQuests.swift */,
+				840748D625F964CE0087F387 /* HobbyQuests.swift */,
+				840748DD25F967740087F387 /* SocialQuests.swift */,
+				844B127F2604F356009569D3 /* CharismaQuests.swift */,
+				840748E025F969230087F387 /* AdventureQuest.swift */,
 			);
 			path = Quests;
 			sourceTree = "<group>";
@@ -129,32 +124,6 @@
 				84484E692607579D007EF415 /* CustomProgressBar.swift */,
 			);
 			path = CustomProgressBar;
-			sourceTree = "<group>";
-		};
-		844B126F2604AF8A009569D3 /* BaseQuests */ = {
-			isa = PBXGroup;
-			children = (
-				84521B8D25FBA1C1008148DC /* FreetimeQuest.swift */,
-				840748D225F9612C0087F387 /* GoOutQuests.swift */,
-				840748D625F964CE0087F387 /* BrainQuests.swift */,
-				840748D925F966560087F387 /* GoodQuests.swift */,
-				840748DD25F967740087F387 /* SocialQuests.swift */,
-				840748E025F969230087F387 /* AdventureQuest.swift */,
-			);
-			path = BaseQuests;
-			sourceTree = "<group>";
-		};
-		844B12702604AF99009569D3 /* AdditionalQuests */ = {
-			isa = PBXGroup;
-			children = (
-				844B12712604AFEC009569D3 /* HobbyQuests.swift */,
-				844B12762604F2B7009569D3 /* TravelingQuests.swift */,
-				844B12792604F2F7009569D3 /* HealthQuests.swift */,
-				844B127C2604F329009569D3 /* LiberationQuests.swift */,
-				844B127F2604F356009569D3 /* CharismaQuests.swift */,
-				844B12822604F3FF009569D3 /* FoodQuests.swift */,
-			);
-			path = AdditionalQuests;
 			sourceTree = "<group>";
 		};
 		84507A1D25E10F4A0060EDE5 /* Services */ = {
@@ -366,7 +335,6 @@
 				8451B5862605EDB500BD0A65 /* CoreDataModel.xcdatamodeld in Sources */,
 				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
 				84424BF425F0161E003F125A /* CategoryHeader.swift in Sources */,
-				844B12772604F2B7009569D3 /* TravelingQuests.swift in Sources */,
 				8451B5932605FEEE00BD0A65 /* MemoryCell.swift in Sources */,
 				8452538925FE3F0200884FC4 /* MemoryViewController.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
@@ -380,19 +348,15 @@
 				84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				844B12802604F356009569D3 /* CharismaQuests.swift in Sources */,
-				844B12722604AFEC009569D3 /* HobbyQuests.swift in Sources */,
 				8451B5812605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift in Sources */,
-				844B127A2604F2F7009569D3 /* HealthQuests.swift in Sources */,
 				84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */,
 				8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */,
 				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
 				840748DA25F966560087F387 /* GoodQuests.swift in Sources */,
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
-				844B127D2604F329009569D3 /* LiberationQuests.swift in Sources */,
 				840748DE25F967740087F387 /* SocialQuests.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
-				840748D725F964CE0087F387 /* BrainQuests.swift in Sources */,
-				844B12832604F3FF009569D3 /* FoodQuests.swift in Sources */,
+				840748D725F964CE0087F387 /* HobbyQuests.swift in Sources */,
 				840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */,
 				84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */,
 				84521B8E25FBA1C1008148DC /* FreetimeQuest.swift in Sources */,

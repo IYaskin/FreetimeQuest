@@ -61,6 +61,18 @@ class UserDefaultsManager {
     
     // AdditionalQuests
 
+    var isGoodQuestsSet: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isGoodQuestsSet")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isGoodQuestsSet")
+        }
+        
+    }
+
     var isHobbyQuestsSet: Bool {
         
         get {
@@ -73,42 +85,19 @@ class UserDefaultsManager {
         
     }
     
-    var isTravelingQuestsSet: Bool {
-        
-        get {
-            UserDefaults.standard.bool(forKey: "isTravelingQuestsSet")
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: "isTravelingQuestsSet")
-        }
-        
-    }
     
-    var isHealthQuestsSet: Bool {
+    var isSocialQuestsSet: Bool {
         
         get {
-            UserDefaults.standard.bool(forKey: "isHealthQuestsSet")
+            UserDefaults.standard.bool(forKey: "isSocialQuestsSet")
         }
         
         set {
-            UserDefaults.standard.set(newValue, forKey: "isHealthQuestsSet")
+            UserDefaults.standard.set(newValue, forKey: "isSocialQuestsSet")
         }
         
     }
 
-    var isLiberationQuestsSet: Bool {
-        
-        get {
-            UserDefaults.standard.bool(forKey: "isLiberationQuestsSet")
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: "isLiberationQuestsSet")
-        }
-        
-    }
-    
     var isCharismaQuestsSet: Bool {
         
         get {
@@ -121,14 +110,14 @@ class UserDefaultsManager {
         
     }
 
-    var isFoodQuestsSet: Bool {
+    var isAdventureQuestsSet: Bool {
         
         get {
-            UserDefaults.standard.bool(forKey: "isFoodQuestsSet")
+            UserDefaults.standard.bool(forKey: "isAdventureQuestsSet")
         }
         
         set {
-            UserDefaults.standard.set(newValue, forKey: "isFoodQuestsSet")
+            UserDefaults.standard.set(newValue, forKey: "isAdventureQuestsSet")
         }
         
     }
