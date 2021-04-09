@@ -133,6 +133,8 @@ class CategoryViewController: UIViewController {
         } else {
             
             let alert = UIAlertController(title: "Введите название квеста:", message: nil, preferredStyle: .alert)
+            alert.setBackgroundColor(color: .systemYellow)
+            alert.view.tintColor = .black
 
             alert.addTextField { (textField) in
                 //textField.text = ""

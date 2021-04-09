@@ -13,6 +13,7 @@ class MemoryCell: UITableViewCell {
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var imageContainerView: UIView!
     
     static let nibName = "MemoryCell"
     static let reuseID = "MemoryCell"
@@ -39,9 +40,12 @@ class MemoryCell: UITableViewCell {
     
     func configureUI() {
         selectionStyle = .none
-        bgView.layer.cornerRadius = 20
-        imgView.layer.cornerRadius = 20
-        imgView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        bgView.layer.cornerRadius = 15
+        imageContainerView.layer.cornerRadius = 15
+        imgView.layer.cornerRadius = 0
+        
+        bgView.dropShadow()
+
         imagePicker.delegate = self
     }
     
@@ -57,10 +61,10 @@ class MemoryCell: UITableViewCell {
 
         if let data = imageData,
            let image = UIImage(data: data) {
-            imgView.isHidden = false
+            imageContainerView.isHidden = false
             imgView.image = image
         } else {
-            imgView.isHidden = true
+            imageContainerView.isHidden = true
         }
 
     }
@@ -70,6 +74,9 @@ class MemoryCell: UITableViewCell {
         let alert = UIAlertController(title: nil,
                                       message: nil,
                                       preferredStyle: .actionSheet)
+        alert.setBackgroundColor(color: .systemYellow)
+        alert.view.tintColor = .black
+
         let galleryAction = UIAlertAction(title: "Галерея", style: .default) { [weak self] _ in
             self?.imagePicker.presentImagePicker(.photoLibrary)
         }
@@ -86,7 +93,7 @@ class MemoryCell: UITableViewCell {
                                  indexPath: indexPath)
         }
         
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .default)
         
         alert.addAction(galleryAction)
         alert.addAction(cameraAction)

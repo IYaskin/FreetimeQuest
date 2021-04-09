@@ -30,6 +30,7 @@ class QuestCell: UITableViewCell {
         selectionStyle = .none
         bgView.backgroundColor = .clear
         cellView.layer.cornerRadius = 10
+        cellView.dropShadow()
     }
     
     func configureStars(stars: Int) {
