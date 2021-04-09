@@ -34,25 +34,34 @@ class QuestCell: UITableViewCell {
     }
     
     func configureStars(stars: Int) {
-        let fullStar = "★"
-        let emptyStar = "☆"
-        
+
         if stars == 1 {
-            firstStarLabel.text = fullStar
-            secondStarLabel.text = emptyStar
-            thirdStarLabel.text = emptyStar
+            firstStarLabel.isHidden = false
+            secondStarLabel.isHidden = true
+            thirdStarLabel.isHidden = true
+
+            firstStarLabel.font = .systemFont(ofSize: 24)
+            
         } else if stars == 2 {
-            firstStarLabel.text = fullStar
-            secondStarLabel.text = fullStar
-            thirdStarLabel.text = emptyStar
+            firstStarLabel.isHidden = false
+            secondStarLabel.isHidden = false
+            thirdStarLabel.isHidden = true
+
+            firstStarLabel.font = .systemFont(ofSize: 20)
+            secondStarLabel.font = .systemFont(ofSize: 20)
         } else if stars == 3 {
-            firstStarLabel.text = fullStar
-            secondStarLabel.text = fullStar
-            thirdStarLabel.text = fullStar
+            firstStarLabel.isHidden = false
+            secondStarLabel.isHidden = false
+            thirdStarLabel.isHidden = false
+            
+            firstStarLabel.font = .systemFont(ofSize: 17)
+            secondStarLabel.font = .systemFont(ofSize: 17)
+            thirdStarLabel.font = .systemFont(ofSize: 17)
+            
         } else {
-            firstStarLabel.text = emptyStar
-            secondStarLabel.text = emptyStar
-            thirdStarLabel.text = emptyStar
+            firstStarLabel.isHidden = true
+            secondStarLabel.isHidden = true
+            thirdStarLabel.isHidden = true
         }
     }
     
