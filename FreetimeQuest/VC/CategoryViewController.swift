@@ -137,7 +137,8 @@ class CategoryViewController: UIViewController {
             alert.view.tintColor = .black
 
             alert.addTextField { (textField) in
-                //textField.text = ""
+                textField.smartInsertDeleteType = UITextSmartInsertDeleteType.no
+                textField.delegate = self
             }
 
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
@@ -207,4 +208,21 @@ class CategoryViewController: UIViewController {
     @IBAction func greyAreaTapped(_ sender: UITapGestureRecognizer) {
         dismiss(animated: true)
     }
+}
+
+
+extension CategoryViewController: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        guard let textFieldText = textField.text,
+            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+                return false
+        }
+        let substringToReplace = textFieldText[rangeOfTextToReplace]
+        let count = textFieldText.count - substringToReplace.count + string.count
+        return count <= 50
+    }
+
 }
