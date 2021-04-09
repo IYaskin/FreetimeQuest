@@ -5,7 +5,7 @@
 //  Created by Igor Yaskin on 10.03.2021.
 //
 
-import Foundation
+import UIKit
 
 class AdventureQuests {
     
@@ -125,12 +125,18 @@ class AdventureQuests {
                                          category: category,
                                          stars: threeStar)
         
-
-        
-
-        
-
         
     }
+    
+    static func getIcon(id: Int) -> UIImage? {
+        switch id {
+        case 1:
+            return UIImage(named: "icon")
+
+        default:
+            return UIImage(named: "icon")
+        }
+    }
+
     
 }

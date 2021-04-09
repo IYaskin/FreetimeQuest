@@ -20,14 +20,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-7T-s5u">
                         <rect key="frame" x="20" y="5" width="448" height="80"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="CrN-9t-EYv">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CrN-9t-EYv">
+                                <rect key="frame" x="10" y="10" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="y7i-9h-lcg"/>
+                                    <constraint firstAttribute="height" constant="60" id="P3d-2G-00k"/>
+                                    <constraint firstAttribute="width" constant="60" id="y7i-9h-lcg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-wj-N4v">
-                                <rect key="frame" x="100" y="5" width="300" height="70"/>
+                                <rect key="frame" x="90" y="5" width="310" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,16 +62,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="CrN-9t-EYv" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" id="17O-Er-R4d"/>
+                            <constraint firstItem="CrN-9t-EYv" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="10" id="17O-Er-R4d"/>
                             <constraint firstAttribute="trailing" secondItem="jQl-BO-vea" secondAttribute="trailing" constant="8" id="8wk-md-BZo"/>
-                            <constraint firstAttribute="bottom" secondItem="CrN-9t-EYv" secondAttribute="bottom" id="DPI-rm-Gp9"/>
+                            <constraint firstAttribute="bottom" secondItem="CrN-9t-EYv" secondAttribute="bottom" constant="10" id="DPI-rm-Gp9"/>
                             <constraint firstAttribute="bottom" secondItem="jQl-BO-vea" secondAttribute="bottom" constant="8" id="WeD-A1-mHJ"/>
                             <constraint firstAttribute="height" constant="80" id="dP9-Bo-XKP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="5" id="gJH-rI-AnC"/>
                             <constraint firstItem="jQl-BO-vea" firstAttribute="top" secondItem="Pz7-7T-s5u" secondAttribute="top" constant="5" id="gP7-X7-Lum"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="leading" secondItem="CrN-9t-EYv" secondAttribute="trailing" constant="20" id="gvX-A4-7lP"/>
                             <constraint firstItem="ovi-wj-N4v" firstAttribute="centerY" secondItem="Pz7-7T-s5u" secondAttribute="centerY" id="lYH-ge-fEj"/>
-                            <constraint firstItem="CrN-9t-EYv" firstAttribute="leading" secondItem="Pz7-7T-s5u" secondAttribute="leading" id="qHa-6N-xwp"/>
+                            <constraint firstItem="CrN-9t-EYv" firstAttribute="leading" secondItem="Pz7-7T-s5u" secondAttribute="leading" constant="10" id="qHa-6N-xwp"/>
                             <constraint firstItem="jQl-BO-vea" firstAttribute="leading" secondItem="ovi-wj-N4v" secondAttribute="trailing" constant="10" id="rqe-s0-M8Z"/>
                         </constraints>
                     </view>
@@ -97,7 +98,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon" width="512" height="512"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

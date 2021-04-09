@@ -5,7 +5,7 @@
 //  Created by Igor Yaskin on 10.03.2021.
 //
 
-import Foundation
+import UIKit
 
 class GoOutQuests {
     
@@ -119,11 +119,65 @@ class GoOutQuests {
                                          category: category,
                                          stars: star)
         
-        CoreDataManager.shared.saveQuest(title: "Фестиваль",
+        CoreDataManager.shared.saveQuest(title: "Шоу",
                                          id: 22,
                                          category: category,
                                          stars: star)
 
+    }
+    
+    static func getIcon(id: Int) -> UIImage? {
+        switch id {
+        case 1:
+            return UIImage(named: "museum")
+        case 2:
+            return UIImage(named: "theater")
+        case 3:
+            return UIImage(named: "gallery")
+        case 4:
+            return UIImage(named: "zoo")
+        case 5:
+            return UIImage(named: "football")
+        case 6:
+            return UIImage(named: "basketball")
+        case 7:
+            return UIImage(named: "hockey")
+        case 8:
+            return UIImage(named: "bowling")
+        case 9:
+            return UIImage(named: "billiard")
+        case 10:
+            return UIImage(named: "concert")
+        case 11:
+            return UIImage(named: "quest")
+        case 12:
+            return UIImage(named: "iceskating")
+            
+        case 13:
+            return UIImage(named: "karting")
+        case 14:
+            return UIImage(named: "trampoline")
+        case 15:
+            return UIImage(named: "aquapark")
+        case 16:
+            return UIImage(named: "excursion")
+        case 17:
+            return UIImage(named: "degustation")
+        case 18:
+            return UIImage(named: "bar")
+        case 19:
+            return UIImage(named: "nightclub")
+        case 20:
+            return UIImage(named: "standup")
+        case 21:
+            return UIImage(named: "sauna")
+        case 22:
+            return UIImage(named: "show")
+
+        default:
+            return nil
+            
+        }
     }
     
 }

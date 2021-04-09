@@ -5,7 +5,7 @@
 //  Created by Igor Yaskin on 10.03.2021.
 //
 
-import Foundation
+import UIKit
 
 class HobbyQuests {
 
@@ -114,5 +114,16 @@ class HobbyQuests {
                                          stars: star)
         
     }
+    
+    static func getIcon(id: Int) -> UIImage? {
+        switch id {
+        case 1:
+            return UIImage(named: "icon")
+
+        default:
+            return UIImage(named: "icon")
+        }
+    }
+
     
 }

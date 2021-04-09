@@ -29,7 +29,7 @@ class QuestCell: UITableViewCell {
     func configureUI() {
         selectionStyle = .none
         bgView.backgroundColor = .clear
-        cellView.layer.cornerRadius = 10
+        cellView.layer.cornerRadius = 15
         cellView.dropShadow()
     }
     
@@ -67,7 +67,8 @@ class QuestCell: UITableViewCell {
     
     func configure(title: String?,
                    category: Int,
-                   stars: Int) {
+                   stars: Int,
+                   id: Int) {
         titleLabel.text = title
         configureStars(stars: stars)
         
@@ -79,6 +80,23 @@ class QuestCell: UITableViewCell {
             secondStarLabel.textColor = category.textColor
             thirdStarLabel.textColor = category.textColor
 
+            
+            switch category {
+            case .goOut:
+                imgView.image = GoOutQuests.getIcon(id: id)
+            case .good:
+                imgView.image = GoodQuests.getIcon(id: id)
+            case .hobby:
+                imgView.image = HobbyQuests.getIcon(id: id)
+            case .social:
+                imgView.image = SocialQuests.getIcon(id: id)
+            case .charisma:
+                imgView.image = CharismaQuests.getIcon(id: id)
+            case .adventure:
+                imgView.image = AdventureQuests.getIcon(id: id)
+            default:
+                imgView.image = nil
+            }
         }
 
     }

@@ -5,7 +5,7 @@
 //  Created by Igor Yaskin on 19.03.2021.
 //
 
-import Foundation
+import UIKit
 
 class CharismaQuests {
     
@@ -103,4 +103,15 @@ class CharismaQuests {
                                          stars: threeStar)
 
     }
+    
+    static func getIcon(id: Int) -> UIImage? {
+        switch id {
+        case 1:
+            return UIImage(named: "icon")
+
+        default:
+            return UIImage(named: "icon")
+        }
+    }
+
 }
