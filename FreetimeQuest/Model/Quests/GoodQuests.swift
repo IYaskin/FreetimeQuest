@@ -74,7 +74,7 @@ class GoodQuests {
                                          category: category,
                                          stars: star)
 
-        CoreDataManager.shared.saveQuest(title: "Посетить приют",
+        CoreDataManager.shared.saveQuest(title: "Угостить друзей",
                                          id: 13,
                                          category: category,
                                          stars: star)
@@ -99,10 +99,41 @@ class GoodQuests {
     static func getIcon(id: Int) -> UIImage? {
         switch id {
         case 1:
-            return UIImage(named: "icon")
+            return UIImage(named: "carrybag")
+        case 2:
+            return UIImage(named: "duck")
+        case 3:
+            return UIImage(named: "animals")
+        case 4:
+            return UIImage(named: "oldstuff")
+        case 5:
+            return UIImage(named: "helpfond")
+        case 6:
+            return UIImage(named: "buygift")
+        case 7:
+            return UIImage(named: "appmark")
+        case 8:
+            return UIImage(named: "blood")
+
+        case 9:
+            return UIImage(named: "trash")
+        case 10:
+            return UIImage(named: "helpold")
+        case 11:
+            return UIImage(named: "birdhouse")
+        case 12:
+            return UIImage(named: "dinner")
+        case 13:
+            return UIImage(named: "feedfriends")
+        case 14:
+            return UIImage(named: "fixhouse")
+        case 15:
+            return UIImage(named: "musician")
+        case 16:
+            return UIImage(named: "homeless")
 
         default:
-            return UIImage(named: "icon")
+            return nil
         }
     }
 

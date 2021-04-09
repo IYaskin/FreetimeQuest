@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "fixhouse.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
