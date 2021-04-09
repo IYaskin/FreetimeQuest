@@ -58,24 +58,36 @@ extension ImagePickerService: UIImagePickerControllerDelegate {
             case .photoLibrary, .savedPhotosAlbum:
                 switch self.selectedMediaType {
                 case .photo:
-                    guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                    if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage  {
+                        self.delegate?.imagePickerService(self,
+                                                          finishWith: image)
+                        return
+                    } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage  {
+                        self.delegate?.imagePickerService(self,
+                                                          finishWith: image)
+                        return
+                    } else {
                         self.delegate?.imagePickerService(self, finishWith: "cantGetMedia")
                         return
                     }
-                    self.delegate?.imagePickerService(self,
-                                                      finishWith: image)
 
                 case .video:
                     return
                 }
 
             case .camera:
-                guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage  {
+                    self.delegate?.imagePickerService(self,
+                                                      finishWith: image)
+                    return
+                } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage  {
+                    self.delegate?.imagePickerService(self,
+                                                      finishWith: image)
+                    return
+                } else {
                     self.delegate?.imagePickerService(self, finishWith: "cantGetMedia")
                     return
                 }
-                self.delegate?.imagePickerService(self, finishWith: image)
-                return
             @unknown default:
                 fatalError()
             }
