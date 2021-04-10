@@ -77,10 +77,12 @@ extension ImagePickerService: UIImagePickerControllerDelegate {
 
             case .camera:
                 if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage  {
+                    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
                     self.delegate?.imagePickerService(self,
                                                       finishWith: image)
                     return
                 } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage  {
+                    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
                     self.delegate?.imagePickerService(self,
                                                       finishWith: image)
                     return

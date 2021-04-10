@@ -42,8 +42,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Камера</string>
+	<string>Нужно для добавления фото в ленту воспоминаний</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Фото</string>
+	<string>Нужно для добавления фото в ленту воспоминаний</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>При фотографировании через приложение, фото будет сохраняться в галерею</string>
 </dict>
 </plist>
