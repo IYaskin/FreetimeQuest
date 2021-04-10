@@ -71,7 +71,7 @@ class GoOutQuests {
         case 10:
             return UIImage(named: "quest")
         case 11:
-            return UIImage(named: "iceSkating")
+            return UIImage(named: "iceskating")
             
         case 12:
             return UIImage(named: "karting")
@@ -86,9 +86,9 @@ class GoOutQuests {
         case 17:
             return UIImage(named: "bar")
         case 18:
-            return UIImage(named: "nightClub")
+            return UIImage(named: "nightclub")
         case 19:
-            return UIImage(named: "standUp")
+            return UIImage(named: "standup")
         case 20:
             return UIImage(named: "sauna")
         case 21:

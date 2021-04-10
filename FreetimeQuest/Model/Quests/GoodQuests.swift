@@ -42,34 +42,34 @@ class GoodQuests {
     static func getIcon(id: Int) -> UIImage? {
         switch id {
         case 0:
-            return UIImage(named: "carryBag")
+            return UIImage(named: "carrybag")
         case 1:
             return UIImage(named: "duck")
         case 2:
             return UIImage(named: "animals")
         case 3:
-            return UIImage(named: "oldStuff")
+            return UIImage(named: "oldstuff")
         case 4:
-            return UIImage(named: "helpFond")
+            return UIImage(named: "helpfond")
         case 5:
-            return UIImage(named: "buyGift")
+            return UIImage(named: "buygift")
         case 6:
-            return UIImage(named: "appMark")
+            return UIImage(named: "appmark")
         case 7:
             return UIImage(named: "blood")
 
         case 8:
             return UIImage(named: "trash")
         case 9:
-            return UIImage(named: "helpOld")
+            return UIImage(named: "helpold")
         case 10:
-            return UIImage(named: "birdHouse")
+            return UIImage(named: "birdhouse")
         case 11:
             return UIImage(named: "dinner")
         case 12:
-            return UIImage(named: "feedFriends")
+            return UIImage(named: "feedfriends")
         case 13:
-            return UIImage(named: "fixHouse")
+            return UIImage(named: "fixhouse")
         case 14:
             return UIImage(named: "musician")
         case 15:
