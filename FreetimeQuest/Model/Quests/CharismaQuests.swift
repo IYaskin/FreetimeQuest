@@ -31,7 +31,7 @@ class CharismaQuests {
                       "Избавиться от вредной привычки"]
 
         for (id, title) in titles.enumerated() {
-            let star = id <= 13 ? 2 : 3
+            let star = id < 14 ? 2 : 3
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
                                              category: Category.charisma.rawValue,
