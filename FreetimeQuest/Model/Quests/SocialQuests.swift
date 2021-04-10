@@ -12,6 +12,8 @@ class SocialQuests {
     static func addQuests() {
         let star = 1
         let category = Category.social.rawValue
+        
+        //let titles = []
 
         CoreDataManager.shared.saveQuest(title: "Улыбнуться прохожему",
                                          id: 1,

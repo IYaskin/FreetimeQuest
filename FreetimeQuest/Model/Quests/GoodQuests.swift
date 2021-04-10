@@ -12,124 +12,67 @@ class GoodQuests {
     static func addQuests() {
         let star = 1
         let category = Category.good.rawValue
+        
+        let titles = ["Помочь донести пакет",
+                      "Покормить уточек",
+                      "Покормить бездомных животных",
+                      "Отдать старые вещи нуждающимся",
+                      "Перечислить любую сумму в фонд помощи",
+                      "Купить подарок близкому человеку",
+                      "Поставить оценку этому приложению",
+                      "Сдать кровь для донорства",
+                      "Поднять мусор",
+                      "Перевести бабушку через дорогу",
+                      "Сделать и повесить скворечник",
+                      "Устроить семейный ужин",
+                      "Угостить друзей",
+                      "Отремонтировать что-то дома",
+                      "Дать денег уличному музыканту",
+                      "Купить еду бездомному"]
 
-        CoreDataManager.shared.saveQuest(title: "Помочь донести пакет",
-                                         id: 1,
-                                         category: category,
-                                         stars: star)
+        for (id, title) in titles.enumerated() {
+            CoreDataManager.shared.saveQuest(title: title,
+                                             id: id,
+                                             category: category,
+                                             stars: star)
+        }
         
-        CoreDataManager.shared.saveQuest(title: "Покормить уточек",
-                                         id: 2,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Покормить бездомных животных",
-                                         id: 3,
-                                         category: category,
-                                         stars: star)
-
-        
-        CoreDataManager.shared.saveQuest(title: "Отдать старые вещи нуждающимся",
-                                         id: 4,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Перечислить любую сумму в фонд помощи",
-                                         id: 5,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Купить подарок близкому человеку",
-                                         id: 6,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Поставить оценку этому приложению",
-                                         id: 7,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Сдать кровь для донорства",
-                                         id: 8,
-                                         category: category,
-                                         stars: star)
-
-        CoreDataManager.shared.saveQuest(title: "Поднять мусор",
-                                         id: 9,
-                                         category: category,
-                                         stars: star)
-
-        CoreDataManager.shared.saveQuest(title: "Перевести бабушку через дорогу",
-                                         id: 10,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Сделать и повесить скворечник",
-                                         id: 11,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Устроить семейный ужин",
-                                         id: 12,
-                                         category: category,
-                                         stars: star)
-
-        CoreDataManager.shared.saveQuest(title: "Угостить друзей",
-                                         id: 13,
-                                         category: category,
-                                         stars: star)
-        
-        CoreDataManager.shared.saveQuest(title: "Отремонтировать что-то дома",
-                                         id: 14,
-                                         category: category,
-                                         stars: star)
-
-        CoreDataManager.shared.saveQuest(title: "Дать денег уличному музыканту",
-                                         id: 15,
-                                         category: category,
-                                         stars: star)
-
-        CoreDataManager.shared.saveQuest(title: "Купить еду бездомному",
-                                         id: 16,
-                                         category: category,
-                                         stars: star)
-
     }
     
     static func getIcon(id: Int) -> UIImage? {
         switch id {
+        case 0:
+            return UIImage(named: "carryBag")
         case 1:
-            return UIImage(named: "carrybag")
-        case 2:
             return UIImage(named: "duck")
-        case 3:
+        case 2:
             return UIImage(named: "animals")
+        case 3:
+            return UIImage(named: "oldStuff")
         case 4:
-            return UIImage(named: "oldstuff")
+            return UIImage(named: "helpFond")
         case 5:
-            return UIImage(named: "helpfond")
+            return UIImage(named: "buyGift")
         case 6:
-            return UIImage(named: "buygift")
+            return UIImage(named: "appMark")
         case 7:
-            return UIImage(named: "appmark")
-        case 8:
             return UIImage(named: "blood")
 
-        case 9:
+        case 8:
             return UIImage(named: "trash")
+        case 9:
+            return UIImage(named: "helpOld")
         case 10:
-            return UIImage(named: "helpold")
+            return UIImage(named: "birdHouse")
         case 11:
-            return UIImage(named: "birdhouse")
-        case 12:
             return UIImage(named: "dinner")
+        case 12:
+            return UIImage(named: "feedFriends")
         case 13:
-            return UIImage(named: "feedfriends")
+            return UIImage(named: "fixHouse")
         case 14:
-            return UIImage(named: "fixhouse")
-        case 15:
             return UIImage(named: "musician")
-        case 16:
+        case 15:
             return UIImage(named: "homeless")
 
         default:
