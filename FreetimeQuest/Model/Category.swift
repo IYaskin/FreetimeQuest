@@ -32,7 +32,7 @@ extension Category {
         case .hobby:
             return .brown
         case .social:
-            return .purple
+            return .systemPink
         case .charisma:
             return .black
         case .adventure:
@@ -44,7 +44,7 @@ extension Category {
     
     var textColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .goOut, .adventure:
+        case .freetimeQuest, .good, .goOut, .adventure, .social:
             return .black
         default:
             return .white
@@ -75,7 +75,7 @@ extension Category {
     
     var headerTextColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .goOut, .adventure:
+        case .freetimeQuest, .good, .goOut, .adventure, .social:
             return .black
         default:
             return.white
