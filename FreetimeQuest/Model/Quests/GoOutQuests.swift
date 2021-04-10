@@ -11,9 +11,6 @@ class GoOutQuests {
     
         
     static func addQuests() {
-        let star = 1
-        let category = Category.goOut.rawValue
-        
         let titles = ["Музей",
                       "Театр",
                       "Галерея",
@@ -40,8 +37,8 @@ class GoOutQuests {
         for (id, title) in titles.enumerated() {
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: category,
-                                             stars: star)
+                                             category: Category.goOut.rawValue,
+                                             stars: 1)
         }
 
     }

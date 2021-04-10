@@ -10,9 +10,6 @@ import UIKit
 class GoodQuests {
     
     static func addQuests() {
-        let star = 1
-        let category = Category.good.rawValue
-        
         let titles = ["Помочь донести пакет",
                       "Покормить уточек",
                       "Покормить бездомных животных",
@@ -33,8 +30,8 @@ class GoodQuests {
         for (id, title) in titles.enumerated() {
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: category,
-                                             stars: star)
+                                             category: Category.good.rawValue,
+                                             stars: 1)
         }
         
     }
