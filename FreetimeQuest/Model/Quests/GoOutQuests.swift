@@ -47,57 +47,35 @@ class GoOutQuests {
     }
     
     static func getIcon(id: Int) -> UIImage? {
-        switch id {
-        case 0:
-            return UIImage(named: "museum")
-        case 1:
-            return UIImage(named: "theater")
-        case 2:
-            return UIImage(named: "gallery")
-        case 3:
-            return UIImage(named: "zoo")
-        case 4:
-            return UIImage(named: "football")
-        case 5:
-            return UIImage(named: "basketball")
-        case 6:
-            return UIImage(named: "hockey")
-        case 7:
-            return UIImage(named: "bowling")
-        case 8:
-            return UIImage(named: "billiard")
-        case 9:
-            return UIImage(named: "concert")
-        case 10:
-            return UIImage(named: "quest")
-        case 11:
-            return UIImage(named: "iceskating")
-            
-        case 12:
-            return UIImage(named: "karting")
-        case 13:
-            return UIImage(named: "trampoline")
-        case 14:
-            return UIImage(named: "aquapark")
-        case 15:
-            return UIImage(named: "excursion")
-        case 16:
-            return UIImage(named: "degustation")
-        case 17:
-            return UIImage(named: "bar")
-        case 18:
-            return UIImage(named: "nightclub")
-        case 19:
-            return UIImage(named: "standup")
-        case 20:
-            return UIImage(named: "sauna")
-        case 21:
-            return UIImage(named: "show")
-
-        default:
+        let images = ["museum",
+                      "theater",
+                      "gallery",
+                      "zoo",
+                      "football",
+                      "basketball",
+                      "hockey",
+                      "bowling",
+                      "billiard",
+                      "concert",
+                      "quest",
+                      "iceskating",
+                      "karting",
+                      "trampoline",
+                      "aquapark",
+                      "excursion",
+                      "degustation",
+                      "bar",
+                      "nightclub",
+                      "standup",
+                      "sauna",
+                      "show"]
+        
+        if id >= 0 && id <= images.count {
+            return UIImage(named: images[id])
+        } else {
             return nil
-            
         }
+        
     }
     
 }
