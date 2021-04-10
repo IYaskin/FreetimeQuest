@@ -11,7 +11,7 @@ class SocialQuests {
     
     static func addQuests() {
         
-        let titles = ["Улыбнуться прохожему",
+        let titles = ["Улыбнуться прохожему",//0
                       "Подмигнуть прохожему",
                       "Скорчить рожицу прохожему",
                       "Сказать \"Здравствуйте\" прохожему",
@@ -36,7 +36,7 @@ class SocialQuests {
                       "Выступить на сцене"]
 
         for (id, title) in titles.enumerated() {
-            let star = id > 13 ? 1 : 2
+            let star = id <= 13 ? 1 : 2
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
                                              category: Category.social.rawValue,

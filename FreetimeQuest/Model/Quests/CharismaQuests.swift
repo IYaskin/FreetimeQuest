@@ -11,107 +11,61 @@ class CharismaQuests {
     
     static func addQuests() {
         
-        let category = Category.charisma.rawValue
+        let titles = ["Вылечить зубы",//0
+                      "Сходить на 8 сеансов массажа",
+                      "Заниматься йогой в течении месяца",
+                      "Медитировать в течении месяца",
+                      "Развивать речь в течении месяца",
+                      "Развивать осанку в течении месяца",
+                      "Закаляться в течении месяца",
+                      "Делать зарядку в течении месяца",
+                      "Правильно питаться в течении месяца",
+                      "Прочитать 5 книг по развитию или по работе",
+                      "Повысить свой доход",
+                      "Устроить себе фотосессию",
+                      "Сходить на сеанс к психологу",
+                      "Купить себе то, что давно хочешь",
+                      
+                      "Достичь своего идеального веса", //14
+                      "Пробежать полумарафон",
+                      "Избавиться от вредной привычки"]
 
-        let twoStar = 2
-
-        CoreDataManager.shared.saveQuest(title: "Вылечить зубы",
-                                         id: 1,
-                                         category: category,
-                                         stars: twoStar)
-        
-        CoreDataManager.shared.saveQuest(title: "Сходить на 8 сеансов массажа",
-                                         id: 2,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Заниматься йогой в течении месяца",
-                                         id: 3,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Медитировать в течении месяца",
-                                         id: 4,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Развивать речь в течении месяца",
-                                         id: 5,
-                                         category: category,
-                                         stars: twoStar)
-        
-        CoreDataManager.shared.saveQuest(title: "Развивать осанку в течении месяца",
-                                         id: 6,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Закаляться в течении месяца",
-                                         id: 7,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Делать зарядку в течении месяца",
-                                         id: 8,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Правильно питаться в течении месяца",
-                                         id: 9,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Прочитать 5 книг по развитию или по работе",
-                                         id: 10,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Повысить свой доход",
-                                         id: 11,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Устроить себе фотосессию",
-                                         id: 12,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Сходить на сеанс к психологу",
-                                         id: 13,
-                                         category: category,
-                                         stars: twoStar)
-
-        CoreDataManager.shared.saveQuest(title: "Купить себе то, что давно хочешь",
-                                         id: 14,
-                                         category: category,
-                                         stars: twoStar)
-
-        let threeStar = 3
-
-        CoreDataManager.shared.saveQuest(title: "Достичь своего идеального веса",
-                                         id: 15,
-                                         category: category,
-                                         stars: threeStar)
-
-        CoreDataManager.shared.saveQuest(title: "Пробежать полумарафон",
-                                         id: 16,
-                                         category: category,
-                                         stars: threeStar)
-
-        CoreDataManager.shared.saveQuest(title: "Избавиться от вредной привычки",
-                                         id: 17,
-                                         category: category,
-                                         stars: threeStar)
+        for (id, title) in titles.enumerated() {
+            let star = id <= 13 ? 2 : 3
+            CoreDataManager.shared.saveQuest(title: title,
+                                             id: id,
+                                             category: Category.charisma.rawValue,
+                                             stars: star)
+        }
 
     }
     
     static func getIcon(id: Int) -> UIImage? {
-        switch id {
-        case 1:
-            return UIImage(named: "icon")
-
-        default:
-            return UIImage(named: "icon")
+        
+        let images = ["teeth",
+                      "massage",
+                      "yoga",
+                      "meditation",
+                      "speaking",
+                      "posture",
+                      "zakalka",
+                      "zaryadka",
+                      "goodfood",
+                      "5books",
+                      "money",
+                      "photosession",
+                      "psycholog",
+                      "buything",
+                      "perfectweight",
+                      "marathon",
+                      "badhabbit"]
+        
+        if id >= 0 && id <= images.count {
+            return UIImage(named: images[id])
+        } else {
+            return nil
         }
+
     }
 
 }
