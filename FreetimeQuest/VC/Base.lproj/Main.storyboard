@@ -32,14 +32,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Irq-ck-7wk">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="zVj-J4-jgg"/>
-                        <barButtonItem key="leftBarButtonItem" title="+ Квесты" id="TlN-v2-cXu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="zVj-J4-jgg"/>
+                        <barButtonItem key="leftBarButtonItem" title="+ Quests" id="TlN-v2-cXu">
                             <connections>
                                 <action selector="leftBarButtonTapped:" destination="BYZ-38-t0r" id="72b-FM-TL9"/>
                                 <segue destination="Uij-mI-oXY" kind="presentation" identifier="Category" id="6ly-xI-Gsb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="К воспоминаниям" id="kIO-Dy-q05">
+                        <barButtonItem key="rightBarButtonItem" title="Memories" id="kIO-Dy-q05">
                             <connections>
                                 <segue destination="qHO-wj-Rho" kind="show" id="elc-FB-DGs"/>
                             </connections>
@@ -70,16 +70,16 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-XQ-Uig">
-                                <rect key="frame" x="40" y="257" width="334" height="392"/>
+                                <rect key="frame" x="40" y="272" width="334" height="362"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-ii-uqX">
-                                        <rect key="frame" x="10" y="20" width="314" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-ii-uqX">
+                                        <rect key="frame" x="10" y="20" width="314" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aBA-ya-b95">
-                                        <rect key="frame" x="20" y="60" width="294" height="322"/>
+                                        <rect key="frame" x="20" y="30" width="294" height="322"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF8-7A-W0C">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="322"/>

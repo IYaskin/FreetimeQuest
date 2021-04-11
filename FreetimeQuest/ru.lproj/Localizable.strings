@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  FreetimeQuest
+
+  Created by Igor Yaskin on 11.04.2021.
+  
+*/
+// Common
+"addQuests" = "Добавить квесты";
+
+//GoOut
+"GoOut.Museum" = "Музей";
+"GoOut.Theater" = "Театр";
+"GoOut.Gallery" = "Галерея";
+"GoOut.Zoo" = "Зоопарк";
+"GoOut.Football" = "Футбол";
+"GoOut.Basketball" = "Баскетбол";
+"GoOut.Hockey" = "Хоккей";
+"GoOut.Bowling" = "Боулинг";
+"GoOut.Billiards" = "Бильярд";
+"GoOut.Concert" = "Концерт";
+"GoOut.Quest" = "Квест";
+"GoOut.IceRink" = "Каток";
+"GoOut.Karting" = "Картинг";
+"GoOut.Trampoline" = "Батуты";
+"GoOut.Aquapark" = "Аквапарк";
+"GoOut.Excursion" = "Экскурсия";
+"GoOut.Degustation" = "Дегустация";
+"GoOut.Bar" = "Бар";
+"GoOut.NightClub" = "Ночной клуб";
+"GoOut.StandUp" = "Stand Up";
+"GoOut.Sauna" = "Баня";
+"GoOut.Show" = "Шоу";
+
+//Good
+
+"Good.CarryBag" = "Помочь донести пакет";
+"Good.FeedDuck" = "Покормить уточек";
+"Good.FeedAnimals" = "Покормить бездомных животных";
+"Good.OldStuff" = "Отдать старые вещи нуждающимся";
+"Good.HelpFond" = "Перечислить любую сумму в фонд помощи";
+"Good.Gift" = "Купить подарок близкому человеку";
+"Good.AppMark" = "Поставить оценку этому приложению";
+"Good.Blood" = "Сдать кровь для донорства";
+"Good.Trash" = "Поднять мусор";
+"Good.HelpBabushka" = "Перевести бабушку через дорогу";
+"Good.BirdHouse" = "Сделать и повесить скворечник";
+"Good.FamilyDinner" = "Устроить семейный ужин";
+"Good.FeedFriends" = "Угостить друзей";
+"Good.FixHouse" = "Отремонтировать что-то дома";
+"Good.SteetMusician" = "Дать денег уличному музыканту";
+"Good.FeedHomeless" = "Купить еду бездомному";
+
+//Hobby
+
+//Social
+
+//Charisma
+
+//Adventure

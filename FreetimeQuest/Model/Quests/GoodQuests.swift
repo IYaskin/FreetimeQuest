@@ -10,22 +10,22 @@ import UIKit
 class GoodQuests {
     
     static func addQuests() {
-        let titles = ["Помочь донести пакет",
-                      "Покормить уточек",
-                      "Покормить бездомных животных",
-                      "Отдать старые вещи нуждающимся",
-                      "Перечислить любую сумму в фонд помощи",
-                      "Купить подарок близкому человеку",
-                      "Поставить оценку этому приложению",
-                      "Сдать кровь для донорства",
-                      "Поднять мусор",
-                      "Перевести бабушку через дорогу",
-                      "Сделать и повесить скворечник",
-                      "Устроить семейный ужин",
-                      "Угостить друзей",
-                      "Отремонтировать что-то дома",
-                      "Дать денег уличному музыканту",
-                      "Купить еду бездомному"]
+        let titles = ["Good.CarryBag",
+                      "Good.FeedDuck",
+                      "Good.FeedAnimals",
+                      "Good.OldStuff",
+                      "Good.HelpFond",
+                      "Good.Gift",
+                      "Good.AppMark",
+                      "Good.Blood",
+                      "Good.Trash",
+                      "Good.HelpBabushka",
+                      "Good.BirdHouse",
+                      "Good.FamilyDinner",
+                      "Good.FeedFriends",
+                      "Good.FixHouse",
+                      "Good.SteetMusician",
+                      "Good.FeedHomeless"]
 
         for (id, title) in titles.enumerated() {
             CoreDataManager.shared.saveQuest(title: title,

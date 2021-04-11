@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  FreetimeQuest
+
+  Created by Igor Yaskin on 11.04.2021.
+  
+*/
+
+// Common
+"addQuests" = "Add Quests";
+
+//GoOut
+"GoOut.Museum" = "Museum";
+"GoOut.Theater" = "Theatre";
+"GoOut.Gallery" = "Gallery";
+"GoOut.Zoo" = "Zoo";
+"GoOut.Football" = "Football";
+"GoOut.Basketball" = "Basketball";
+"GoOut.Hockey" = "Hockey";
+"GoOut.Bowling" = "Bowling";
+"GoOut.Billiards" = "Billiards";
+"GoOut.Concert" = "Concert";
+"GoOut.Quest" = "Quest";
+"GoOut.IceRink" = "Ice rink";
+"GoOut.Karting" = "Karting";
+"GoOut.Trampoline" = "Trampoline";
+"GoOut.Aquapark" = "Aquapark";
+"GoOut.Excursion" = "Excursion";
+"GoOut.Degustation" = "Degustation";
+"GoOut.Bar" = "Bar";
+"GoOut.NightClub" = "Night club";
+"GoOut.StandUp" = "Stand Up";
+"GoOut.Sauna" = "Sauna";
+"GoOut.Show" = "Show";
+
+//Good
+
+"Good.CarryBag" = "Help someone carry the bag";
+"Good.FeedDuck" = "Feed ducks";
+"Good.FeedAnimals" = "Feed homeless animals";
+"Good.OldStuff" = "Give old things to needy";
+"Good.HelpFond" = "Transfer some money to the aid fund";
+"Good.Gift" = "Buy gift for the close person";
+"Good.AppMark" = "Rate this app";
+"Good.Blood" = "Donate blood";
+"Good.Trash" = "Pick up trash";
+"Good.HelpBabushka" = "Take grandma across the street";
+"Good.BirdHouse" = "Make and hang a birdhouse";
+"Good.FamilyDinner" = "Arrange a family dinner";
+"Good.FeedFriends" = "Treat friends";
+"Good.FixHouse" = "Fix something at home";
+"Good.SteetMusician" = "Give money to a street musician";
+"Good.FeedHomeless" = "Buy food for the homeless";
+
+//Hobby
+
+//Social
+
+//Charisma
+
+//Adventure

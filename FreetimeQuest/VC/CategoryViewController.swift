@@ -42,7 +42,9 @@ class CategoryViewController: UIViewController {
     }
     
     func updateTitle() {
-        titleLabel.text = "Добавить квесты ★\(starsCount)"
+        let text = NSLocalizedString("addQuests", comment: "")
+        //Добавить квесты
+        titleLabel.text = "\(text) ★\(starsCount)"
     }
     
     func configureAdditionalQuestsStackView() {

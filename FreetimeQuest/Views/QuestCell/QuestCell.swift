@@ -69,7 +69,9 @@ class QuestCell: UITableViewCell {
                    category: Int,
                    stars: Int,
                    id: Int) {
-        titleLabel.text = title
+        if let title = title {
+            titleLabel.text = NSLocalizedString(title, comment: "")
+        }
         configureStars(stars: stars)
         
         if let category = Category(rawValue: category) {
