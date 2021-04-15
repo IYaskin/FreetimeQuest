@@ -113,4 +113,22 @@
 
 //Charisma
 
+"Charisma.Teeth" = "Cure teeth";
+"Charisma.Massage" = "Take 8 massage sessions";
+"Charisma.Yoga" = "Do yoga within a month";
+"Charisma.Meditation" = "Meditate within a month";
+"Charisma.Speech" = "Develop speech within a month";
+"Charisma.Posture" = "Develop posture within a month";
+"Charisma.Temper" = "Temper within a month";
+"Charisma.Morning" = "Do morning exercises within a month";
+"Charisma.Food" = "Eat right within a month";
+"Charisma.Books" = "Read 5 books on development or work";
+"Charisma.Income" = "Increase your income";
+"Charisma.Fotosession" = "Order yourself a photo session";
+"Charisma.Psychologist" = "Go to a session with a psychologist";
+"Charisma.Buy" = "Buy yourself what you want for a long time";
+"Charisma.Weight" = "Reach your ideal weight";
+"Charisma.Marathon" = "Run a half marathon";
+"Charisma.BadHabit" = "Get rid of the bad habit";
+
 //Adventure

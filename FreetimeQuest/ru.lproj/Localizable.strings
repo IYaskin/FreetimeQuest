@@ -111,4 +111,23 @@
 
 //Charisma
 
+"Charisma.Teeth" = "Вылечить зубы";
+"Charisma.Massage" = "Сходить на 8 сеансов массажа";
+"Charisma.Yoga" = "Заниматься йогой в течении месяца";
+"Charisma.Meditation" = "Медитировать в течении месяца";
+"Charisma.Speech" = "Развивать речь в течении месяца";
+"Charisma.Posture" = "Развивать осанку в течении месяца";
+"Charisma.Temper" = "Закаляться в течении месяца";
+"Charisma.Morning" = "Делать зарядку в течении месяца";
+"Charisma.Food" = "Правильно питаться в течении месяца";
+"Charisma.Books" = "Прочитать 5 книг по развитию или по работе";
+"Charisma.Income" = "Повысить свой доход";
+"Charisma.Fotosession" = "Устроить себе фотосессию";
+"Charisma.Psychologist" = "Сходить на сеанс к психологу";
+"Charisma.Buy" = "Купить себе то, что давно хочешь";
+
+"Charisma.Weight" = "Достичь своего идеального веса";
+"Charisma.Marathon" = "Пробежать полумарафон";
+"Charisma.BadHabit" = "Избавиться от вредной привычки";
+
 //Adventure

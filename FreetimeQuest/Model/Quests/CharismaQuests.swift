@@ -11,24 +11,24 @@ class CharismaQuests {
     
     static func addQuests() {
         
-        let titles = ["Вылечить зубы",//0
-                      "Сходить на 8 сеансов массажа",
-                      "Заниматься йогой в течении месяца",
-                      "Медитировать в течении месяца",
-                      "Развивать речь в течении месяца",
-                      "Развивать осанку в течении месяца",
-                      "Закаляться в течении месяца",
-                      "Делать зарядку в течении месяца",
-                      "Правильно питаться в течении месяца",
-                      "Прочитать 5 книг по развитию или по работе",
-                      "Повысить свой доход",
-                      "Устроить себе фотосессию",
-                      "Сходить на сеанс к психологу",
-                      "Купить себе то, что давно хочешь",
-                      
-                      "Достичь своего идеального веса", //14
-                      "Пробежать полумарафон",
-                      "Избавиться от вредной привычки"]
+        let titles = ["Charisma.Teeth",
+                      "Charisma.Massage",
+                      "Charisma.Yoga",
+                      "Charisma.Meditation",
+                      "Charisma.Speech",
+                      "Charisma.Posture",
+                      "Charisma.Temper",
+                      "Charisma.Morning",
+                      "Charisma.Food",
+                      "Charisma.Books",
+                      "Charisma.Income",
+                      "Charisma.Fotosession",
+                      "Charisma.Psychologist",
+                      "Charisma.Buy",
+                      "Charisma.Weight",
+                      "Charisma.Marathon",
+                      "Charisma.BadHabit"]
+
 
         for (id, title) in titles.enumerated() {
             let star = id < 14 ? 2 : 3
