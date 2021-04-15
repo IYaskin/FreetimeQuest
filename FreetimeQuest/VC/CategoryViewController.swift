@@ -92,7 +92,8 @@ class CategoryViewController: UIViewController {
         let button = UIButton()
         
         button.tag = category.rawValue
-        button.setTitle("+ \(category.title) ★\(category.price)", for: .normal)
+        let title = NSLocalizedString(category.title, comment: "")
+        button.setTitle("+ \(title) ★\(category.price)", for: .normal)
         button.setTitleColor(category.textColor, for: .normal)
         button.backgroundColor = category.cellColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true

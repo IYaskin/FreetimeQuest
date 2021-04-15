@@ -56,19 +56,19 @@ extension Category {
         case .freetimeQuest:
             return "Freetime Quest"
         case .goOut:
-            return "Посетить места"
+            return "GoOut"
         case .good:
-            return "Добро"
+            return "Good"
         case .hobby:
-            return "Хобби"
+            return "Hobby"
         case .social:
-            return "Раскрепощение"
+            return "Social"
         case .charisma:
-            return "Саморазвитие"
+            return "Charisma"
         case .adventure:
-            return "Приключения"
+            return "Adventure"
         case .myQuests:
-            return "Мои квесты"
+            return "MyQuests"
 
         }
     }

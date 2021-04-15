@@ -22,7 +22,7 @@ class MemoryViewController: UIViewController {
     }
     
     func configureUI() {
-        self.title = "Воспоминания"
+        self.title = NSLocalizedString("Memories", comment: "")
         
         tableView.dataSource = self
         tableView.delegate = self

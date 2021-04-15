@@ -42,7 +42,7 @@ class CategoryHeader: UIView {
 
     public func configureWith(category: Int) {
         if let category = Category(rawValue: category) {
-            titleLabel.text = category.title
+            titleLabel.text = NSLocalizedString(category.title, comment: "")
             titleLabel.textColor = category.headerTextColor
             headerView.backgroundColor = category.cellColor
         }

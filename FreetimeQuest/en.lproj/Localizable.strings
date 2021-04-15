@@ -7,7 +7,16 @@
 */
 
 // Common
-"addQuests" = "Add Quests";
+"addQuests" = "Add category";
+"Memories" = "Memories";
+
+"GoOut" = "Visit places";
+"Good" = "Good";
+"Hobby" = "Hobby";
+"Social" = "Social";
+"Charisma" = "Development";
+"Adventure" = "Adventure";
+"MyQuests" = "My quests";
 
 //GoOut
 "GoOut.Museum" = "Museum";

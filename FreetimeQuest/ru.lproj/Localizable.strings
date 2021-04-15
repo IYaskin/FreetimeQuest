@@ -6,7 +6,16 @@
   
 */
 // Common
-"addQuests" = "Добавить квесты";
+"addQuests" = "Добавить категорию";
+"Memories" = "Воспоминания";
+
+"GoOut" = "Посетить места";
+"Good" = "Добро";
+"Hobby" = "Хобби";
+"Social" = "Раскрепощение";
+"Charisma" = "Развитие";
+"Adventure" = "Приключения";
+"MyQuests" = "Мои квесты";
 
 //GoOut
 "GoOut.Museum" = "Музей";
