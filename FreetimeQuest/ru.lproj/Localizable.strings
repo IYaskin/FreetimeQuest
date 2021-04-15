@@ -53,6 +53,28 @@
 
 //Hobby
 
+"Hobby.Checkers" = "Сыграть в шашки";
+"Hobby.Chess" = "Сыграть в шахматы";
+"Hobby.Backgammon" = "Сыграть в нарды";
+"Hobby.Poker" = "Сыграть в покер";
+"Hobby.Darts" = "Сыграть в дартс";
+"Hobby.BoardGame" = "Сыграть в настольную игру";
+"Hobby.Puzzle" = "Собрать пазл";
+"Hobby.ComputerGame" = "Пройти компьютерную игру";
+"Hobby.DrawPicture" = "Нарисовать картину";
+"Hobby.MoldClay" = "Слепить что-то из глины или гипса";
+"Hobby.ReadNovel" = "Прочитать роман";
+"Hobby.ReadDetective" = "Прочитать детектив";
+"Hobby.ReadFiction" = "Прочитать фантастику";
+"Hobby.ReadFantasy" = "Прочитать фэнтези";
+"Hobby.LearnPoem" = "Выучить стихотворение";
+"Hobby.WritePoem" = "Написать стихотворение";
+"Hobby.MakePhoto" = "Сделать красивое фото, вставить в рамку";
+"Hobby.NoGadgets" = "Провести день без гаджетов";
+"Hobby.Plant" = "Посадить растение";
+"Hobby.FlyKite" = "Запустить воздушного змея";
+"Hobby.OrderPortrait" = "Заказать свой портрет";
+"Hobby.FreeSection" = "Сходить на пробное занятие в секцию";
 //Social
 
 //Charisma

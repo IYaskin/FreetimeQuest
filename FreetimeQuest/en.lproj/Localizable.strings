@@ -54,6 +54,29 @@
 
 //Hobby
 
+"Hobby.Checkers" = "Play checkers";
+"Hobby.Chess" = "Play chess";
+"Hobby.Backgammon" = "Play backgammon";
+"Hobby.Poker" = "Play pocker";
+"Hobby.Darts" = "Play darts";
+"Hobby.BoardGame" = "Play a board game";
+"Hobby.Puzzle" = "Collect the puzzle";
+"Hobby.ComputerGame" = "Complete the computer game";
+"Hobby.DrawPicture" = "Draw a picture";
+"Hobby.MoldClay" = "Mold something out of clay or plaster";
+"Hobby.ReadNovel" = "Read novel";
+"Hobby.ReadDetective" = "Read detective";
+"Hobby.ReadFiction" = "Read fiction";
+"Hobby.ReadFantasy" = "Read fantasy";
+"Hobby.LearnPoem" = "Learn a poem";
+"Hobby.WritePoem" = "Write a poem";
+"Hobby.MakePhoto" = "Make a beautiful photo, insert into a frame";
+"Hobby.NoGadgets" = "Spend a day without gadgets";
+"Hobby.Plant" = "To plant a herb";
+"Hobby.FlyKite" = "Fly a kite";
+"Hobby.OrderPortrait" = "Order your portrait";
+"Hobby.FreeSection" = "Go to a trial lesson";
+
 //Social
 
 //Charisma
