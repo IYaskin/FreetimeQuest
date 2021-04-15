@@ -79,6 +79,29 @@
 
 //Social
 
+"Social.Smile" = "Smile to stranger";
+"Social.Wink" = "Wink to stranger";
+"Social.Ugly" = "Make a face to stranger";
+"Social.Hello" = "Say \"Hello!\" to stranger";
+"Social.Compliment" = "Make compliment to stranger";
+"Social.Questions" = "Ask 10 questions to strangers during a walk";
+"Social.Call" = "Call any organization and tell a joke";
+"Social.AskPhoto" = "Ask a stranger to take a picture of you";
+"Social.Selfie" = "Take a selfie with a stranger";
+"Social.Oboznalsya" = "Pretend you know the person";
+"Social.ExchangeNumbers" = "Exchange phone numbers";
+"Social.LoveLetter" = "Send a love letter by mail";
+"Social.TellPoem" = "Tell someone a poem";
+"Social.Sing" = "Sing for someone";
+"Social.MeetSomeone" = "Make an acquaintance";
+"Social.AskSalt" = "Borrow salt from neighbors";
+"Social.Wish" = "Wish everyone a pleasant journey in transport";
+"Social.Fountain" = "Take a dip in the fountain";
+"Social.Dance" = "Dance in the street";
+"Social.Party" = "Make a party";
+"Social.Picnic" = "Make a picnic";
+"Social.Stage" = "Perform on stage";
+
 //Charisma
 
 //Adventure

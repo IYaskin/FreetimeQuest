@@ -11,29 +11,28 @@ class SocialQuests {
     
     static func addQuests() {
         
-        let titles = ["Улыбнуться прохожему",//0
-                      "Подмигнуть прохожему",
-                      "Скорчить рожицу прохожему",
-                      "Сказать \"Здравствуйте\" прохожему",
-                      "Сделать комплимент прохожему",
-                      "Задать 10 вопросов прохожим за прогулку",
-                      "Позвонить в любую организацию и рассказать анекдот",
-                      "Попросить прохожего вас сфотографировать",
-                      "Сделать селфи с незнакомым человеком",
-                      "Сделать вид, что обознались",
-                      "Обменяться телефонами",
-                      "Отправить любовное письмо по почте",
-                      "Рассказать кому-нибудь стихотворение",
-                      "Спеть для кого-нибудь",
-                      
-                      "Завязать знакомство",//14
-                      "Одолжить соль у соседей",
-                      "Пожелать приятной дороги в транспорте",
-                      "Искупаться в фонтане",
-                      "Потанцевать на улице",
-                      "Устроить вечеринку",
-                      "Устроить пикник",
-                      "Выступить на сцене"]
+        let titles = ["Social.Smile",
+                      "Social.Wink",
+                      "Social.Ugly",
+                      "Social.Hello",
+                      "Social.Compliment",
+                      "Social.Questions",
+                      "Social.Call",
+                      "Social.AskPhoto",
+                      "Social.Selfie",
+                      "Social.Oboznalsya",
+                      "Social.ExchangeNumbers",
+                      "Social.LoveLetter",
+                      "Social.TellPoem",
+                      "Social.Sing",
+                      "Social.MeetSomeone",
+                      "Social.AskSalt",
+                      "Social.Wish",
+                      "Social.Fountain",
+                      "Social.Dance",
+                      "Social.Party",
+                      "Social.Picnic",
+                      "Social.Stage"]
 
         for (id, title) in titles.enumerated() {
             let star = id < 14 ? 1 : 2

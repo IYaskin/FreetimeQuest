@@ -56,7 +56,7 @@ class MemoryCell: UITableViewCell {
         formatter.dateFormat = "dd.MM.yy"
         let date = formatter.string(from: date)
         
-        titleLabel.text = date + "\n" + title
+        titleLabel.text = date + "\n" + NSLocalizedString(title, comment: "")
 
 
         if let data = imageData,
