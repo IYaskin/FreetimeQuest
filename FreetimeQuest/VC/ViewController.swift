@@ -101,8 +101,8 @@ extension ViewController: UITableViewDataSource {
         }
         
         let quest = fetchedResultsController.object(at: indexPath)
-        print(quest.category)
-        if quest.category == 7,
+
+        if quest.category == Category.myQuests.rawValue,
            let cell = tableView.dequeueReusableCell(withIdentifier: MyQuestCell.reuseID) as? MyQuestCell {
             cell.configure(title: quest.title)
             return cell
