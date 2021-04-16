@@ -139,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-nO-GpX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-nO-GpX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -161,6 +161,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW7-h1-Flg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.753623188406" y="-172.09821428571428"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="kmy-cS-teR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWN-3Y-zz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Sheet" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Eb-sf-dEX" customClass="SheetViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h69-GR-vnz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbC-Sx-VEG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EoB-6O-dtq" appends="YES" id="PUd-aX-Yxc"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-K4-Z1l">
+                                <rect key="frame" x="40" y="272" width="334" height="362"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V7h-f7-uOQ">
+                                        <rect key="frame" x="20" y="30" width="294" height="322"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhW-Y0-SHW">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="322"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="322" id="MLT-fD-wcO"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="V7h-f7-uOQ" secondAttribute="bottom" constant="10" id="F2T-Mk-a0C"/>
+                                    <constraint firstItem="V7h-f7-uOQ" firstAttribute="leading" secondItem="Ueh-K4-Z1l" secondAttribute="leading" constant="20" symbolic="YES" id="bbY-UP-q6J"/>
+                                    <constraint firstItem="V7h-f7-uOQ" firstAttribute="top" secondItem="Ueh-K4-Z1l" secondAttribute="top" constant="30" id="rPo-tX-6DN"/>
+                                    <constraint firstItem="V7h-f7-uOQ" firstAttribute="centerX" secondItem="Ueh-K4-Z1l" secondAttribute="centerX" id="rYj-6h-JtR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QQ2-wY-eeY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ueh-K4-Z1l" firstAttribute="leading" secondItem="QQ2-wY-eeY" secondAttribute="leading" constant="40" id="1XZ-Q4-HAY"/>
+                            <constraint firstItem="Ueh-K4-Z1l" firstAttribute="centerY" secondItem="QQ2-wY-eeY" secondAttribute="centerY" id="GYE-xL-wSN"/>
+                            <constraint firstItem="Ueh-K4-Z1l" firstAttribute="centerX" secondItem="QQ2-wY-eeY" secondAttribute="centerX" id="OOR-Uw-umW"/>
+                            <constraint firstItem="PbC-Sx-VEG" firstAttribute="leading" secondItem="QQ2-wY-eeY" secondAttribute="leading" id="Q3O-8i-yEG"/>
+                            <constraint firstItem="PbC-Sx-VEG" firstAttribute="trailing" secondItem="QQ2-wY-eeY" secondAttribute="trailing" id="VYu-md-2pU"/>
+                            <constraint firstItem="PbC-Sx-VEG" firstAttribute="top" secondItem="h69-GR-vnz" secondAttribute="top" id="rzz-Uf-ST3"/>
+                            <constraint firstAttribute="bottom" secondItem="PbC-Sx-VEG" secondAttribute="bottom" id="wpv-IZ-0Y0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="PbC-Sx-VEG" id="uiB-lF-qrw"/>
+                        <outlet property="contentView" destination="Ueh-K4-Z1l" id="4ku-LQ-WZo"/>
+                        <outlet property="stackView" destination="V7h-f7-uOQ" id="P9x-3e-QUj"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="EoB-6O-dtq">
+                    <connections>
+                        <action selector="greyAreaTapped:" destination="7Eb-sf-dEX" id="LBF-D2-XGb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2546" y="-172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MlL-yc-hf9">

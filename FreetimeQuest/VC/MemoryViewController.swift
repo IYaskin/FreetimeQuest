@@ -46,6 +46,16 @@ class MemoryViewController: UIViewController {
         quest.image = image?.jpegData(compressionQuality: 0.5)
         CoreDataManager.shared.saveContext()
     }
+    
+    public func openSheet(haveImage: Bool, indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Sheet") as! SheetViewController
+        vc.mainVC = self
+        vc.haveImage = haveImage
+        vc.indexPath = indexPath
+
+        self.present(vc, animated: true)
+    }
 }
 
 
@@ -70,19 +80,24 @@ extension MemoryViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let quest = fetchedResultsController.object(at: indexPath)
+        let memory = fetchedResultsController.object(at: indexPath)
 
-        cell.configure(title: quest.title,
-                       date: quest.date,
-                       imageData: quest.image)
-        cell.vc = self
-        cell.indexPath = indexPath
+        cell.configure(title: memory.title,
+                       date: memory.date,
+                       imageData: memory.image)
         return cell
     }
     
 }
 
 extension MemoryViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let memory = fetchedResultsController.object(at: indexPath)
+        let haveImage = memory.image != nil
+
+        openSheet(haveImage: haveImage, indexPath: indexPath)
+    }
     
     
 //    func tableView(_ tableView: UITableView,
