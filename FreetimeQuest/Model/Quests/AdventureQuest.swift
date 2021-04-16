@@ -10,29 +10,30 @@ import UIKit
 class AdventureQuests {
     
     static func addQuests() {
-        let titles = ["Встретить рассвет",//0
-                      "Сделать ставку на матч",
-                      "Покататься по ночному городу",
-                      "Посетить парк аттракционов",
-                      "Покататься на сноуборде",
-                      "Увидеть звездопад",
+        let titles = ["Adventure.Sunrise",
+                      "Adventure.Bet",
+                      "Adventure.NightCity",
+                      "Adventure.ParkAttractions",
+                      "Adventure.Snowboard",
+                      "Adventure.Stars",
                       
-                      "Покататься на лошади",//6
-                      "Прыгнуть с веревкой",
-                      "Поход с палатками",
-                      "Постоять под водопадом",
-                      "Круиз на теплоходе",
-                      "Побывать на острове",
-                      "Искупаться в проруби",
+                      "Adventure.Horse",
+                      "Adventure.RopeJumping",
+                      "Adventure.Tents",
+                      "Adventure.Waterfall",
+                      "Adventure.Cruise",
+                      "Adventure.Island",
+                      "Adventure.Cold",
                       
-                      "Увидеть северное сияние",//13
-                      "Покататься на серфинге",
-                      "Поплавать с аквалангом",
-                      "Полетать на кукурузнике",
-                      "Полетать на воздушном шаре",
-                      "Сделать тату",
-                      "Путешествие автостопом",
-                      "Прыгнуть с парашютом"]
+                      "Adventure.Lights",
+                      "Adventure.Surfing",
+                      "Adventure.Scuba",
+                      "Adventure.SmallPlane",
+                      "Adventure.Balloon",
+                      "Adventure.Tatoo",
+                      "Adventure.Autostop",
+                      "Adventure.Parachute"]
+
         
         for (id, title) in titles.enumerated() {
             var star = 1

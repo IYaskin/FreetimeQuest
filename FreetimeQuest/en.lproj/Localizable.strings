@@ -132,3 +132,27 @@
 "Charisma.BadHabit" = "Get rid of the bad habit";
 
 //Adventure
+
+"Adventure.Sunrise" = "See the sunrise";
+"Adventure.Bet" = "Place a bet on a match";
+"Adventure.NightCity" = "Take a ride in the city at night";
+"Adventure.ParkAttractions" = "Visit the amusement park";
+"Adventure.Snowboard" = "Go snowboarding";
+"Adventure.Stars" = "See the starfall";
+
+"Adventure.Horse" = "Ride a horse";
+"Adventure.RopeJumping" = "Rope jumping";
+"Adventure.Tents" = "Camping with tents";
+"Adventure.Waterfall" = "Stand under the waterfall";
+"Adventure.Cruise" = "Boat cruise";
+"Adventure.Island" = "Visit the island";
+"Adventure.Cold" = "Swim in the ice hole";
+
+"Adventure.Lights" = "See the northern lights";
+"Adventure.Surfing" = "Go surfing";
+"Adventure.Scuba" = "Scuba diving";
+"Adventure.SmallPlane" = "Fly on the biplane";
+"Adventure.Balloon" = "Fly in a hot air balloon";
+"Adventure.Tatoo" = "Get a tattoo";
+"Adventure.Autostop" = "Hitchhiking";
+"Adventure.Parachute" = "Jump with a parachute";

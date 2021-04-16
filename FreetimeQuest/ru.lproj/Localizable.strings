@@ -131,3 +131,27 @@
 "Charisma.BadHabit" = "Избавиться от вредной привычки";
 
 //Adventure
+
+"Adventure.Sunrise" = "Встретить рассвет";
+"Adventure.Bet" = "Сделать ставку на матч";
+"Adventure.NightCity" = "Покататься по ночному городу";
+"Adventure.ParkAttractions" = "Посетить парк аттракционов";
+"Adventure.Snowboard" = "Покататься на сноуборде";
+"Adventure.Stars" = "Увидеть звездопад";
+
+"Adventure.Horse" = "Покататься на лошади";
+"Adventure.RopeJumping" = "Прыгнуть с веревкой";
+"Adventure.Tents" = "Поход с палатками";
+"Adventure.Waterfall" = "Постоять под водопадом";
+"Adventure.Cruise" = "Круиз на теплоходе";
+"Adventure.Island" = "Побывать на острове";
+"Adventure.Cold" = "Искупаться в проруби";
+
+"Adventure.Lights" = "Увидеть северное сияние";
+"Adventure.Surfing" = "Покататься на серфинге";
+"Adventure.Scuba" = "Поплавать с аквалангом";
+"Adventure.SmallPlane" = "Полетать на кукурузнике";
+"Adventure.Balloon" = "Полетать на воздушном шаре";
+"Adventure.Tatoo" = "Сделать тату";
+"Adventure.Autostop" = "Путешествие автостопом";
+"Adventure.Parachute" = "Прыгнуть с парашютом";

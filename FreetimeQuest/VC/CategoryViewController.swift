@@ -119,8 +119,8 @@ class CategoryViewController: UIViewController {
         guard let category = Category(rawValue: sender.tag) else {
             return
         }
-        
-        showAlert(title: "Купить \(category.title) за ★\(category.price)",
+        let title = NSLocalizedString(category.title, comment: "")
+        showAlert(title: "Купить \(title) за ★\(category.price)",
                   okButtonTitle: "Ок",
                   okAction: { _ in
                     self.addCategory(category)
