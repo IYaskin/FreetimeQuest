@@ -87,7 +87,6 @@
             <connections>
                 <outlet property="bgView" destination="d3s-jd-FCT" id="dnh-Oo-GEJ"/>
                 <outlet property="cellView" destination="Pz7-7T-s5u" id="rJd-kR-OkF"/>
-                <outlet property="contentView" destination="d3s-jd-FCT" id="BYw-E4-IBg"/>
                 <outlet property="firstStarLabel" destination="grL-hj-pMb" id="xuW-EK-tIg"/>
                 <outlet property="imgView" destination="CrN-9t-EYv" id="xQu-Ex-hd1"/>
                 <outlet property="secondStarLabel" destination="bkZ-DC-yW7" id="XlX-Up-msO"/>

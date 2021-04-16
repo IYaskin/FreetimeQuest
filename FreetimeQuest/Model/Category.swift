@@ -8,7 +8,6 @@
 import UIKit
 
 enum Category: Int {
-    //Base
     case freetimeQuest
     case goOut
     case good
@@ -38,16 +37,16 @@ extension Category {
         case .adventure:
             return .red
         case .myQuests:
-            return .magenta
+            return .white
         }
     }
     
     var textColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .goOut, .adventure, .social:
-            return .black
-        default:
+        case .hobby, .charisma:
             return .white
+        default:
+            return .black
         }
     }
     
@@ -75,10 +74,10 @@ extension Category {
     
     var headerTextColor: UIColor {
         switch self {
-        case .freetimeQuest, .good, .goOut, .adventure, .social:
-            return .black
+        case .hobby, .charisma:
+            return .white
         default:
-            return.white
+            return .black
         }
     }
     

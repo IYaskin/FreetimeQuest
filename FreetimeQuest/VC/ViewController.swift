@@ -44,6 +44,8 @@ class ViewController: UIViewController {
                                   forCellReuseIdentifier: QuestCell.reuseID)
         tableView.register(UINib.init(nibName: FreetimeQuestCell.nibName, bundle: nil),
                                   forCellReuseIdentifier: FreetimeQuestCell.reuseID)
+        tableView.register(UINib.init(nibName: MyQuestCell.nibName, bundle: nil),
+                                  forCellReuseIdentifier: MyQuestCell.reuseID)
 
         tableView.backgroundColor = .clear
 
@@ -98,11 +100,18 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        let quest = fetchedResultsController.object(at: indexPath)
+        print(quest.category)
+        if quest.category == 7,
+           let cell = tableView.dequeueReusableCell(withIdentifier: MyQuestCell.reuseID) as? MyQuestCell {
+            cell.configure(title: quest.title)
+            return cell
+        }
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestCell.reuseID) as? QuestCell else {
             return UITableViewCell()
         }
         
-        let quest = fetchedResultsController.object(at: indexPath)
         cell.configure(title: quest.title,
                        category: Int(quest.category),
                        stars: Int(quest.stars),
