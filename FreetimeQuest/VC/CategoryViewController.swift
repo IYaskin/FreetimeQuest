@@ -142,6 +142,7 @@ class CategoryViewController: UIViewController {
 
             alert.addTextField { (textField) in
                 textField.smartInsertDeleteType = UITextSmartInsertDeleteType.no
+                textField.font = .systemFont(ofSize: 20)
                 textField.delegate = self
             }
 
