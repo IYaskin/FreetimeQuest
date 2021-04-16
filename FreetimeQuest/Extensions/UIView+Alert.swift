@@ -37,7 +37,7 @@ extension UIViewController {
     
     func showOkAlert(title: String,
                        message: String? = nil,
-                       okButtonTitle: String,
+                       okButtonTitle: String = Text.Ok,
                        okAction: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title,
                                       message: message,
@@ -54,6 +54,20 @@ extension UIViewController {
                 animated: true,
                 completion: nil)
     }
+
+    func showNotEnoughStarsAlert() {
+        showOkAlert(title: Text.NotEnoughStars,
+                    message: Text.DoMoreQuests)
+    }
+    
+    func showQuestsAddedAlert() {
+        showOkAlert(title: Text.QuestsAdded)
+    }
+    
+    func showWrongNameAlert() {
+        showOkAlert(title: Text.IncorrectName)
+    }
+
 
 
 }

@@ -41,10 +41,12 @@ class CategoryViewController: UIViewController {
         configureAdditionalQuestsStackView()
     }
     
-    func updateTitle() {
-        let text = NSLocalizedString("addQuests", comment: "")
-        //Добавить квесты
-        titleLabel.text = "\(text) ★\(starsCount)"
+    func updateTitle(haveCategories: Bool) {
+        guard haveCategories else {
+            titleLabel.text = "★\(starsCount)"
+            return
+        }
+        titleLabel.text = "\(Text.AddCategory) ★\(starsCount)"
     }
     
     func configureAdditionalQuestsStackView() {
@@ -82,10 +84,12 @@ class CategoryViewController: UIViewController {
         }
 
         if !haveCategories {
+            updateTitle(haveCategories: false)
             addMyQuestsButtonToStackView()
+            return
         }
         
-        updateTitle()
+        updateTitle(haveCategories: true)
     }
     
     func addCategoryButtonToStackView(category: Category) {
@@ -105,8 +109,7 @@ class CategoryViewController: UIViewController {
     
     func addMyQuestsButtonToStackView() {
         let button = UIButton()
-        
-        button.setTitle("Добавить квест ★1", for: .normal)
+        button.setTitle("\(Text.AddQuest) ★1", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
@@ -120,19 +123,17 @@ class CategoryViewController: UIViewController {
             return
         }
         let title = NSLocalizedString(category.title, comment: "")
-        showAlert(title: "Купить \(title) за ★\(category.price)",
-                  okButtonTitle: "Ок",
+        showAlert(title: "\(Text.Add) \"\(title)\" \(Text._for) ★\(category.price)?",
+                  okButtonTitle: Text.Ok,
                   okAction: { _ in
                     self.addCategory(category)
                   },
-                  cancelButtonTitle: "Отмена")
+                  cancelButtonTitle: Text.Cancel)
     }
     
     @objc func addMyQuest() {
         if starsCount == 0 {
-            showOkAlert(title: "Не хватает звезд :(",
-                        message: "Выполните больше квестов, чтобы их заработать",
-                        okButtonTitle: "Ок")
+            showNotEnoughStarsAlert()
         } else {
             
             let alert = UIAlertController(title: "Введите название квеста:", message: nil, preferredStyle: .alert)
@@ -144,21 +145,19 @@ class CategoryViewController: UIViewController {
                 textField.delegate = self
             }
 
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            alert.addAction(UIAlertAction(title: Text.Ok, style: .default, handler: { [weak alert] (_) in
                 guard let text = alert?.textFields?[0].text,
                       !text.isEmpty else {
-                    self.showOkAlert(title: "Некорректное название :(",
-                                message: nil,
-                                okButtonTitle: "Ок")
+                    self.showWrongNameAlert()
                     return
                 }
                 
                 CoreDataManager.shared.saveMyQuest(title: text)
-                self.updateTitle()
+                self.updateTitle(haveCategories: false)
                 self.mainVC?.updateHeader()
             }))
             
-            alert.addAction(UIAlertAction(title: "Отмена", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: Text.Cancel, style: .default, handler: nil))
 
             self.present(alert, animated: true, completion: nil)
         }
@@ -167,9 +166,7 @@ class CategoryViewController: UIViewController {
     
     func addCategory(_ category: Category) {
         if starsCount < category.price {
-            showOkAlert(title: "Не хватает звезд :(",
-                      message: "Выполните больше квестов, чтобы их заработать",
-                      okButtonTitle: "Ок")
+            showNotEnoughStarsAlert()
         } else {
             
             switch category {
@@ -201,9 +198,7 @@ class CategoryViewController: UIViewController {
             starsCount -= category.price
             configureAdditionalQuestsStackView()
             mainVC?.updateHeader()
-            showOkAlert(title: "Квесты добавлены!",
-                        okButtonTitle: "Ок")
-
+            showQuestsAddedAlert()
         }
 
     }

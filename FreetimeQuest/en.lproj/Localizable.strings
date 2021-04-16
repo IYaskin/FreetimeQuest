@@ -7,7 +7,6 @@
 */
 
 // Common
-"addQuests" = "Add category";
 "Memories" = "Memories";
 
 "GoOut" = "Visit places";
@@ -17,6 +16,18 @@
 "Charisma" = "Development";
 "Adventure" = "Adventure";
 "MyQuests" = "My quests";
+
+"AddCategory" = "Add category";
+"AddQuest" = "Add quest";
+"Add" = "Add";
+"for" = "for";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"NotEnoughStars" = "Not enough stars :(";
+"DoMoreQuests" = "Complete quests to earn more";
+"IncorrectName" = "Incorrect name :(";
+"QuestsAdded" = "Quests added!"
+
 
 //GoOut
 "GoOut.Museum" = "Museum";

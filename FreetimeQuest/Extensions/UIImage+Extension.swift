@@ -8,10 +8,6 @@
 import UIKit
 
 extension UIImage {
-    static let icon = UIImage(named: "icon")!
-}
-
-extension UIImage {
     
     func resizeImageWith(newSize: CGSize) -> UIImage {
         
