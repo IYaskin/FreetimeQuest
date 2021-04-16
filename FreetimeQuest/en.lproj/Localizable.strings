@@ -18,16 +18,21 @@
 "MyQuests" = "My quests";
 
 "AddCategory" = "Add category";
-"AddQuest" = "Add quest";
+"AddQuest" = "Add your quest";
 "Add" = "Add";
 "for" = "for";
+"from" = "from";
 "Ok" = "Ok";
 "Cancel" = "Cancel";
 "NotEnoughStars" = "Not enough stars :(";
 "DoMoreQuests" = "Complete quests to earn more";
 "IncorrectName" = "Incorrect name :(";
-"QuestsAdded" = "Quests added!"
-
+"QuestsAdded" = "Quests added!";
+"EnterQuestName" = "Enter quest name:";
+"CompleteQuest" = "Complete quest";
+"DeleteQuest" = "Delete quest";
+"Completed" = "Completed";
+"MyQuestAdded" = "Your quest added!";
 
 //GoOut
 "GoOut.Museum" = "Museum";

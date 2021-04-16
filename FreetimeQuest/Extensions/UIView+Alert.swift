@@ -64,6 +64,10 @@ extension UIViewController {
         showOkAlert(title: Text.QuestsAdded)
     }
     
+    func showMyQuestAddedAlert() {
+        showOkAlert(title: Text.MyQuestAdded)
+    }
+    
     func showWrongNameAlert() {
         showOkAlert(title: Text.IncorrectName)
     }

@@ -13,6 +13,7 @@ class Text {
 
     static let Add = NSLocalizedString("Add", comment: "")
     static let _for = NSLocalizedString("for", comment: "")
+    static let from = NSLocalizedString("from", comment: "")
     static let Ok = NSLocalizedString("Ok", comment: "")
     static let Cancel = NSLocalizedString("Cancel", comment: "")
     
@@ -21,5 +22,12 @@ class Text {
     
     static let IncorrectName = NSLocalizedString("IncorrectName", comment: "")
     static let QuestsAdded = NSLocalizedString("QuestsAdded", comment: "")
+    static let MyQuestAdded = NSLocalizedString("MyQuestAdded", comment: "")
+
+    static let Memories = NSLocalizedString("Memories", comment: "")
+    static let EnterQuestName = NSLocalizedString("EnterQuestName", comment: "")
+    static let CompleteQuest = NSLocalizedString("CompleteQuest", comment: "")
+    static let DeleteQuest = NSLocalizedString("DeleteQuest", comment: "")
+    static let Completed = NSLocalizedString("Completed", comment: "")
 
 }

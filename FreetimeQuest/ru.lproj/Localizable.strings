@@ -17,15 +17,21 @@
 "MyQuests" = "Мои квесты";
 
 "AddCategory" = "Добавить категорию";
-"AddQuest" = "Добавить квест";
+"AddQuest" = "Добавить свой квест";
 "Add" = "Добавить";
 "for" = "за";
+"from" = "из";
 "Ok" = "Ок";
 "Cancel" = "Отмена";
 "NotEnoughStars" = "Не хватает звезд :(";
 "DoMoreQuests" = "Выполните больше квестов, чтобы их заработать";
 "IncorrectName" = "Некорректное название :(";
-"QuestsAdded" = "Квесты добавлены!"
+"QuestsAdded" = "Квесты добавлены!";
+"EnterQuestName" = "Введите название квеста:";
+"CompleteQuest" = "Выполнить задание";
+"DeleteQuest" = "Удалить задание";
+"Completed" = "Выполнено";
+"MyQuestAdded" = "Ваш квест добавлен!";
 
 //GoOut
 "GoOut.Museum" = "Музей";

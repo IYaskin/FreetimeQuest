@@ -38,7 +38,7 @@ class FreetimeQuestCell: UITableViewCell {
         
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
-        doneQuestsLabel.text = "Выполнено \(doneQuests) из \(maxQuests)"
+        doneQuestsLabel.text = "\(Text.Completed) \(doneQuests) \(Text.from) \(maxQuests)"
         
         let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
         progressBar.progress = progress

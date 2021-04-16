@@ -136,7 +136,7 @@ class CategoryViewController: UIViewController {
             showNotEnoughStarsAlert()
         } else {
             
-            let alert = UIAlertController(title: "Введите название квеста:", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: Text.EnterQuestName, message: nil, preferredStyle: .alert)
             alert.setBackgroundColor(color: .systemYellow)
             alert.view.tintColor = .black
 
@@ -155,6 +155,7 @@ class CategoryViewController: UIViewController {
                 CoreDataManager.shared.saveMyQuest(title: text)
                 self.updateTitle(haveCategories: false)
                 self.mainVC?.updateHeader()
+                self.showMyQuestAddedAlert()
             }))
             
             alert.addAction(UIAlertAction(title: Text.Cancel, style: .default, handler: nil))
