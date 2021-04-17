@@ -73,6 +73,44 @@ class ViewController: UIViewController {
         }
     }
     
+    func openWebVC(indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            return
+        }
+        let quest = self.fetchedResultsController.object(at: indexPath)
+        var url: String? = nil
+        
+        switch Int(quest.category) {
+        case Category.goOut.rawValue:
+            url = GoOutQuests.getURLString(id: Int(quest.id))
+        case Category.good.rawValue:
+            url = GoodQuests.getURLString(id: Int(quest.id))
+        case Category.hobby.rawValue:
+            url = HobbyQuests.getURLString(id: Int(quest.id))
+        case Category.social.rawValue:
+            url = SocialQuests.getURLString(id: Int(quest.id))
+        case Category.charisma.rawValue:
+            url = CharismaQuests.getURLString(id: Int(quest.id))
+        case Category.adventure.rawValue:
+            url = AdventureQuests.getURLString(id: Int(quest.id))
+        default:
+            break
+        }
+        print("url = \(url)")
+
+        guard url != nil else {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Web") as! WebViewController
+
+        vc.navBarTitle = NSLocalizedString(quest.title, comment: "")
+        vc.urlString = url
+
+        navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -123,6 +161,11 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt")
+        openWebVC(indexPath: indexPath)
+    }
     
     func tableView( _ tableView: UITableView,
                             viewForHeaderInSection section: Int) -> UIView? {

@@ -74,5 +74,36 @@ class HobbyQuests {
         }
     }
 
-    
+    static func getURLString(id: Int) -> String? {
+        let urls = ["Hobby.URL.Checkers",
+                    "Hobby.URL.Chess",
+                    "Hobby.URL.Backgammon",
+                    "Hobby.URL.Poker",
+                    "Hobby.URL.Darts",
+                    "Hobby.URL.BoardGame",
+                    "Hobby.URL.Puzzle",
+                    "Hobby.URL.ComputerGame",
+                    "Hobby.URL.DrawPicture",
+                    "Hobby.URL.MoldClay",
+                    "Hobby.URL.ReadNovel",
+                    "Hobby.URL.ReadDetective",
+                    "Hobby.URL.ReadFiction",
+                    "Hobby.URL.ReadFantasy",
+                    "Hobby.URL.LearnPoem",
+                    "Hobby.URL.WritePoem",
+                    "Hobby.URL.MakePhoto",
+                    "Hobby.URL.NoGadgets",
+                    "Hobby.URL.Plant",
+                    "Hobby.URL.FlyKite",
+                    "Hobby.URL.OrderPortrait",
+                    "Hobby.URL.FreeSection"]
+        
+        if id >= 0 && id <= urls.count {
+            return NSLocalizedString(urls[id], comment: "")
+        } else {
+            return nil
+        }
+        
+    }
+
 }

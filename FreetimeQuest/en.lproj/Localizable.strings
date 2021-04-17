@@ -172,3 +172,28 @@
 "Adventure.Tatoo" = "Get a tattoo";
 "Adventure.Autostop" = "Hitchhiking";
 "Adventure.Parachute" = "Jump with a parachute";
+
+
+//URl
+"GoOut.URL.Museum" = "Visit the museum";
+"GoOut.URL.Theater" = "Visit the theater";
+"GoOut.URL.Gallery" = "Visit the gallery";
+"GoOut.URL.Zoo" = "Visit the zoo";
+"GoOut.URL.Football" = "Go to a football game";
+"GoOut.URL.Basketball" = "Go to a basketball game";
+"GoOut.URL.Hockey" = "Go to hockey";
+"GoOut.URL.Bowling" = "Go bowling";
+"GoOut.URL.Billiards" = "Go to billiards";
+"GoOut.URL.Concert" = "Go to a concert";
+"GoOut.URL.Quest" = "Go on a quest";
+"GoOut.URL.IceRink" = "Go to the ice rink";
+"GoOut.URL.Karting" = "Go karting";
+"GoOut.URL.Trampoline" = "Go to trampolines";
+"GoOut.URL.Aquapark" = "Go to the aquapark";
+"GoOut.URL.Excursion" = "Go on an excursion";
+"GoOut.URL.Degustation" = "Go for a tasting";
+"GoOut.URL.Bar" = "Go to a bar";
+"GoOut.URL.NightClub" = "Go to a night club";
+"GoOut.URL.StandUp" = "Go to Stand Up";
+"GoOut.URL.Sauna" = "Go to the sauna";
+"GoOut.URL.Show" = "Go to a show";

@@ -171,3 +171,29 @@
 "Adventure.Tatoo" = "Сделать тату";
 "Adventure.Autostop" = "Путешествие автостопом";
 "Adventure.Parachute" = "Прыгнуть с парашютом";
+
+
+//URL
+
+"GoOut.URL.Museum" = "Посетить музей";
+"GoOut.URL.Theater" = "Посетить театр";
+"GoOut.URL.Gallery" = "Посетить галерею";
+"GoOut.URL.Zoo" = "Посетить зоопарк";
+"GoOut.URL.Football" = "Сходить на футбольный матч";
+"GoOut.URL.Basketball" = "Сходить на баскетбол";
+"GoOut.URL.Hockey" = "Сходить на хоккей";
+"GoOut.URL.Bowling" = "Сходить в боулинг";
+"GoOut.URL.Billiards" = "Сходить в бильярд";
+"GoOut.URL.Concert" = "Сходить на концерт";
+"GoOut.URL.Quest" = "Сходить на квест";
+"GoOut.URL.IceRink" = "Сходить на каток";
+"GoOut.URL.Karting" = "Сходить на картинг";
+"GoOut.URL.Trampoline" = "Сходить на батуты";
+"GoOut.URL.Aquapark" = "Сходить в аквапарк";
+"GoOut.URL.Excursion" = "Сходить на экскурсию";
+"GoOut.URL.Degustation" = "Сходить на дегустацию";
+"GoOut.URL.Bar" = "Сходить в бар";
+"GoOut.URL.NightClub" = "Сходить в ночной клуб";
+"GoOut.URL.StandUp" = "Сходить на StandUp";
+"GoOut.URL.Sauna" = "Сходить в баню";
+"GoOut.URL.Show" = "Посетить шоу";

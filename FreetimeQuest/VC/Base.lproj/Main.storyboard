@@ -53,6 +53,41 @@
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="75.669642857142847"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="hau-lD-yav">
+            <objects>
+                <viewController storyboardIdentifier="Web" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PDW-ms-uH7" customClass="WebViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dyr-w3-c6N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxL-pe-0mi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V8Y-Zc-5nR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jxL-pe-0mi" firstAttribute="leading" secondItem="V8Y-Zc-5nR" secondAttribute="leading" id="BLP-Au-Fd2"/>
+                            <constraint firstItem="jxL-pe-0mi" firstAttribute="top" secondItem="V8Y-Zc-5nR" secondAttribute="top" id="cuT-am-yTo"/>
+                            <constraint firstItem="jxL-pe-0mi" firstAttribute="trailing" secondItem="V8Y-Zc-5nR" secondAttribute="trailing" id="d7v-MI-XoW"/>
+                            <constraint firstAttribute="bottom" secondItem="jxL-pe-0mi" secondAttribute="bottom" id="oyZ-Ey-XHF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xf9-4o-ML8"/>
+                    <connections>
+                        <outlet property="webView" destination="jxL-pe-0mi" id="tLP-Nx-57Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJq-CZ-Ij4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="785.49107142857144"/>
+        </scene>
         <!--Category View Controller-->
         <scene sceneID="qSv-ht-BKY">
             <objects>
@@ -165,7 +200,6 @@
         <!--Sheet View Controller-->
         <scene sceneID="kmy-cS-teR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FWN-3Y-zz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Sheet" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Eb-sf-dEX" customClass="SheetViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h69-GR-vnz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -222,6 +256,7 @@
                         <outlet property="stackView" destination="V7h-f7-uOQ" id="P9x-3e-QUj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWN-3Y-zz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EoB-6O-dtq">
                     <connections>
                         <action selector="greyAreaTapped:" destination="7Eb-sf-dEX" id="LBF-D2-XGb"/>

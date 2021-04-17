@@ -84,5 +84,37 @@ class AdventureQuests {
 
     }
 
-    
+    static func getURLString(id: Int) -> String? {
+        let urls = ["Adventure.URL.Sunrise",
+                    "Adventure.URL.Bet",
+                    "Adventure.URL.NightCity",
+                    "Adventure.URL.ParkAttractions",
+                    "Adventure.URL.Snowboard",
+                    "Adventure.URL.Stars",
+                    
+                    "Adventure.URL.Horse",
+                    "Adventure.URL.RopeJumping",
+                    "Adventure.URL.Tents",
+                    "Adventure.URL.Waterfall",
+                    "Adventure.URL.Cruise",
+                    "Adventure.URL.Island",
+                    "Adventure.URL.Cold",
+                    
+                    "Adventure.URL.Lights",
+                    "Adventure.URL.Surfing",
+                    "Adventure.URL.Scuba",
+                    "Adventure.URL.SmallPlane",
+                    "Adventure.URL.Balloon",
+                    "Adventure.URL.Tatoo",
+                    "Adventure.URL.Autostop",
+                    "Adventure.URL.Parachute"]
+        
+        if id >= 0 && id <= urls.count {
+            return NSLocalizedString(urls[id], comment: "")
+        } else {
+            return nil
+        }
+        
+    }
+
 }

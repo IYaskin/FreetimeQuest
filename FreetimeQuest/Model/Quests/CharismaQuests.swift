@@ -67,5 +67,32 @@ class CharismaQuests {
         }
 
     }
+    
+    static func getURLString(id: Int) -> String? {
+        let urls = ["Charisma.URL.Teeth",
+                    "Charisma.URL.Massage",
+                    "Charisma.URL.Yoga",
+                    "Charisma.URL.Meditation",
+                    "Charisma.URL.Speech",
+                    "Charisma.URL.Posture",
+                    "Charisma.URL.Temper",
+                    "Charisma.URL.Morning",
+                    "Charisma.URL.Food",
+                    "Charisma.URL.Books",
+                    "Charisma.URL.Income",
+                    "Charisma.URL.Fotosession",
+                    "Charisma.URL.Psychologist",
+                    "Charisma.URL.Buy",
+                    "Charisma.URL.Weight",
+                    "Charisma.URL.Marathon",
+                    "Charisma.URL.BadHabit"]
+        
+        if id >= 0 && id <= urls.count {
+            return NSLocalizedString(urls[id], comment: "")
+        } else {
+            return nil
+        }
+        
+    }
 
 }

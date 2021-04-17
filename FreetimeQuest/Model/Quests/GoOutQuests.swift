@@ -75,4 +75,37 @@ class GoOutQuests {
         
     }
     
+    static func getURLString(id: Int) -> String? {
+        let urls = ["GoOut.URL.Museum",
+                    "GoOut.URL.Theater",
+                    "GoOut.URL.Gallery",
+                    "GoOut.URL.Zoo",
+                    "GoOut.URL.Football",
+                    "GoOut.URL.Basketball",
+                    "GoOut.URL.Hockey",
+                    "GoOut.URL.Bowling",
+                    "GoOut.URL.Billiards",
+                    "GoOut.URL.Concert",
+                    "GoOut.URL.Quest",
+                    "GoOut.URL.IceRink",
+                    "GoOut.URL.Karting",
+                    "GoOut.URL.Trampoline",
+                    "GoOut.URL.Aquapark",
+                    "GoOut.URL.Excursion",
+                    "GoOut.URL.Degustation",
+                    "GoOut.URL.Bar",
+                    "GoOut.URL.NightClub",
+                    "GoOut.URL.StandUp",
+                    "GoOut.URL.Sauna",
+                    "GoOut.URL.Show"]
+        
+        if id >= 0 && id <= urls.count {
+            return NSLocalizedString(urls[id], comment: "")
+        } else {
+            return nil
+        }
+        
+    }
+
+    
 }
