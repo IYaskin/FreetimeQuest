@@ -260,3 +260,21 @@
 "Social.URL.Party" = "";
 "Social.URL.Picnic" = "";
 "Social.URL.Stage" = "";
+
+"Charisma.URL.Teeth" = "Dentist";
+"Charisma.URL.Massage" = "Sign up for a massage";
+"Charisma.URL.Yoga" = "Yoga tutorials";
+"Charisma.URL.Meditation" = "Meditation tutorials";
+"Charisma.URL.Speech" = "Speech development exercises";
+"Charisma.URL.Posture" = "Posture development exercises";
+"Charisma.URL.Temper" = "How to temper properly";
+"Charisma.URL.Morning" = "Good morning exercises";
+"Charisma.URL.Food" = "How to eat right";
+"Charisma.URL.Books" = "Book store";
+"Charisma.URL.Income" = "";
+"Charisma.URL.Fotosession" = "Order a photo session";
+"Charisma.URL.Psychologist" = "Make an appointment with a psychologist";
+"Charisma.URL.Buy" = "";
+"Charisma.URL.Weight" = "";
+"Charisma.URL.Marathon" = "How to prepare for a half marathon";
+"Charisma.URL.BadHabit" = "How to get rid of a bad habit";

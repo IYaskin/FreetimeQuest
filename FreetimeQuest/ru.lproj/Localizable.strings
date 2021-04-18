@@ -260,3 +260,21 @@
 "Social.URL.Party" = "";
 "Social.URL.Picnic" = "";
 "Social.URL.Stage" = "";
+
+"Charisma.URL.Teeth" = "Стоматология";
+"Charisma.URL.Massage" = "Записаться на массаж";
+"Charisma.URL.Yoga" = "Видеоуроки по йоге";
+"Charisma.URL.Meditation" = "Видеоуроки по медитации";
+"Charisma.URL.Speech" = "Упражнения по развитию речи";
+"Charisma.URL.Posture" = "Упражнения по развитию осанки";
+"Charisma.URL.Temper" = "Как правильно закаляться";
+"Charisma.URL.Morning" = "Упражнения для зарядки";
+"Charisma.URL.Food" = "Правильно питание";
+"Charisma.URL.Books" = "Книжный магазин";
+"Charisma.URL.Income" = "";
+"Charisma.URL.Fotosession" = "Заказать фотосессию";
+"Charisma.URL.Psychologist" = "Записаться к психологу";
+"Charisma.URL.Buy" = "";
+"Charisma.URL.Weight" = "";
+"Charisma.URL.Marathon" = "Как подготовиться к полумарафону";
+"Charisma.URL.BadHabit" = "Как избавиться от вредной привычки";
