@@ -17,6 +17,7 @@ class QuestCell: UITableViewCell {
     @IBOutlet weak var firstStarLabel: UILabel!
     @IBOutlet weak var secondStarLabel: UILabel!
     @IBOutlet weak var thirdStarLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     
     static let nibName = "QuestCell"
     static let reuseID = "QuestCell"
@@ -68,10 +69,12 @@ class QuestCell: UITableViewCell {
     func configure(title: String?,
                    category: Int,
                    stars: Int,
-                   id: Int) {
+                   id: Int,
+                   haveURL: Bool) {
         if let title = title {
             titleLabel.text = NSLocalizedString(title, comment: "")
         }
+        detailLabel.isHidden = !haveURL
         configureStars(stars: stars)
         
         if let category = Category(rawValue: category) {
@@ -81,7 +84,7 @@ class QuestCell: UITableViewCell {
             firstStarLabel.textColor = category.textColor
             secondStarLabel.textColor = category.textColor
             thirdStarLabel.textColor = category.textColor
-
+            detailLabel.textColor = category.textColor
             
             switch category {
             case .goOut:

@@ -78,27 +78,28 @@ class ViewController: UIViewController {
             return
         }
         let quest = self.fetchedResultsController.object(at: indexPath)
-        var url: String? = nil
+        var urlString: String? = nil
         
         switch Int(quest.category) {
         case Category.goOut.rawValue:
-            url = GoOutQuests.getURLString(id: Int(quest.id))
+            urlString = GoOutQuests.getURLString(id: Int(quest.id))
         case Category.good.rawValue:
-            url = GoodQuests.getURLString(id: Int(quest.id))
+            urlString = GoodQuests.getURLString(id: Int(quest.id))
         case Category.hobby.rawValue:
-            url = HobbyQuests.getURLString(id: Int(quest.id))
+            urlString = HobbyQuests.getURLString(id: Int(quest.id))
         case Category.social.rawValue:
-            url = SocialQuests.getURLString(id: Int(quest.id))
+            urlString = SocialQuests.getURLString(id: Int(quest.id))
         case Category.charisma.rawValue:
-            url = CharismaQuests.getURLString(id: Int(quest.id))
+            urlString = CharismaQuests.getURLString(id: Int(quest.id))
         case Category.adventure.rawValue:
-            url = AdventureQuests.getURLString(id: Int(quest.id))
+            urlString = AdventureQuests.getURLString(id: Int(quest.id))
         default:
             break
         }
-        print("url = \(url)")
+        print("url = \(urlString)")
 
-        guard url != nil else {
+        guard let url = urlString,
+              !url.isEmpty else {
             return
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -150,10 +151,36 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        var urlString: String? = nil
+        
+        switch Int(quest.category) {
+        case Category.goOut.rawValue:
+            urlString = GoOutQuests.getURLString(id: Int(quest.id))
+        case Category.good.rawValue:
+            urlString = GoodQuests.getURLString(id: Int(quest.id))
+        case Category.hobby.rawValue:
+            urlString = HobbyQuests.getURLString(id: Int(quest.id))
+        case Category.social.rawValue:
+            urlString = SocialQuests.getURLString(id: Int(quest.id))
+        case Category.charisma.rawValue:
+            urlString = CharismaQuests.getURLString(id: Int(quest.id))
+        case Category.adventure.rawValue:
+            urlString = AdventureQuests.getURLString(id: Int(quest.id))
+        default:
+            break
+        }
+
+        var haveURL = false
+        if let url = urlString,
+           !url.isEmpty {
+            haveURL = true
+        }
+            
         cell.configure(title: quest.title,
                        category: Int(quest.category),
                        stars: Int(quest.stars),
-                       id: Int(quest.id))
+                       id: Int(quest.id),
+                       haveURL: haveURL)
 
         return cell
     }
