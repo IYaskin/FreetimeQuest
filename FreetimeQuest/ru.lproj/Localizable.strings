@@ -197,3 +197,27 @@
 "GoOut.URL.StandUp" = "Сходить на StandUp";
 "GoOut.URL.Sauna" = "Сходить в баню";
 "GoOut.URL.Show" = "Посетить шоу";
+
+
+"Hobby.URL.Checkers" = "Играть в шашки онлайн";
+"Hobby.URL.Chess" = "Играть в шахматы онлайн";
+"Hobby.URL.Backgammon" = "Играть в нарды онлайн";
+"Hobby.URL.Poker" = "Правила игры в покер";
+"Hobby.URL.Darts" = "Правила игры в дартс";
+"Hobby.URL.BoardGame" = "Лучшие настольные игры";
+"Hobby.URL.Puzzle" = "Купить пазл";
+"Hobby.URL.ComputerGame" = "Лучшие компьютерные игры";
+"Hobby.URL.DrawPicture" = "Обучение рисованию";
+"Hobby.URL.MoldClay" = "Обучение лепке из глины";
+"Hobby.URL.ReadNovel" = "Список лучших романов";
+"Hobby.URL.ReadDetective" = "Список лучших детективных романов";
+"Hobby.URL.ReadFiction" = "Список лучших книг в жанре научной фантастики";
+"Hobby.URL.ReadFantasy" = "Список лучших книг фэнтези";
+"Hobby.URL.LearnPoem" = "Стихи русских поэтов-классиков";
+"Hobby.URL.WritePoem" = "Как написать стихотворение?";
+"Hobby.URL.MakePhoto" = "Как снять классное фото";
+"Hobby.URL.NoGadgets" = "Можно ли прожить один день без гаджетов?";
+"Hobby.URL.Plant" = "Как посадить комнатное растение в горшок";
+"Hobby.URL.FlyKite" = "Как запустить воздушного змея";
+"Hobby.URL.OrderPortrait" = "Заказать портрет";
+"Hobby.URL.FreeSection" = "Бесплатные пробные занятия в секцию";

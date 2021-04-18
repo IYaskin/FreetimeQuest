@@ -197,3 +197,26 @@
 "GoOut.URL.StandUp" = "Go to Stand Up";
 "GoOut.URL.Sauna" = "Go to the sauna";
 "GoOut.URL.Show" = "Go to a show";
+
+"Hobby.URL.Checkers" = "Play checkers online";
+"Hobby.URL.Chess" = "Play chess online";
+"Hobby.URL.Backgammon" = "Play backgammon online";
+"Hobby.URL.Poker" = "Poker rules";
+"Hobby.URL.Darts" = "Darts rules";
+"Hobby.URL.BoardGame" = "Best board games";
+"Hobby.URL.Puzzle" = "Buy puzzle";
+"Hobby.URL.ComputerGame" = "Best computer games";
+"Hobby.URL.DrawPicture" = "Painting training";
+"Hobby.URL.MoldClay" = "Clay modeling training";
+"Hobby.URL.ReadNovel" = "List of the best novels";
+"Hobby.URL.ReadDetective" = "List of the best detective novels";
+"Hobby.URL.ReadFiction" = "List of the best science fiction books";
+"Hobby.URL.ReadFantasy" = "List of the best fantasy books";
+"Hobby.URL.LearnPoem" = "Poems of classic poets";
+"Hobby.URL.WritePoem" = "How to write a poem";
+"Hobby.URL.MakePhoto" = "How to take a good photo";
+"Hobby.URL.NoGadgets" = "Is it possible to live one day without gadgets?";
+"Hobby.URL.Plant" = "How to plant a houseplant in a pot";
+"Hobby.URL.FlyKite" = "How to fly a kite";
+"Hobby.URL.OrderPortrait" = "Order portrait";
+"Hobby.URL.FreeSection" = "Free trial lessons";
