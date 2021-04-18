@@ -127,7 +127,7 @@
 
 //Charisma
 
-"Charisma.Teeth" = "Вылечить зубы";
+"Charisma.Teeth" = "Сходить на осмотр к стоматологу";
 "Charisma.Massage" = "Сходить на 8 сеансов массажа";
 "Charisma.Yoga" = "Заниматься йогой в течении месяца";
 "Charisma.Meditation" = "Медитировать в течении месяца";
@@ -238,3 +238,25 @@
 "Hobby.URL.OrderPortrait" = "Заказать портрет";
 "Hobby.URL.FreeSection" = "Бесплатные пробные занятия в секцию";
 
+"Social.URL.Smile"  = "";
+"Social.URL.Wink"  = "";
+"Social.URL.Ugly"  = "";
+"Social.URL.Hello"  = "";
+"Social.URL.Compliment"  = "";
+"Social.URL.Questions"  = "";
+"Social.URL.Call"  = "Анекдоты";
+"Social.URL.AskPhoto" = "";
+"Social.URL.Selfie" = "";
+"Social.URL.Oboznalsya" = "Курсы актерского мастерства";
+"Social.URL.ExchangeNumbers" = "";
+"Social.URL.LoveLetter" = "Как отправить письмо по почте";
+"Social.URL.TellPoem" = "";
+"Social.URL.Sing" = "Караоке бары";
+"Social.URL.MeetSomeone" = "";
+"Social.URL.AskSalt" = "";
+"Social.URL.Wish" = "";
+"Social.URL.Fountain" = "Фонтаны";
+"Social.URL.Dance" = "";
+"Social.URL.Party" = "";
+"Social.URL.Picnic" = "";
+"Social.URL.Stage" = "";

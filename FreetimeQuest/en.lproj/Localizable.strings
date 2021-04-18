@@ -129,7 +129,7 @@
 
 //Charisma
 
-"Charisma.Teeth" = "Cure teeth";
+"Charisma.Teeth" = "Go to the dentist for a checkup";
 "Charisma.Massage" = "Take 8 massage sessions";
 "Charisma.Yoga" = "Do yoga within a month";
 "Charisma.Meditation" = "Meditate within a month";
@@ -237,3 +237,26 @@
 "Hobby.URL.FlyKite" = "How to fly a kite";
 "Hobby.URL.OrderPortrait" = "Order portrait";
 "Hobby.URL.FreeSection" = "Free trial lessons";
+
+"Social.URL.Smile"  = "";
+"Social.URL.Wink"  = "";
+"Social.URL.Ugly"  = "";
+"Social.URL.Hello"  = "";
+"Social.URL.Compliment"  = "";
+"Social.URL.Questions"  = "";
+"Social.URL.Call"  = "Corny jokes";
+"Social.URL.AskPhoto" = "";
+"Social.URL.Selfie" = "";
+"Social.URL.Oboznalsya" = "Acting Courses";
+"Social.URL.ExchangeNumbers" = "";
+"Social.URL.LoveLetter" = "How to send a letter by mail";
+"Social.URL.TellPoem" = "";
+"Social.URL.Sing" = "Karaoke bars";
+"Social.URL.MeetSomeone" = "";
+"Social.URL.AskSalt" = "";
+"Social.URL.Wish" = "";
+"Social.URL.Fountain" = "Fountains";
+"Social.URL.Dance" = "";
+"Social.URL.Party" = "";
+"Social.URL.Picnic" = "";
+"Social.URL.Stage" = "";
