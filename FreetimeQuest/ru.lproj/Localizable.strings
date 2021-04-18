@@ -198,6 +198,22 @@
 "GoOut.URL.Sauna" = "Сходить в баню";
 "GoOut.URL.Show" = "Посетить шоу";
 
+"Good.URL.CarryBag" = "";
+"Good.URL.FeedDuck" = "Ближайший парк";
+"Good.URL.FeedAnimals" = "";
+"Good.URL.OldStuff" = "Куда сдать старые вещи?";
+"Good.URL.HelpFond" = "Перечислить средства в фонд помощи";
+"Good.URL.Gift" = "Идеи для подарка близкому человеку";
+"Good.URL.AppMark" = "";
+"Good.URL.Blood" = "Где можно сдать кровь для донорства";
+"Good.URL.Trash" = "";
+"Good.URL.HelpBabushka" = "";
+"Good.URL.BirdHouse" = "Как построить скворечник";
+"Good.URL.FamilyDinner" = "Рецепты для семейного ужина";
+"Good.URL.FeedFriends" = "Заказать пиццу";
+"Good.URL.FixHouse" = "";
+"Good.URL.SteetMusician" = "";
+"Good.URL.FeedHomeless" = "";
 
 "Hobby.URL.Checkers" = "Играть в шашки онлайн";
 "Hobby.URL.Chess" = "Играть в шахматы онлайн";
@@ -221,3 +237,4 @@
 "Hobby.URL.FlyKite" = "Как запустить воздушного змея";
 "Hobby.URL.OrderPortrait" = "Заказать портрет";
 "Hobby.URL.FreeSection" = "Бесплатные пробные занятия в секцию";
+

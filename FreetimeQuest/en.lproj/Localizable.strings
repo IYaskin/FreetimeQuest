@@ -198,6 +198,23 @@
 "GoOut.URL.Sauna" = "Go to the sauna";
 "GoOut.URL.Show" = "Go to a show";
 
+"Good.URL.CarryBag" = "";
+"Good.URL.FeedDuck" = "Nearest park";
+"Good.URL.FeedAnimals" = "";
+"Good.URL.OldStuff" = "Where to drop off old things";
+"Good.URL.HelpFond" = "Transfer money to the aid fund";
+"Good.URL.Gift" = "Gift ideas for a close person";
+"Good.URL.AppMark" = "";
+"Good.URL.Blood" = "Where donate blood";
+"Good.URL.Trash" = "";
+"Good.URL.HelpBabushka" = "";
+"Good.URL.BirdHouse" = "How to build a birdhouse";
+"Good.URL.FamilyDinner" = "Family Dinner Recipes";
+"Good.URL.FeedFriends" = "Order pizza";
+"Good.URL.FixHouse" = "";
+"Good.URL.SteetMusician" = "";
+"Good.URL.FeedHomeless" = "";
+
 "Hobby.URL.Checkers" = "Play checkers online";
 "Hobby.URL.Chess" = "Play chess online";
 "Hobby.URL.Backgammon" = "Play backgammon online";
