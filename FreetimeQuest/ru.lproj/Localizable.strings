@@ -100,6 +100,8 @@
 "Hobby.NoGadgets" = "Провести день без гаджетов";
 "Hobby.Plant" = "Посадить растение";
 "Hobby.FlyKite" = "Запустить воздушного змея";
+"Hobby.Cake" = "Испечь пирог";
+"Hobby.Mors" = "Приготовить морс";
 "Hobby.OrderPortrait" = "Заказать свой портрет";
 "Hobby.FreeSection" = "Сходить на пробное занятие в секцию";
 //Social
@@ -237,6 +239,8 @@
 "Hobby.URL.NoGadgets" = "Можно ли прожить один день без гаджетов?";
 "Hobby.URL.Plant" = "Как посадить комнатное растение в горшок";
 "Hobby.URL.FlyKite" = "Как запустить воздушного змея";
+"Hobby.URL.Cake" = "Как испечь пирог";
+"Hobby.URL.Mors" = "Как приготовить морс";
 "Hobby.URL.OrderPortrait" = "Заказать портрет";
 "Hobby.URL.FreeSection" = "Бесплатные пробные занятия в секцию";
 

@@ -30,6 +30,8 @@ class HobbyQuests {
                         "Hobby.NoGadgets",
                         "Hobby.Plant",
                         "Hobby.FlyKite",
+                        "Hobby.Cake",
+                        "Hobby.Mors",
                         "Hobby.OrderPortrait",
                         "Hobby.FreeSection"]
 
@@ -65,6 +67,8 @@ class HobbyQuests {
                       "nogadgets",
                       "plant",
                       "kite",
+                      "cake",
+                      "mors",
                       "portrait",
                       "freesection"]
         if id >= 0 && id <= images.count {
@@ -95,6 +99,8 @@ class HobbyQuests {
                     "Hobby.URL.NoGadgets",
                     "Hobby.URL.Plant",
                     "Hobby.URL.FlyKite",
+                    "Hobby.URL.Cake",
+                    "Hobby.URL.Mors",
                     "Hobby.URL.OrderPortrait",
                     "Hobby.URL.FreeSection"]
         

@@ -100,6 +100,8 @@
 "Hobby.NoGadgets" = "Spend a day without gadgets";
 "Hobby.Plant" = "To plant a herb";
 "Hobby.FlyKite" = "Fly a kite";
+"Hobby.Cake" = "Bake a cake";
+"Hobby.Mors" = "Make fruit drink";
 "Hobby.OrderPortrait" = "Order your portrait";
 "Hobby.FreeSection" = "Go to a trial lesson";
 
@@ -237,6 +239,8 @@
 "Hobby.URL.NoGadgets" = "Is it possible to live one day without gadgets?";
 "Hobby.URL.Plant" = "How to plant a houseplant in a pot";
 "Hobby.URL.FlyKite" = "How to fly a kite";
+"Hobby.URL.Cake" = "How to bake a cake";
+"Hobby.URL.Mors" = "How to make fruit drink";
 "Hobby.URL.OrderPortrait" = "Order portrait";
 "Hobby.URL.FreeSection" = "Free trial lessons";
 
