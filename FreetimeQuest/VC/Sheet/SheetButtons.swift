@@ -16,21 +16,21 @@ enum SheetButtons {
 
     case deletePhoto
     case deleteMemory
-    
+
     var title: String {
         switch self {
         case .addPhotoFromCamera:
-            return "Добавить фото с камеры"
+            return NSLocalizedString("Sheet.AddCamera", comment: "") 
         case .addPhotoFromGallery:
-            return "Добавить фото с галереи"
+            return NSLocalizedString("Sheet.AddGallery", comment: "")
         case .changePhotoWithCamera:
-            return "Изменить на фото с камеры"
+            return NSLocalizedString("Sheet.ChangeCamera", comment: "")
         case .changePhotoWithGallery:
-            return "Изменить на фото из галереи"
+            return NSLocalizedString("Sheet.ChangeGallery", comment: "")
         case .deletePhoto:
-            return "Удалить фото"
+            return NSLocalizedString("Sheet.DeletePhoto", comment: "")
         case .deleteMemory:
-            return "Удалить воспоминание"
+            return NSLocalizedString("Sheet.DeleteMemory", comment: "") 
         }
     }
 }

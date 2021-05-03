@@ -34,6 +34,14 @@
 "Completed" = "Completed";
 "MyQuestAdded" = "Your quest added!";
 
+//SheetButtons
+"Sheet.AddCamera" = "Add photo from camera";
+"Sheet.AddGallery" = "Add photo from gallery";
+"Sheet.ChangeCamera" = "Change photo with camera";
+"Sheet.ChangeGallery" = "Change photo with gallery";
+"Sheet.DeletePhoto" = "Delete photo";
+"Sheet.DeleteMemory" = "Delete memory";
+
 //GoOut
 "GoOut.Cinema" = "Cinema";
 "GoOut.Museum" = "Museum";

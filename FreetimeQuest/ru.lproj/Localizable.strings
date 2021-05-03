@@ -33,6 +33,14 @@
 "Completed" = "Выполнено";
 "MyQuestAdded" = "Ваш квест добавлен!";
 
+//SheetButtons
+"Sheet.AddCamera" = "Добавить фото с камеры";
+"Sheet.AddGallery" = "Добавить фото с галереи";
+"Sheet.ChangeCamera" = "Изменить на фото с камеры";
+"Sheet.ChangeGallery" = "Изменить на фото из галереи";
+"Sheet.DeletePhoto" = "Удалить фото";
+"Sheet.DeleteMemory" = "Удалить воспоминание";
+
 //GoOut
 
 "GoOut.Cinema" = "Кинотеатр";

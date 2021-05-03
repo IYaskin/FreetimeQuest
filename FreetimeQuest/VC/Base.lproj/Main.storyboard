@@ -214,10 +214,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-K4-Z1l">
-                                <rect key="frame" x="40" y="272" width="334" height="362"/>
+                                <rect key="frame" x="40" y="277" width="334" height="352"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V7h-f7-uOQ">
-                                        <rect key="frame" x="20" y="30" width="294" height="322"/>
+                                        <rect key="frame" x="20" y="15" width="294" height="322"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhW-Y0-SHW">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="322"/>
@@ -231,9 +231,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="V7h-f7-uOQ" secondAttribute="bottom" constant="10" id="F2T-Mk-a0C"/>
+                                    <constraint firstAttribute="bottom" secondItem="V7h-f7-uOQ" secondAttribute="bottom" constant="15" id="F2T-Mk-a0C"/>
                                     <constraint firstItem="V7h-f7-uOQ" firstAttribute="leading" secondItem="Ueh-K4-Z1l" secondAttribute="leading" constant="20" symbolic="YES" id="bbY-UP-q6J"/>
-                                    <constraint firstItem="V7h-f7-uOQ" firstAttribute="top" secondItem="Ueh-K4-Z1l" secondAttribute="top" constant="30" id="rPo-tX-6DN"/>
+                                    <constraint firstItem="V7h-f7-uOQ" firstAttribute="top" secondItem="Ueh-K4-Z1l" secondAttribute="top" constant="15" id="rPo-tX-6DN"/>
                                     <constraint firstItem="V7h-f7-uOQ" firstAttribute="centerX" secondItem="Ueh-K4-Z1l" secondAttribute="centerX" id="rYj-6h-JtR"/>
                                 </constraints>
                             </view>
