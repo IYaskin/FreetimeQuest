@@ -322,7 +322,7 @@ extension ViewController: NSFetchedResultsControllerDelegate {
             updateHeader()
         case .delete:
             if let indexPath = indexPath {
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             updateHeader()
         default:

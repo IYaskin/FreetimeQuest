@@ -135,6 +135,11 @@ class CoreDataManager {
         saveContext()
     }
     
+    func deleteMemory(_ memory: MemoryObject) {
+        viewContext.delete(memory)
+        saveContext()
+    }
+    
     func saveContext() {
         guard viewContext.hasChanges else {
             return

@@ -92,10 +92,14 @@ class SheetViewController: UIViewController {
         mainVC?.updateCell(image: nil,
                           indexPath: indexPath)
         dismiss(animated: true, completion: nil)
-
     }
     
     @objc func deleteMemory() {
+        guard let indexPath = indexPath else {
+            return
+        }
+        mainVC?.deleteMemory(indexPath: indexPath)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func greyAreaTapped(_ sender: UITapGestureRecognizer) {

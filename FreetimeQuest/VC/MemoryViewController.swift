@@ -47,6 +47,11 @@ class MemoryViewController: UIViewController {
         CoreDataManager.shared.saveContext()
     }
     
+    public func deleteMemory(indexPath: IndexPath) {
+        let memory = fetchedResultsController.object(at: indexPath)
+        CoreDataManager.shared.deleteMemory(memory)
+    }
+    
     public func openSheet(haveImage: Bool, indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Sheet") as! SheetViewController
@@ -153,7 +158,7 @@ extension MemoryViewController: NSFetchedResultsControllerDelegate {
             }
         case .delete:
             if let indexPath = indexPath {
-                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
         case .update:
             if let indexPath = indexPath {
