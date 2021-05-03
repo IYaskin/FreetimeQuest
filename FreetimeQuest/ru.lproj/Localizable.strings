@@ -32,6 +32,7 @@
 "DeleteQuest" = "Удалить задание";
 "Completed" = "Выполнено";
 "MyQuestAdded" = "Ваш квест добавлен!";
+"CheckInternet" = "Нет интернет соединения :(";
 
 //SheetButtons
 "Sheet.AddCamera" = "Добавить фото с камеры";

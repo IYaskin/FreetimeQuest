@@ -191,7 +191,11 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt")
-        openWebVC(indexPath: indexPath)
+        if Reachability.isConnectedToNetwork() {
+            openWebVC(indexPath: indexPath)
+        } else {
+            showOkAlert(title: NSLocalizedString("CheckInternet", comment: ""))
+        }
     }
     
     func tableView( _ tableView: UITableView,

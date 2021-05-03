@@ -33,6 +33,7 @@
 "DeleteQuest" = "Delete quest";
 "Completed" = "Completed";
 "MyQuestAdded" = "Your quest added!";
+"CheckInternet" = "No internet connection :(";
 
 //SheetButtons
 "Sheet.AddCamera" = "Add photo from camera";
