@@ -35,6 +35,7 @@
 "MyQuestAdded" = "Your quest added!";
 
 //GoOut
+"GoOut.Cinema" = "Cinema";
 "GoOut.Museum" = "Museum";
 "GoOut.Theater" = "Theatre";
 "GoOut.Gallery" = "Gallery";
@@ -175,6 +176,7 @@
 
 
 //URl
+"GoOut.URL.Cinema" = "Visit the cinema";
 "GoOut.URL.Museum" = "Visit the museum";
 "GoOut.URL.Theater" = "Visit the theater";
 "GoOut.URL.Gallery" = "Visit the gallery";

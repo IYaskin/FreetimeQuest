@@ -11,7 +11,8 @@ class GoOutQuests {
     
         
     static func addQuests() {
-        let titles = ["GoOut.Museum",
+        let titles = ["GoOut.Cinema",
+                      "GoOut.Museum",
                       "GoOut.Theater",
                       "GoOut.Gallery",
                       "GoOut.Zoo",
@@ -44,7 +45,8 @@ class GoOutQuests {
     }
     
     static func getIcon(id: Int) -> UIImage? {
-        let images = ["museum",
+        let images = ["cinema",
+                      "museum",
                       "theater",
                       "gallery",
                       "zoo",
@@ -76,7 +78,8 @@ class GoOutQuests {
     }
     
     static func getURLString(id: Int) -> String? {
-        let urls = ["GoOut.URL.Museum",
+        let urls = ["GoOut.URL.Cinema",
+                    "GoOut.URL.Museum",
                     "GoOut.URL.Theater",
                     "GoOut.URL.Gallery",
                     "GoOut.URL.Zoo",

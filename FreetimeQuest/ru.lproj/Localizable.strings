@@ -34,6 +34,8 @@
 "MyQuestAdded" = "Ваш квест добавлен!";
 
 //GoOut
+
+"GoOut.Cinema" = "Кинотеатр";
 "GoOut.Museum" = "Музей";
 "GoOut.Theater" = "Театр";
 "GoOut.Gallery" = "Галерея";
@@ -174,7 +176,7 @@
 
 
 //URL
-
+"GoOut.URL.Cinema" = "Посетить кинотеатр";
 "GoOut.URL.Museum" = "Посетить музей";
 "GoOut.URL.Theater" = "Посетить театр";
 "GoOut.URL.Gallery" = "Посетить галерею";
