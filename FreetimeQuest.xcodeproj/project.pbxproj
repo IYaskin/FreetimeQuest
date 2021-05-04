@@ -49,6 +49,9 @@
 		846799A1262A0C49007FA801 /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799A0262A0C49007FA801 /* SheetButtons.swift */; };
 		846799B7262A1DA6007FA801 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799B6262A1DA6007FA801 /* WebViewController.swift */; };
 		846799BC262A1F06007FA801 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846799BB262A1F06007FA801 /* WebKit.framework */; };
+		846BE1822641A8C200E28AAA /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* done.mp3 */; };
+		846BE1852641A8C800E28AAA /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* delete.mp3 */; };
+		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
 		847978552620B84700817123 /* UIAlertController+BgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978542620B84700817123 /* UIAlertController+BgColor.swift */; };
 		847978582620C55800817123 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978572620C55800817123 /* UIView+Shadow.swift */; };
 		84DE3A542640787C00C327B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE3A532640787C00C327B5 /* Reachability.swift */; };
@@ -103,6 +106,9 @@
 		846799A0262A0C49007FA801 /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
 		846799B6262A1DA6007FA801 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		846799BB262A1F06007FA801 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		846BE1812641A8C200E28AAA /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
+		846BE1842641A8C800E28AAA /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = delete.mp3; sourceTree = "<group>"; };
+		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
 		847978542620B84700817123 /* UIAlertController+BgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+BgColor.swift"; sourceTree = "<group>"; };
 		847978572620C55800817123 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		84DE3A532640787C00C327B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 		84507A2025E10F5C0060EDE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				846BE1802641A8B600E28AAA /* Sounds */,
 				846799882629AC38007FA801 /* Text.swift */,
 				84544F8A25BDD0E9000683FC /* Category.swift */,
 				840748D125F961010087F387 /* Quests */,
@@ -209,6 +216,7 @@
 				8458E84825E2607C00C233B6 /* UIView+Alert.swift */,
 				847978572620C55800817123 /* UIView+Shadow.swift */,
 				847978542620B84700817123 /* UIAlertController+BgColor.swift */,
+				846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +335,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		846BE1802641A8B600E28AAA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				846BE1812641A8C200E28AAA /* done.mp3 */,
+				846BE1842641A8C800E28AAA /* delete.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,7 +408,9 @@
 				84424BF725F01644003F125A /* CategoryHeader.xib in Resources */,
 				8451B5972605FEF800BD0A65 /* MemoryCell.xib in Resources */,
 				845E7C4F2622F86600B33170 /* Localizable.strings in Resources */,
+				846BE1822641A8C200E28AAA /* done.mp3 in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
+				846BE1852641A8C800E28AAA /* delete.mp3 in Resources */,
 				846799912629CAFB007FA801 /* MyQuestCell.xib in Resources */,
 				84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */,
 			);
@@ -432,6 +451,7 @@
 				8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */,
 				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
 				8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */,
+				846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */,
 				840748DA25F966560087F387 /* GoodQuests.swift in Sources */,
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
 				840748DE25F967740087F387 /* SocialQuests.swift in Sources */,

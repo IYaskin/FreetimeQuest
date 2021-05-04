@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -269,6 +270,7 @@ extension ViewController: UITableViewDelegate {
                            okAction: { _ in
                             self.coreData.doneQuest(quest)
                             handler(true)
+                            SystemSoundID.playFileNamed(fileName: "done", withExtenstion: "mp3")
                            },
                            cancelButtonTitle: Text.Cancel) { _ in
                 handler(false)
@@ -292,6 +294,7 @@ extension ViewController: UITableViewDelegate {
                            okAction: { _ in
                             self.coreData.deleteQuest(quest)
                             handler(true)
+                            SystemSoundID.playFileNamed(fileName: "delete", withExtenstion: "mp3")
                            },
                            cancelButtonTitle: Text.Cancel) { _ in
                 handler(false)
