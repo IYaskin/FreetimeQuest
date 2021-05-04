@@ -62,8 +62,8 @@
 "GoOut.Aquapark" = "Aquapark";
 "GoOut.Excursion" = "Excursion";
 "GoOut.Degustation" = "Degustation";
-"GoOut.Bar" = "Bar";
-"GoOut.NightClub" = "Night club";
+"GoOut.Bar" = "Bar (18+)";
+"GoOut.NightClub" = "Night club (18+)";
 "GoOut.StandUp" = "Stand Up";
 "GoOut.Sauna" = "Sauna";
 "GoOut.Show" = "Show";
@@ -141,15 +141,15 @@
 
 //Charisma
 
-"Charisma.Teeth" = "Go to the dentist for a checkup";
-"Charisma.Massage" = "Take 8 massage sessions";
-"Charisma.Yoga" = "Do yoga within a month";
-"Charisma.Meditation" = "Meditate within a month";
-"Charisma.Speech" = "Develop speech within a month";
-"Charisma.Posture" = "Develop posture within a month";
-"Charisma.Temper" = "Temper within a month";
-"Charisma.Morning" = "Do morning exercises within a month";
-"Charisma.Food" = "Eat right within a month";
+"Charisma.Teeth" = "Visit dentist";
+"Charisma.Massage" = "Get massage";
+"Charisma.Yoga" = "Yoga (5 times)";
+"Charisma.Meditation" = "Meditation (5 times)";
+"Charisma.Speech" = "Develop speech (7 days)";
+"Charisma.Posture" = "Develop posture (7 days)";
+"Charisma.Temper" = "Temper (7 days)";
+"Charisma.Morning" = "Do morning exercises (14 days)";
+"Charisma.Food" = "Eat right (14 days)";
 "Charisma.Books" = "Read 5 books on development or work";
 "Charisma.Income" = "Increase your income";
 "Charisma.Fotosession" = "Order yourself a photo session";
@@ -162,7 +162,7 @@
 //Adventure
 
 "Adventure.Sunrise" = "See the sunrise";
-"Adventure.Bet" = "Place a bet on a match";
+"Adventure.Bet" = "Place a bet on a match (18+)";
 "Adventure.NightCity" = "Take a ride in the city at night";
 "Adventure.ParkAttractions" = "Visit the amusement park";
 "Adventure.Snowboard" = "Go snowboarding";
@@ -181,7 +181,7 @@
 "Adventure.Scuba" = "Scuba diving";
 "Adventure.SmallPlane" = "Fly on the biplane";
 "Adventure.Balloon" = "Fly in a hot air balloon";
-"Adventure.Tatoo" = "Get a tattoo";
+"Adventure.Tatoo" = "Get a tattoo (18+)";
 "Adventure.Autostop" = "Hitchhiking";
 "Adventure.Parachute" = "Jump with a parachute";
 
@@ -211,22 +211,22 @@
 "GoOut.URL.Sauna" = "Go to the sauna";
 "GoOut.URL.Show" = "Go to a show";
 
-//"Good.URL.CarryBag" = "";
+//"Good.INFO.CarryBag" = "";
 "Good.URL.FeedDuck" = "Nearest park";
-//"Good.URL.FeedAnimals" = "";
+"Good.INFO.FeedAnimals" = "Extra:\nFeed dog, cat and birds";
 "Good.URL.OldStuff" = "Where to drop off old things";
 "Good.URL.HelpFond" = "Transfer money to the aid fund";
 "Good.URL.Gift" = "Gift ideas for a close person";
-//"Good.URL.AppMark" = "";
+//"Good.INFO.AppMark" = "";
 "Good.URL.Blood" = "Where donate blood";
-//"Good.URL.Trash" = "";
-//"Good.URL.HelpBabushka" = "";
+"Good.INFO.Trash" = "Extra:\nCollect a bag of garbage";
+"Good.INFO.HelpBabushka" = "Extra:\nAnd grandpa too"
 "Good.URL.BirdHouse" = "How to build a birdhouse";
 "Good.URL.FamilyDinner" = "Family Dinner Recipes";
 "Good.URL.FeedFriends" = "Order pizza";
-//"Good.URL.FixHouse" = "";
-//"Good.URL.SteetMusician" = "";
-//"Good.URL.FeedHomeless" = "";
+"Good.INFO.FixHouse" = "Extra:\nBuy something for home";
+"Good.INFO.SteetMusician" = "Extra:\nPraise the performance";
+"Good.INFO.FeedHomeless" = "Extra:\nHear his story";
 
 "Hobby.URL.Checkers" = "Play checkers online";
 "Hobby.URL.Chess" = "Play chess online";
@@ -253,28 +253,28 @@
 "Hobby.URL.OrderPortrait" = "Order portrait";
 "Hobby.URL.FreeSection" = "Free trial lessons";
 
-//"Social.URL.Smile"  = "";
-//"Social.URL.Wink"  = "";
-//"Social.URL.Ugly"  = "";
-//"Social.URL.Hello"  = "";
-//"Social.URL.Compliment"  = "";
-//"Social.URL.Questions"  = "";
+"Social.INFO.Smile"  = "Extra:\nSmile to 10 person";
+"Social.INFO.Wink"  = "Extra:\nWink to 5 person";
+"Social.INFO.Ugly"  = "Extra:\nPractice in front of the mirror";
+"Social.INFO.Hello"  = "Extra:\nGreet and wish 5 people a good day";
+"Social.INFO.Compliment"  = "Extra:\nGive someone a chocolate bar";
+"Social.INFO.Questions"  = "Extra questions:\n1.How do I get to the library?\n2.Where am I?\n3.What is the year now?";
 "Social.URL.Call"  = "Corny jokes";
-//"Social.URL.AskPhoto" = "";
-//"Social.URL.Selfie" = "";
-//"Social.URL.Oboznalsya" = "Acting Courses";
-//"Social.URL.ExchangeNumbers" = "";
+"Social.INFO.AskPhoto" = "Choose the right person. He should have a kind face or you must run faster than him.";
+"Social.INFO.Selfie" = "Extra:\nSend him this photo on the social network";
+"Social.INFO.Oboznalsya" = "Your ad for acting classes could be here";
+"Social.INFO.ExchangeNumbers" = "Extra:\nWrite an SMS to this number";
 "Social.URL.LoveLetter" = "How to send a letter by mail";
-//"Social.URL.TellPoem" = "";
+//"Social.INFO.TellPoem" = "";
 "Social.URL.Sing" = "Karaoke bars";
-//"Social.URL.MeetSomeone" = "";
-//"Social.URL.AskSalt" = "";
-//"Social.URL.Wish" = "";
+"Social.INFO.MeetSomeone" = "Extra:\nMeet again";
+"Social.INFO.AskSalt" = "Extra:\nGet to know the neighbors";
+"Social.INFO.Wish" = "Extra frases:\n1.Everyone chao-cacao!\n2.Arivederci!\n3.Here is my stop!";
 "Social.URL.Fountain" = "Fountains";
-//"Social.URL.Dance" = "";
-//"Social.URL.Party" = "";
-//"Social.URL.Picnic" = "";
-//"Social.URL.Stage" = "";
+"Social.INFO.Dance" = "Extra:\nInvite someone to dance";
+//"Social.INFO.Party" = "";
+//"Social.INFO.Picnic" = "";
+//"Social.INFO.Stage" = "";
 
 "Charisma.URL.Teeth" = "Dentist";
 "Charisma.URL.Massage" = "Sign up for a massage";
@@ -286,17 +286,17 @@
 "Charisma.URL.Morning" = "Good morning exercises";
 "Charisma.URL.Food" = "How to eat right";
 "Charisma.URL.Books" = "Book store";
-//"Charisma.URL.Income" = "";
+"Charisma.INFO.Income" = "Your ad for a pyramid scheme could be here";
 "Charisma.URL.Fotosession" = "Order a photo session";
 "Charisma.URL.Psychologist" = "Make an appointment with a psychologist";
-//"Charisma.URL.Buy" = "";
-//"Charisma.URL.Weight" = "";
+"Charisma.INFO.Buy" = "Extra:\nAsk for a discount at the store";
+"Charisma.INFO.Weight" = "Extra:\nKeep a food and exercise diary";
 "Charisma.URL.Marathon" = "How to prepare for a half marathon";
 "Charisma.URL.BadHabit" = "How to get rid of a bad habit";
 
 "Adventure.URL.Sunrise" = "Dawn time";
-//"Adventure.URL.Bet" = "";
-//"Adventure.URL.NightCity" = "";
+"Adventure.INFO.Bet" = "Your bookmaker advertisement could be here";
+"Adventure.INFO.NightCity" = "Extra:\nPlay Kavinsky - \"Nightcall\"";
 "Adventure.URL.ParkAttractions" = "Amusement park";
 "Adventure.URL.Snowboard" = "Where to go snowboarding";
 "Adventure.URL.Stars" = "When the closest starfall";
@@ -306,7 +306,7 @@
 "Adventure.URL.Waterfall" = "Waterfalls";
 "Adventure.URL.Cruise" = "Water cruises";
 "Adventure.URL.Island" = "The most beautiful islands";
-//"Adventure.URL.Cold" = "";
+//"Adventure.INFO.Cold" = "";
 "Adventure.URL.Lights" = "Where can be the northern lights";
 "Adventure.URL.Surfing" = "Best surfing spots";
 "Adventure.URL.Scuba" = "Where to go scuba diving";
