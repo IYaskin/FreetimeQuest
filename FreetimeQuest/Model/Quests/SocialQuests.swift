@@ -90,7 +90,7 @@ class SocialQuests {
                                nil,
                                nil,
                                "Social.URL.LoveLetter",
-                               nil,
+                               "Social.URL.TellPoem",
                                "Social.URL.Sing",
                                nil,
                                nil,
@@ -127,16 +127,16 @@ class SocialQuests {
                                 "Social.INFO.Oboznalsya",
                                 "Social.INFO.ExchangeNumbers",
                                 nil,
-                                nil,//"Social.INFO.TellPoem"
+                                nil,
                                 nil,
                                 "Social.INFO.MeetSomeone",
                                 "Social.INFO.AskSalt",
                                 "Social.INFO.Wish",
                                 nil,
                                 "Social.INFO.Dance",
-                                nil,//"Social.INFO.Party"
-                                nil,//"Social.INFO.Picnic
-                                nil]//"Social.INFO.Stage"
+                                "Social.INFO.Party",
+                                "Social.INFO.Picnic",
+                                "Social.INFO.Stage"]
         
         guard id >= 0 &&
                 id <= infos.count else {

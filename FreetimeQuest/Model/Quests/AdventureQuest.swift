@@ -135,7 +135,7 @@ class AdventureQuests {
                                nil,
                                nil,
                                nil,
-                               nil,//"Adventure.INFO.Cold"
+                               "Adventure.INFO.Cold",
                                
                                nil,
                                nil,

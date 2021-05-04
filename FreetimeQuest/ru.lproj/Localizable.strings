@@ -211,7 +211,7 @@
 "GoOut.URL.Sauna" = "Сходить в баню";
 "GoOut.URL.Show" = "Посетить шоу";
 
-//"Good.INFO.CarryBag" = "Дополнительно:\n";
+"Good.INFO.CarryBag" = "Дополнительно:\nЗавязать разговор";
 "Good.URL.FeedDuck" = "Ближайший парк";
 "Good.INFO.FeedAnimals" = "Дополнительно:\nПокормить собаку, кошку и птичек";
 "Good.URL.OldStuff" = "Куда сдать старые вещи?";
@@ -242,7 +242,7 @@
 "Hobby.URL.ReadDetective" = "Список лучших детективных романов";
 "Hobby.URL.ReadFiction" = "Список лучших книг в жанре научной фантастики";
 "Hobby.URL.ReadFantasy" = "Список лучших книг фэнтези";
-"Hobby.URL.LearnPoem" = "Стихи русских поэтов-классиков";
+"Hobby.URL.LearnPoem" = "Стихи поэтов";
 "Hobby.URL.WritePoem" = "Как написать стихотворение?";
 "Hobby.URL.MakePhoto" = "Как снять классное фото";
 "Hobby.URL.NoGadgets" = "Можно ли прожить один день без гаджетов?";
@@ -265,16 +265,16 @@
 "Social.INFO.Oboznalsya" = "Здесь могла бы быть ваша реклама курсов актерского мастерства";
 "Social.INFO.ExchangeNumbers" = "Дополнительно:\nНапишите смс на этот номер";
 "Social.URL.LoveLetter" = "Как отправить письмо по почте";
-//"Social.INFO.TellPoem" = "";
+"Social.URL.TellPoem" = "Стихи поэтов";
 "Social.URL.Sing" = "Караоке бары";
 "Social.INFO.MeetSomeone" = "Дополнительно:\nВстретиться еще раз";
 "Social.INFO.AskSalt" = "Дополнительно:\nПознакомиться с соседями";
 "Social.INFO.Wish" = "Дополнительно сказать:\n1.Всем чао-какао!\n2.Ариведерчи!\n3.А вот и моя остановочка!";
 "Social.URL.Fountain" = "Фонтаны";
 "Social.INFO.Dance" = "Дополнительно:\nПригласить кого-нибудь потанцевать";
-//"Social.INFO.Party" = "";
-//"Social.INFO.Picnic" = "";
-//"Social.INFO.Stage" = "";
+"Social.INFO.Party" = "Дополнительно:\nПридумать веселые конкурсы";
+"Social.INFO.Picnic" = "Дополнительно:\nПриготовить шашлык";
+"Social.INFO.Stage" = "Дополнительно:\nНе опозориться";
 
 "Charisma.URL.Teeth" = "Стоматология";
 "Charisma.URL.Massage" = "Записаться на массаж";
@@ -307,7 +307,7 @@
 "Adventure.URL.Waterfall" = "Водопады";
 "Adventure.URL.Cruise" = "Водные круизы";
 "Adventure.URL.Island" = "Самые красивые острова";
-//"Adventure.INFO.Cold" = "";
+"Adventure.INFO.Cold" = "Дополнительно:\nНе заболеть";
 
 "Adventure.URL.Lights" = "Где можно увидеть северное сияние";
 "Adventure.URL.Surfing" = "Где можно покататься на серфинге";

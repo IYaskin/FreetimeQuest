@@ -89,7 +89,7 @@ class GoodQuests {
     }
     
     static func getInfoString(id: Int) -> String? {
-        let infos: [String?] = [nil,//"Good.INFO.CarryBag"
+        let infos: [String?] = ["Good.INFO.CarryBag",
                                 nil,
                                 "Good.INFO.FeedAnimals",
                                 nil,

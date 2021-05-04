@@ -211,7 +211,7 @@
 "GoOut.URL.Sauna" = "Go to the sauna";
 "GoOut.URL.Show" = "Go to a show";
 
-//"Good.INFO.CarryBag" = "";
+"Good.INFO.CarryBag" = "Extra:\nStart a conversation";
 "Good.URL.FeedDuck" = "Nearest park";
 "Good.INFO.FeedAnimals" = "Extra:\nFeed dog, cat and birds";
 "Good.URL.OldStuff" = "Where to drop off old things";
@@ -265,16 +265,16 @@
 "Social.INFO.Oboznalsya" = "Your ad for acting classes could be here";
 "Social.INFO.ExchangeNumbers" = "Extra:\nWrite an SMS to this number";
 "Social.URL.LoveLetter" = "How to send a letter by mail";
-//"Social.INFO.TellPoem" = "";
+"Social.URL.TellPoem" = "Poems of classic poets";
 "Social.URL.Sing" = "Karaoke bars";
 "Social.INFO.MeetSomeone" = "Extra:\nMeet again";
 "Social.INFO.AskSalt" = "Extra:\nGet to know the neighbors";
 "Social.INFO.Wish" = "Extra frases:\n1.Everyone chao-cacao!\n2.Arivederci!\n3.Here is my stop!";
 "Social.URL.Fountain" = "Fountains";
 "Social.INFO.Dance" = "Extra:\nInvite someone to dance";
-//"Social.INFO.Party" = "";
-//"Social.INFO.Picnic" = "";
-//"Social.INFO.Stage" = "";
+"Social.INFO.Party" = "Extra:\nCome up with fun contests";
+"Social.INFO.Picnic" = "Extra:\nCook barbecue";
+"Social.INFO.Stage" = "Extra:\nDo not disgrace";
 
 "Charisma.URL.Teeth" = "Dentist";
 "Charisma.URL.Massage" = "Sign up for a massage";
@@ -306,7 +306,7 @@
 "Adventure.URL.Waterfall" = "Waterfalls";
 "Adventure.URL.Cruise" = "Water cruises";
 "Adventure.URL.Island" = "The most beautiful islands";
-//"Adventure.INFO.Cold" = "";
+"Adventure.INFO.Cold" = "Extra:\nDon't get sick";
 "Adventure.URL.Lights" = "Where can be the northern lights";
 "Adventure.URL.Surfing" = "Best surfing spots";
 "Adventure.URL.Scuba" = "Where to go scuba diving";
