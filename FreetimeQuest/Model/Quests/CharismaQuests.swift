@@ -97,5 +97,35 @@ class CharismaQuests {
         }
         return NSLocalizedString(url, comment: "")
     }
+    
+    static func getInfoString(id: Int) -> String? {
+        let infos: [String?] = [nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                nil,
+                                "Charisma.INFO.Income",
+                                nil,
+                                nil,
+                                "Charisma.INFO.Buy",
+                                "Charisma.INFO.Weight",
+                                nil,
+                                nil]
+        
+        guard id >= 0 &&
+                id <= infos.count else {
+            return nil
+        }
+        
+        guard let info = infos[id] else  {
+            return nil
+        }
+        return NSLocalizedString(info, comment: "")
+    }
 
 }

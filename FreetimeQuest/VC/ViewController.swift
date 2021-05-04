@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func openWebVC(indexPath: IndexPath) {
+    func openWebOrAlert(indexPath: IndexPath) {
         if indexPath.section == 0 {
             return
         }
@@ -96,19 +96,45 @@ class ViewController: UIViewController {
         default:
             break
         }
-        print("url = \(urlString)")
 
-        guard let url = urlString,
-              !url.isEmpty else {
+        if let url = urlString {
+            
+            guard Reachability.isConnectedToNetwork() else {
+                showOkAlert(title: NSLocalizedString("CheckInternet", comment: ""))
+                return
+            }
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Web") as! WebViewController
+
+            vc.navBarTitle = NSLocalizedString(quest.title, comment: "")
+            vc.urlString = url
+
+            navigationController?.pushViewController(vc, animated: true)
+
             return
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Web") as! WebViewController
+        
+        var infoString: String? = nil
+        
+        switch Int(quest.category) {
+        case Category.good.rawValue:
+            infoString = GoodQuests.getInfoString(id: Int(quest.id))
+        case Category.social.rawValue:
+            infoString = SocialQuests.getInfoString(id: Int(quest.id))
+        case Category.charisma.rawValue:
+            infoString = CharismaQuests.getInfoString(id: Int(quest.id))
+        case Category.adventure.rawValue:
+            infoString = AdventureQuests.getInfoString(id: Int(quest.id))
+        default:
+            return
+        }
 
-        vc.navBarTitle = NSLocalizedString(quest.title, comment: "")
-        vc.urlString = url
-
-        navigationController?.pushViewController(vc, animated: true)
+        if let info = infoString {
+            showOkAlert(title: info)
+        }
+        
+        
 
     }
     
@@ -152,35 +178,38 @@ extension ViewController: UITableViewDataSource {
         }
         
         var urlString: String? = nil
+        var infoString: String? = nil
         
         switch Int(quest.category) {
         case Category.goOut.rawValue:
             urlString = GoOutQuests.getURLString(id: Int(quest.id))
         case Category.good.rawValue:
             urlString = GoodQuests.getURLString(id: Int(quest.id))
+            infoString = GoodQuests.getInfoString(id: Int(quest.id))
         case Category.hobby.rawValue:
             urlString = HobbyQuests.getURLString(id: Int(quest.id))
         case Category.social.rawValue:
             urlString = SocialQuests.getURLString(id: Int(quest.id))
+            infoString = SocialQuests.getInfoString(id: Int(quest.id))
         case Category.charisma.rawValue:
             urlString = CharismaQuests.getURLString(id: Int(quest.id))
+            infoString = CharismaQuests.getInfoString(id: Int(quest.id))
         case Category.adventure.rawValue:
             urlString = AdventureQuests.getURLString(id: Int(quest.id))
+            infoString = AdventureQuests.getInfoString(id: Int(quest.id))
         default:
             break
         }
 
-        var haveURL = false
-        if let url = urlString,
-           !url.isEmpty {
-            haveURL = true
-        }
+        let haveURL = urlString != nil
+        let haveInfo = infoString != nil
             
         cell.configure(title: quest.title,
                        category: Int(quest.category),
                        stars: Int(quest.stars),
                        id: Int(quest.id),
-                       haveURL: haveURL)
+                       haveURL: haveURL,
+                       haveInfo: haveInfo)
 
         return cell
     }
@@ -190,12 +219,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt")
-        if Reachability.isConnectedToNetwork() {
-            openWebVC(indexPath: indexPath)
-        } else {
-            showOkAlert(title: NSLocalizedString("CheckInternet", comment: ""))
-        }
+        openWebOrAlert(indexPath: indexPath)
     }
     
     func tableView( _ tableView: UITableView,

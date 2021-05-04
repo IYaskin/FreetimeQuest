@@ -112,6 +112,42 @@ class SocialQuests {
         return NSLocalizedString(url, comment: "")
 
     }
-
     
+    
+    static func getInfoString(id: Int) -> String? {
+        let infos: [String?] = ["Social.INFO.Smile",
+                                "Social.INFO.Wink",
+                                "Social.INFO.Ugly",
+                                "Social.INFO.Hello",
+                                "Social.INFO.Compliment",
+                                "Social.INFO.Questions",
+                                nil,
+                                "Social.INFO.AskPhoto",
+                                "Social.INFO.Selfie",
+                                "Social.INFO.Oboznalsya",
+                                "Social.INFO.ExchangeNumbers",
+                                nil,
+                                nil,//"Social.INFO.TellPoem"
+                                nil,
+                                "Social.INFO.MeetSomeone",
+                                "Social.INFO.AskSalt",
+                                "Social.INFO.Wish",
+                                nil,
+                                "Social.INFO.Dance",
+                                nil,//"Social.INFO.Party"
+                                nil,//"Social.INFO.Picnic
+                                nil]//"Social.INFO.Stage"
+        
+        guard id >= 0 &&
+                id <= infos.count else {
+            return nil
+        }
+        
+        guard let info = infos[id] else  {
+            return nil
+        }
+        return NSLocalizedString(info, comment: "")
+        
+    }
+
 }

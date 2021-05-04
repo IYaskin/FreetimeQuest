@@ -120,5 +120,43 @@ class AdventureQuests {
         return NSLocalizedString(url, comment: "")
 
     }
+    
+    static func getInfoString(id: Int) -> String? {
+        let urls: [String?] = [nil,
+                               "Adventure.INFO.Bet",
+                               "Adventure.INFO.NightCity",
+                               nil,
+                               nil,
+                               nil,
+                               
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,//"Adventure.INFO.Cold"
+                               
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil]
+        
+        guard id >= 0 &&
+              id <= urls.count else {
+            return nil
+        }
+        
+        guard let url = urls[id] else  {
+            return nil
+        }
+        return NSLocalizedString(url, comment: "")
+
+    }
+
 
 }

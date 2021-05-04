@@ -87,5 +87,33 @@ class GoodQuests {
         }
         return NSLocalizedString(url, comment: "")
     }
+    
+    static func getInfoString(id: Int) -> String? {
+        let infos: [String?] = [nil,//"Good.INFO.CarryBag"
+                                nil,
+                                "Good.INFO.FeedAnimals",
+                                nil,
+                                nil,
+                                nil,
+                                nil,//"Good.INFO.AppMark"
+                                nil,
+                                "Good.INFO.Trash",
+                                "Good.INFO.HelpBabushka",
+                                nil,
+                                nil,
+                                nil,
+                                "Good.INFO.FixHouse",
+                                "Good.INFO.SteetMusician",
+                                "Good.INFO.FeedHomeless"]
+        guard id >= 0 &&
+                id <= infos.count else {
+            return nil
+        }
+        
+        guard let info = infos[id] else  {
+            return nil
+        }
+        return NSLocalizedString(info, comment: "")
+    }
 
 }

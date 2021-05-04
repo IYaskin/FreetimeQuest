@@ -70,11 +70,20 @@ class QuestCell: UITableViewCell {
                    category: Int,
                    stars: Int,
                    id: Int,
-                   haveURL: Bool) {
+                   haveURL: Bool,
+                   haveInfo: Bool) {
         if let title = title {
             titleLabel.text = NSLocalizedString(title, comment: "")
         }
-        infoImageView.isHidden = !haveURL
+        if haveURL {
+            infoImageView.isHidden = false
+            infoImageView.image = UIImage(named: "internet")
+        } else if haveInfo {
+            infoImageView.isHidden = false
+            infoImageView.image = UIImage(named: "info")
+        } else {
+            infoImageView.isHidden = true
+        }
         configureStars(stars: stars)
         
         if let category = Category(rawValue: category) {
