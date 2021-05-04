@@ -104,12 +104,13 @@ class HobbyQuests {
                     "Hobby.URL.OrderPortrait",
                     "Hobby.URL.FreeSection"]
         
-        if id >= 0 && id <= urls.count {
-            return NSLocalizedString(urls[id], comment: "")
-        } else {
+        guard id >= 0 &&
+              id <= urls.count else {
             return nil
         }
         
+        return NSLocalizedString(urls[id], comment: "")
+
     }
 
 }

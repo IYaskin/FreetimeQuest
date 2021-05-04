@@ -33,7 +33,7 @@ extension Category {
         case .social:
             return .systemPink
         case .charisma:
-            return .black
+            return .blue
         case .adventure:
             return .red
         case .myQuests:

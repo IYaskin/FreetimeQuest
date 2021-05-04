@@ -61,29 +61,31 @@ class GoodQuests {
     }
 
     static func getURLString(id: Int) -> String? {
-        let urls = ["Good.URL.CarryBag",
-                    "Good.URL.FeedDuck",
-                    "Good.URL.FeedAnimals",
-                    "Good.URL.OldStuff",
-                    "Good.URL.HelpFond",
-                    "Good.URL.Gift",
-                    "Good.URL.AppMark",
-                    "Good.URL.Blood",
-                    "Good.URL.Trash",
-                    "Good.URL.HelpBabushka",
-                    "Good.URL.BirdHouse",
-                    "Good.URL.FamilyDinner",
-                    "Good.URL.FeedFriends",
-                    "Good.URL.FixHouse",
-                    "Good.URL.SteetMusician",
-                    "Good.URL.FeedHomeless"]
-        
-        if id >= 0 && id <= urls.count {
-            return NSLocalizedString(urls[id], comment: "")
-        } else {
+        let urls: [String?] = [nil,
+                               "Good.URL.FeedDuck",
+                               nil,
+                               "Good.URL.OldStuff",
+                               "Good.URL.HelpFond",
+                               "Good.URL.Gift",
+                               nil,
+                               "Good.URL.Blood",
+                               nil,
+                               nil,
+                               "Good.URL.BirdHouse",
+                               "Good.URL.FamilyDinner",
+                               "Good.URL.FeedFriends",
+                               nil,
+                               nil,
+                               nil]
+        guard id >= 0 &&
+              id <= urls.count else {
             return nil
         }
         
+        guard let url = urls[id] else  {
+            return nil
+        }
+        return NSLocalizedString(url, comment: "")
     }
 
 }

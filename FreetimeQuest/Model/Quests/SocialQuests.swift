@@ -78,35 +78,39 @@ class SocialQuests {
     }
     
     static func getURLString(id: Int) -> String? {
-        let urls = ["Social.URL.Smile",
-                    "Social.URL.Wink",
-                    "Social.URL.Ugly",
-                    "Social.URL.Hello",
-                    "Social.URL.Compliment",
-                    "Social.URL.Questions",
-                    "Social.URL.Call",
-                    "Social.URL.AskPhoto",
-                    "Social.URL.Selfie",
-                    "Social.URL.Oboznalsya",
-                    "Social.URL.ExchangeNumbers",
-                    "Social.URL.LoveLetter",
-                    "Social.URL.TellPoem",
-                    "Social.URL.Sing",
-                    "Social.URL.MeetSomeone",
-                    "Social.URL.AskSalt",
-                    "Social.URL.Wish",
-                    "Social.URL.Fountain",
-                    "Social.URL.Dance",
-                    "Social.URL.Party",
-                    "Social.URL.Picnic",
-                    "Social.URL.Stage"]
+        let urls: [String?] = [nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               "Social.URL.Call",
+                               nil,
+                               nil,
+                               nil,
+                               nil,
+                               "Social.URL.LoveLetter",
+                               nil,
+                               "Social.URL.Sing",
+                               nil,
+                               nil,
+                               nil,
+                               "Social.URL.Fountain",
+                               nil,
+                               nil,
+                               nil,
+                               nil]
         
-        if id >= 0 && id <= urls.count {
-            return NSLocalizedString(urls[id], comment: "")
-        } else {
+        guard id >= 0 &&
+              id <= urls.count else {
             return nil
         }
         
+        guard let url = urls[id] else  {
+            return nil
+        }
+        return NSLocalizedString(url, comment: "")
+
     }
 
     

@@ -69,30 +69,33 @@ class CharismaQuests {
     }
     
     static func getURLString(id: Int) -> String? {
-        let urls = ["Charisma.URL.Teeth",
-                    "Charisma.URL.Massage",
-                    "Charisma.URL.Yoga",
-                    "Charisma.URL.Meditation",
-                    "Charisma.URL.Speech",
-                    "Charisma.URL.Posture",
-                    "Charisma.URL.Temper",
-                    "Charisma.URL.Morning",
-                    "Charisma.URL.Food",
-                    "Charisma.URL.Books",
-                    "Charisma.URL.Income",
-                    "Charisma.URL.Fotosession",
-                    "Charisma.URL.Psychologist",
-                    "Charisma.URL.Buy",
-                    "Charisma.URL.Weight",
-                    "Charisma.URL.Marathon",
-                    "Charisma.URL.BadHabit"]
+        let urls: [String?] = ["Charisma.URL.Teeth",
+                               "Charisma.URL.Massage",
+                               "Charisma.URL.Yoga",
+                               "Charisma.URL.Meditation",
+                               "Charisma.URL.Speech",
+                               "Charisma.URL.Posture",
+                               "Charisma.URL.Temper",
+                               "Charisma.URL.Morning",
+                               "Charisma.URL.Food",
+                               "Charisma.URL.Books",
+                               nil,
+                               "Charisma.URL.Fotosession",
+                               "Charisma.URL.Psychologist",
+                               nil,
+                               nil,
+                               "Charisma.URL.Marathon",
+                               "Charisma.URL.BadHabit"]
         
-        if id >= 0 && id <= urls.count {
-            return NSLocalizedString(urls[id], comment: "")
-        } else {
+        guard id >= 0 &&
+              id <= urls.count else {
             return nil
         }
         
+        guard let url = urls[id] else  {
+            return nil
+        }
+        return NSLocalizedString(url, comment: "")
     }
 
 }
