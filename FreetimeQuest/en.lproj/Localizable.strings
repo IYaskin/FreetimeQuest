@@ -92,7 +92,7 @@
 "Hobby.Checkers" = "Play checkers";
 "Hobby.Chess" = "Play chess";
 "Hobby.Backgammon" = "Play backgammon";
-"Hobby.Poker" = "Play pocker";
+"Hobby.Poker" = "Play poker";
 "Hobby.Darts" = "Play darts";
 "Hobby.BoardGame" = "Play a board game";
 "Hobby.Puzzle" = "Collect the puzzle";
@@ -204,7 +204,7 @@
 "GoOut.URL.Trampoline" = "Go to trampolines";
 "GoOut.URL.Aquapark" = "Go to the aquapark";
 "GoOut.URL.Excursion" = "Go on an excursion";
-"GoOut.URL.Degustation" = "Go for a tasting";
+"GoOut.URL.Degustation" = "Go for a degustation";
 "GoOut.URL.Bar" = "Go to a bar";
 "GoOut.URL.NightClub" = "Go to a night club";
 "GoOut.URL.StandUp" = "Go to Stand Up";
@@ -285,7 +285,7 @@
 "Charisma.URL.Temper" = "How to temper properly";
 "Charisma.URL.Morning" = "Good morning exercises";
 "Charisma.URL.Food" = "How to eat right";
-"Charisma.URL.Books" = "Book store";
+"Charisma.URL.Books" = "Books for self development";
 "Charisma.INFO.Income" = "Your ad for a pyramid scheme could be here";
 "Charisma.URL.Fotosession" = "Order a photo session";
 "Charisma.URL.Psychologist" = "Make an appointment with a psychologist";

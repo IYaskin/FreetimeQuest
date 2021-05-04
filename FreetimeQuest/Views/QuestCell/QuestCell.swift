@@ -75,10 +75,7 @@ class QuestCell: UITableViewCell {
         if let title = title {
             titleLabel.text = NSLocalizedString(title, comment: "")
         }
-        if haveURL {
-            infoImageView.isHidden = false
-            infoImageView.image = UIImage(named: "internet")
-        } else if haveInfo {
+        if haveInfo {
             infoImageView.isHidden = false
             infoImageView.image = UIImage(named: "info")
         } else {
