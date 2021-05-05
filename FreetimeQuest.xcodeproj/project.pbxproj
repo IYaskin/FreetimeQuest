@@ -49,6 +49,7 @@
 		846799A1262A0C49007FA801 /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799A0262A0C49007FA801 /* SheetButtons.swift */; };
 		846799B7262A1DA6007FA801 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799B6262A1DA6007FA801 /* WebViewController.swift */; };
 		846799BC262A1F06007FA801 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846799BB262A1F06007FA801 /* WebKit.framework */; };
+		8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */; };
 		846BE1822641A8C200E28AAA /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* done.mp3 */; };
 		846BE1852641A8C800E28AAA /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* delete.mp3 */; };
 		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
@@ -106,6 +107,7 @@
 		846799A0262A0C49007FA801 /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
 		846799B6262A1DA6007FA801 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		846799BB262A1F06007FA801 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		846BE1812641A8C200E28AAA /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		846BE1842641A8C800E28AAA /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = delete.mp3; sourceTree = "<group>"; };
 		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
@@ -202,7 +204,8 @@
 				8452539825FE45F900884FC4 /* CategoryViewController.swift */,
 				8452538825FE3F0200884FC4 /* MemoryViewController.swift */,
 				846799B5262A1D83007FA801 /* WebViewController */,
-				8467999F262A0C3B007FA801 /* Sheet */,
+				8467999F262A0C3B007FA801 /* SheetViewController */,
+				8467DBFF26427D5B00A5F234 /* OnboardingViewController */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 			);
 			path = VC;
@@ -310,13 +313,13 @@
 			path = MyQuestCell;
 			sourceTree = "<group>";
 		};
-		8467999F262A0C3B007FA801 /* Sheet */ = {
+		8467999F262A0C3B007FA801 /* SheetViewController */ = {
 			isa = PBXGroup;
 			children = (
 				846799A0262A0C49007FA801 /* SheetButtons.swift */,
 				8467999C2629D5EA007FA801 /* SheetViewController.swift */,
 			);
-			path = Sheet;
+			path = SheetViewController;
 			sourceTree = "<group>";
 		};
 		846799B5262A1D83007FA801 /* WebViewController */ = {
@@ -333,6 +336,14 @@
 				846799BB262A1F06007FA801 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8467DBFF26427D5B00A5F234 /* OnboardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */,
+			);
+			path = OnboardingViewController;
 			sourceTree = "<group>";
 		};
 		846BE1802641A8B600E28AAA /* Sounds */ = {
@@ -446,6 +457,7 @@
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
 				844B12802604F356009569D3 /* CharismaQuests.swift in Sources */,
+				8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */,
 				8451B5812605ED1400BD0A65 /* MemoryObject+CoreDataProperties.swift in Sources */,
 				84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */,
 				8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */,

@@ -26,6 +26,18 @@ class UserDefaultsManager {
         
     }
     
+    var isOnboardingDone: Bool {
+        
+        get {
+            UserDefaults.standard.bool(forKey: "isOnboardingDone")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isOnboardingDone")
+        }
+        
+    }
+    
     var allQuestsCount: Int {
         
         get {

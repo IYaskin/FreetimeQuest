@@ -26,9 +26,7 @@ class SheetViewController: UIViewController {
     }
     
     func configureUI() {
-        bgView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         contentView.layer.cornerRadius = 20
-        contentView.backgroundColor = .systemYellow
         imagePicker.delegate = self
         imagePicker.presentingViewController = self
         configureStackView()

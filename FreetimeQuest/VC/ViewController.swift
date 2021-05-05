@@ -23,6 +23,19 @@ class ViewController: UIViewController {
         configureUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showOnboardingIfNeeded()
+    }
+    
+    func showOnboardingIfNeeded() {
+        if !UserDefaultsManager.shared.isOnboardingDone {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Onboarding") as! OnboardingViewController
+            self.present(vc, animated: true)
+        }
+    }
+    
     func firstLaunchCheck() {
         guard !UserDefaultsManager.shared.isBaseQuestsSet else {
             return
@@ -35,10 +48,13 @@ class ViewController: UIViewController {
         FreetimeQuest.addHeader()
 
         GoOutQuests.addQuests()
+        
+
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
     func configureUI() {
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib.init(nibName: QuestCell.nibName, bundle: nil),
