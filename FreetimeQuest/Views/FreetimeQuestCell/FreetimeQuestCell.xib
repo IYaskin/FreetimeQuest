@@ -33,22 +33,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y23-vq-TYL" customClass="CustomProgressBar" customModule="FreetimeQuest" customModuleProvider="target">
-                                <rect key="frame" x="76" y="115.5" width="263" height="7"/>
+                                <rect key="frame" x="88" y="109.5" width="239" height="7"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="7" id="mR4-6j-PAw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KE-7Z-a54">
-                                <rect key="frame" x="16" y="95" width="48" height="48"/>
+                                <rect key="frame" x="16" y="83" width="60" height="60"/>
                                 <color key="backgroundColor" name="grey"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="5IY-Fx-XWG"/>
-                                    <constraint firstAttribute="width" constant="48" id="b76-Ay-Gyl"/>
+                                    <constraint firstAttribute="height" constant="60" id="5IY-Fx-XWG"/>
+                                    <constraint firstAttribute="width" constant="60" id="b76-Ay-Gyl"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="violetCheck" translatesAutoresizingMaskIntoConstraints="NO" id="GBe-XP-HWG">
-                                <rect key="frame" x="28" y="83" width="24" height="24"/>
+                                <rect key="frame" x="34" y="71" width="24" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="1Bi-ct-0Xx"/>
@@ -56,21 +56,21 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afu-ex-8BM">
-                                <rect key="frame" x="16" y="95" width="48" height="48"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                <rect key="frame" x="16" y="83" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mC-0P-QRy">
-                                <rect key="frame" x="351" y="95" width="48" height="48"/>
+                                <rect key="frame" x="339" y="83" width="60" height="60"/>
                                 <color key="backgroundColor" name="grey"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="YLb-z2-2dc"/>
-                                    <constraint firstAttribute="width" constant="48" id="fR8-03-Jv4"/>
+                                    <constraint firstAttribute="height" constant="60" id="YLb-z2-2dc"/>
+                                    <constraint firstAttribute="width" constant="60" id="fR8-03-Jv4"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="violetStar" translatesAutoresizingMaskIntoConstraints="NO" id="Lf1-56-AoW">
-                                <rect key="frame" x="363" y="83" width="24" height="24"/>
+                                <rect key="frame" x="357" y="71" width="24" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="1ij-SC-TV1"/>
@@ -78,18 +78,27 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-ph-Es4">
-                                <rect key="frame" x="351" y="95" width="48" height="48"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                <rect key="frame" x="339" y="83" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnO-Jj-SaV">
+                                <rect key="frame" x="0.0" y="166" width="407" height="1"/>
+                                <color key="backgroundColor" name="grey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="3zJ-PH-56v"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="V9j-Hv-UsG" secondAttribute="trailing" constant="20" id="36Z-IN-IBj"/>
+                            <constraint firstAttribute="trailing" secondItem="SnO-Jj-SaV" secondAttribute="trailing" id="A1Z-6u-hE3"/>
                             <constraint firstItem="y23-vq-TYL" firstAttribute="leading" secondItem="3KE-7Z-a54" secondAttribute="trailing" constant="12" id="BwP-2G-5HX"/>
                             <constraint firstItem="V9j-Hv-UsG" firstAttribute="leading" secondItem="bgh-Ec-WRL" secondAttribute="leading" constant="20" id="D0x-2j-njh"/>
                             <constraint firstItem="HKa-ph-Es4" firstAttribute="top" secondItem="1mC-0P-QRy" secondAttribute="top" id="DE7-Yu-eA5"/>
+                            <constraint firstAttribute="bottom" secondItem="SnO-Jj-SaV" secondAttribute="bottom" id="E4M-HJ-yk3"/>
                             <constraint firstItem="HKa-ph-Es4" firstAttribute="leading" secondItem="y23-vq-TYL" secondAttribute="trailing" constant="12" id="F60-v0-Muk"/>
                             <constraint firstItem="GBe-XP-HWG" firstAttribute="top" secondItem="3KE-7Z-a54" secondAttribute="top" constant="-12" id="FOY-Eq-5U1"/>
                             <constraint firstItem="HKa-ph-Es4" firstAttribute="centerX" secondItem="1mC-0P-QRy" secondAttribute="centerX" id="IFi-kE-vQi"/>
@@ -103,6 +112,7 @@
                             <constraint firstItem="HKa-ph-Es4" firstAttribute="centerY" secondItem="1mC-0P-QRy" secondAttribute="centerY" id="hOE-X7-L4s"/>
                             <constraint firstItem="V9j-Hv-UsG" firstAttribute="top" secondItem="bgh-Ec-WRL" secondAttribute="top" constant="24" id="jaU-Uo-kqn"/>
                             <constraint firstItem="afu-ex-8BM" firstAttribute="top" secondItem="3KE-7Z-a54" secondAttribute="top" id="jaq-3o-rvP"/>
+                            <constraint firstItem="SnO-Jj-SaV" firstAttribute="leading" secondItem="bgh-Ec-WRL" secondAttribute="leading" id="ocQ-wt-4Sh"/>
                             <constraint firstItem="afu-ex-8BM" firstAttribute="centerY" secondItem="3KE-7Z-a54" secondAttribute="centerY" id="ovP-Us-DHi"/>
                             <constraint firstItem="afu-ex-8BM" firstAttribute="centerX" secondItem="3KE-7Z-a54" secondAttribute="centerX" id="rDk-Hv-skE"/>
                             <constraint firstItem="y23-vq-TYL" firstAttribute="centerY" secondItem="3KE-7Z-a54" secondAttribute="centerY" id="sAo-TZ-cag"/>

@@ -14,10 +14,9 @@ class QuestCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     
-    @IBOutlet weak var firstStarLabel: UILabel!
-    @IBOutlet weak var secondStarLabel: UILabel!
-    @IBOutlet weak var thirdStarLabel: UILabel!
     @IBOutlet weak var infoImageView: UIImageView!
+    
+    @IBOutlet weak var starsLabel: UILabel!
     
     static let nibName = "QuestCell"
     static let reuseID = "QuestCell"
@@ -35,35 +34,13 @@ class QuestCell: UITableViewCell {
     }
     
     func configureStars(stars: Int) {
-
-        if stars == 1 {
-            firstStarLabel.isHidden = false
-            secondStarLabel.isHidden = true
-            thirdStarLabel.isHidden = true
-
-            firstStarLabel.font = .systemFont(ofSize: 24)
-            
-        } else if stars == 2 {
-            firstStarLabel.isHidden = false
-            secondStarLabel.isHidden = false
-            thirdStarLabel.isHidden = true
-
-            firstStarLabel.font = .systemFont(ofSize: 20)
-            secondStarLabel.font = .systemFont(ofSize: 20)
-        } else if stars == 3 {
-            firstStarLabel.isHidden = false
-            secondStarLabel.isHidden = false
-            thirdStarLabel.isHidden = false
-            
-            firstStarLabel.font = .systemFont(ofSize: 17)
-            secondStarLabel.font = .systemFont(ofSize: 17)
-            thirdStarLabel.font = .systemFont(ofSize: 17)
-            
-        } else {
-            firstStarLabel.isHidden = true
-            secondStarLabel.isHidden = true
-            thirdStarLabel.isHidden = true
+        starsLabel.text = ""
+        var text = ""
+        for _ in 1...stars {
+            text += "★"
         }
+        starsLabel.text = text
+
     }
     
     func configure(title: String?,
@@ -87,9 +64,7 @@ class QuestCell: UITableViewCell {
             titleLabel.textColor = category.textColor
             cellView.backgroundColor = category.cellColor
             
-            firstStarLabel.textColor = category.textColor
-            secondStarLabel.textColor = category.textColor
-            thirdStarLabel.textColor = category.textColor
+            starsLabel.textColor = category.textColor
             
             switch category {
             case .goOut:

@@ -262,9 +262,9 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath == IndexPath(row: 0, section: 0) {
-            return 160
+            return 145
         }
-        return 90
+        return 118
 
     }
     
