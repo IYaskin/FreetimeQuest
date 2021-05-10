@@ -58,7 +58,7 @@ class CharismaQuests {
                       "buything",
                       "perfectweight",
                       "marathon",
-                      "badhabbit"]
+                      "badhabit"]
         
         if id >= 0 && id <= images.count {
             return UIImage(named: images[id])
