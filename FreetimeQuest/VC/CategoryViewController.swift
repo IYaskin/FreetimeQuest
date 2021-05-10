@@ -36,7 +36,6 @@ class CategoryViewController: UIViewController {
     func configureUI() {
         bgView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         contentView.layer.cornerRadius = 20
-        contentView.backgroundColor = .systemYellow
         
         configureAdditionalQuestsStackView()
     }
@@ -98,7 +97,7 @@ class CategoryViewController: UIViewController {
         button.tag = category.rawValue
         let title = NSLocalizedString(category.title, comment: "")
         button.setTitle("+ \(title) ★\(category.price)", for: .normal)
-        button.setTitleColor(category.textColor, for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.backgroundColor = category.cellColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)

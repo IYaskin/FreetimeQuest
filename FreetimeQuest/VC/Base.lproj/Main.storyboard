@@ -183,7 +183,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j3B-df-thZ"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iAE-nO-GpX" firstAttribute="top" secondItem="j3B-df-thZ" secondAttribute="top" id="9G3-9q-MKV"/>
                             <constraint firstAttribute="bottom" secondItem="iAE-nO-GpX" secondAttribute="bottom" id="GnQ-F2-oLO"/>
@@ -232,7 +232,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="V7h-f7-uOQ" secondAttribute="bottom" constant="15" id="F2T-Mk-a0C"/>
                                     <constraint firstItem="V7h-f7-uOQ" firstAttribute="leading" secondItem="Ueh-K4-Z1l" secondAttribute="leading" constant="20" symbolic="YES" id="bbY-UP-q6J"/>
@@ -296,7 +296,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="UTA-KP-6Ja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" id="8nA-99-Xiy"/>
                                     <constraint firstItem="UTA-KP-6Ja" firstAttribute="top" secondItem="lxR-8D-5kf" secondAttribute="top" constant="8" id="Oki-qd-6wl"/>
@@ -354,9 +354,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

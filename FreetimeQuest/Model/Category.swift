@@ -25,30 +25,43 @@ extension Category {
         case .freetimeQuest:
             return .white
         case .goOut:
-            return .orange
+            return UIColor(named: "GoOut.Cell")!
         case .good:
-            return .lightGray
+            return UIColor(named: "Good.Cell")!
         case .hobby:
-            return .brown
+            return UIColor(named: "Hobby.Cell")!
         case .social:
-            return .systemPink
+            return UIColor(named: "Social.Cell")!
         case .charisma:
-            return .blue
+            return UIColor(named: "Charisma.Cell")!
         case .adventure:
-            return .red
+            return UIColor(named: "Adventure.Cell")!
         case .myQuests:
-            return .white
+            return UIColor(named: "My.Cell")!
         }
     }
     
-    var textColor: UIColor {
+    var starColor: UIColor {
         switch self {
-        case .hobby, .charisma:
+        case .freetimeQuest:
             return .white
-        default:
-            return .black
+        case .goOut:
+            return UIColor(named: "GoOut.Star")!
+        case .good:
+            return UIColor(named: "Good.Star")!
+        case .hobby:
+            return UIColor(named: "Hobby.Star")!
+        case .social:
+            return UIColor(named: "Social.Star")!
+        case .charisma:
+            return UIColor(named: "Charisma.Star")!
+        case .adventure:
+            return UIColor(named: "Adventure.Star")!
+        case .myQuests:
+            return UIColor(named: "My.Star")!
         }
     }
+
     
     var title: String {
         switch self {
@@ -68,16 +81,6 @@ extension Category {
             return "Adventure"
         case .myQuests:
             return "MyQuests"
-
-        }
-    }
-    
-    var headerTextColor: UIColor {
-        switch self {
-        case .hobby, .charisma:
-            return .white
-        default:
-            return .black
         }
     }
     
@@ -101,6 +104,5 @@ extension Category {
             return 0
         }
     }
-
 
 }

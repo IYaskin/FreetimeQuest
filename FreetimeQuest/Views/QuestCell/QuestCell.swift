@@ -61,10 +61,9 @@ class QuestCell: UITableViewCell {
         configureStars(stars: stars)
         
         if let category = Category(rawValue: category) {
-            titleLabel.textColor = category.textColor
             cellView.backgroundColor = category.cellColor
             
-            starsLabel.textColor = category.textColor
+            starsLabel.textColor = category.starColor
             
             switch category {
             case .goOut:
