@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryHeader" customModule="FreetimeQuest" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="YFq-Eg-I0b"/>
                 <outlet property="headerView" destination="FvP-9G-r0I" id="sSN-dO-69v"/>
+                <outlet property="numberLabel" destination="diC-qg-rw6" id="vz7-in-3LH"/>
                 <outlet property="titleLabel" destination="ab7-EX-0Ji" id="5Oj-f5-d1y"/>
             </connections>
         </placeholder>
@@ -24,18 +31,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-9G-r0I">
                     <rect key="frame" x="0.0" y="44" width="456" height="129"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-EX-0Ji">
-                            <rect key="frame" x="20" y="0.0" width="70.5" height="129"/>
-                            <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-EX-0Ji">
+                            <rect key="frame" x="20" y="0.0" width="49" height="129"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
+                            <color key="textColor" name="black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diC-qg-rw6">
+                            <rect key="frame" x="342.5" y="0.0" width="93.5" height="129"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
+                            <color key="textColor" name="black"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="ab7-EX-0Ji" firstAttribute="centerY" secondItem="FvP-9G-r0I" secondAttribute="centerY" id="Elo-VF-zpH"/>
-                        <constraint firstItem="ab7-EX-0Ji" firstAttribute="top" secondItem="FvP-9G-r0I" secondAttribute="top" id="GlW-w5-Rjq"/>
+                        <constraint firstAttribute="bottom" secondItem="diC-qg-rw6" secondAttribute="bottom" id="Ijc-K8-nA1"/>
                         <constraint firstItem="ab7-EX-0Ji" firstAttribute="leading" secondItem="FvP-9G-r0I" secondAttribute="leading" constant="20" id="MIc-2z-yTT"/>
+                        <constraint firstAttribute="bottom" secondItem="ab7-EX-0Ji" secondAttribute="bottom" id="Rcc-CJ-VJc"/>
+                        <constraint firstAttribute="trailing" secondItem="diC-qg-rw6" secondAttribute="trailing" constant="20" id="ZnT-H2-msA"/>
+                        <constraint firstItem="ab7-EX-0Ji" firstAttribute="centerY" secondItem="FvP-9G-r0I" secondAttribute="centerY" id="eSh-cp-Nmf"/>
+                        <constraint firstItem="diC-qg-rw6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ab7-EX-0Ji" secondAttribute="trailing" constant="10" id="oPc-Fs-K4s"/>
+                        <constraint firstItem="diC-qg-rw6" firstAttribute="centerY" secondItem="FvP-9G-r0I" secondAttribute="centerY" id="wzc-sL-SVW"/>
                     </constraints>
                 </view>
             </subviews>
@@ -52,11 +69,11 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="black">
+            <color red="0.17647058823529413" green="0.10196078431372549" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -137,7 +137,6 @@ class CategoryViewController: UIViewController {
         } else {
             
             let alert = UIAlertController(title: Text.EnterQuestName, message: nil, preferredStyle: .alert)
-            alert.setBackgroundColor(color: .systemYellow)
             alert.view.tintColor = .black
 
             alert.addTextField { (textField) in

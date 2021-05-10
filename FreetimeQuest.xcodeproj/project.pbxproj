@@ -53,6 +53,7 @@
 		846BE1822641A8C200E28AAA /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* done.mp3 */; };
 		846BE1852641A8C800E28AAA /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* delete.mp3 */; };
 		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
+		84773FDC26494DB2006D0C5F /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */; };
 		847978552620B84700817123 /* UIAlertController+BgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978542620B84700817123 /* UIAlertController+BgColor.swift */; };
 		847978582620C55800817123 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978572620C55800817123 /* UIView+Shadow.swift */; };
 		84DE3A542640787C00C327B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE3A532640787C00C327B5 /* Reachability.swift */; };
@@ -111,6 +112,7 @@
 		846BE1812641A8C200E28AAA /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		846BE1842641A8C800E28AAA /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = delete.mp3; sourceTree = "<group>"; };
 		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
+		84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
 		847978542620B84700817123 /* UIAlertController+BgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+BgColor.swift"; sourceTree = "<group>"; };
 		847978572620C55800817123 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		84DE3A532640787C00C327B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		84507A2025E10F5C0060EDE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84773FDA26494D6C006D0C5F /* Font */,
 				846BE1802641A8B600E28AAA /* Sounds */,
 				846799882629AC38007FA801 /* Text.swift */,
 				84544F8A25BDD0E9000683FC /* Category.swift */,
@@ -355,6 +358,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		84773FDA26494D6C006D0C5F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +431,7 @@
 				8451B5972605FEF800BD0A65 /* MemoryCell.xib in Resources */,
 				845E7C4F2622F86600B33170 /* Localizable.strings in Resources */,
 				846BE1822641A8C200E28AAA /* done.mp3 in Resources */,
+				84773FDC26494DB2006D0C5F /* SFProText-Regular.ttf in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
 				846BE1852641A8C800E28AAA /* delete.mp3 in Resources */,
 				846799912629CAFB007FA801 /* MyQuestCell.xib in Resources */,

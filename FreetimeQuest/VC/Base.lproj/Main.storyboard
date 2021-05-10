@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +24,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gw9-RA-I3D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gsb-SN-tzk"/>
                             <constraint firstItem="gw9-RA-I3D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IVR-A0-Ru5"/>
@@ -34,12 +35,14 @@
                     <navigationItem key="navigationItem" id="Irq-ck-7wk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="zVj-J4-jgg"/>
                         <barButtonItem key="leftBarButtonItem" title="+ Quests" id="TlN-v2-cXu">
+                            <color key="tintColor" name="black"/>
                             <connections>
                                 <action selector="leftBarButtonTapped:" destination="BYZ-38-t0r" id="72b-FM-TL9"/>
                                 <segue destination="Uij-mI-oXY" kind="presentation" identifier="Category" id="6ly-xI-Gsb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Memories" id="kIO-Dy-q05">
+                            <color key="tintColor" name="black"/>
                             <connections>
                                 <segue destination="qHO-wj-Rho" kind="show" id="elc-FB-DGs"/>
                             </connections>
@@ -333,7 +336,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="systemYellowColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -346,6 +349,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="black">
+            <color red="0.17647058823529413" green="0.10196078431372549" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -257,7 +257,7 @@ extension ViewController: UITableViewDelegate {
             return 0
         }
 
-        return 60
+        return 63
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -292,7 +292,7 @@ extension ViewController: UITableViewDelegate {
                 handler(false)
             }
         }
-        doneAction.backgroundColor = .systemYellow
+        doneAction.backgroundColor = .white
         
         let doneImage = UIImage(named: "check")!
         let doneResizedImage = doneImage.resizeImageWith(newSize: CGSize(width: 32,
@@ -317,7 +317,7 @@ extension ViewController: UITableViewDelegate {
             }
         }
         
-        deleteAction.backgroundColor = .systemYellow
+        deleteAction.backgroundColor = .white
 
         let deleteImage = UIImage(named: "close")!
         

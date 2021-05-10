@@ -12,6 +12,7 @@ class CategoryHeader: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,15 +37,13 @@ class CategoryHeader: UIView {
     }
     
     private func configureUI() {
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.black.cgColor
+
     }
 
     public func configureWith(category: Int) {
         if let category = Category(rawValue: category) {
             titleLabel.text = NSLocalizedString(category.title, comment: "")
-            titleLabel.textColor = category.headerTextColor
-            headerView.backgroundColor = category.cellColor
+            numberLabel.text = "5"
         }
     }
     
