@@ -7,44 +7,25 @@
 
 import UIKit
 
-class CategoryHeader: UIView {
+class CategoryHeader: UITableViewHeaderFooterView {
     
-    @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    
-    private func commonInit() {
-        let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
-        nib.instantiate(withOwner: self, options: nil)
-        
-        addSubview(contentView)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        configureUI()
-    }
-    
-    private func configureUI() {
+    static let nibName = "CategoryHeader"
+    static let reuseID = "CategoryHeader"
 
-    }
-
-    public func configureWith(category: Int) {
+    public func configureWith(category: Int,
+                              stars: Int) {
         if let category = Category(rawValue: category) {
             titleLabel.text = NSLocalizedString(category.title, comment: "")
-            numberLabel.text = "5"
+            numberLabel.text = "\(stars)"
         }
+    }
+    
+    public func updateStars(stars: Int) {
+        numberLabel.text = "\(stars)"
     }
     
 }

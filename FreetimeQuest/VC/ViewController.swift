@@ -63,6 +63,9 @@ class ViewController: UIViewController {
                                   forCellReuseIdentifier: FreetimeQuestCell.reuseID)
         tableView.register(UINib.init(nibName: MyQuestCell.nibName, bundle: nil),
                                   forCellReuseIdentifier: MyQuestCell.reuseID)
+        
+        tableView.register(UINib.init(nibName: CategoryHeader.nibName, bundle: nil), forHeaderFooterViewReuseIdentifier: CategoryHeader.reuseID)
+
 
         tableView.backgroundColor = .clear
 
@@ -246,8 +249,10 @@ extension ViewController: UITableViewDelegate {
         }
 
         let category = fetchedResultsController.object(at: IndexPath(row: 0, section: section)).category
-        let header = CategoryHeader()
-        header.configureWith(category: Int(category))
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategoryHeader.reuseID) as! CategoryHeader
+        let stars = fetchedResultsController.fetchedObjects?.filter{$0.category == category}.count ?? 0
+        header.configureWith(category: Int(category),
+                             stars: stars)
         return header
     }
     
@@ -365,11 +370,22 @@ extension ViewController: NSFetchedResultsControllerDelegate {
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
+                
+                if let header = tableView.headerView(forSection: indexPath.section) as? CategoryHeader,
+                   let category = (anObject as? QuestObject)?.category,
+                   let stars = fetchedResultsController.fetchedObjects?.filter({$0.category == category}).count {
+                    header.updateStars(stars: stars)
+                }
             }
             updateHeader()
         case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
+                if let header = tableView.headerView(forSection: indexPath.section) as? CategoryHeader,
+                   let category = (anObject as? QuestObject)?.category,
+                   let stars = fetchedResultsController.fetchedObjects?.filter({$0.category == category}).count {
+                    header.updateStars(stars: stars)
+                }
             }
             updateHeader()
         default:
