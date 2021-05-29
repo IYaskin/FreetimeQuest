@@ -18,7 +18,6 @@
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
 		84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84484E692607579D007EF415 /* CustomProgressBar.swift */; };
 		844B12802604F356009569D3 /* CharismaQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B127F2604F356009569D3 /* CharismaQuests.swift */; };
-		84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2325E111510060EDE5 /* UIImage+Extension.swift */; };
 		84507A2A25E111ED0060EDE5 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84507A2925E111ED0060EDE5 /* QuestCell.swift */; };
 		84507A2E25E111F70060EDE5 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84507A2D25E111F70060EDE5 /* QuestCell.xib */; };
 		8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */; };
@@ -79,7 +78,7 @@
 		8486E878266270170074F5B9 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E860266270170074F5B9 /* SwipeActionsView.swift */; };
 		8486E879266270170074F5B9 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486E862266270170074F5B9 /* SwipeTableViewCell.swift */; };
 		84DE3A542640787C00C327B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE3A532640787C00C327B5 /* Reachability.swift */; };
-		84E99C2425F38274003A0C12 /* ImageWithoutRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E99C2325F38274003A0C12 /* ImageWithoutRender.swift */; };
+		84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,7 +93,6 @@
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84484E692607579D007EF415 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		844B127F2604F356009569D3 /* CharismaQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharismaQuests.swift; sourceTree = "<group>"; };
-		84507A2325E111510060EDE5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		84507A2925E111ED0060EDE5 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
 		84507A2D25E111F70060EDE5 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
 		8450FE1925BDBC0F00814F81 /* FreetimeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreetimeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +159,7 @@
 		8486E861266270170074F5B9 /* SwipeCellKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCellKit.h; sourceTree = "<group>"; };
 		8486E862266270170074F5B9 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewCell.swift; sourceTree = "<group>"; };
 		84DE3A532640787C00C327B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		84E99C2325F38274003A0C12 /* ImageWithoutRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithoutRender.swift; sourceTree = "<group>"; };
+		84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,12 +261,11 @@
 		84507A2625E111560060EDE5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				84507A2325E111510060EDE5 /* UIImage+Extension.swift */,
-				84E99C2325F38274003A0C12 /* ImageWithoutRender.swift */,
 				8458E84825E2607C00C233B6 /* UIView+Alert.swift */,
 				847978572620C55800817123 /* UIView+Shadow.swift */,
 				847978542620B84700817123 /* UIAlertController+BgColor.swift */,
 				846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */,
+				84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8486E867266270170074F5B9 /* SwipeAccessibilityCustomAction.swift in Sources */,
+				84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */,
 				8451B5862605EDB500BD0A65 /* CoreDataModel.xcdatamodeld in Sources */,
 				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
 				84424BF425F0161E003F125A /* CategoryHeader.swift in Sources */,
@@ -540,7 +538,6 @@
 				846799892629AC38007FA801 /* Text.swift in Sources */,
 				840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */,
 				84DE3A542640787C00C327B5 /* Reachability.swift in Sources */,
-				84E99C2425F38274003A0C12 /* ImageWithoutRender.swift in Sources */,
 				8486E866266270170074F5B9 /* Swipeable.swift in Sources */,
 				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
 				8486E864266270170074F5B9 /* SwipeAnimator.swift in Sources */,
@@ -560,7 +557,6 @@
 				8486E86F266270170074F5B9 /* SwipeCollectionViewCellDelegate.swift in Sources */,
 				8486E869266270170074F5B9 /* SwipeTransitionLayout.swift in Sources */,
 				8451B5802605ED1400BD0A65 /* MemoryObject+CoreDataClass.swift in Sources */,
-				84507A2425E111510060EDE5 /* UIImage+Extension.swift in Sources */,
 				8486E863266270170074F5B9 /* SwipeTableViewCellDelegate.swift in Sources */,
 				8486E874266270170074F5B9 /* SwipeTableViewCell+Accessibility.swift in Sources */,
 				8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */,

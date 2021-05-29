@@ -97,7 +97,7 @@ class CategoryViewController: UIViewController {
         button.tag = category.rawValue
         let title = NSLocalizedString(category.title, comment: "")
         button.setTitle("+ \(title) ★\(category.price)", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(UIColor.darkViolet, for: .normal)
         button.backgroundColor = category.cellColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -109,8 +109,10 @@ class CategoryViewController: UIViewController {
     func addMyQuestsButtonToStackView() {
         let button = UIButton()
         button.setTitle("\(Text.AddQuest) ★1", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(UIColor.darkViolet, for: .normal)
         button.backgroundColor = .white
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.darkViolet.cgColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         button.addTarget(self, action: #selector(addMyQuest), for: .touchUpInside)
         button.layer.cornerRadius = 20
@@ -136,7 +138,7 @@ class CategoryViewController: UIViewController {
         } else {
             
             let alert = UIAlertController(title: Text.EnterQuestName, message: nil, preferredStyle: .alert)
-            alert.view.tintColor = .black
+            alert.view.tintColor = UIColor.darkViolet
 
             alert.addTextField { (textField) in
                 textField.smartInsertDeleteType = UITextSmartInsertDeleteType.no

@@ -19,7 +19,7 @@ extension UIViewController {
                                       message: message,
                                       preferredStyle: .alert)
 
-        alert.view.tintColor = .black
+        alert.view.tintColor = UIColor.darkViolet
 
         let okAction = UIAlertAction(title: okButtonTitle,
                                      style: .default,
@@ -43,7 +43,7 @@ extension UIViewController {
                                       message: message,
                                       preferredStyle: .alert)
 
-        alert.view.tintColor = .black
+        alert.view.tintColor = UIColor.darkViolet
 
         let okAction = UIAlertAction(title: okButtonTitle,
                                      style: .default,

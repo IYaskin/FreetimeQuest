@@ -58,8 +58,10 @@ class SheetViewController: UIViewController {
         let button = UIButton()
         
         button.setTitle(buttonType.title, for: .normal)
-        button.setTitleColor(UIColor(named: "black")!, for: .normal)
+        button.setTitleColor(UIColor.darkViolet, for: .normal)
         button.backgroundColor = .white
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.darkViolet.cgColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         switch buttonType {
         case .addPhotoFromCamera, .changePhotoWithCamera:
