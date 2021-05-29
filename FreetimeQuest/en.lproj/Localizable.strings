@@ -37,10 +37,8 @@
 "CheckInternet" = "No internet connection :(";
 
 //SheetButtons
-"Sheet.AddCamera" = "Add photo from camera";
-"Sheet.AddGallery" = "Add photo from gallery";
-"Sheet.ChangeCamera" = "Change photo with camera";
-"Sheet.ChangeGallery" = "Change photo with gallery";
+"Sheet.AddCamera" = "Camera";
+"Sheet.AddGallery" = "Gallery";
 "Sheet.DeletePhoto" = "Delete photo";
 "Sheet.DeleteMemory" = "Delete memory";
 

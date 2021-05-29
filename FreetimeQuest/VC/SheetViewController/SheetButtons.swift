@@ -10,9 +10,6 @@ import Foundation
 enum SheetButtons {
     case addPhotoFromCamera
     case addPhotoFromGallery
-    
-    case changePhotoWithCamera
-    case changePhotoWithGallery
 
     case deletePhoto
     case deleteMemory
@@ -23,10 +20,6 @@ enum SheetButtons {
             return NSLocalizedString("Sheet.AddCamera", comment: "") 
         case .addPhotoFromGallery:
             return NSLocalizedString("Sheet.AddGallery", comment: "")
-        case .changePhotoWithCamera:
-            return NSLocalizedString("Sheet.ChangeCamera", comment: "")
-        case .changePhotoWithGallery:
-            return NSLocalizedString("Sheet.ChangeGallery", comment: "")
         case .deletePhoto:
             return NSLocalizedString("Sheet.DeletePhoto", comment: "")
         case .deleteMemory:

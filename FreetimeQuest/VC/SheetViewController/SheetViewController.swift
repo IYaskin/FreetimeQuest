@@ -43,13 +43,11 @@ class SheetViewController: UIViewController {
             return
         }
         
+        addButtonToStackView(buttonType: .addPhotoFromCamera)
+        addButtonToStackView(buttonType: .addPhotoFromGallery)
+
         if haveImage {
-            addButtonToStackView(buttonType: .changePhotoWithCamera)
-            addButtonToStackView(buttonType: .changePhotoWithGallery)
             addButtonToStackView(buttonType: .deletePhoto)
-        } else {
-            addButtonToStackView(buttonType: .addPhotoFromCamera)
-            addButtonToStackView(buttonType: .addPhotoFromGallery)
         }
         addButtonToStackView(buttonType: .deleteMemory)
     }
@@ -64,9 +62,9 @@ class SheetViewController: UIViewController {
         button.layer.borderColor = UIColor.darkViolet.cgColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         switch buttonType {
-        case .addPhotoFromCamera, .changePhotoWithCamera:
+        case .addPhotoFromCamera:
             button.addTarget(self, action: #selector(addPhotoFromCamera), for: .touchUpInside)
-        case .addPhotoFromGallery, .changePhotoWithGallery:
+        case .addPhotoFromGallery:
             button.addTarget(self, action: #selector(addPhotoFromGallery), for: .touchUpInside)
         case .deletePhoto:
             button.addTarget(self, action: #selector(deletePhoto), for: .touchUpInside)

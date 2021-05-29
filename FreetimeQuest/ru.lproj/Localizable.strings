@@ -36,10 +36,8 @@
 "CheckInternet" = "Нет интернет соединения :(";
 
 //SheetButtons
-"Sheet.AddCamera" = "Добавить фото с камеры";
-"Sheet.AddGallery" = "Добавить фото с галереи";
-"Sheet.ChangeCamera" = "Изменить на фото с камеры";
-"Sheet.ChangeGallery" = "Изменить на фото из галереи";
+"Sheet.AddCamera" = "Камера";
+"Sheet.AddGallery" = "Галерея";
 "Sheet.DeletePhoto" = "Удалить фото";
 "Sheet.DeleteMemory" = "Удалить воспоминание";
 
