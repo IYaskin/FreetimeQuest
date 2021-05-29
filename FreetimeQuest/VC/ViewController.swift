@@ -232,6 +232,7 @@ extension ViewController: UITableViewDataSource {
         if quest.category == Category.myQuests.rawValue,
            let cell = tableView.dequeueReusableCell(withIdentifier: MyQuestCell.reuseID) as? MyQuestCell {
             cell.configure(title: quest.title)
+            cell.delegate = self
             return cell
         }
         

@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class MyQuestCell: UITableViewCell {
+class MyQuestCell: SwipeTableViewCell {
     
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var titleLabel: UILabel!

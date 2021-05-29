@@ -13,6 +13,7 @@ class MemoryCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imageContainerView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     static let nibName = "MemoryCell"
     static let reuseID = "MemoryCell"
@@ -41,10 +42,11 @@ class MemoryCell: UITableViewCell {
                    date: Date,
                    imageData: Data?) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yy"
+        formatter.dateFormat = "dd.MM.yyyy"
         let date = formatter.string(from: date)
+        dateLabel.text = date
         
-        titleLabel.text = date + "\n" + NSLocalizedString(title, comment: "")
+        titleLabel.text = NSLocalizedString(title, comment: "")
 
 
         if let data = imageData,

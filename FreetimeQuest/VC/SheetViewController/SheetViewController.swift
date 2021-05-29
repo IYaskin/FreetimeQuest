@@ -58,7 +58,7 @@ class SheetViewController: UIViewController {
         let button = UIButton()
         
         button.setTitle(buttonType.title, for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(UIColor(named: "black")!, for: .normal)
         button.backgroundColor = .white
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         switch buttonType {

@@ -16,8 +16,9 @@
 "Adventure" = "Приключения";
 "MyQuests" = "Мои квесты";
 
-"AddCategory" = "Добавить категорию";
-"AddQuest" = "Добавить свой квест";
+"AddCategory" = "Категории:";
+"AllCategoriesAdded" = "Все категории добавлены!";
+"AddQuest" = "+ Квест";
 "Add" = "Добавить";
 "for" = "за";
 "from" = "из";

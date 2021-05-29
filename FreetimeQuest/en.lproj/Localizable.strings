@@ -17,8 +17,9 @@
 "Adventure" = "Adventure";
 "MyQuests" = "My quests";
 
-"AddCategory" = "Add category";
-"AddQuest" = "Add your quest";
+"AddCategory" = "Categories:";
+"AllCategoriesAdded" = "All categories added!";
+"AddQuest" = "+ Quest";
 "Add" = "Add";
 "for" = "for";
 "from" = "from";

@@ -42,10 +42,10 @@ class CategoryViewController: UIViewController {
     
     func updateTitle(haveCategories: Bool) {
         guard haveCategories else {
-            titleLabel.text = "★\(starsCount)"
+            titleLabel.text = "\(Text.AllCategoriesAdded)"
             return
         }
-        titleLabel.text = "\(Text.AddCategory) ★\(starsCount)"
+        titleLabel.text = "\(Text.AddCategory)"
     }
     
     func configureAdditionalQuestsStackView() {

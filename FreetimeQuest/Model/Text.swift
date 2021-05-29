@@ -9,6 +9,7 @@ import Foundation
 
 class Text {
     static let AddCategory = NSLocalizedString("AddCategory", comment: "")
+    static let AllCategoriesAdded = NSLocalizedString("AllCategoriesAdded", comment: "")
     static let AddQuest = NSLocalizedString("AddQuest", comment: "")
 
     static let Add = NSLocalizedString("Add", comment: "")
