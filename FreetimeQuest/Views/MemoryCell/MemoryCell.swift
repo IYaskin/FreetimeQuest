@@ -32,10 +32,10 @@ class MemoryCell: UITableViewCell {
         selectionStyle = .none
         bgView.layer.cornerRadius = 15
         imageContainerView.layer.cornerRadius = 15
-        imgView.layer.cornerRadius = 0
         
         bgView.dropShadow()
-
+        bgView.layer.borderWidth = 1
+        bgView.layer.borderColor = UIColor.black.withAlphaComponent(0.2).cgColor
     }
     
     func configure(title: String,
