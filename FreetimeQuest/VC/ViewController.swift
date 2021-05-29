@@ -160,6 +160,48 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView,
+                   editActionsForRowAt indexPath: IndexPath,
+                   for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let doneAction = SwipeAction(style: .destructive, title: nil) { action, indexPath in
+            let quest = self.fetchedResultsController.object(at: indexPath)
+            self.showAlert(title: "\(Text.CompleteQuest)\n\"\(NSLocalizedString(quest.title, comment: ""))\" ?",
+                           message: nil,
+                           okButtonTitle: Text.Ok,
+                           okAction: { _ in
+                            self.coreData.doneQuest(quest)
+                            SystemSoundID.playFileNamed(fileName: "done", withExtenstion: "mp3")
+                           },
+                           cancelButtonTitle: Text.Cancel) { _ in
+            }
+        }
+        doneAction.backgroundColor = .white
+        doneAction.image = UIImage(named: "check60")
+
+
+        let deleteAction = SwipeAction(style: .destructive, title: nil) { action, indexPath in
+            let quest = self.fetchedResultsController.object(at: indexPath)
+            self.showAlert(title: "\(Text.DeleteQuest)\n\"\(NSLocalizedString(quest.title, comment: ""))\" ?",
+                           message: nil,
+                           okButtonTitle: Text.Ok,
+                           okAction: { _ in
+                            self.coreData.deleteQuest(quest)
+                            SystemSoundID.playFileNamed(fileName: "delete", withExtenstion: "mp3")
+                           },
+                           cancelButtonTitle: Text.Cancel) { _ in
+            }
+        }
+        deleteAction.backgroundColor = .white
+        deleteAction.image = UIImage(named: "close40")
+
+        return [deleteAction, doneAction]
+    }
+}
+
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -231,6 +273,7 @@ extension ViewController: UITableViewDataSource {
                        haveURL: haveURL,
                        haveInfo: haveInfo)
 
+        cell.delegate = self
         return cell
     }
     
@@ -278,66 +321,6 @@ extension ViewController: UITableViewDelegate {
             return false
         }
         return true
-    }
-            
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-
-        let doneAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
-            let quest = self.fetchedResultsController.object(at: indexPath)
-            self.showAlert(title: "\(Text.CompleteQuest)\n\"\(NSLocalizedString(quest.title, comment: ""))\" ?",
-                           message: nil,
-                           okButtonTitle: Text.Ok,
-                           okAction: { _ in
-                            self.coreData.doneQuest(quest)
-                            handler(true)
-                            SystemSoundID.playFileNamed(fileName: "done", withExtenstion: "mp3")
-                           },
-                           cancelButtonTitle: Text.Cancel) { _ in
-                handler(false)
-            }
-        }
-        doneAction.backgroundColor = .white
-        
-        let doneImage = UIImage(named: "check")!
-        let doneResizedImage = doneImage.resizeImageWith(newSize: CGSize(width: 32,
-                                                                         height: 32))
-        let doneCGImage = doneResizedImage.cgImage
-        if let cgImage =  doneCGImage {
-            doneAction.image = ImageWithoutRender(cgImage: cgImage, scale: 1, orientation: .up)
-        }
-
-        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (action, view, handler) in
-            let quest = self.fetchedResultsController.object(at: indexPath)
-            self.showAlert(title: "\(Text.DeleteQuest)\n\"\(NSLocalizedString(quest.title, comment: ""))\" ?",
-                           message: nil,
-                           okButtonTitle: Text.Ok,
-                           okAction: { _ in
-                            self.coreData.deleteQuest(quest)
-                            handler(true)
-                            SystemSoundID.playFileNamed(fileName: "delete", withExtenstion: "mp3")
-                           },
-                           cancelButtonTitle: Text.Cancel) { _ in
-                handler(false)
-            }
-        }
-        
-        deleteAction.backgroundColor = .white
-
-        let deleteImage = UIImage(named: "close")!
-        
-        let deleteResizedImage = deleteImage.resizeImageWith(newSize: CGSize(width: 23,
-                                                                         height: 23))
-        let deleteCGImage = deleteResizedImage.cgImage
-        if let cgImage =  deleteCGImage {
-            deleteAction.image = ImageWithoutRender(cgImage: cgImage, scale: 1, orientation: .up)
-        }
-
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, doneAction])
-
-        configuration.performsFirstActionWithFullSwipe = false
-        return configuration
-
     }
 }
 
