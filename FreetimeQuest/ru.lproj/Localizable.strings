@@ -6,6 +6,8 @@
   
 */
 // Common
+"lang" = "ru";
+
 "Memories" = "Воспоминания";
 
 "GoOut" = "Посетить места";
@@ -40,6 +42,19 @@
 "Sheet.AddGallery" = "Галерея";
 "Sheet.DeletePhoto" = "Удалить фото";
 "Sheet.DeleteMemory" = "Удалить воспоминание";
+
+//Onboarding
+"Skip" = "Пропустить";
+"Next" = "Далее";
+"Start" = "Начать";
+
+"CompleteQuests" = "Выполняй квесты";
+"AddQuests" = "Открывай новые квесты";
+"CreateMemories" = "Создавай воспоминания";
+
+"CompleteQuestsDescription" = "Свайпни для выполнения / удаления квеста\n\nНажми на ячейку для информации\n\nВыполняй задания - зарабатывай звездочки";
+"AddQuestsDescription" = "После открытия всех категорий появится возможность добавлять свои квесты";
+"CreateMemoriesDescription" = "Нажми на ячейку для добавления / изменения фотографии";
 
 //GoOut
 

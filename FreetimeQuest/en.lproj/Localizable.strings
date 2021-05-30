@@ -7,6 +7,8 @@
 */
 
 // Common
+"lang" = "en";
+
 "Memories" = "Memories";
 
 "GoOut" = "Visit places";
@@ -41,6 +43,19 @@
 "Sheet.AddGallery" = "Gallery";
 "Sheet.DeletePhoto" = "Delete photo";
 "Sheet.DeleteMemory" = "Delete memory";
+
+// Onboarding
+"Skip" = "Skip";
+"Next" = "Next";
+"Start" = "Start";
+
+"CompleteQuests" = "Complete quests";
+"AddQuests" = "Unlock new quests";
+"CreateMemories" = "Create memories";
+
+"CompleteQuestsDescription" = "Swipe to done / delete quest\n\nTap on cell for more info\n\nComplete quests and earn stars\n";
+"AddQuestsDescription" = "After opening all categories it will be possible to add your own quests";
+"CreateMemoriesDescription" = "Tap on cell to add or change photo";
 
 //GoOut
 "GoOut.Cinema" = "Cinema";

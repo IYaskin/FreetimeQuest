@@ -300,12 +300,60 @@
                                             <action selector="skipButtonTapped:" destination="r7Y-oc-Js0" eventType="touchUpInside" id="ZuR-ig-6tU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-a8-n0q">
+                                        <rect key="frame" x="20" y="668" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4AH-9c-xEc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="black"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="r7Y-oc-Js0" eventType="touchUpInside" id="oG1-RR-jmw"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g6Z-hW-LE0">
+                                        <rect key="frame" x="125.5" y="632.5" width="123" height="27.5"/>
+                                        <color key="pageIndicatorTintColor" name="grey"/>
+                                        <color key="currentPageIndicatorTintColor" name="black"/>
+                                    </pageControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-Iq-gIr">
+                                        <rect key="frame" x="20" y="460.5" width="334" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-Gy-mKi">
+                                        <rect key="frame" x="20" y="409" width="334" height="28"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iRp-sC-8RP">
+                                        <rect key="frame" x="20" y="46" width="334" height="323"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="ifl-Gy-mKi" firstAttribute="top" secondItem="iRp-sC-8RP" secondAttribute="bottom" constant="40" id="2aP-Rb-AN0"/>
+                                    <constraint firstItem="iRp-sC-8RP" firstAttribute="centerX" secondItem="lxR-8D-5kf" secondAttribute="centerX" id="6yG-e1-P0S"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lhe-a8-n0q" secondAttribute="bottom" constant="20" id="8He-UK-deF"/>
                                     <constraint firstItem="UTA-KP-6Ja" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" id="8nA-99-Xiy"/>
+                                    <constraint firstItem="g6Z-hW-LE0" firstAttribute="centerX" secondItem="lxR-8D-5kf" secondAttribute="centerX" id="DND-sL-9fo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lhe-a8-n0q" secondAttribute="trailing" constant="20" id="Fdn-9Q-Sle"/>
                                     <constraint firstItem="UTA-KP-6Ja" firstAttribute="top" secondItem="lxR-8D-5kf" secondAttribute="top" constant="8" id="Oki-qd-6wl"/>
+                                    <constraint firstItem="M6R-Iq-gIr" firstAttribute="leading" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" id="SWn-9f-h1K"/>
+                                    <constraint firstItem="Lhe-a8-n0q" firstAttribute="leading" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" id="Yhb-27-FlV"/>
+                                    <constraint firstItem="ifl-Gy-mKi" firstAttribute="leading" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" id="Zfl-Ye-L3w"/>
                                     <constraint firstAttribute="trailing" secondItem="UTA-KP-6Ja" secondAttribute="trailing" constant="8" id="aFl-QU-SG4"/>
+                                    <constraint firstItem="ifl-Gy-mKi" firstAttribute="centerX" secondItem="lxR-8D-5kf" secondAttribute="centerX" id="fbA-cV-4er"/>
+                                    <constraint firstItem="M6R-Iq-gIr" firstAttribute="centerX" secondItem="lxR-8D-5kf" secondAttribute="centerX" id="gjE-1m-IvG"/>
+                                    <constraint firstItem="iRp-sC-8RP" firstAttribute="bottom" secondItem="lxR-8D-5kf" secondAttribute="centerY" id="h2I-yG-cFa"/>
+                                    <constraint firstItem="Lhe-a8-n0q" firstAttribute="top" secondItem="g6Z-hW-LE0" secondAttribute="bottom" constant="8" symbolic="YES" id="l6h-HV-1q8"/>
+                                    <constraint firstItem="iRp-sC-8RP" firstAttribute="leading" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" symbolic="YES" id="pJD-Ns-7ic"/>
+                                    <constraint firstItem="M6R-Iq-gIr" firstAttribute="top" secondItem="ifl-Gy-mKi" secondAttribute="bottom" constant="23.5" id="tbj-0E-uIC"/>
+                                    <constraint firstItem="g6Z-hW-LE0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="M6R-Iq-gIr" secondAttribute="bottom" constant="10" id="usF-uC-kPV"/>
+                                    <constraint firstItem="iRp-sC-8RP" firstAttribute="top" secondItem="lxR-8D-5kf" secondAttribute="top" constant="46" id="uur-p6-xc0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -325,7 +373,12 @@
                     <navigationItem key="navigationItem" id="uTI-1T-yut"/>
                     <connections>
                         <outlet property="bgView" destination="lxR-8D-5kf" id="kAu-fZ-fIq"/>
+                        <outlet property="descriptionLabel" destination="M6R-Iq-gIr" id="NrI-xV-2im"/>
+                        <outlet property="imageView" destination="iRp-sC-8RP" id="a0e-Lg-Rl0"/>
+                        <outlet property="nextButton" destination="Lhe-a8-n0q" id="CnX-Os-k5f"/>
+                        <outlet property="pageControl" destination="g6Z-hW-LE0" id="2pr-7A-EHg"/>
                         <outlet property="skipButton" destination="UTA-KP-6Ja" id="xNd-dO-uRw"/>
+                        <outlet property="titleLabel" destination="ifl-Gy-mKi" id="qfX-sO-7dj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tt-n8-vYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,6 +411,9 @@
     <resources>
         <namedColor name="black">
             <color red="0.17647058823529413" green="0.10196078431372549" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey">
+            <color red="0.92156862745098034" green="0.92549019607843142" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

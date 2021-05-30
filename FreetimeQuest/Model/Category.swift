@@ -91,15 +91,15 @@ extension Category {
         case .goOut:
             return 0
         case .good:
-            return 1
+            return 5
         case .hobby:
-            return 1
+            return 10
         case .social:
-            return 1
+            return 15
         case .charisma:
-            return 1
+            return 20
         case .adventure:
-            return 1
+            return 25
         case .myQuests:
             return 0
         }

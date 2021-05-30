@@ -8,6 +8,13 @@
 import Foundation
 
 class Text {
+    
+    static let lang = NSLocalizedString("lang", comment: "")
+
+    static var isRussian: Bool {
+        return lang == "ru"
+    }
+    
     static let AddCategory = NSLocalizedString("AddCategory", comment: "")
     static let AllCategoriesAdded = NSLocalizedString("AllCategoriesAdded", comment: "")
     static let AddQuest = NSLocalizedString("AddQuest", comment: "")
@@ -18,6 +25,10 @@ class Text {
     static let Ok = NSLocalizedString("Ok", comment: "")
     static let Cancel = NSLocalizedString("Cancel", comment: "")
     
+    static let Skip = NSLocalizedString("Skip", comment: "")
+    static let Next = NSLocalizedString("Next", comment: "")
+    static let Start = NSLocalizedString("Start", comment: "")
+
     static let NotEnoughStars = NSLocalizedString("NotEnoughStars", comment: "")
     static let DoMoreQuests = NSLocalizedString("DoMoreQuests", comment: "")
     
@@ -30,5 +41,14 @@ class Text {
     static let CompleteQuest = NSLocalizedString("CompleteQuest", comment: "")
     static let DeleteQuest = NSLocalizedString("DeleteQuest", comment: "")
     static let Completed = NSLocalizedString("Completed", comment: "")
+    
+    //Onboarding
+    static let CompleteQuests = NSLocalizedString("CompleteQuests", comment: "")
+    static let AddQuests = NSLocalizedString("AddQuests", comment: "")
+    static let CreateMemories = NSLocalizedString("CreateMemories", comment: "")
+
+    static let CompleteQuestsDescription = NSLocalizedString("CompleteQuestsDescription", comment: "")
+    static let AddQuestsDescription = NSLocalizedString("AddQuestsDescription", comment: "")
+    static let CreateMemoriesDescription = NSLocalizedString("CreateMemoriesDescription", comment: "")
 
 }
