@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Нужно для поиска по запросам</string>
+	<string>Searching about quest</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -44,10 +44,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>Нужно для добавления фото в ленту воспоминаний</string>
+	<string>Add photo to memories wall</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Нужно для добавления фото в ленту воспоминаний</string>
+	<string>Add photo to memories wall</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>При фотографировании через приложение, фото будет сохраняться в галерею</string>
+	<string>Save photo to gallery using camera from app</string>
 </dict>
 </plist>
