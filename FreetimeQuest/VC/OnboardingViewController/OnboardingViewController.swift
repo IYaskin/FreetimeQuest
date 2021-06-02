@@ -28,9 +28,13 @@ class OnboardingViewController: UIViewController {
                                 Text.AddQuestsDescription,
                                 Text.CreateMemoriesDescription]
     
-    private let images = [UIImage(named: "onboarding1")!,
-                          UIImage(named: "onboarding2")!,
-                          UIImage(named: "onboarding3")!]
+    private let ruImages = [UIImage(named: "onboarding_ru_1")!,
+                            UIImage(named: "onboarding_ru_2")!,
+                            UIImage(named: "onboarding_ru_3")!]
+    
+    private let enImages = [UIImage(named: "onboarding_en_1")!,
+                            UIImage(named: "onboarding_en_2")!,
+                            UIImage(named: "onboarding_en_3")!]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,18 +58,16 @@ class OnboardingViewController: UIViewController {
         }
         titleLabel.text = titles[index]
         descriptionLabel.text = descriptions[index]
-        imageView.image = images[index]
+        imageView.image = Text.isRussian ? ruImages[index] : enImages[index]
     }
     
     @IBAction func skipButtonTapped(_ sender: UIButton) {
-        UserDefaultsManager.shared.isOnboardingDone = true
-        dismiss(animated: true, completion: nil)
+        completeOnboarding()
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard index != maxIndex else {
-            UserDefaultsManager.shared.isOnboardingDone = true
-            dismiss(animated: true, completion: nil)
+            completeOnboarding()
             return
         }
         
@@ -77,4 +79,40 @@ class OnboardingViewController: UIViewController {
             nextButton.setTitle(Text.Start, for: .normal)
         }
     }
+    
+    @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+        // previous
+        guard index > 0 else {
+            return
+        }
+        
+        if index == maxIndex {
+            nextButton.setTitle(Text.Next, for: .normal)
+        }
+
+        index -= 1
+        pageControl.currentPage = index
+        configurePage()
+    }
+    
+    @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
+        // next
+        guard index != maxIndex else {
+            return
+        }
+        
+        index += 1
+        pageControl.currentPage = index
+        configurePage()
+        
+        if index == maxIndex {
+            nextButton.setTitle(Text.Start, for: .normal)
+        }
+    }
+    
+    private func completeOnboarding() {
+        UserDefaultsManager.shared.isOnboardingDone = true
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

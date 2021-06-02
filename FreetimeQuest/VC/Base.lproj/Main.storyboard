@@ -317,14 +317,17 @@
                                         <color key="pageIndicatorTintColor" name="grey"/>
                                         <color key="currentPageIndicatorTintColor" name="black"/>
                                     </pageControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-Iq-gIr">
-                                        <rect key="frame" x="20" y="460.5" width="334" height="17.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-Iq-gIr">
+                                        <rect key="frame" x="20" y="461.5" width="334" height="17.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-Gy-mKi">
-                                        <rect key="frame" x="20" y="409" width="334" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-Gy-mKi">
+                                        <rect key="frame" x="20" y="409" width="334" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="Zoc-CX-uHf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -334,6 +337,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="ifl-Gy-mKi" firstAttribute="top" secondItem="iRp-sC-8RP" secondAttribute="bottom" constant="40" id="2aP-Rb-AN0"/>
                                     <constraint firstItem="iRp-sC-8RP" firstAttribute="centerX" secondItem="lxR-8D-5kf" secondAttribute="centerX" id="6yG-e1-P0S"/>
@@ -352,9 +356,13 @@
                                     <constraint firstItem="Lhe-a8-n0q" firstAttribute="top" secondItem="g6Z-hW-LE0" secondAttribute="bottom" constant="8" symbolic="YES" id="l6h-HV-1q8"/>
                                     <constraint firstItem="iRp-sC-8RP" firstAttribute="leading" secondItem="lxR-8D-5kf" secondAttribute="leading" constant="20" symbolic="YES" id="pJD-Ns-7ic"/>
                                     <constraint firstItem="M6R-Iq-gIr" firstAttribute="top" secondItem="ifl-Gy-mKi" secondAttribute="bottom" constant="23.5" id="tbj-0E-uIC"/>
-                                    <constraint firstItem="g6Z-hW-LE0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="M6R-Iq-gIr" secondAttribute="bottom" constant="10" id="usF-uC-kPV"/>
+                                    <constraint firstItem="g6Z-hW-LE0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="M6R-Iq-gIr" secondAttribute="bottom" constant="5" id="usF-uC-kPV"/>
                                     <constraint firstItem="iRp-sC-8RP" firstAttribute="top" secondItem="lxR-8D-5kf" secondAttribute="top" constant="46" id="uur-p6-xc0"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="imG-nj-ZPe" appends="YES" id="AEa-vj-v0H"/>
+                                    <outletCollection property="gestureRecognizers" destination="Xjf-XZ-zGB" appends="YES" id="AwQ-DP-Ayp"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Be5-fy-ice"/>
@@ -382,6 +390,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tt-n8-vYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="imG-nj-ZPe">
+                    <connections>
+                        <action selector="rightSwipe:" destination="r7Y-oc-Js0" id="bag-uY-9cy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Xjf-XZ-zGB">
+                    <connections>
+                        <action selector="leftSwipe:" destination="r7Y-oc-Js0" id="vAz-c3-9zW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="-563.16964285714278"/>
         </scene>
