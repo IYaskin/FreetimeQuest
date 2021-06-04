@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  FreetimeQuest
+
+  Created by Igor Yaskin on 04.06.2021.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Searching places about quest";
+"NSCameraUsageDescription" = "Add photo to memories wall";
+"NSPhotoLibraryUsageDescription" = "Add photo to memories wall";
+"NSPhotoLibraryAddUsageDescription" = "Save photo to gallery using camera from app";
