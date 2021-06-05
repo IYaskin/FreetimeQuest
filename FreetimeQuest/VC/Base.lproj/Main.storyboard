@@ -186,18 +186,70 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-yF-qgr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx8-hW-1JQ">
+                                        <rect key="frame" x="147" y="361.5" width="120" height="85"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mQR-f3-0Xt">
+                                                <rect key="frame" x="50" y="8" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Готовим GIF из _ фото" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-OC-eVL">
+                                                <rect key="frame" x="8" y="36" width="104" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Wxn-OC-eVL" firstAttribute="top" secondItem="mQR-f3-0Xt" secondAttribute="bottom" constant="8" id="8vg-3Z-mW9"/>
+                                            <constraint firstItem="Wxn-OC-eVL" firstAttribute="leading" secondItem="Jx8-hW-1JQ" secondAttribute="leading" constant="8" id="YhP-5W-7l9"/>
+                                            <constraint firstItem="mQR-f3-0Xt" firstAttribute="centerX" secondItem="Jx8-hW-1JQ" secondAttribute="centerX" id="dRR-Vb-eEM"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wxn-OC-eVL" secondAttribute="bottom" constant="8" id="hVu-7U-B94"/>
+                                            <constraint firstAttribute="width" constant="120" id="neu-9t-dGM"/>
+                                            <constraint firstItem="Wxn-OC-eVL" firstAttribute="centerX" secondItem="Jx8-hW-1JQ" secondAttribute="centerX" id="q01-if-6x9"/>
+                                            <constraint firstItem="mQR-f3-0Xt" firstAttribute="top" secondItem="Jx8-hW-1JQ" secondAttribute="top" constant="8" id="vGK-tr-YIg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20010446712670737" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Jx8-hW-1JQ" firstAttribute="centerY" secondItem="JFn-yF-qgr" secondAttribute="centerY" id="Va1-b0-05P"/>
+                                    <constraint firstItem="Jx8-hW-1JQ" firstAttribute="centerX" secondItem="JFn-yF-qgr" secondAttribute="centerX" id="xgt-pz-9fx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j3B-df-thZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JFn-yF-qgr" firstAttribute="top" secondItem="iAE-nO-GpX" secondAttribute="top" id="7wn-6X-MTo"/>
                             <constraint firstItem="iAE-nO-GpX" firstAttribute="top" secondItem="j3B-df-thZ" secondAttribute="top" id="9G3-9q-MKV"/>
+                            <constraint firstItem="JFn-yF-qgr" firstAttribute="bottom" secondItem="iAE-nO-GpX" secondAttribute="bottom" id="9Tl-jg-6lN"/>
                             <constraint firstAttribute="bottom" secondItem="iAE-nO-GpX" secondAttribute="bottom" id="GnQ-F2-oLO"/>
+                            <constraint firstItem="JFn-yF-qgr" firstAttribute="leading" secondItem="iAE-nO-GpX" secondAttribute="leading" id="Y9a-3S-CNp"/>
+                            <constraint firstItem="JFn-yF-qgr" firstAttribute="trailing" secondItem="iAE-nO-GpX" secondAttribute="trailing" id="nMP-t1-Qwd"/>
                             <constraint firstItem="iAE-nO-GpX" firstAttribute="leading" secondItem="j3B-df-thZ" secondAttribute="leading" id="ntJ-Lf-Exq"/>
                             <constraint firstItem="iAE-nO-GpX" firstAttribute="trailing" secondItem="j3B-df-thZ" secondAttribute="trailing" id="wkY-PD-9WU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vhx-sa-r3E"/>
+                    <navigationItem key="navigationItem" id="vhx-sa-r3E">
+                        <barButtonItem key="rightBarButtonItem" title="GIF" id="cTz-KC-OQt">
+                            <connections>
+                                <action selector="createGIFBarButtonTapped:" destination="qHO-wj-Rho" id="Vpi-Z5-jKG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="loader" destination="mQR-f3-0Xt" id="qwE-E9-icc"/>
+                        <outlet property="loaderLabel" destination="Wxn-OC-eVL" id="Cef-aT-58I"/>
+                        <outlet property="loaderView" destination="JFn-yF-qgr" id="0B9-z0-iM1"/>
                         <outlet property="tableView" destination="iAE-nO-GpX" id="Tkx-Uq-5Th"/>
                     </connections>
                 </viewController>

@@ -329,3 +329,12 @@
 "Adventure.URL.Tatoo" = "Tattoo parlor";
 "Adventure.URL.Autostop" = "How to hitchhike";
 "Adventure.URL.Parachute" = "Where to jump with a parachute";
+
+//GIF
+"CreateGIF" = "Create GIF from added photos?";
+"AtLeastTwoImage" = "To create a GIF you need at least 2 photos";
+"CreatingGIFFrom" = "Creating GIF from";
+"photo" = "photo";
+"GIFCreated" = "GIF saved to gallery!";
+"GIFNotCreated" = "GIF not created :(\n (Allow access to gallery in settings)";
+

@@ -331,3 +331,11 @@
 "Adventure.URL.Tatoo" = "Тату салон";
 "Adventure.URL.Autostop" = "Как путешествовать автостопом";
 "Adventure.URL.Parachute" = "Где можно прыгнуть с парашютом";
+
+//GIF
+"CreateGIF" = "Создать GIF из добавленных фото?";
+"AtLeastTwoImage" = "Для создания GIF необходимо хотя бы 2 фото";
+"CreatingGIFFrom" = "Готовим GIF из";
+"photo" = "фото";
+"GIFCreated" = "GIF сохранена в фотогалерее!";
+"GIFNotCreated" = "Не удалось создать GIF :(\n (Разрешите доступ к галерее в настройках)";

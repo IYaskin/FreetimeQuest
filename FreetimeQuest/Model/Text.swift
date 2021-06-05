@@ -51,4 +51,11 @@ class Text {
     static let AddQuestsDescription = NSLocalizedString("AddQuestsDescription", comment: "")
     static let CreateMemoriesDescription = NSLocalizedString("CreateMemoriesDescription", comment: "")
 
+    //GIF
+    static let CreateGIF = NSLocalizedString("CreateGIF", comment: "")
+    static let AtLeastTwoImage = NSLocalizedString("AtLeastTwoImage", comment: "")
+    static let CreatingGIFFrom = NSLocalizedString("CreatingGIFFrom", comment: "")
+    static let photo = NSLocalizedString("photo", comment: "")
+    static let GIFCreated = NSLocalizedString("GIFCreated", comment: "")
+    static let GIFNotCreated = NSLocalizedString("GIFNotCreated", comment: "")
 }

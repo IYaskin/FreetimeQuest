@@ -11,11 +11,15 @@ import CoreData
 class MemoryViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var loaderLabel: UILabel!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     private var coreData = CoreDataManager.shared
     
     private lazy var fetchedResultsController: NSFetchedResultsController<MemoryObject> = coreData.memoryFRC()
 
+    private let imagePlaceholder = UIImage(named: "GIF_1")!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -61,6 +65,58 @@ class MemoryViewController: UIViewController {
 
         self.present(vc, animated: true)
     }
+    
+    @IBAction func createGIFBarButtonTapped(_ sender: UIBarButtonItem) {
+        showAlert(title: Text.CreateGIF, okButtonTitle: Text.Ok, okAction: { [weak self] _ in
+            self?.showLoader()
+            self?.createGIF()
+        },
+        cancelButtonTitle: Text.Cancel)
+    }
+    
+    private func createGIF() {
+        var images: [UIImage] = [imagePlaceholder]
+        var imagesCount = 0
+        fetchedResultsController.fetchedObjects?.forEach({ (memory) in
+            if let data = memory.image,
+               let image = UIImage(data: data) {
+                images.append(image)
+                imagesCount += 1
+            }
+        })
+        
+        guard imagesCount > 1 else {
+            hideLoader()
+            showOkAlert(title: Text.AtLeastTwoImage)
+            return
+        }
+        loaderLabel.text = "\(Text.CreatingGIFFrom) \(imagesCount) \(Text.photo)"
+
+        GIF.createGif(from: images) { success in
+            DispatchQueue.main.async { [weak self] in
+                if success {
+                    self?.hideLoader()
+                    self?.showOkAlert(title: Text.GIFCreated)
+                } else {
+                    self?.hideLoader()
+                    self?.showOkAlert(title: Text.GIFNotCreated)
+                }
+            }
+        }
+    }
+    
+    private func showLoader() {
+        loaderLabel.text = "\(Text.CreatingGIFFrom) _ \(Text.photo)"
+        loaderView.isHidden = false
+        loader.startAnimating()
+    }
+    
+    private func hideLoader() {
+        loaderLabel.text = "\(Text.CreatingGIFFrom) _ \(Text.photo)"
+        loader.stopAnimating()
+        loaderView.isHidden = true
+    }
+
 }
 
 
@@ -104,25 +160,6 @@ extension MemoryViewController: UITableViewDelegate {
         openSheet(haveImage: haveImage, indexPath: indexPath)
     }
     
-    
-//    func tableView(_ tableView: UITableView,
-//                   heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        if fetchedResultsController.object(at: indexPath).image == nil {
-//            return 100
-//        }
-//        return 400
-//    }
-//
-//    func tableView(_ tableView: UITableView,
-//                   estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if fetchedResultsController.object(at: indexPath).image == nil {
-//            return 100
-//        }
-//        return 400
-//
-//    }
-    
 }
 
 extension MemoryViewController: NSFetchedResultsControllerDelegate {
@@ -140,7 +177,6 @@ extension MemoryViewController: NSFetchedResultsControllerDelegate {
             tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .delete:
             tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
-            // update
         default:
             return
         }
