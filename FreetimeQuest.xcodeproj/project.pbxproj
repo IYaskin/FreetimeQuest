@@ -49,6 +49,7 @@
 		846799B7262A1DA6007FA801 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799B6262A1DA6007FA801 /* WebViewController.swift */; };
 		846799BC262A1F06007FA801 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846799BB262A1F06007FA801 /* WebKit.framework */; };
 		8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */; };
+		846BBEFC266B727500BC58D1 /* category.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BBEFB266B727500BC58D1 /* category.mp3 */; };
 		846BE1822641A8C200E28AAA /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* done.mp3 */; };
 		846BE1852641A8C800E28AAA /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* delete.mp3 */; };
 		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
@@ -131,6 +132,7 @@
 		846799B6262A1DA6007FA801 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		846799BB262A1F06007FA801 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		846BBEFB266B727500BC58D1 /* category.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = category.mp3; sourceTree = "<group>"; };
 		846BE1812641A8C200E28AAA /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		846BE1842641A8C800E28AAA /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = delete.mp3; sourceTree = "<group>"; };
 		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		846BE1802641A8B600E28AAA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				846BBEFB266B727500BC58D1 /* category.mp3 */,
 				846BE1812641A8C200E28AAA /* done.mp3 */,
 				846BE1842641A8C800E28AAA /* delete.mp3 */,
 			);
@@ -508,6 +511,7 @@
 				84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */,
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
 				84D2915A266A1B2600A66C4D /* InfoPlist.strings in Resources */,
+				846BBEFC266B727500BC58D1 /* category.mp3 in Resources */,
 				84424BF725F01644003F125A /* CategoryHeader.xib in Resources */,
 				8451B5972605FEF800BD0A65 /* MemoryCell.xib in Resources */,
 				845E7C4F2622F86600B33170 /* Localizable.strings in Resources */,
