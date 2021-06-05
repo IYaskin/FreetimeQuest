@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreData
-import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -174,7 +173,7 @@ extension ViewController: SwipeTableViewCellDelegate {
                            okButtonTitle: Text.Ok,
                            okAction: { _ in
                             self.coreData.doneQuest(quest)
-                            SystemSoundID.playFileNamed(fileName: "done", withExtenstion: "mp3")
+                            Sound.playDoneQuest()
                            },
                            cancelButtonTitle: Text.Cancel) { _ in
             }
@@ -190,7 +189,7 @@ extension ViewController: SwipeTableViewCellDelegate {
                            okButtonTitle: Text.Ok,
                            okAction: { _ in
                             self.coreData.deleteQuest(quest)
-                            SystemSoundID.playFileNamed(fileName: "delete", withExtenstion: "mp3")
+                            Sound.playDeleteQuest()
                            },
                            cancelButtonTitle: Text.Cancel) { _ in
             }

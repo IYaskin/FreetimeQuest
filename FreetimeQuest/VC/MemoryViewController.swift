@@ -96,6 +96,7 @@ class MemoryViewController: UIViewController {
             DispatchQueue.main.async { [weak self] in
                 if success {
                     self?.hideLoader()
+                    Sound.playCreateGIF()
                     self?.showOkAlert(title: Text.GIFCreated)
                 } else {
                     self?.hideLoader()

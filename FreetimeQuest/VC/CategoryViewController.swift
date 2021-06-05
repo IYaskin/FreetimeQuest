@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AudioToolbox
 
 class CategoryViewController: UIViewController {
     
@@ -157,7 +156,7 @@ class CategoryViewController: UIViewController {
                 CoreDataManager.shared.saveMyQuest(title: text)
                 self.updateTitle(haveCategories: false)
                 self.mainVC?.updateHeader()
-                SystemSoundID.playFileNamed(fileName: "category", withExtenstion: "mp3")
+                Sound.playAddCategory()
                 self.showMyQuestAddedAlert()
             }))
             
@@ -202,7 +201,7 @@ class CategoryViewController: UIViewController {
             starsCount -= category.price
             configureAdditionalQuestsStackView()
             mainVC?.updateHeader()
-            SystemSoundID.playFileNamed(fileName: "category", withExtenstion: "mp3")
+            Sound.playAddCategory()
             showQuestsAddedAlert()
         }
 
