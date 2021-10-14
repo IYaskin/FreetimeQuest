@@ -63,11 +63,8 @@
 "GoOut.Theater" = "Театр";
 "GoOut.Gallery" = "Галерея";
 "GoOut.Zoo" = "Зоопарк";
-"GoOut.Football" = "Футбол";
-"GoOut.Basketball" = "Баскетбол";
-"GoOut.Hockey" = "Хоккей";
+"GoOut.SportMatch" = "Посетить спортивный матч";
 "GoOut.Bowling" = "Боулинг";
-"GoOut.Billiards" = "Бильярд";
 "GoOut.Concert" = "Концерт";
 "GoOut.Quest" = "Квест";
 "GoOut.IceRink" = "Каток";
@@ -86,7 +83,7 @@
 
 "Good.CarryBag" = "Помочь донести пакет";
 "Good.FeedDuck" = "Покормить уточек";
-"Good.FeedAnimals" = "Покормить бездомных животных";
+"Good.PetAnimals" = "Погладить кошку или собаку";
 "Good.OldStuff" = "Отдать старые вещи нуждающимся";
 "Good.HelpFond" = "Перечислить любую сумму в фонд помощи";
 "Good.Gift" = "Купить подарок близкому человеку";
@@ -103,8 +100,7 @@
 
 //Hobby
 
-"Hobby.Checkers" = "Сыграть в шашки";
-"Hobby.Chess" = "Сыграть в шахматы";
+"Hobby.Chess" = "Сыграть в шахматы или шашки";
 "Hobby.Backgammon" = "Сыграть в нарды";
 "Hobby.Poker" = "Сыграть в покер";
 "Hobby.Darts" = "Сыграть в дартс";
@@ -113,18 +109,13 @@
 "Hobby.ComputerGame" = "Пройти компьютерную игру";
 "Hobby.DrawPicture" = "Нарисовать картину";
 "Hobby.MoldClay" = "Слепить что-то из глины или гипса";
-"Hobby.ReadNovel" = "Прочитать роман";
-"Hobby.ReadDetective" = "Прочитать детектив";
-"Hobby.ReadFiction" = "Прочитать фантастику";
-"Hobby.ReadFantasy" = "Прочитать фэнтези";
+"Hobby.ReadBook" = "Прочитать книгу";
 "Hobby.LearnPoem" = "Выучить стихотворение";
-"Hobby.WritePoem" = "Написать стихотворение";
 "Hobby.MakePhoto" = "Сделать красивое фото, вставить в рамку";
 "Hobby.NoGadgets" = "Провести день без гаджетов";
 "Hobby.Plant" = "Посадить растение";
 "Hobby.FlyKite" = "Запустить воздушного змея";
-"Hobby.Cake" = "Испечь пирог";
-"Hobby.Mors" = "Приготовить морс";
+"Hobby.Cook" = "Приготовить новое блюдо";
 "Hobby.OrderPortrait" = "Заказать свой портрет";
 "Hobby.FreeSection" = "Сходить на пробное занятие в секцию";
 //Social
@@ -137,17 +128,17 @@
 "Social.Questions" = "Задать 10 вопросов прохожим за прогулку";
 "Social.Call" = "Позвонить в любую организацию и рассказать анекдот";
 "Social.AskPhoto" = "Попросить прохожего вас сфотографировать";
-"Social.Selfie" = "Сделать селфи с незнакомым человеком";
+"Social.Selfie" = "Сделать селфи с кем-нибудь";
 "Social.Oboznalsya" = "Сделать вид, что обознались";
 "Social.ExchangeNumbers" = "Обменяться номерами телефонов";
 "Social.LoveLetter" = "Отправить любовное письмо по почте";
 "Social.TellPoem" = "Рассказать кому-нибудь стихотворение";
 "Social.Sing" = "Спеть для кого-нибудь";
-"Social.MeetSomeone" = "Завязать знакомство";
+"Social.MeetSomeone" = "Познакомиться с кем-нибудь";
 "Social.AskSalt" = "Одолжить соль у соседей";
 "Social.Wish" = "Пожелать всем приятной дороги в транспорте";
 "Social.Fountain" = "Искупаться в фонтане";
-"Social.Dance" = "Потанцевать на улице";
+"Social.Dance" = "Потанцевать с кем-нибудь";
 "Social.Party" = "Устроить вечеринку";
 "Social.Picnic" = "Устроить пикник";
 "Social.Stage" = "Выступить на сцене";
@@ -180,7 +171,7 @@
 "Adventure.NightCity" = "Покататься по ночному городу";
 "Adventure.ParkAttractions" = "Посетить парк аттракционов";
 "Adventure.Snowboard" = "Покататься на сноуборде";
-"Adventure.Stars" = "Увидеть звездопад";
+"Adventure.Stars" = "Увидеть 5 созвездий";
 
 "Adventure.Horse" = "Покататься на лошади";
 "Adventure.RopeJumping" = "Прыгнуть с веревкой";

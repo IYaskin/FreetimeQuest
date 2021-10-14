@@ -46,25 +46,19 @@ class ViewController: UIViewController {
         UserDefaultsManager.shared.allQuestsCount = 0
         UserDefaultsManager.shared.doneQuestsCount = 0
 
-        GoOutQuests.addQuests()
-        GoodQuests.addQuests()
-        HobbyQuests.addQuests()
-        SocialQuests.addQuests()
-        AdventureQuests.addQuests()
-
+        Quests.addQuests()
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
     func configureUI() {
         collectionView.register(UINib(nibName: "QuestCell", bundle: nil),
                                 forCellWithReuseIdentifier: "QuestCell")
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print(error)
+        }
         collectionView.reloadData()
-//        do {
-//            try fetchedResultsController.performFetch()
-//            collectionView.reloadData()
-//        } catch {
-//            print(error)
-//        }
 
     }
     
@@ -88,7 +82,9 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestCell", for: indexPath) as! QuestCell
-        cell.configureCell(indexPath.row)
+        let object = fetchedResultsController.fetchedObjects![indexPath.row]
+        
+        cell.configureCell(object)
         cell.configureCornerRadius(cellSide: cellSide)
         return cell
     }

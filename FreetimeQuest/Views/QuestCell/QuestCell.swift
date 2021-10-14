@@ -17,9 +17,11 @@ class QuestCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configureCell(_ row: Int) {
-        imageBgView.backgroundColor = UIColor(named: "Hobby.Cell")!
-        imgView.image = UIImage(named: "massage")!
+    func configureCell(_ object: QuestObject) {
+        if let category = Category(rawValue: Int(object.category)) {
+            imageBgView.backgroundColor = category.cellColor
+            imgView.image = Quests.getIcon(id: Int(object.id))
+        }
     }
     
     func configureCornerRadius(cellSide: CGFloat) {

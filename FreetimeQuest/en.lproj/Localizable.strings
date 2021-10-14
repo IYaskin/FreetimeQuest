@@ -63,11 +63,8 @@
 "GoOut.Theater" = "Theatre";
 "GoOut.Gallery" = "Gallery";
 "GoOut.Zoo" = "Zoo";
-"GoOut.Football" = "Football";
-"GoOut.Basketball" = "Basketball";
-"GoOut.Hockey" = "Hockey";
+"GoOut.SportMatch" = "Sport match";
 "GoOut.Bowling" = "Bowling";
-"GoOut.Billiards" = "Billiards";
 "GoOut.Concert" = "Concert";
 "GoOut.Quest" = "Quest";
 "GoOut.IceRink" = "Ice rink";
@@ -86,7 +83,7 @@
 
 "Good.CarryBag" = "Help someone carry the bag";
 "Good.FeedDuck" = "Feed ducks";
-"Good.FeedAnimals" = "Feed homeless animals";
+"Good.PetAnimals" = "Pet a cat or dog";
 "Good.OldStuff" = "Give old things to needy";
 "Good.HelpFond" = "Transfer some money to the aid fund";
 "Good.Gift" = "Buy gift for the close person";
@@ -103,8 +100,7 @@
 
 //Hobby
 
-"Hobby.Checkers" = "Play checkers";
-"Hobby.Chess" = "Play chess";
+"Hobby.Chess" = "Play chess or checkers";
 "Hobby.Backgammon" = "Play backgammon";
 "Hobby.Poker" = "Play poker";
 "Hobby.Darts" = "Play darts";
@@ -113,18 +109,13 @@
 "Hobby.ComputerGame" = "Complete the computer game";
 "Hobby.DrawPicture" = "Draw a picture";
 "Hobby.MoldClay" = "Mold something out of clay or plaster";
-"Hobby.ReadNovel" = "Read novel";
-"Hobby.ReadDetective" = "Read detective";
-"Hobby.ReadFiction" = "Read fiction";
-"Hobby.ReadFantasy" = "Read fantasy";
+"Hobby.ReadBook" = "Read a book";
 "Hobby.LearnPoem" = "Learn a poem";
-"Hobby.WritePoem" = "Write a poem";
 "Hobby.MakePhoto" = "Make a beautiful photo, insert into a frame";
 "Hobby.NoGadgets" = "Spend a day without gadgets";
 "Hobby.Plant" = "To plant a herb";
 "Hobby.FlyKite" = "Fly a kite";
-"Hobby.Cake" = "Bake a cake";
-"Hobby.Mors" = "Make fruit drink";
+"Hobby.Cook" = "Сook a new dish";
 "Hobby.OrderPortrait" = "Order your portrait";
 "Hobby.FreeSection" = "Go to a trial lesson";
 
@@ -138,7 +129,7 @@
 "Social.Questions" = "Ask 10 questions to strangers during a walk";
 "Social.Call" = "Call any organization and tell a joke";
 "Social.AskPhoto" = "Ask a stranger to take a picture of you";
-"Social.Selfie" = "Take a selfie with a stranger";
+"Social.Selfie" = "Take a selfie with somebody";
 "Social.Oboznalsya" = "Pretend you know the person";
 "Social.ExchangeNumbers" = "Exchange phone numbers";
 "Social.LoveLetter" = "Send a love letter by mail";
@@ -148,7 +139,7 @@
 "Social.AskSalt" = "Borrow salt from neighbors";
 "Social.Wish" = "Wish everyone a pleasant journey in transport";
 "Social.Fountain" = "Take a dip in the fountain";
-"Social.Dance" = "Dance in the street";
+"Social.Dance" = "Dance with somebody";
 "Social.Party" = "Make a party";
 "Social.Picnic" = "Make a picnic";
 "Social.Stage" = "Perform on stage";
@@ -180,7 +171,7 @@
 "Adventure.NightCity" = "Take a ride in the city at night";
 "Adventure.ParkAttractions" = "Visit the amusement park";
 "Adventure.Snowboard" = "Go snowboarding";
-"Adventure.Stars" = "See the starfall";
+"Adventure.Stars" = "See five constellations";
 
 "Adventure.Horse" = "Ride a horse";
 "Adventure.RopeJumping" = "Bungee jumping";

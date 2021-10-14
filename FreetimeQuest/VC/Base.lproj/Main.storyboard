@@ -273,7 +273,7 @@
                                         <color key="currentPageIndicatorTintColor" name="black"/>
                                     </pageControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-Iq-gIr">
-                                        <rect key="frame" x="20" y="461.5" width="334" height="17.5"/>
+                                        <rect key="frame" x="20" y="461.5" width="334" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

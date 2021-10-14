@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D225F9612C0087F387 /* GoOutQuests.swift */; };
-		840748D725F964CE0087F387 /* HobbyQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D625F964CE0087F387 /* HobbyQuests.swift */; };
-		840748DA25F966560087F387 /* GoodQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748D925F966560087F387 /* GoodQuests.swift */; };
-		840748DE25F967740087F387 /* SocialQuests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748DD25F967740087F387 /* SocialQuests.swift */; };
-		840748E125F969230087F387 /* AdventureQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748E025F969230087F387 /* AdventureQuest.swift */; };
 		840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748E325F96A7E0087F387 /* UserDefaultsManager.swift */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
 		84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84484E692607579D007EF415 /* CustomProgressBar.swift */; };
@@ -47,14 +42,10 @@
 		93211C772717926800E68D4B /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93211C752717926800E68D4B /* CoreDataModel.xcdatamodeld */; };
 		93463F1E2718419400199BF0 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F1C2718419400199BF0 /* QuestCell.swift */; };
 		93463F1F2718419400199BF0 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93463F1D2718419400199BF0 /* QuestCell.xib */; };
+		93463F2127188E0D00199BF0 /* Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F2027188E0D00199BF0 /* Quests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840748D225F9612C0087F387 /* GoOutQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoOutQuests.swift; sourceTree = "<group>"; };
-		840748D625F964CE0087F387 /* HobbyQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyQuests.swift; sourceTree = "<group>"; };
-		840748D925F966560087F387 /* GoodQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodQuests.swift; sourceTree = "<group>"; };
-		840748DD25F967740087F387 /* SocialQuests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialQuests.swift; sourceTree = "<group>"; };
-		840748E025F969230087F387 /* AdventureQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureQuest.swift; sourceTree = "<group>"; };
 		840748E325F96A7E0087F387 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84484E692607579D007EF415 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
@@ -96,6 +87,7 @@
 		93211C762717926800E68D4B /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		93463F1C2718419400199BF0 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
 		93463F1D2718419400199BF0 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
+		93463F2027188E0D00199BF0 /* Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +104,7 @@
 		840748D125F961010087F387 /* Quests */ = {
 			isa = PBXGroup;
 			children = (
-				840748D225F9612C0087F387 /* GoOutQuests.swift */,
-				840748D925F966560087F387 /* GoodQuests.swift */,
-				840748D625F964CE0087F387 /* HobbyQuests.swift */,
-				840748DD25F967740087F387 /* SocialQuests.swift */,
-				840748E025F969230087F387 /* AdventureQuest.swift */,
+				93463F2027188E0D00199BF0 /* Quests.swift */,
 			);
 			path = Quests;
 			sourceTree = "<group>";
@@ -386,7 +374,6 @@
 				840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */,
 				84DE3A542640787C00C327B5 /* Reachability.swift in Sources */,
 				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
-				840748E125F969230087F387 /* AdventureQuest.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
 				8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */,
@@ -394,12 +381,9 @@
 				84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */,
 				8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */,
 				846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */,
-				840748DA25F966560087F387 /* GoodQuests.swift in Sources */,
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
-				840748DE25F967740087F387 /* SocialQuests.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
-				840748D725F964CE0087F387 /* HobbyQuests.swift in Sources */,
-				840748D325F9612C0087F387 /* GoOutQuests.swift in Sources */,
+				93463F2127188E0D00199BF0 /* Quests.swift in Sources */,
 				84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,10 +46,9 @@ class CoreDataManager {
 
         let fetchRequest: NSFetchRequest<QuestObject> = QuestObject.fetchRequest()
 
-        let sectionDescriptor = NSSortDescriptor(key: "category", ascending: true)
         let idDescriptor = NSSortDescriptor(key: "id", ascending: true)
         
-        fetchRequest.sortDescriptors = [sectionDescriptor, idDescriptor]
+        fetchRequest.sortDescriptors = [idDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: viewContext,
                                                                   sectionNameKeyPath: "category",
