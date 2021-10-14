@@ -9,7 +9,7 @@ import UIKit
 
 class SheetViewController: UIViewController {
     
-    weak var mainVC: MemoryViewController?
+    weak var mainVC: UIViewController?
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var contentView: UIView!
@@ -87,8 +87,8 @@ class SheetViewController: UIViewController {
         guard let indexPath = indexPath else {
             return
         }
-        mainVC?.updateCell(image: nil,
-                          indexPath: indexPath)
+//        mainVC?.updateCell(image: nil,
+//                          indexPath: indexPath)
         dismiss(animated: true, completion: nil)
     }
     
@@ -96,7 +96,7 @@ class SheetViewController: UIViewController {
         guard let indexPath = indexPath else {
             return
         }
-        mainVC?.deleteMemory(indexPath: indexPath)
+//        mainVC?.deleteMemory(indexPath: indexPath)
         dismiss(animated: true, completion: nil)
     }
     
@@ -114,8 +114,8 @@ extension SheetViewController: ImagePickerServiceDelegate {
         guard let indexPath = indexPath else {
             return
         }
-        mainVC?.updateCell(image: image,
-                       indexPath: indexPath)
+//        mainVC?.updateCell(image: image,
+//                       indexPath: indexPath)
         dismiss(animated: true, completion: nil)
     }
     

@@ -30,8 +30,7 @@ class GoodQuests {
         for (id, title) in titles.enumerated() {
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: Category.good.rawValue,
-                                             stars: 1)
+                                             category: Category.good.rawValue)
         }
         
     }
@@ -58,62 +57,6 @@ class GoodQuests {
         } else {
             return nil
         }
-    }
-
-    static func getURLString(id: Int) -> String? {
-        let urls: [String?] = [nil,
-                               "Good.URL.FeedDuck",
-                               nil,
-                               "Good.URL.OldStuff",
-                               "Good.URL.HelpFond",
-                               "Good.URL.Gift",
-                               nil,
-                               "Good.URL.Blood",
-                               nil,
-                               nil,
-                               "Good.URL.BirdHouse",
-                               "Good.URL.FamilyDinner",
-                               "Good.URL.FeedFriends",
-                               nil,
-                               nil,
-                               nil]
-        guard id >= 0 &&
-              id <= urls.count else {
-            return nil
-        }
-        
-        guard let url = urls[id] else  {
-            return nil
-        }
-        return NSLocalizedString(url, comment: "")
-    }
-    
-    static func getInfoString(id: Int) -> String? {
-        let infos: [String?] = ["Good.INFO.CarryBag",
-                                nil,
-                                "Good.INFO.FeedAnimals",
-                                nil,
-                                nil,
-                                nil,
-                                nil,//"Good.INFO.AppMark"
-                                nil,
-                                "Good.INFO.Trash",
-                                "Good.INFO.HelpBabushka",
-                                nil,
-                                nil,
-                                nil,
-                                "Good.INFO.FixHouse",
-                                "Good.INFO.SteetMusician",
-                                "Good.INFO.FeedHomeless"]
-        guard id >= 0 &&
-                id <= infos.count else {
-            return nil
-        }
-        
-        guard let info = infos[id] else  {
-            return nil
-        }
-        return NSLocalizedString(info, comment: "")
     }
 
 }

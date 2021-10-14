@@ -39,8 +39,7 @@ class HobbyQuests {
         for (id, title) in titles.enumerated() {
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: Category.hobby.rawValue,
-                                             stars: 1)
+                                             category: Category.hobby.rawValue)
         }
 
     }
@@ -76,41 +75,6 @@ class HobbyQuests {
         } else {
             return nil
         }
-    }
-
-    static func getURLString(id: Int) -> String? {
-        let urls = ["Hobby.URL.Checkers",
-                    "Hobby.URL.Chess",
-                    "Hobby.URL.Backgammon",
-                    "Hobby.URL.Poker",
-                    "Hobby.URL.Darts",
-                    "Hobby.URL.BoardGame",
-                    "Hobby.URL.Puzzle",
-                    "Hobby.URL.ComputerGame",
-                    "Hobby.URL.DrawPicture",
-                    "Hobby.URL.MoldClay",
-                    "Hobby.URL.ReadNovel",
-                    "Hobby.URL.ReadDetective",
-                    "Hobby.URL.ReadFiction",
-                    "Hobby.URL.ReadFantasy",
-                    "Hobby.URL.LearnPoem",
-                    "Hobby.URL.WritePoem",
-                    "Hobby.URL.MakePhoto",
-                    "Hobby.URL.NoGadgets",
-                    "Hobby.URL.Plant",
-                    "Hobby.URL.FlyKite",
-                    "Hobby.URL.Cake",
-                    "Hobby.URL.Mors",
-                    "Hobby.URL.OrderPortrait",
-                    "Hobby.URL.FreeSection"]
-        
-        guard id >= 0 &&
-              id <= urls.count else {
-            return nil
-        }
-        
-        return NSLocalizedString(urls[id], comment: "")
-
     }
 
 }

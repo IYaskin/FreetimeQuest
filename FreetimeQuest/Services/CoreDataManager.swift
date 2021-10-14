@@ -11,7 +11,6 @@ import CoreData
 class CoreDataManager {
     
     private let questEntityName = "QuestObject"
-    private let memoryEntityName = "MemoryObject"
     
     let container: NSPersistentContainer!
     let viewContext: NSManagedObjectContext!
@@ -27,8 +26,7 @@ class CoreDataManager {
     
     func saveQuest(title: String,
                    id: Int,
-                   category: Int,
-                   stars: Int) {
+                   category: Int) {
         let entity = NSEntityDescription.entity(forEntityName: self.questEntityName,
                                                 in: self.viewContext)!
         
@@ -38,51 +36,8 @@ class CoreDataManager {
         quest.setValue(title, forKeyPath: "title")
         quest.setValue(id, forKeyPath: "id")
         quest.setValue(category, forKeyPath: "category")
-        quest.setValue(stars, forKeyPath: "stars")
-        
-        if category != Category.freetimeQuest.rawValue {
-            UserDefaultsManager.shared.allQuestsCount += 1
-        }
-
-        saveContext()
-    }
-    
-    func saveMyQuest(title: String) {
-        
-        let category = Category.myQuests.rawValue
-        let star = 0
-        let id = UserDefaultsManager.shared.myQuestsCounter
-        
-        let entity = NSEntityDescription.entity(forEntityName: self.questEntityName,
-                                                in: self.viewContext)!
-        
-        let quest = NSManagedObject(entity: entity,
-                                    insertInto: self.viewContext)
-        
-        quest.setValue(title, forKeyPath: "title")
-        quest.setValue(id, forKeyPath: "id")
-        quest.setValue(category, forKeyPath: "category")
-        quest.setValue(star, forKeyPath: "stars")
         
         UserDefaultsManager.shared.allQuestsCount += 1
-        UserDefaultsManager.shared.myQuestsCounter += 1
-        UserDefaultsManager.shared.starsCount -= 1
-
-        saveContext()
-    }
-    
-    func saveMemory(title: String,
-                    date: Date,
-                    image: Data?) {
-        let entity = NSEntityDescription.entity(forEntityName: self.memoryEntityName,
-                                                in: self.viewContext)!
-        
-        let quest = NSManagedObject(entity: entity,
-                                    insertInto: self.viewContext)
-        
-        quest.setValue(title, forKeyPath: "title")
-        quest.setValue(date, forKeyPath: "date")
-        quest.setValue(image, forKeyPath: "image")
         
         saveContext()
     }
@@ -102,43 +57,25 @@ class CoreDataManager {
         return fetchedResultsController
     }
     
-    func memoryFRC() -> NSFetchedResultsController<MemoryObject> {
-
-        let fetchRequest: NSFetchRequest<MemoryObject> = MemoryObject.fetchRequest()
-
-        let dataDescriptor = NSSortDescriptor(key: "date", ascending: true)
-        
-        fetchRequest.sortDescriptors = [dataDescriptor]
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                  managedObjectContext: viewContext,
-                                                                  sectionNameKeyPath: nil,
-                                                                  cacheName: nil)
-        return fetchedResultsController
-    }
     
-    func doneQuest(_ quest: QuestObject) {
-        let title = quest.title
-        let date = Date()
-        UserDefaultsManager.shared.doneQuestsCount += 1
-        UserDefaultsManager.shared.starsCount += Int(quest.stars)
-        viewContext.delete(quest)
-        saveContext()
-        
-        saveMemory(title: title,
-                   date: date,
-                   image: nil)
-    }
-    
-    func deleteQuest(_ quest: QuestObject) {
-        viewContext.delete(quest)
-        UserDefaultsManager.shared.allQuestsCount -= 1
-        saveContext()
-    }
-    
-    func deleteMemory(_ memory: MemoryObject) {
-        viewContext.delete(memory)
-        saveContext()
-    }
+//    func doneQuest(_ quest: QuestObject) {
+//        let title = quest.title
+//        let date = Date()
+//        UserDefaultsManager.shared.doneQuestsCount += 1
+//        UserDefaultsManager.shared.starsCount += Int(quest.stars)
+//        viewContext.delete(quest)
+//        saveContext()
+//        
+//        saveMemory(title: title,
+//                   date: date,
+//                   image: nil)
+//    }
+//    
+//    func deleteQuest(_ quest: QuestObject) {
+//        viewContext.delete(quest)
+//        UserDefaultsManager.shared.allQuestsCount -= 1
+//        saveContext()
+//    }
     
     func saveContext() {
         guard viewContext.hasChanges else {

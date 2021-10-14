@@ -36,17 +36,9 @@ class AdventureQuests {
 
         
         for (id, title) in titles.enumerated() {
-            var star = 1
-            if id >= 6 && id < 13 {
-                star = 2
-            } else if id >= 13 {
-                star = 3
-            }
-
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: Category.adventure.rawValue,
-                                             stars: star)
+                                             category: Category.adventure.rawValue)
         }
 
     }
@@ -84,79 +76,53 @@ class AdventureQuests {
 
     }
 
-    static func getURLString(id: Int) -> String? {
-        let urls: [String?] = ["Adventure.URL.Sunrise",
-                               nil,
-                               nil,
-                               "Adventure.URL.ParkAttractions",
-                               "Adventure.URL.Snowboard",
-                               "Adventure.URL.Stars",
-                               
-                               "Adventure.URL.Horse",
-                               "Adventure.URL.RopeJumping",
-                               "Adventure.URL.Tents",
-                               "Adventure.URL.Waterfall",
-                               "Adventure.URL.Cruise",
-                               "Adventure.URL.Island",
-                               nil,
-                               
-                               "Adventure.URL.Lights",
-                               "Adventure.URL.Surfing",
-                               "Adventure.URL.Scuba",
-                               "Adventure.URL.SmallPlane",
-                               "Adventure.URL.Balloon",
-                               "Adventure.URL.Tatoo",
-                               "Adventure.URL.Autostop",
-                               "Adventure.URL.Parachute"]
-        
-        guard id >= 0 &&
-              id <= urls.count else {
-            return nil
-        }
-        
-        guard let url = urls[id] else  {
-            return nil
-        }
-        return NSLocalizedString(url, comment: "")
-
-    }
-    
-    static func getInfoString(id: Int) -> String? {
-        let urls: [String?] = [nil,
-                               "Adventure.INFO.Bet",
-                               "Adventure.INFO.NightCity",
-                               nil,
-                               nil,
-                               nil,
-                               
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               "Adventure.INFO.Cold",
-                               
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil]
-        
-        guard id >= 0 &&
-              id <= urls.count else {
-            return nil
-        }
-        
-        guard let url = urls[id] else  {
-            return nil
-        }
-        return NSLocalizedString(url, comment: "")
-
-    }
-
-
 }
+
+//static func addQuests() {
+//    
+//    let titles = ["Charisma.Teeth",
+//                  "Charisma.Massage",
+//                  "Charisma.Yoga",
+//                  "Charisma.Meditation",
+//                  "Charisma.Speech",
+//                  "Charisma.Posture",
+//                  "Charisma.Temper",
+//                  "Charisma.Morning",
+//                  "Charisma.Food",
+//                  "Charisma.Books",
+//                  "Charisma.Income",
+//                  "Charisma.Fotosession",
+//                  "Charisma.Psychologist",
+//                  "Charisma.Buy",
+//                  "Charisma.Weight",
+//                  "Charisma.Marathon",
+//                  "Charisma.BadHabit"]
+//}
+//
+//static func getIcon(id: Int) -> UIImage? {
+//    
+//    let images = ["teeth",
+//                  "massage",
+//                  "yoga",
+//                  "meditation",
+//                  "speaking",
+//                  "posture",
+//                  "zakalka",
+//                  "zaryadka",
+//                  "goodfood",
+//                  "5books",
+//                  "money",
+//                  "photosession",
+//                  "psycholog",
+//                  "buything",
+//                  "perfectweight",
+//                  "marathon",
+//                  "badhabit"]
+//    
+//    if id >= 0 && id <= images.count {
+//        return UIImage(named: images[id])
+//    } else {
+//        return nil
+//    }
+//
+//}

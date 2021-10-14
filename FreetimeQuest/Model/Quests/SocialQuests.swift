@@ -35,11 +35,9 @@ class SocialQuests {
                       "Social.Stage"]
 
         for (id, title) in titles.enumerated() {
-            let star = id < 14 ? 1 : 2
             CoreDataManager.shared.saveQuest(title: title,
                                              id: id,
-                                             category: Category.social.rawValue,
-                                             stars: star)
+                                             category: Category.social.rawValue)
         }
 
     }
@@ -77,77 +75,5 @@ class SocialQuests {
         
     }
     
-    static func getURLString(id: Int) -> String? {
-        let urls: [String?] = [nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               "Social.URL.Call",
-                               nil,
-                               nil,
-                               nil,
-                               nil,
-                               "Social.URL.LoveLetter",
-                               "Social.URL.TellPoem",
-                               "Social.URL.Sing",
-                               nil,
-                               nil,
-                               nil,
-                               "Social.URL.Fountain",
-                               nil,
-                               nil,
-                               nil,
-                               nil]
-        
-        guard id >= 0 &&
-              id <= urls.count else {
-            return nil
-        }
-        
-        guard let url = urls[id] else  {
-            return nil
-        }
-        return NSLocalizedString(url, comment: "")
-
-    }
-    
-    
-    static func getInfoString(id: Int) -> String? {
-        let infos: [String?] = ["Social.INFO.Smile",
-                                "Social.INFO.Wink",
-                                "Social.INFO.Ugly",
-                                "Social.INFO.Hello",
-                                "Social.INFO.Compliment",
-                                "Social.INFO.Questions",
-                                nil,
-                                "Social.INFO.AskPhoto",
-                                "Social.INFO.Selfie",
-                                "Social.INFO.Oboznalsya",
-                                "Social.INFO.ExchangeNumbers",
-                                nil,
-                                nil,
-                                nil,
-                                "Social.INFO.MeetSomeone",
-                                "Social.INFO.AskSalt",
-                                "Social.INFO.Wish",
-                                nil,
-                                "Social.INFO.Dance",
-                                "Social.INFO.Party",
-                                "Social.INFO.Picnic",
-                                "Social.INFO.Stage"]
-        
-        guard id >= 0 &&
-                id <= infos.count else {
-            return nil
-        }
-        
-        guard let info = infos[id] else  {
-            return nil
-        }
-        return NSLocalizedString(info, comment: "")
-        
-    }
 
 }

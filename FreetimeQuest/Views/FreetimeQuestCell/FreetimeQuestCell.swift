@@ -50,8 +50,7 @@ class FreetimeQuestCell: UITableViewCell {
     }
     
     func configure() {
-        let stars = UserDefaultsManager.shared.starsCount
-        starsLabel.text = "\(stars)"
+        starsLabel.text = ""
         
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
