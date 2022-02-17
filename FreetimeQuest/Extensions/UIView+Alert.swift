@@ -54,23 +54,4 @@ extension UIViewController {
                 completion: nil)
     }
 
-    func showNotEnoughStarsAlert() {
-        showOkAlert(title: Text.NotEnoughStars,
-                    message: Text.DoMoreQuests)
-    }
-    
-    func showQuestsAddedAlert() {
-        showOkAlert(title: Text.QuestsAdded)
-    }
-    
-    func showMyQuestAddedAlert() {
-        showOkAlert(title: Text.MyQuestAdded)
-    }
-    
-    func showWrongNameAlert() {
-        showOkAlert(title: Text.IncorrectName)
-    }
-
-
-
 }

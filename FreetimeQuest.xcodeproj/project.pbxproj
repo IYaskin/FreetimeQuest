@@ -33,11 +33,8 @@
 		846BE1822641A8C200E28AAA /* done.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* done.mp3 */; };
 		846BE1852641A8C800E28AAA /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* delete.mp3 */; };
 		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
-		84773FDC26494DB2006D0C5F /* SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */; };
-		847978552620B84700817123 /* UIAlertController+BgColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978542620B84700817123 /* UIAlertController+BgColor.swift */; };
 		847978582620C55800817123 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978572620C55800817123 /* UIView+Shadow.swift */; };
 		84D2915A266A1B2600A66C4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D2915C266A1B2600A66C4D /* InfoPlist.strings */; };
-		84DE3A542640787C00C327B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE3A532640787C00C327B5 /* Reachability.swift */; };
 		84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */; };
 		93211C772717926800E68D4B /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93211C752717926800E68D4B /* CoreDataModel.xcdatamodeld */; };
 		93463F1E2718419400199BF0 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F1C2718419400199BF0 /* QuestCell.swift */; };
@@ -63,8 +60,6 @@
 		8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8458E84825E2607C00C233B6 /* UIView+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Alert.swift"; sourceTree = "<group>"; };
-		845E7C462622F6E600B33170 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		845E7C472622F6E600B33170 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		845E7C502622F86600B33170 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		845E7C522622F86A00B33170 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		846799882629AC38007FA801 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -77,12 +72,9 @@
 		846BE1812641A8C200E28AAA /* done.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done.mp3; sourceTree = "<group>"; };
 		846BE1842641A8C800E28AAA /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = delete.mp3; sourceTree = "<group>"; };
 		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
-		84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.ttf"; sourceTree = "<group>"; };
-		847978542620B84700817123 /* UIAlertController+BgColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+BgColor.swift"; sourceTree = "<group>"; };
 		847978572620C55800817123 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		84D2915B266A1B2600A66C4D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84D2915E266A27A600A66C4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		84DE3A532640787C00C327B5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		93211C762717926800E68D4B /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		93463F1C2718419400199BF0 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
@@ -123,7 +115,6 @@
 				8455583C25DDAC020026F66D /* CoreDataManager.swift */,
 				840748E325F96A7E0087F387 /* UserDefaultsManager.swift */,
 				8444244125CD7507003ED6AC /* ImagePicker.swift */,
-				84DE3A532640787C00C327B5 /* Reachability.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,7 +132,6 @@
 		84507A2025E10F5C0060EDE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84773FDA26494D6C006D0C5F /* Font */,
 				846BE1802641A8B600E28AAA /* Sounds */,
 				846799882629AC38007FA801 /* Text.swift */,
 				846BBF01266B788E00BC58D1 /* Sound.swift */,
@@ -168,7 +158,6 @@
 			children = (
 				8458E84825E2607C00C233B6 /* UIView+Alert.swift */,
 				847978572620C55800817123 /* UIView+Shadow.swift */,
-				847978542620B84700817123 /* UIAlertController+BgColor.swift */,
 				846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */,
 				84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */,
 			);
@@ -264,14 +253,6 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		84773FDA26494D6C006D0C5F /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				84773FDB26494DB2006D0C5F /* SFProText-Regular.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
 		93463F1B2718417000199BF0 /* QuestCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +329,6 @@
 				846BBEFF266B783500BC58D1 /* GIF.mp3 in Resources */,
 				845E7C4F2622F86600B33170 /* Localizable.strings in Resources */,
 				846BE1822641A8C200E28AAA /* done.mp3 in Resources */,
-				84773FDC26494DB2006D0C5F /* SFProText-Regular.ttf in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
 				846BE1852641A8C800E28AAA /* delete.mp3 in Resources */,
 			);
@@ -368,11 +348,9 @@
 				93463F1E2718419400199BF0 /* QuestCell.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
-				847978552620B84700817123 /* UIAlertController+BgColor.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* Category.swift in Sources */,
 				846799892629AC38007FA801 /* Text.swift in Sources */,
 				840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */,
-				84DE3A542640787C00C327B5 /* Reachability.swift in Sources */,
 				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
 				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
@@ -395,7 +373,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8450FE2325BDBC0F00814F81 /* Base */,
-				845E7C462622F6E600B33170 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -404,7 +381,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8450FE2825BDBC1000814F81 /* Base */,
-				845E7C472622F6E600B33170 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

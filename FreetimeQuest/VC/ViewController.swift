@@ -62,15 +62,6 @@ class ViewController: UIViewController {
 
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "Category" {
-//            if let nextViewController = segue.destination as? CategoryViewController {
-//                nextViewController.mainVC = self
-//            }
-//        }
-//    }
-    
-    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -78,7 +69,6 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         52
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestCell", for: indexPath) as! QuestCell

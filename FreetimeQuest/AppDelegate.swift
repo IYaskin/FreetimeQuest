@@ -34,8 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         CoreDataManager.shared.saveContext()
     }
-    
-    // testing commit
 
 }
 

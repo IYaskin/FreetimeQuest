@@ -42,7 +42,6 @@
 "Sheet.AddCamera" = "Camera";
 "Sheet.AddGallery" = "Gallery";
 "Sheet.DeletePhoto" = "Delete photo";
-"Sheet.DeleteMemory" = "Delete memory";
 
 // Onboarding
 "Skip" = "Skip";

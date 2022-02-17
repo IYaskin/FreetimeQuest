@@ -41,7 +41,6 @@
 "Sheet.AddCamera" = "Камера";
 "Sheet.AddGallery" = "Галерея";
 "Sheet.DeletePhoto" = "Удалить фото";
-"Sheet.DeleteMemory" = "Удалить воспоминание";
 
 //Onboarding
 "Skip" = "Пропустить";

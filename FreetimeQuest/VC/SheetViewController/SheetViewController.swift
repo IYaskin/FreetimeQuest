@@ -37,19 +37,14 @@ class SheetViewController: UIViewController {
             stackView.removeArrangedSubview($0)
             $0.removeFromSuperview()
         })
-        
-        guard let haveImage = haveImage else {
-            addButtonToStackView(buttonType: .deleteMemory)
-            return
-        }
-        
+                
         addButtonToStackView(buttonType: .addPhotoFromCamera)
         addButtonToStackView(buttonType: .addPhotoFromGallery)
 
-        if haveImage {
+        //TODO: fix this
+        if haveImage ?? false {
             addButtonToStackView(buttonType: .deletePhoto)
         }
-        addButtonToStackView(buttonType: .deleteMemory)
     }
     
     func addButtonToStackView(buttonType: SheetButtons) {
@@ -61,6 +56,8 @@ class SheetViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.darkViolet.cgColor
         button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        button.layer.cornerRadius = 20
+
         switch buttonType {
         case .addPhotoFromCamera:
             button.addTarget(self, action: #selector(addPhotoFromCamera), for: .touchUpInside)
@@ -68,10 +65,8 @@ class SheetViewController: UIViewController {
             button.addTarget(self, action: #selector(addPhotoFromGallery), for: .touchUpInside)
         case .deletePhoto:
             button.addTarget(self, action: #selector(deletePhoto), for: .touchUpInside)
-        case .deleteMemory:
-            button.addTarget(self, action: #selector(deleteMemory), for: .touchUpInside)
         }
-        button.layer.cornerRadius = 20
+        
         stackView.addArrangedSubview(button)
 
     }
@@ -83,20 +78,14 @@ class SheetViewController: UIViewController {
     @objc func addPhotoFromGallery() {
         imagePicker.presentImagePicker(.photoLibrary)
     }
+    
     @objc func deletePhoto() {
+        //TODO: add this
         guard let indexPath = indexPath else {
             return
         }
 //        mainVC?.updateCell(image: nil,
 //                          indexPath: indexPath)
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @objc func deleteMemory() {
-        guard let indexPath = indexPath else {
-            return
-        }
-//        mainVC?.deleteMemory(indexPath: indexPath)
         dismiss(animated: true, completion: nil)
     }
     
