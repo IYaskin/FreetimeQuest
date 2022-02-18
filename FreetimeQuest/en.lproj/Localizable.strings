@@ -126,8 +126,8 @@
 "Social.Hello" = "Say \"Hello!\" to stranger";
 "Social.Compliment" = "Make compliment to stranger";
 "Social.Questions" = "Ask 10 questions to strangers during a walk";
-"Social.Call" = "Call any organization and tell a joke";
-"Social.AskPhoto" = "Ask a stranger to take a picture of you";
+"Social.Call" = "Call somebody and tell a joke";
+//"Social.AskPhoto" = "Ask a stranger to take a picture of you";
 "Social.Selfie" = "Take a selfie with somebody";
 "Social.Oboznalsya" = "Pretend you know the person";
 "Social.ExchangeNumbers" = "Exchange phone numbers";
@@ -158,7 +158,7 @@
 "Charisma.Income" = "Increase your income";
 "Charisma.Fotosession" = "Order yourself a photo session";
 "Charisma.Psychologist" = "Go to a session with a psychologist";
-"Charisma.Buy" = "Buy yourself what you want for a long time";
+"Charisma.Buy" = "Buy yourself what you really want";
 "Charisma.Weight" = "Reach your ideal weight";
 "Charisma.Marathon" = "Run a half marathon";
 "Charisma.BadHabit" = "Get rid of the bad habit";
