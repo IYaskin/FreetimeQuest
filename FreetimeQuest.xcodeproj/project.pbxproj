@@ -17,8 +17,6 @@
 		8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */; };
 		8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */; };
 		8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */; };
-		84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */; };
-		84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */; };
 		84544F8B25BDD0E9000683FC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* Category.swift */; };
 		8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583C25DDAC020026F66D /* CoreDataManager.swift */; };
 		8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84825E2607C00C233B6 /* UIView+Alert.swift */; };
@@ -53,8 +51,6 @@
 		8450FE2525BDBC1000814F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450FE2825BDBC1000814F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450FE2A25BDBC1000814F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreetimeQuestCell.swift; sourceTree = "<group>"; };
-		84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreetimeQuestCell.xib; sourceTree = "<group>"; };
 		84544F8A25BDD0E9000683FC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8455583C25DDAC020026F66D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -124,7 +120,6 @@
 			children = (
 				93463F1B2718417000199BF0 /* QuestCell */,
 				84484E6826075787007EF415 /* CustomProgressBar */,
-				84521B8625FBA152008148DC /* FreetimeQuestCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,15 +193,6 @@
 				84D2915C266A1B2600A66C4D /* InfoPlist.strings */,
 			);
 			path = FreetimeQuest;
-			sourceTree = "<group>";
-		};
-		84521B8625FBA152008148DC /* FreetimeQuestCell */ = {
-			isa = PBXGroup;
-			children = (
-				84521B8725FBA16C008148DC /* FreetimeQuestCell.swift */,
-				84521B8A25FBA179008148DC /* FreetimeQuestCell.xib */,
-			);
-			path = FreetimeQuestCell;
 			sourceTree = "<group>";
 		};
 		8455584425DDB60C0026F66D /* QuestObject */ = {
@@ -321,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */,
-				84521B8B25FBA179008148DC /* FreetimeQuestCell.xib in Resources */,
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
 				84D2915A266A1B2600A66C4D /* InfoPlist.strings in Resources */,
 				93463F1F2718419400199BF0 /* QuestCell.xib in Resources */,
@@ -356,7 +341,6 @@
 				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
 				8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */,
 				846BBF02266B788F00BC58D1 /* Sound.swift in Sources */,
-				84521B8825FBA16C008148DC /* FreetimeQuestCell.swift in Sources */,
 				8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */,
 				846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */,
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightPlaceholderView: UIView!
     @IBOutlet weak var maxStarsLabel: UILabel!
     
+    @IBOutlet weak var progressBar: CustomProgressBar!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -84,6 +85,18 @@ class ViewController: UIViewController {
             print(error)
         }
         collectionView.reloadData()
+    }
+    
+    //TODO: call after done/delete quest
+    func updateUI() {
+        let doneQuests = UserDefaultsManager.shared.doneQuestsCount
+        let maxQuests = UserDefaultsManager.shared.allQuestsCount
+        
+        currentStarsLabel.text = "\(doneQuests)"
+        maxStarsLabel.text = "\(maxQuests)"
+
+        let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
+        progressBar.progress = progress
     }
     
 }

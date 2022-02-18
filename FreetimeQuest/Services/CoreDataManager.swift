@@ -56,25 +56,17 @@ class CoreDataManager {
         return fetchedResultsController
     }
     
+    //TODO: test it
+    func doneQuest(_ quest: QuestObject) {
+        quest.isDone = true
+        saveContext()
+    }
     
-//    func doneQuest(_ quest: QuestObject) {
-//        let title = quest.title
-//        let date = Date()
-//        UserDefaultsManager.shared.doneQuestsCount += 1
-//        UserDefaultsManager.shared.starsCount += Int(quest.stars)
-//        viewContext.delete(quest)
-//        saveContext()
-//        
-//        saveMemory(title: title,
-//                   date: date,
-//                   image: nil)
-//    }
-//    
-//    func deleteQuest(_ quest: QuestObject) {
-//        viewContext.delete(quest)
-//        UserDefaultsManager.shared.allQuestsCount -= 1
-//        saveContext()
-//    }
+    func deleteQuest(_ quest: QuestObject) {
+        viewContext.delete(quest)
+        UserDefaultsManager.shared.allQuestsCount -= 1
+        saveContext()
+    }
     
     func saveContext() {
         guard viewContext.hasChanges else {

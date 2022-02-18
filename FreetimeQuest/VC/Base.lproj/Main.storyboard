@@ -158,6 +158,7 @@
                         <outlet property="leftCheckImageView" destination="Hrz-f7-S2v" id="Ppz-qg-tkh"/>
                         <outlet property="leftPlaceholderView" destination="jvi-EQ-EFg" id="3U6-yE-Ual"/>
                         <outlet property="maxStarsLabel" destination="uDt-3P-RW7" id="seI-77-Top"/>
+                        <outlet property="progressBar" destination="ArM-ne-2GO" id="UQG-qU-2UQ"/>
                         <outlet property="rightPlaceholderView" destination="tg9-9W-bp9" id="II7-NE-x5g"/>
                         <outlet property="rightStarImageView" destination="ajc-9H-pyH" id="fi0-Xf-9Qk"/>
                     </connections>
