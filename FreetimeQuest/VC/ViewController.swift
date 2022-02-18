@@ -10,6 +10,15 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var leftCheckImageView: UIImageView!
+    @IBOutlet weak var leftPlaceholderView: UIView!
+    @IBOutlet weak var currentStarsLabel: UILabel!
+    
+    @IBOutlet weak var rightStarImageView: UIImageView!
+    @IBOutlet weak var rightPlaceholderView: UIView!
+    @IBOutlet weak var maxStarsLabel: UILabel!
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var coreData = CoreDataManager.shared
@@ -31,6 +40,13 @@ class ViewController: UIViewController {
         showOnboardingIfNeeded()
     }
     
+    override func viewDidLayoutSubviews() {
+        leftCheckImageView.layer.cornerRadius = leftCheckImageView.bounds.height / 2
+        rightStarImageView.layer.cornerRadius = rightStarImageView.bounds.height / 2
+        leftPlaceholderView.layer.cornerRadius = leftPlaceholderView.bounds.height / 2
+        rightPlaceholderView.layer.cornerRadius = leftPlaceholderView.bounds.height / 2
+    }
+    
     func showOnboardingIfNeeded() {
         if !UserDefaultsManager.shared.isOnboardingDone {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -43,14 +59,23 @@ class ViewController: UIViewController {
         guard !UserDefaultsManager.shared.isBaseQuestsSet else {
             return
         }
-        UserDefaultsManager.shared.allQuestsCount = 0
-        UserDefaultsManager.shared.doneQuestsCount = 0
-
         Quests.addQuests()
-        UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
     func configureUI() {
+        leftCheckImageView.layer.borderWidth = 1
+        leftCheckImageView.layer.borderColor = UIColor.violet.cgColor
+        leftPlaceholderView.layer.borderWidth = 1
+        leftPlaceholderView.layer.borderColor = UIColor.gray.cgColor
+        
+        rightStarImageView.layer.borderWidth = 1
+        rightStarImageView.layer.borderColor = UIColor.violet.cgColor
+        rightPlaceholderView.layer.borderWidth = 1
+        rightPlaceholderView.layer.borderColor = UIColor.gray.cgColor
+        
+        currentStarsLabel.text = "\(UserDefaultsManager.shared.doneQuestsCount)"
+        maxStarsLabel.text = "\(UserDefaultsManager.shared.allQuestsCount)"
+        
         collectionView.register(UINib(nibName: "QuestCell", bundle: nil),
                                 forCellWithReuseIdentifier: "QuestCell")
         do {
@@ -59,7 +84,6 @@ class ViewController: UIViewController {
             print(error)
         }
         collectionView.reloadData()
-
     }
     
 }

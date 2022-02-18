@@ -41,7 +41,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-EQ-EFg">
                                         <rect key="frame" x="16" y="83" width="60" height="60"/>
-                                        <color key="backgroundColor" name="grey"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="cCA-O4-mh9"/>
                                             <constraint firstAttribute="width" constant="60" id="t0C-mU-TOO"/>
@@ -57,13 +57,13 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw6-TC-WNe">
                                         <rect key="frame" x="16" y="83" width="60" height="60"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg9-9W-bp9">
                                         <rect key="frame" x="346" y="83" width="60" height="60"/>
-                                        <color key="backgroundColor" name="grey"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Fqm-gB-luI"/>
                                             <constraint firstAttribute="height" constant="60" id="d4P-aw-fXs"/>
@@ -79,7 +79,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-3P-RW7">
                                         <rect key="frame" x="346" y="83" width="60" height="60"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -154,6 +154,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="9Zc-yw-fsA" id="BH7-Ba-1jy"/>
+                        <outlet property="currentStarsLabel" destination="Lw6-TC-WNe" id="Pzg-Ri-ImJ"/>
+                        <outlet property="leftCheckImageView" destination="Hrz-f7-S2v" id="Ppz-qg-tkh"/>
+                        <outlet property="leftPlaceholderView" destination="jvi-EQ-EFg" id="3U6-yE-Ual"/>
+                        <outlet property="maxStarsLabel" destination="uDt-3P-RW7" id="seI-77-Top"/>
+                        <outlet property="rightPlaceholderView" destination="tg9-9W-bp9" id="II7-NE-x5g"/>
+                        <outlet property="rightStarImageView" destination="ajc-9H-pyH" id="fi0-Xf-9Qk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

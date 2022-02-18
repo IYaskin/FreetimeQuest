@@ -10,6 +10,7 @@ import UIKit
 class Quests {
     
     static func addQuests() {
+        //TODO: add all quests
         let titles = ["GoOut.Cinema", "Good.PetAnimals", "Hobby.Chess", "Social.Smile",
                       
                       "GoOut.Zoo", "Good.FeedDuck", "Hobby.Puzzle", "Social.Wink",
@@ -37,6 +38,10 @@ class Quests {
                       "Adventure.Parachute", "Adventure.Scuba", "Adventure.Surfing", "Adventure.Lights"
                       ]
 
+        
+        UserDefaultsManager.shared.allQuestsCount = 0
+        UserDefaultsManager.shared.doneQuestsCount = 0
+
         for (id, title) in titles.enumerated() {
             print("id = \(id), title = \(title)")
             let category: Category
@@ -57,7 +62,8 @@ class Quests {
                                              id: id,
                                              category: category.rawValue)
         }
-
+        
+        UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
     static func getIcon(id: Int) -> UIImage? {

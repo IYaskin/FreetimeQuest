@@ -9,4 +9,7 @@ import UIKit
 
 extension UIColor {
     static let darkViolet = UIColor(named: "black")!
+    static let violet = UIColor(named: "violet")!
+    static let greyBorder = UIColor(named: "greyBorder")!
+
 }

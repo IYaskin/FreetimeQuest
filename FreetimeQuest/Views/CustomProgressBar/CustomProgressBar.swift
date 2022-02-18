@@ -17,7 +17,7 @@ class CustomProgressBar: UIView {
     }
 
     @IBInspectable
-    var frontColor: UIColor = .red {
+    var frontColor: UIColor = .green {
         didSet {
             frontView?.backgroundColor = frontColor
         }
