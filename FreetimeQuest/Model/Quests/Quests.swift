@@ -9,41 +9,143 @@ import UIKit
 
 class Quests {
     
+    static let quests =
+    ["GoOut.Cinema",
+     "GoOut.Museum",
+     "GoOut.Theater",
+     "GoOut.Gallery",
+     "GoOut.Zoo",
+     "GoOut.Football",
+     "GoOut.Basketball",
+     "GoOut.Hockey",
+     "GoOut.Bowling",
+     "GoOut.Billiards",
+     "GoOut.Concert",
+     "GoOut.Quest",
+     "GoOut.IceRink",
+     "GoOut.Karting",
+     "GoOut.Trampoline",
+     "GoOut.Aquapark",
+     "GoOut.Excursion",
+     "GoOut.Degustation",
+     "GoOut.Bar",
+     "GoOut.NightClub",
+     "GoOut.StandUp",
+     "GoOut.Sauna",
+     "GoOut.Show",
+    
+     "Hobby.Checkers",
+     "Hobby.Chess",
+     "Hobby.Backgammon",
+     "Hobby.Poker",
+     "Hobby.Darts",
+     "Hobby.BoardGame",
+     "Hobby.Puzzle",
+     "Hobby.ComputerGame",
+     "Hobby.DrawPicture",
+     "Hobby.MoldClay",
+     "Hobby.ReadNovel",
+     "Hobby.ReadDetective",
+     "Hobby.ReadFiction",
+     "Hobby.ReadFantasy",
+     "Hobby.LearnPoem",
+     "Hobby.WritePoem",
+     "Hobby.MakePhoto",
+     "Hobby.NoGadgets",
+     "Hobby.Plant",
+     "Hobby.FlyKite",
+     "Hobby.Cake",
+     "Hobby.Mors",
+     "Hobby.OrderPortrait",
+     "Hobby.FreeSection",
+    
+     "Good.CarryBag",
+     "Good.FeedDuck",
+     "Good.FeedAnimals",
+     "Good.OldStuff",
+     "Good.HelpFond",
+     "Good.Gift",
+     "Good.AppMark",
+     "Good.Blood",
+     "Good.Trash",
+     "Good.HelpBabushka",
+     "Good.BirdHouse",
+     "Good.FamilyDinner",
+     "Good.FeedFriends",
+     "Good.FixHouse",
+     "Good.SteetMusician",
+     "Good.FeedHomeless",
+
+     "Social.Smile",
+     "Social.Wink",
+     "Social.Ugly",
+     "Social.Hello",
+     "Social.Compliment",
+     "Social.Questions",
+     "Social.Call",
+     "Social.AskPhoto",
+     "Social.Selfie",
+     "Social.Oboznalsya",
+     "Social.ExchangeNumbers",
+     "Social.LoveLetter",
+     "Social.TellPoem",
+     "Social.Sing",
+     "Social.MeetSomeone",
+     "Social.AskSalt",
+     "Social.Wish",
+     "Social.Fountain",
+     "Social.Dance",
+     "Social.Party",
+     "Social.Picnic",
+     "Social.Stage",
+    
+     "Charisma.Teeth",
+     "Charisma.Massage",
+     "Charisma.Yoga",
+     "Charisma.Meditation",
+     "Charisma.Speech",
+     "Charisma.Posture",
+     "Charisma.Temper",
+     "Charisma.Morning",
+     "Charisma.Food",
+     "Charisma.Books",
+     "Charisma.Income",
+     "Charisma.Fotosession",
+     "Charisma.Psychologist",
+     "Charisma.Buy",
+     "Charisma.Weight",
+     "Charisma.Marathon",
+     "Charisma.BadHabit",
+    
+     "Adventure.Sunrise",
+     "Adventure.Bet",
+     "Adventure.NightCity",
+     "Adventure.ParkAttractions",
+     "Adventure.Snowboard",
+     "Adventure.Stars",
+     "Adventure.Horse",
+     "Adventure.RopeJumping",
+     "Adventure.Tents",
+     "Adventure.Waterfall",
+     "Adventure.Cruise",
+     "Adventure.Island",
+     "Adventure.Cold",
+     "Adventure.Lights",
+     "Adventure.Surfing",
+     "Adventure.Scuba",
+     "Adventure.SmallPlane",
+     "Adventure.Balloon",
+     "Adventure.Tatoo",
+     "Adventure.Autostop",
+     "Adventure.Parachute"]
+
+    
     static func addQuests() {
-        //TODO: add all quests
-        let titles = ["GoOut.Cinema", "Good.PetAnimals", "Hobby.Chess", "Social.Smile",
-                      
-                      "GoOut.Zoo", "Good.FeedDuck", "Hobby.Puzzle", "Social.Wink",
-
-                      "GoOut.Karting", "Good.CarryBag", "Hobby.Cook", "Social.Compliment",
-
-                      "GoOut.Museum", "Good.OldStuff", "Hobby.DrawPicture", "Social.Selfie",
-                       
-                      "GoOut.Bowling", "Good.Gift", "Hobby.BoardGame", "Social.MeetSomeone",
-                      
-                      "GoOut.Gallery", "Good.FeedFriends", "Hobby.ReadBook", "Social.Dance",
-                      
-                      "GoOut.SportMatch", "Good.HelpFond", "Hobby.MakePhoto", "Social.Massage",
-
-                      "GoOut.Trampoline", "Good.SteetMusician", "Hobby.LearnPoem", "Social.Fotosession",
-                      
-                      "GoOut.Concert", "Good.BirdHouse", "Hobby.Plant", "Adventure.Sunrise",
-                       
-                      "GoOut.StandUp", "GoOut.Theater", "Hobby.FlyKite", "Adventure.NightCity",
-                      
-                      "Adventure.ParkAttractions", "Adventure.Tents", "Adventure.Horse", "Adventure.Stars",
-                      
-                      "Adventure.RopeJumping", "Adventure.Tatoo", "Adventure.Snowboard", "Adventure.Balloon",
-                      
-                      "Adventure.Parachute", "Adventure.Scuba", "Adventure.Surfing", "Adventure.Lights"
-                      ]
-
         
         UserDefaultsManager.shared.allQuestsCount = 0
         UserDefaultsManager.shared.doneQuestsCount = 0
 
-        for (id, title) in titles.enumerated() {
-            print("id = \(id), title = \(title)")
+        for (id, title) in quests.enumerated() {
             let category: Category
             if title.hasPrefix("GoOut") {
                 category = .goOut
@@ -53,6 +155,8 @@ class Quests {
                 category = .hobby
             } else if title.hasPrefix("Social"){
                 category = .social
+            } else if title.hasPrefix("Charisma"){
+                category = .charisma
             } else if title.hasPrefix("Adventure"){
                 category = .adventure
             } else {
@@ -66,33 +170,137 @@ class Quests {
         UserDefaultsManager.shared.isBaseQuestsSet = true
     }
     
+    static let images =
+    ["cinema",
+     "museum",
+     "theater",
+     "gallery",
+     "zoo",
+     "football",
+     "basketball",
+     "hockey",
+     "bowling",
+     "billiard",
+     "concert",
+     "quest",
+     "iceskating",
+     "karting",
+     "trampoline",
+     "aquapark",
+     "excursion",
+     "degustation",
+     "bar",
+     "nightclub",
+     "standup",
+     "sauna",
+     "show",
+    
+     "checkers",
+     "chess",
+     "nards",
+     "poker",
+     "darts",
+     "tablegame",
+     "puzzle",
+     "computergame",
+     "painting",
+     "sculpting",
+     "readroman",
+     "readdetective",
+     "readfiction",
+     "readfantasy",
+     "memberpoem",
+     "writepoem",
+     "photo",
+     "nogadgets",
+     "plant",
+     "kite",
+     "cake",
+     "mors",
+     "portrait",
+     "freesection",
+    
+     "carrybag",
+     "duck",
+     "animals",
+     "oldstuff",
+     "helpfond",
+     "buygift",
+     "appmark",
+     "blood",
+     "trash",
+     "helpold",
+     "birdhouse",
+     "dinner",
+     "feedfriends",
+     "fixhouse",
+     "musician",
+     "homeless",
+    
+     "smile",
+     "wink",
+     "ugly",
+     "hello",
+     "compliment",
+     "questions",
+     "anekdot",
+     "socialphoto",
+     "selfie",
+     "oboznalsya",
+     "exchangenumbers",
+     "letter",
+     "tellpoem",
+     "sing",
+     "meetsomeone",
+     "salt",
+     "wishgoodtrip",
+     "fountain",
+     "dance",
+     "party",
+     "picnic",
+     "stage",
+    
+     "teeth",
+     "massage",
+     "yoga",
+     "meditation",
+     "speaking",
+     "posture",
+     "zakalka",
+     "zaryadka",
+     "goodfood",
+     "5books",
+     "money",
+     "photosession",
+     "psycholog",
+     "buything",
+     "perfectweight",
+     "marathon",
+     "badhabit",
+     
+     "sunrise",
+     "betting",
+     "nightride",
+     "parkattraction",
+     "snowboard",
+     "stars",
+     "horse",
+     "rope",
+     "tents",
+     "waterfall",
+     "cruise",
+     "island",
+     "prorub",
+     "northernlights",
+     "surfing",
+     "scuba",
+     "plane",
+     "balloon",
+     "tattoo",
+     "autostop",
+     "parachute"]
+
     static func getIcon(id: Int) -> UIImage? {
-        let images = ["cinema", "animals", "chess", "smile",
-                      
-                      "zoo", "duck", "puzzle", "wink",
-
-                      "karting", "carrybag", "cake", "compliment",
-                      
-                      "museum", "oldstuff", "painting", "selfie",
-                      
-                      "bowling", "buygift", "tablegame", "meetsomeone",
-                      
-                      "gallery", "feedfriends", "readdetective", "dance",
-
-                      "football", "helpfond", "photo", "massage",
-                      
-                      "trampoline", "musician", "memberpoem", "photosession",
-                      
-                      "concert", "birdhouse", "plant", "sunrise",
-                      
-                      "standup", "theater", "kite", "nightride",
-                      
-                      "parkattraction", "tents", "horse", "stars",
-                       
-                      "rope", "tattoo", "snowboard", "balloon",
-                      
-                      "parachute", "scuba", "surfing", "northernlights"
-                      ]
 
         if id >= 0 && id <= images.count {
             return UIImage(named: images[id])

@@ -12,6 +12,7 @@ enum Category: Int {
     case good
     case hobby
     case social
+    case charisma
     case adventure
 }
 
@@ -27,6 +28,8 @@ extension Category {
             return UIColor(named: "Hobby.Cell")!
         case .social:
             return UIColor(named: "Social.Cell")!
+        case .charisma:
+            return UIColor(named: "Charisma.Cell")!
         case .adventure:
             return UIColor(named: "Adventure.Cell")!
         }
@@ -42,24 +45,10 @@ extension Category {
             return UIColor(named: "Hobby.Star")!
         case .social:
             return UIColor(named: "Social.Star")!
+        case .charisma:
+            return UIColor(named: "Charisma.Star")!
         case .adventure:
             return UIColor(named: "Adventure.Star")!
-        }
-    }
-
-    
-    var title: String {
-        switch self {
-        case .goOut:
-            return "GoOut"
-        case .good:
-            return "Good"
-        case .hobby:
-            return "Hobby"
-        case .social:
-            return "Social"
-        case .adventure:
-            return "Adventure"
         }
     }
 

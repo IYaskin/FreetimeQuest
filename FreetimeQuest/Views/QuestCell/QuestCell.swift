@@ -25,10 +25,8 @@ class QuestCell: UICollectionViewCell {
     }
     
     func configureCornerRadius(cellSide: CGFloat) {
-        print("cellSide = \(cellSide)")
         let offset: CGFloat = 10
         let radius = (cellSide - offset) / 2
-        print("radius = \(radius)")
         imageBgView.layer.cornerRadius = radius
     }
     
