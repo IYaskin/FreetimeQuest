@@ -126,7 +126,7 @@ extension ViewController: UICollectionViewDelegate {
         
         let quest = fetchedResultsController.object(at: indexPath)
         vc.questTitle = quest.title
-        vc.contentColor = Category(rawValue: Int(quest.category))?.cellColor ?? .white
+        vc.category = Category(rawValue: Int(quest.category))
         self.present(vc, animated: true)
     }
     

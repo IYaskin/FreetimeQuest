@@ -9,15 +9,12 @@
 // Common
 "lang" = "en";
 
-"Memories" = "Memories";
-
 "GoOut" = "Visit places";
 "Good" = "Good";
 "Hobby" = "Hobby";
 "Social" = "Social";
 "Charisma" = "Development";
 "Adventure" = "Adventure";
-"MyQuests" = "My quests";
 
 "AddCategory" = "Categories:";
 "AllCategoriesAdded" = "All categories added!";

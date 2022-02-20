@@ -12,13 +12,14 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
-    var questTitle = ""
-    var contentColor = UIColor.white
+    var questTitle: String?
+    var category: Category?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,14 @@ class QuestViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        titleLabel.text = NSLocalizedString(questTitle, comment: "")
-        contentView.backgroundColor = contentColor
+        if let title = questTitle {
+            titleLabel.text = NSLocalizedString(title, comment: "")
+        }
+        if let category = category {
+            contentView.backgroundColor = category.cellColor
+            categoryLabel.text = NSLocalizedString(category.title, comment: "")
+            categoryLabel.textColor = category.starColor
+        }
     }
     
     override func viewDidLayoutSubviews() {

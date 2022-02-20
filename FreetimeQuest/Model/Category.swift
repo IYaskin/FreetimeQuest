@@ -51,5 +51,23 @@ extension Category {
             return UIColor(named: "Adventure.Star")!
         }
     }
+    
+    var title: String {
+        switch self {
+        case .goOut:
+            return "GoOut"
+        case .good:
+            return "Good"
+        case .hobby:
+            return "Hobby"
+        case .social:
+            return "Social"
+        case .charisma:
+            return "Charisma"
+        case .adventure:
+            return "Adventure"
+        }
+    }
+
 
 }
