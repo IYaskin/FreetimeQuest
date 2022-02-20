@@ -119,6 +119,17 @@ extension ViewController: UICollectionViewDataSource {
 }
 
 extension ViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Quest") as! QuestViewController
+        
+        let quest = fetchedResultsController.object(at: indexPath)
+        vc.questTitle = quest.title
+        vc.contentColor = Category(rawValue: Int(quest.category))?.cellColor ?? .white
+        self.present(vc, animated: true)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {

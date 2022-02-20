@@ -38,6 +38,7 @@
 		93463F1E2718419400199BF0 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F1C2718419400199BF0 /* QuestCell.swift */; };
 		93463F1F2718419400199BF0 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93463F1D2718419400199BF0 /* QuestCell.xib */; };
 		93463F2127188E0D00199BF0 /* Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F2027188E0D00199BF0 /* Quests.swift */; };
+		9350968627C29B2E00651835 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350968527C29B2E00651835 /* QuestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		93463F1C2718419400199BF0 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
 		93463F1D2718419400199BF0 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
 		93463F2027188E0D00199BF0 /* Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests.swift; sourceTree = "<group>"; };
+		9350968527C29B2E00651835 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
 				8467999F262A0C3B007FA801 /* SheetViewController */,
 				8467DBFF26427D5B00A5F234 /* OnboardingViewController */,
+				9350968427C29B0800651835 /* QuestViewController */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 			);
 			path = VC;
@@ -248,6 +251,14 @@
 			path = QuestCell;
 			sourceTree = "<group>";
 		};
+		9350968427C29B0800651835 /* QuestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9350968527C29B2E00651835 /* QuestViewController.swift */,
+			);
+			path = QuestViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +346,7 @@
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
 				84544F8B25BDD0E9000683FC /* Category.swift in Sources */,
 				846799892629AC38007FA801 /* Text.swift in Sources */,
+				9350968627C29B2E00651835 /* QuestViewController.swift in Sources */,
 				840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */,
 				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,

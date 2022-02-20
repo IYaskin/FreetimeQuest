@@ -51,7 +51,7 @@ class CoreDataManager {
         fetchRequest.sortDescriptors = [idDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                                   managedObjectContext: viewContext,
-                                                                  sectionNameKeyPath: "category",
+                                                                  sectionNameKeyPath: nil,
                                                                   cacheName: nil)
         return fetchedResultsController
     }

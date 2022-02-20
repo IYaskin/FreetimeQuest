@@ -64,6 +64,7 @@
 "GoOut.Zoo" = "Zoo";
 "GoOut.SportMatch" = "Sport match";
 "GoOut.Bowling" = "Bowling";
+"GoOut.Billiards" = "Billiards";
 "GoOut.Concert" = "Concert";
 "GoOut.Quest" = "Quest";
 "GoOut.IceRink" = "Ice rink";
@@ -147,8 +148,8 @@
 
 "Charisma.Teeth" = "Visit dentist";
 "Charisma.Massage" = "Get massage";
-"Charisma.Yoga" = "Yoga (5 times)";
-"Charisma.Meditation" = "Meditation (5 times)";
+"Charisma.Yoga" = "Yoga (7 days)";
+"Charisma.Meditation" = "Meditation (7 days)";
 "Charisma.Speech" = "Develop speech (7 days)";
 "Charisma.Posture" = "Develop posture (7 days)";
 "Charisma.Temper" = "Temper (7 days)";

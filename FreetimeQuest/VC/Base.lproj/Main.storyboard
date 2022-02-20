@@ -365,6 +365,122 @@
             </objects>
             <point key="canvasLocation" x="1006" y="-573"/>
         </scene>
+        <!--Quest View Controller-->
+        <scene sceneID="B2X-bW-OwP">
+            <objects>
+                <viewController storyboardIdentifier="Quest" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T1j-u5-qsg" customClass="QuestViewController" customModule="FreetimeQuest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b6D-ZJ-9zw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxV-us-On0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGE-7S-RNg">
+                                <rect key="frame" x="40" y="345.5" width="334" height="215"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h4-TZ-NWS">
+                                        <rect key="frame" x="20" y="25" width="294" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Ud-xY-WsC">
+                                        <rect key="frame" x="20" y="95" width="294" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-WX-XoN">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-aa-Rto">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                                        <connections>
+                                                            <action selector="shareButtonTapped:" destination="T1j-u5-qsg" eventType="touchUpInside" id="14e-5j-KLn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhH-wa-AhO">
+                                                        <rect key="frame" x="147" y="0.0" width="147" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Photo"/>
+                                                        <connections>
+                                                            <action selector="photoButtonTapped:" destination="T1j-u5-qsg" eventType="touchUpInside" id="3Dp-BW-hrn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tva-EE-1o6">
+                                                <rect key="frame" x="0.0" y="50" width="294" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-RK-ak4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                                        <connections>
+                                                            <action selector="deleteButtonTapped:" destination="T1j-u5-qsg" eventType="touchUpInside" id="Kam-Nd-8dj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOh-QA-MDM">
+                                                        <rect key="frame" x="147" y="0.0" width="147" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Done/Undone"/>
+                                                        <connections>
+                                                            <action selector="doneButtonTapped:" destination="T1j-u5-qsg" eventType="touchUpInside" id="Czn-Iy-uph"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="JrE-6R-ngT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0Ud-xY-WsC" firstAttribute="centerX" secondItem="DGE-7S-RNg" secondAttribute="centerX" id="2Co-K4-CGf"/>
+                                    <constraint firstItem="9h4-TZ-NWS" firstAttribute="centerX" secondItem="DGE-7S-RNg" secondAttribute="centerX" id="DvE-Wa-s0d"/>
+                                    <constraint firstItem="9h4-TZ-NWS" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="20" id="PMo-i2-weM"/>
+                                    <constraint firstItem="0Ud-xY-WsC" firstAttribute="top" secondItem="9h4-TZ-NWS" secondAttribute="bottom" constant="40" id="T6Y-Bq-MEX"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ud-xY-WsC" secondAttribute="bottom" constant="20" id="ar5-U5-U1b"/>
+                                    <constraint firstItem="9h4-TZ-NWS" firstAttribute="top" secondItem="DGE-7S-RNg" secondAttribute="top" constant="25" id="l4o-WG-F9Q"/>
+                                    <constraint firstItem="0Ud-xY-WsC" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="20" id="ztf-eA-GGn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WMf-wi-fkO"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DGE-7S-RNg" firstAttribute="leading" secondItem="WMf-wi-fkO" secondAttribute="leading" constant="40" id="3cO-ry-0R9"/>
+                            <constraint firstItem="JxV-us-On0" firstAttribute="trailing" secondItem="WMf-wi-fkO" secondAttribute="trailing" id="5Ox-qM-n2N"/>
+                            <constraint firstItem="DGE-7S-RNg" firstAttribute="centerY" secondItem="WMf-wi-fkO" secondAttribute="centerY" id="FGC-eV-7qV"/>
+                            <constraint firstItem="DGE-7S-RNg" firstAttribute="centerX" secondItem="WMf-wi-fkO" secondAttribute="centerX" id="Ook-cx-CNl"/>
+                            <constraint firstAttribute="bottom" secondItem="JxV-us-On0" secondAttribute="bottom" id="QL7-OE-1vN"/>
+                            <constraint firstItem="JxV-us-On0" firstAttribute="leading" secondItem="WMf-wi-fkO" secondAttribute="leading" id="scM-Tn-AMg"/>
+                            <constraint firstItem="JxV-us-On0" firstAttribute="top" secondItem="b6D-ZJ-9zw" secondAttribute="top" id="wxx-MH-HbX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="JxV-us-On0" id="hqo-HR-BZ7"/>
+                        <outlet property="contentView" destination="DGE-7S-RNg" id="ui0-GK-eAS"/>
+                        <outlet property="deleteButton" destination="6sb-RK-ak4" id="qST-xU-BIx"/>
+                        <outlet property="doneButton" destination="eOh-QA-MDM" id="CmX-kd-zjc"/>
+                        <outlet property="photoButton" destination="BhH-wa-AhO" id="c8f-HK-wDS"/>
+                        <outlet property="shareButton" destination="m4L-aa-Rto" id="8tz-5c-y1F"/>
+                        <outlet property="titleLabel" destination="9h4-TZ-NWS" id="fDI-6Y-cYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xl0-Fi-7sf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="t6h-n5-JSu">
+                    <connections>
+                        <action selector="greyAreaTapped:" destination="T1j-u5-qsg" id="kfL-FQ-GNB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2389.8550724637685" y="75.669642857142847"/>
+        </scene>
     </scenes>
     <resources>
         <image name="violetCheck" width="12" height="10"/>

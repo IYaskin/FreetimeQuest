@@ -64,6 +64,7 @@
 "GoOut.Zoo" = "Зоопарк";
 "GoOut.SportMatch" = "Посетить спортивный матч";
 "GoOut.Bowling" = "Боулинг";
+"GoOut.Billiards" = "Бильярд";
 "GoOut.Concert" = "Концерт";
 "GoOut.Quest" = "Квест";
 "GoOut.IceRink" = "Каток";
@@ -146,14 +147,14 @@
 
 "Charisma.Teeth" = "Посетить стоматолога";
 "Charisma.Massage" = "Сходить на массаж";
-"Charisma.Yoga" = "Попробовать йогу";
+"Charisma.Yoga" = "Йога (7 дней)";
 "Charisma.Meditation" = "Медитировать (7 дней)";
 "Charisma.Speech" = "Упражнения для речи (7 дней)";
 "Charisma.Posture" = "Упражнения для осанки (7 дней)";
 "Charisma.Temper" = "Закалка (7 дней)";
 "Charisma.Morning" = "Зарядка (14 дней)";
 "Charisma.Food" = "Правильное питание (14 дней)";
-"Charisma.Books" = "Прочитать 5 книг по развитию или по работе";
+"Charisma.Books" = "Прочитать книгу по развитию или по работе";
 "Charisma.Income" = "Повысить свой доход";
 "Charisma.Fotosession" = "Устроить себе фотосессию";
 "Charisma.Psychologist" = "Сходить на сеанс к психологу";
