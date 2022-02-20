@@ -9,33 +9,39 @@ import UIKit
 
 class CustomProgressBar: UIView {
     
-    @IBInspectable
     var progress: CGFloat = 0 {
         didSet {
             setProgress(animated: true)
         }
     }
 
-    @IBInspectable
-    var frontColor: UIColor = .green {
-        didSet {
-            frontView?.backgroundColor = frontColor
-        }
-    }
-    
-    @IBInspectable
-    var backColor: UIColor = .gray {
-        didSet {
-            backgroundColor = backColor
-        }
-    }
-    
     private var frontView: UIView?
+
+    private var frontColor: UIColor = .myGreen
+    private var backColor: UIColor = .black.withAlphaComponent(0.2)
     
-    fileprivate func configureUI() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        configureUI()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setProgress(animated: false)
+    }
+
+    
+    private func configureUI() {
         backgroundColor = backColor
         self.clipsToBounds = true
         self.layer.cornerRadius = bounds.height / 2
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
         
         addFrontView()
     }
@@ -48,20 +54,12 @@ class CustomProgressBar: UIView {
         view.backgroundColor = frontColor
         view.clipsToBounds = true
         view.layer.cornerRadius = bounds.height / 2
+
         addSubview(view)
         frontView = view
     }
     
         
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        configureUI()
-    }
         
     private func setProgress(animated: Bool) {
         let newWidth = max(bounds.width * progress, 0)
@@ -81,8 +79,4 @@ class CustomProgressBar: UIView {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setProgress(animated: false)
-    }
 }

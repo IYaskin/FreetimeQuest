@@ -33,10 +33,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-ne-2GO" customClass="CustomProgressBar" customModule="FreetimeQuest" customModuleProvider="target">
-                                        <rect key="frame" x="88" y="109.5" width="246" height="7"/>
+                                        <rect key="frame" x="88" y="108" width="246" height="10"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="7" id="k8E-KT-SYQ"/>
+                                            <constraint firstAttribute="height" constant="10" id="k8E-KT-SYQ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-EQ-EFg">

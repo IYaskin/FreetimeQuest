@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showOnboardingIfNeeded()
+        updateUI()
     }
     
     override func viewDidLayoutSubviews() {
@@ -96,7 +97,7 @@ class ViewController: UIViewController {
         maxStarsLabel.text = "\(maxQuests)"
 
         let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
-        progressBar.progress = progress
+        progressBar.progress = 0.5
     }
     
 }
