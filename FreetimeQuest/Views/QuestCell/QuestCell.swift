@@ -21,6 +21,7 @@ class QuestCell: UICollectionViewCell {
         if let category = Category(rawValue: Int(object.category)) {
             imageBgView.backgroundColor = category.cellColor
             imgView.image = Quests.getIcon(id: Int(object.id))
+            imageBgView.dropShadow()
         }
     }
     
