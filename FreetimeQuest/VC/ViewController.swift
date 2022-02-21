@@ -80,15 +80,8 @@ class ViewController: UIViewController {
         
         collectionView.register(UINib(nibName: "QuestCell", bundle: nil),
                                 forCellWithReuseIdentifier: "QuestCell")
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            print(error)
-        }
-        collectionView.reloadData()
     }
     
-    //TODO: call after done/delete quest
     func updateUI() {
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
@@ -98,6 +91,13 @@ class ViewController: UIViewController {
 
         let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
         progressBar.progress = progress
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print(error)
+        }
+        collectionView.reloadData()
     }
     
 }
@@ -127,10 +127,15 @@ extension ViewController: UICollectionViewDelegate {
         
         let quest = fetchedResultsController.object(at: indexPath)
         vc.quest = quest
+        
         vc.updateHandler = { [weak self] in
-            self?.collectionView.reloadData()
             self?.updateUI()
         }
+        
+        vc.deleteHandler = { [weak self] in
+            self?.updateUI()
+        }
+
         self.present(vc, animated: true)
     }
     

@@ -20,6 +20,7 @@ class QuestViewController: UIViewController {
     
     var quest: QuestObject?
     var updateHandler: (()->())?
+    var deleteHandler: (()->())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,16 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        guard let quest = quest else {
+            return
+        }
+
+        CoreDataManager.shared.deleteQuest(quest)
+        
+        dismiss(animated: false) { [weak self] in
+            self?.deleteHandler?()
+        }
+
     }
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
