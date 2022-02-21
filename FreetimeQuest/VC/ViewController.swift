@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         maxStarsLabel.text = "\(maxQuests)"
 
         let progress: CGFloat = CGFloat(doneQuests) / CGFloat(maxQuests)
-        progressBar.progress = 0.5
+        progressBar.progress = progress
     }
     
 }
