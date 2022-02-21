@@ -16,24 +16,9 @@
 "Charisma" = "Development";
 "Adventure" = "Adventure";
 
-"AddCategory" = "Categories:";
-"AllCategoriesAdded" = "All categories added!";
-"AddQuest" = "+ Quest";
-"Add" = "Add";
-"for" = "for";
-"from" = "from";
 "Ok" = "Ok";
 "Cancel" = "Cancel";
-"NotEnoughStars" = "Not enough stars :(";
-"DoMoreQuests" = "Complete quests to earn more";
-"IncorrectName" = "Incorrect name :(";
-"QuestsAdded" = "Quests added!";
-"EnterQuestName" = "Enter quest name:";
-"CompleteQuest" = "Complete quest";
-"DeleteQuest" = "Delete quest";
-"Completed" = "Completed";
-"MyQuestAdded" = "Your quest added!";
-"CheckInternet" = "No internet connection :(";
+"DeleteQuest" = "Delete quest?";
 
 //SheetButtons
 "Sheet.AddCamera" = "Camera";

@@ -69,11 +69,15 @@ class QuestViewController: UIViewController {
             return
         }
 
-        CoreDataManager.shared.deleteQuest(quest)
-        
-        dismiss(animated: false) { [weak self] in
-            self?.deleteHandler?()
-        }
+        showAlert(title: Text.DeleteQuest,
+                  okButtonTitle: Text.Ok, okAction: { [weak self] _ in
+            CoreDataManager.shared.deleteQuest(quest)
+            
+            self?.dismiss(animated: false) { [weak self] in
+                self?.updateHandler?()
+            }
+
+        }, cancelButtonTitle: Text.Cancel)
 
     }
     

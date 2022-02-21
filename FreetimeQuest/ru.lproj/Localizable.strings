@@ -8,8 +8,6 @@
 // Common
 "lang" = "ru";
 
-"Memories" = "Воспоминания";
-
 "GoOut" = "Посетить места";
 "Good" = "Делай добро";
 "Hobby" = "Хобби";
@@ -17,24 +15,9 @@
 "Charisma" = "Развитие";
 "Adventure" = "Приключения";
 
-"AddCategory" = "Категории:";
-"AllCategoriesAdded" = "Все категории добавлены!";
-"AddQuest" = "+ Квест";
-"Add" = "Добавить";
-"for" = "за";
-"from" = "из";
 "Ok" = "Ок";
 "Cancel" = "Отмена";
-"NotEnoughStars" = "Не хватает звезд :(";
-"DoMoreQuests" = "Выполните больше квестов, чтобы их заработать";
-"IncorrectName" = "Некорректное название :(";
-"QuestsAdded" = "Квесты добавлены!";
-"EnterQuestName" = "Введите название квеста:";
-"CompleteQuest" = "Выполнить задание";
-"DeleteQuest" = "Удалить задание";
-"Completed" = "Выполнено";
-"MyQuestAdded" = "Ваш квест добавлен!";
-"CheckInternet" = "Нет интернет соединения :(";
+"DeleteQuest" = "Удалить квест?";
 
 //SheetButtons
 "Sheet.AddCamera" = "Камера";
