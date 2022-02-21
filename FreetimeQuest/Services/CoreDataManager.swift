@@ -56,9 +56,9 @@ class CoreDataManager {
         return fetchedResultsController
     }
     
-    //TODO: test it
-    func doneQuest(_ quest: QuestObject) {
-        quest.isDone = true
+    func doneQuest(_ quest: QuestObject, isDone: Bool) {
+        quest.isDone = isDone
+        UserDefaultsManager.shared.doneQuestsCount += isDone ? 1 : -1
         saveContext()
     }
     

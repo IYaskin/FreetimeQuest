@@ -18,8 +18,8 @@ class QuestViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
-    var questTitle: String?
-    var category: Category?
+    var quest: QuestObject?
+    var updateHandler: (()->())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,20 @@ class QuestViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let title = questTitle {
-            titleLabel.text = NSLocalizedString(title, comment: "")
+        
+        guard let quest = quest else {
+            return
         }
-        if let category = category {
+
+        titleLabel.text = NSLocalizedString(quest.title, comment: "")
+        
+        if quest.isDone {
+            doneButton.setImage(UIImage.init(systemName: "arrow.counterclockwise"), for: .normal)
+        } else {
+            doneButton.setImage(UIImage.init(systemName: "checkmark"), for: .normal)
+        }
+        
+        if let category = Category(rawValue: Int(quest.category)) {
             contentView.backgroundColor = category.cellColor
             categoryLabel.text = NSLocalizedString(category.title, comment: "")
             categoryLabel.textColor = category.starColor
@@ -57,5 +67,15 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
+        guard let quest = quest else {
+            return
+        }
+
+        CoreDataManager.shared.doneQuest(quest, isDone: !quest.isDone)
+        
+        dismiss(animated: false) { [weak self] in
+            self?.updateHandler?()
+        }
     }
+    
 }

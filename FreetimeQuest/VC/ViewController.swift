@@ -126,8 +126,11 @@ extension ViewController: UICollectionViewDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "Quest") as! QuestViewController
         
         let quest = fetchedResultsController.object(at: indexPath)
-        vc.questTitle = quest.title
-        vc.category = Category(rawValue: Int(quest.category))
+        vc.quest = quest
+        vc.updateHandler = { [weak self] in
+            self?.collectionView.reloadData()
+            self?.updateUI()
+        }
         self.present(vc, animated: true)
     }
     
