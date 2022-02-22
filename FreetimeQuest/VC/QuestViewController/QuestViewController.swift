@@ -20,12 +20,15 @@ class QuestViewController: UIViewController {
     
     var quest: QuestObject?
     var updateHandler: (()->())?
-    var deleteHandler: (()->())?
-
+    
+    private let imagePicker = ImagePickerService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let dismissTap = UITapGestureRecognizer(target: self, action: #selector (bgTapped))
         bgView.addGestureRecognizer(dismissTap)
+        imagePicker.delegate = self
+        imagePicker.presentingViewController = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +65,37 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction func photoButtonTapped(_ sender: UIButton) {
+        guard let quest = quest else {
+            return
+        }
+
+        let alertVC = UIAlertController(title: Text.SetPhoto, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: Text.Cancel, style: .cancel)
+        
+        let deleteAction = UIAlertAction(title: Text.DeletePhoto, style: .destructive) { [weak self] _ in
+            CoreDataManager.shared.setQuestImage(quest, image: Data())
+            self?.dismiss(animated: false) { [weak self] in
+                self?.updateHandler?()
+            }
+        }
+        
+        let galleryAction = UIAlertAction(title: Text.AddGallery, style: .default) { [weak self] _ in
+            self?.imagePicker.presentImagePicker(.photoLibrary)
+        }
+        
+        let cameraAction = UIAlertAction(title: Text.AddCamera, style: .default) { [weak self] _ in
+            self?.imagePicker.presentImagePicker(.camera)
+        }
+
+        alertVC.addAction(cameraAction)
+        alertVC.addAction(galleryAction)
+        if UIImage(data: quest.image) != nil {
+            alertVC.addAction(deleteAction)
+        }
+        alertVC.addAction(cancelAction)
+
+        present(alertVC, animated: true)
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
@@ -88,9 +122,29 @@ class QuestViewController: UIViewController {
 
         CoreDataManager.shared.doneQuest(quest, isDone: !quest.isDone)
         
+        dismiss(animated: true) { [weak self] in
+            self?.updateHandler?()
+        }
+    }
+    
+}
+
+extension QuestViewController: ImagePickerServiceDelegate {
+    
+    func imagePickerService(_ service: ImagePickerService,
+                            finishWith image: UIImage) {
+        guard let quest = quest else {
+            return
+        }
+
+        CoreDataManager.shared.setQuestImage(quest, image: image.pngData() ?? Data())
         dismiss(animated: false) { [weak self] in
             self?.updateHandler?()
         }
     }
     
+    func imagePickerService(_ service: ImagePickerService,
+                            finishWith error: String) {
+        showOkAlert(title: "Не удалось получить фото :(", okButtonTitle: "Ок")
+    }
 }

@@ -112,8 +112,7 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuestCell", for: indexPath) as! QuestCell
         let object = fetchedResultsController.fetchedObjects![indexPath.row]
         
-        cell.configureCell(object)
-        cell.configureCornerRadius(cellSide: cellSide)
+        cell.configureCell(object, cellSide: cellSide)
         return cell
     }
     
@@ -129,10 +128,6 @@ extension ViewController: UICollectionViewDelegate {
         vc.quest = quest
         
         vc.updateHandler = { [weak self] in
-            self?.updateUI()
-        }
-        
-        vc.deleteHandler = { [weak self] in
             self?.updateUI()
         }
 

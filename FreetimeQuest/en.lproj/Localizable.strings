@@ -20,10 +20,11 @@
 "Cancel" = "Cancel";
 "DeleteQuest" = "Delete quest?";
 
-//SheetButtons
-"Sheet.AddCamera" = "Camera";
-"Sheet.AddGallery" = "Gallery";
-"Sheet.DeletePhoto" = "Delete photo";
+//Photo
+"AddCamera" = "Camera";
+"AddGallery" = "Gallery";
+"DeletePhoto" = "Delete photo";
+"SetPhoto" = "Set photo";
 
 // Onboarding
 "Skip" = "Skip";

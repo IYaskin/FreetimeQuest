@@ -22,8 +22,6 @@
 		8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84825E2607C00C233B6 /* UIView+Alert.swift */; };
 		845E7C4F2622F86600B33170 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845E7C512622F86600B33170 /* Localizable.strings */; };
 		846799892629AC38007FA801 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799882629AC38007FA801 /* Text.swift */; };
-		8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467999C2629D5EA007FA801 /* SheetViewController.swift */; };
-		846799A1262A0C49007FA801 /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799A0262A0C49007FA801 /* SheetButtons.swift */; };
 		8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */; };
 		846BBEFC266B727500BC58D1 /* category.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BBEFB266B727500BC58D1 /* category.mp3 */; };
 		846BBEFF266B783500BC58D1 /* GIF.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BBEFE266B783500BC58D1 /* GIF.mp3 */; };
@@ -60,8 +58,6 @@
 		845E7C502622F86600B33170 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		845E7C522622F86A00B33170 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		846799882629AC38007FA801 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		8467999C2629D5EA007FA801 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
-		846799A0262A0C49007FA801 /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
 		8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		846BBEFB266B727500BC58D1 /* category.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = category.mp3; sourceTree = "<group>"; };
 		846BBEFE266B783500BC58D1 /* GIF.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GIF.mp3; sourceTree = "<group>"; };
@@ -143,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
-				8467999F262A0C3B007FA801 /* SheetViewController */,
 				8467DBFF26427D5B00A5F234 /* OnboardingViewController */,
 				9350968427C29B0800651835 /* QuestViewController */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
@@ -205,15 +200,6 @@
 				8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */,
 			);
 			path = QuestObject;
-			sourceTree = "<group>";
-		};
-		8467999F262A0C3B007FA801 /* SheetViewController */ = {
-			isa = PBXGroup;
-			children = (
-				846799A0262A0C49007FA801 /* SheetButtons.swift */,
-				8467999C2629D5EA007FA801 /* SheetViewController.swift */,
-			);
-			path = SheetViewController;
 			sourceTree = "<group>";
 		};
 		846799BA262A1F06007FA801 /* Frameworks */ = {
@@ -340,7 +326,6 @@
 				84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */,
 				93211C772717926800E68D4B /* CoreDataModel.xcdatamodeld in Sources */,
 				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
-				846799A1262A0C49007FA801 /* SheetButtons.swift in Sources */,
 				93463F1E2718419400199BF0 /* QuestCell.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
 				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
@@ -353,7 +338,6 @@
 				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
 				8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */,
 				846BBF02266B788F00BC58D1 /* Sound.swift in Sources */,
-				8467999D2629D5EA007FA801 /* SheetViewController.swift in Sources */,
 				846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */,
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,

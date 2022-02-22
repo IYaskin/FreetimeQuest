@@ -68,6 +68,12 @@ class CoreDataManager {
         saveContext()
     }
     
+    func setQuestImage(_ quest: QuestObject, image: Data) {
+        quest.image = image
+        UserDefaultsManager.shared.allQuestsCount -= 1
+        saveContext()
+    }
+
     func saveContext() {
         guard viewContext.hasChanges else {
             return

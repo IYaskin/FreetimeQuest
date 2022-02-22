@@ -19,10 +19,11 @@
 "Cancel" = "Отмена";
 "DeleteQuest" = "Удалить квест?";
 
-//SheetButtons
-"Sheet.AddCamera" = "Камера";
-"Sheet.AddGallery" = "Галерея";
-"Sheet.DeletePhoto" = "Удалить фото";
+//Photo
+"AddCamera" = "Камера";
+"AddGallery" = "Галерея";
+"DeletePhoto" = "Удалить фото";
+"SetPhoto" = "Установить фото";
 
 //Onboarding
 "Skip" = "Пропустить";
