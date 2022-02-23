@@ -10,17 +10,17 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var leftCheckImageView: UIImageView!
-    @IBOutlet weak var leftPlaceholderView: UIView!
-    @IBOutlet weak var currentStarsLabel: UILabel!
+    @IBOutlet private weak var leftCheckImageView: UIImageView!
+    @IBOutlet private weak var leftPlaceholderView: UIView!
+    @IBOutlet private weak var currentStarsLabel: UILabel!
     
-    @IBOutlet weak var rightStarImageView: UIImageView!
-    @IBOutlet weak var rightPlaceholderView: UIView!
-    @IBOutlet weak var maxStarsLabel: UILabel!
+    @IBOutlet private weak var rightStarImageView: UIImageView!
+    @IBOutlet private weak var rightPlaceholderView: UIView!
+    @IBOutlet private weak var maxStarsLabel: UILabel!
     
-    @IBOutlet weak var progressBar: CustomProgressBar!
+    @IBOutlet private weak var progressBar: CustomProgressBar!
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     private var coreData = CoreDataManager.shared
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         rightPlaceholderView.layer.cornerRadius = leftPlaceholderView.bounds.height / 2
     }
     
-    func showOnboardingIfNeeded() {
+    private func showOnboardingIfNeeded() {
         if !UserDefaultsManager.shared.isOnboardingDone {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Onboarding") as! OnboardingViewController
@@ -57,14 +57,14 @@ class ViewController: UIViewController {
         }
     }
     
-    func firstLaunchCheck() {
+    private func firstLaunchCheck() {
         guard !UserDefaultsManager.shared.isBaseQuestsSet else {
             return
         }
         Quests.addQuests()
     }
     
-    func configureUI() {
+    private func configureUI() {
         leftCheckImageView.layer.borderWidth = 1
         leftCheckImageView.layer.borderColor = UIColor.violet.cgColor
         leftPlaceholderView.layer.borderWidth = 1
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                                 forCellWithReuseIdentifier: "QuestCell")
     }
     
-    func updateUI() {
+    private func updateUI() {
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
         

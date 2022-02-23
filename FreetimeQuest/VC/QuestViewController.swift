@@ -9,14 +9,14 @@ import UIKit
 
 class QuestViewController: UIViewController {
 
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var shareButton: UIButton!
-    @IBOutlet weak var photoButton: UIButton!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet private weak var bgView: UIView!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var categoryLabel: UILabel!
+    @IBOutlet private weak var shareButton: UIButton!
+    @IBOutlet private weak var photoButton: UIButton!
+    @IBOutlet private weak var deleteButton: UIButton!
+    @IBOutlet private weak var doneButton: UIButton!
     
     var quest: QuestObject?
     var updateHandler: (()->())?
@@ -57,14 +57,14 @@ class QuestViewController: UIViewController {
         contentView.layer.cornerRadius = 20
     }
     
-    @objc func bgTapped() {
+    @objc private func bgTapped() {
         dismiss(animated: true)
     }
     
-    @IBAction func shareButtonTapped(_ sender: UIButton) {
+    @IBAction private func shareButtonTapped(_ sender: UIButton) {
     }
     
-    @IBAction func photoButtonTapped(_ sender: UIButton) {
+    @IBAction private func photoButtonTapped(_ sender: UIButton) {
         guard let quest = quest else {
             return
         }
@@ -98,7 +98,7 @@ class QuestViewController: UIViewController {
         present(alertVC, animated: true)
     }
     
-    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func deleteButtonTapped(_ sender: UIButton) {
         guard let quest = quest else {
             return
         }
@@ -115,7 +115,7 @@ class QuestViewController: UIViewController {
 
     }
     
-    @IBAction func doneButtonTapped(_ sender: UIButton) {
+    @IBAction private func doneButtonTapped(_ sender: UIButton) {
         guard let quest = quest else {
             return
         }

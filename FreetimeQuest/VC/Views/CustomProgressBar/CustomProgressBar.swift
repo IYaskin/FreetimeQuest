@@ -62,20 +62,17 @@ class CustomProgressBar: UIView {
         
         
     private func setProgress(animated: Bool) {
-        let newWidth = max(bounds.width * progress, 0)
-        let setting = {
-            self.frontView?.frame.size.width = newWidth
-        }
         if animated {
             UIView.animate(withDuration: 0.5,
                            delay: 0,
                            usingSpringWithDamping: 0.7,
                            initialSpringVelocity: 0,
-                           options: .curveEaseOut) {
-               setting()
+                           options: .curveEaseOut) { [weak self] in
+                guard let self = self else { return }
+                self.frontView?.frame.size.width = max(self.bounds.width * self.progress, 0)
             }
         } else {
-            setting()
+            self.frontView?.frame.size.width = max(bounds.width * progress, 0)
         }
     }
     

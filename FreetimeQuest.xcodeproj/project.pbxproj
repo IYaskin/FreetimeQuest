@@ -138,9 +138,10 @@
 		84507A2225E10F9A0060EDE5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				84507A1F25E10F550060EDE5 /* Views */,
 				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
-				8467DBFF26427D5B00A5F234 /* OnboardingViewController */,
-				9350968427C29B0800651835 /* QuestViewController */,
+				8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */,
+				9350968527C29B2E00651835 /* QuestViewController.swift */,
 				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
 			);
 			path = VC;
@@ -181,7 +182,6 @@
 				845E7C512622F86600B33170 /* Localizable.strings */,
 				84507A2625E111560060EDE5 /* Extensions */,
 				84507A1D25E10F4A0060EDE5 /* Services */,
-				84507A1F25E10F550060EDE5 /* Views */,
 				84507A2025E10F5C0060EDE5 /* Model */,
 				84507A2225E10F9A0060EDE5 /* VC */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
@@ -209,14 +209,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8467DBFF26427D5B00A5F234 /* OnboardingViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */,
-			);
-			path = OnboardingViewController;
-			sourceTree = "<group>";
-		};
 		846BE1802641A8B600E28AAA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,14 +227,6 @@
 				93463F1D2718419400199BF0 /* QuestCell.xib */,
 			);
 			path = QuestCell;
-			sourceTree = "<group>";
-		};
-		9350968427C29B0800651835 /* QuestViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9350968527C29B2E00651835 /* QuestViewController.swift */,
-			);
-			path = QuestViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

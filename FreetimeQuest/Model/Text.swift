@@ -18,20 +18,13 @@ class Text {
     static let Ok = NSLocalizedString("Ok", comment: "")
     static let Cancel = NSLocalizedString("Cancel", comment: "")
     
-    static let Skip = NSLocalizedString("Skip", comment: "")
-    static let Next = NSLocalizedString("Next", comment: "")
-    static let Start = NSLocalizedString("Start", comment: "")
 
     static let DeleteQuest = NSLocalizedString("DeleteQuest", comment: "")
     
     //Onboarding
-    static let CompleteQuests = NSLocalizedString("CompleteQuests", comment: "")
-    static let AddQuests = NSLocalizedString("AddQuests", comment: "")
-    static let CreateMemories = NSLocalizedString("CreateMemories", comment: "")
-
-    static let CompleteQuestsDescription = NSLocalizedString("CompleteQuestsDescription", comment: "")
-    static let AddQuestsDescription = NSLocalizedString("AddQuestsDescription", comment: "")
-    static let CreateMemoriesDescription = NSLocalizedString("CreateMemoriesDescription", comment: "")
+    static let Hello = NSLocalizedString("Hello", comment: "")
+    static let OnboardingText = NSLocalizedString("OnboardingText", comment: "")
+    static let Start = NSLocalizedString("Start", comment: "")
 
     //Photo
     static let DeletePhoto = NSLocalizedString("DeletePhoto", comment: "")

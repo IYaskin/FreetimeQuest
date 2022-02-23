@@ -27,17 +27,9 @@
 "SetPhoto" = "Set photo";
 
 // Onboarding
-"Skip" = "Skip";
-"Next" = "Next";
+"Hello" = "Welcome!";
+"OnboardingText" = "Complete quests in your free time\nCall friends for help\n🔥Add colors to your life!🔥";
 "Start" = "Start";
-
-"CompleteQuests" = "Complete quests";
-"AddQuests" = "Unlock new quests";
-"CreateMemories" = "Create memories";
-
-"CompleteQuestsDescription" = "Swipe to done / delete quest\n\nTap on cell for more info\n\nComplete quests and earn stars\n";
-"AddQuestsDescription" = "After opening all categories it will be possible to add your own quests";
-"CreateMemoriesDescription" = "Tap on cell to add or change photo\n\nCreate GIF from added photos and share it with friends!";
 
 //GoOut
 "GoOut.Cinema" = "Cinema";
