@@ -24,7 +24,7 @@
 "AddCamera" = "Camera";
 "AddGallery" = "Gallery";
 "DeletePhoto" = "Delete photo";
-"SetPhoto" = "Set photo";
+"SetPhoto" = "Set a photo on the cover of the quest";
 
 // Onboarding
 "Hello" = "Welcome!";

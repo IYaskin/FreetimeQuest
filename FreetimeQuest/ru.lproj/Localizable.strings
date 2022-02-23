@@ -23,7 +23,7 @@
 "AddCamera" = "Камера";
 "AddGallery" = "Галерея";
 "DeletePhoto" = "Удалить фото";
-"SetPhoto" = "Установить фото";
+"SetPhoto" = "Установить фото на обложку квеста";
 
 //Onboarding
 "Hello" = "Добро пожаловать!";
