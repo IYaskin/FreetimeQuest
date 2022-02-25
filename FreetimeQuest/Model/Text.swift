@@ -31,4 +31,9 @@ class Text {
     static let AddGallery = NSLocalizedString("AddGallery", comment: "")
     static let AddCamera = NSLocalizedString("AddCamera", comment: "")
     static let SetPhoto = NSLocalizedString("SetPhoto", comment: "")
+    
+    //Share
+    static let ShareTextStart = NSLocalizedString("ShareTextStart", comment: "")
+    static let ShareTextEnd = NSLocalizedString("ShareTextEnd", comment: "")
+
 }

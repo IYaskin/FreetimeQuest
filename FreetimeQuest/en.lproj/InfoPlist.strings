@@ -5,7 +5,6 @@
   Created by Igor Yaskin on 04.06.2021.
   
 */
-"NSLocationWhenInUseUsageDescription" = "Searching places about quest";
-"NSCameraUsageDescription" = "Add photo to memories wall";
-"NSPhotoLibraryUsageDescription" = "Add photo to memories wall";
+"NSCameraUsageDescription" = "Need for setting a photo on the cover of the quest";
+"NSPhotoLibraryUsageDescription" = "Need for setting a photo on the cover of the quest";
 "NSPhotoLibraryAddUsageDescription" = "Save photo to gallery using camera from app";

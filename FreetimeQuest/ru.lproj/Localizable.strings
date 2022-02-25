@@ -31,6 +31,10 @@
 
 "Start" = "Начать";
 
+//Share
+"ShareTextStart" = "Привет! Хочешь выполнить квест ";
+"ShareTextEnd" = " вместе?";
+
 //GoOut
 
 "GoOut.Cinema" = "Кинотеатр";

@@ -31,6 +31,10 @@
 "OnboardingText" = "Complete quests in your free time\nCall friends for help\n🔥Add colors to your life!🔥";
 "Start" = "Start";
 
+//Share
+"ShareTextStart" = "Hey! Do you want to complete the quest ";
+"ShareTextEnd" = " together?";
+
 //GoOut
 "GoOut.Cinema" = "Cinema";
 "GoOut.Museum" = "Museum";

@@ -14,13 +14,6 @@ class OnboardingViewController: UIViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     
-//    private let titles = [Text.CompleteQuests,
-//                          Text.AddQuests,
-//                          Text.CreateMemories]
-//
-//    private let descriptions = [Text.CompleteQuestsDescription,
-//                                Text.AddQuestsDescription,
-//                                Text.CreateMemoriesDescription]
     override func viewDidLoad() {
         super.viewDidLoad()
 

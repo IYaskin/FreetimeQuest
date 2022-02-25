@@ -62,6 +62,13 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction private func shareButtonTapped(_ sender: UIButton) {
+        guard let title = quest?.title else {
+            return
+        }
+        let text = Text.ShareTextStart + "\"" + NSLocalizedString(title, comment: "") + "\"" + Text.ShareTextEnd
+        let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        activityVC.excludedActivityTypes = [.message, .mail]
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     @IBAction private func photoButtonTapped(_ sender: UIButton) {
