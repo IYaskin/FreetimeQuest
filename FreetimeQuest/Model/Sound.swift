@@ -9,21 +9,21 @@ import Foundation
 import AudioToolbox
 
 class Sound {
-    static func playDoneQuest() {
-        SystemSoundID.playFileNamed(fileName: "done", withExtenstion: "mp3")
+    static func playGoodMusic(id: Int) {
+        switch id {
+        case 1:
+            SystemSoundID.playFileNamed(fileName: "1", withExtenstion: "mp3")
+        case 2:
+            SystemSoundID.playFileNamed(fileName: "2", withExtenstion: "mp3")
+        case 3:
+            SystemSoundID.playFileNamed(fileName: "3", withExtenstion: "mp3")
+        default:
+            break
+        }
     }
     
-    static func playDeleteQuest() {
-        SystemSoundID.playFileNamed(fileName: "delete", withExtenstion: "mp3")
+    static func playBadMusic() {
+        SystemSoundID.playFileNamed(fileName: "4", withExtenstion: "mp3")
     }
-    
-    static func playAddCategory() {
-        SystemSoundID.playFileNamed(fileName: "category", withExtenstion: "mp3")
-    }
-    
-    static func playCreateGIF() {
-        SystemSoundID.playFileNamed(fileName: "GIF", withExtenstion: "mp3")
-    }
-
 
 }

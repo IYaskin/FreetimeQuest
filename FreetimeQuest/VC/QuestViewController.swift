@@ -113,7 +113,7 @@ class QuestViewController: UIViewController {
         showAlert(title: Text.DeleteQuest,
                   okButtonTitle: Text.Ok, okAction: { [weak self] _ in
             CoreDataManager.shared.deleteQuest(quest)
-            
+            Sound.playBadMusic()
             self?.dismiss(animated: false) { [weak self] in
                 self?.updateHandler?()
             }
@@ -126,8 +126,16 @@ class QuestViewController: UIViewController {
         guard let quest = quest else {
             return
         }
-
-        CoreDataManager.shared.doneQuest(quest, isDone: !quest.isDone)
+        let questIsDone = !quest.isDone
+        CoreDataManager.shared.doneQuest(quest, isDone: questIsDone)
+        
+        if questIsDone {
+            let randomInt = Int.random(in: 1..<4)
+            print(randomInt)
+            Sound.playGoodMusic(id: randomInt)
+        } else {
+            Sound.playBadMusic()
+        }
         
         dismiss(animated: true) { [weak self] in
             self?.updateHandler?()
