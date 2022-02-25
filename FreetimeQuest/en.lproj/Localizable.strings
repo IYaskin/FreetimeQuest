@@ -28,7 +28,7 @@
 
 // Onboarding
 "Hello" = "Welcome!";
-"OnboardingText" = "Complete quests in your free time\nCall friends for help\n🔥Add colors to your life!🔥";
+"OnboardingText" = "Complete quests in your free time\n\nCall friends for help\n\n🔥Add colors to your life!🔥";
 "Start" = "Start";
 
 //Share
