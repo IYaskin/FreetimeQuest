@@ -19,7 +19,7 @@ class QuestViewController: UIViewController {
     @IBOutlet private weak var doneButton: UIButton!
     
     var quest: QuestObject?
-    var updateHandler: (()->())?
+    var updateHandler: ((Animation?)->())?
     
     private let imagePicker = ImagePickerService()
     
@@ -83,7 +83,7 @@ class QuestViewController: UIViewController {
         let deleteAction = UIAlertAction(title: Text.DeletePhoto, style: .destructive) { [weak self] _ in
             CoreDataManager.shared.setQuestImage(quest, image: Data())
             self?.dismiss(animated: false) { [weak self] in
-                self?.updateHandler?()
+                self?.updateHandler?(nil)
             }
         }
         
@@ -112,10 +112,11 @@ class QuestViewController: UIViewController {
 
         showAlert(title: Text.DeleteQuest,
                   okButtonTitle: Text.Ok, okAction: { [weak self] _ in
+            let questIsDone = quest.isDone
             CoreDataManager.shared.deleteQuest(quest)
             Sound.playBadMusic()
             self?.dismiss(animated: false) { [weak self] in
-                self?.updateHandler?()
+                self?.updateHandler?(questIsDone ? .deleteDoneQuest : .deleteUndoneQuest)
             }
 
         }, cancelButtonTitle: Text.Cancel)
@@ -138,7 +139,7 @@ class QuestViewController: UIViewController {
         }
         
         dismiss(animated: true) { [weak self] in
-            self?.updateHandler?()
+            self?.updateHandler?(questIsDone ? .doneQuest : .undoneQuest)
         }
     }
     
@@ -154,7 +155,7 @@ extension QuestViewController: ImagePickerServiceDelegate {
 
         CoreDataManager.shared.setQuestImage(quest, image: image.pngData() ?? Data())
         dismiss(animated: false) { [weak self] in
-            self?.updateHandler?()
+            self?.updateHandler?(nil)
         }
     }
     

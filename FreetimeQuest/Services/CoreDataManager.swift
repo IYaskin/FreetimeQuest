@@ -63,8 +63,12 @@ class CoreDataManager {
     }
     
     func deleteQuest(_ quest: QuestObject) {
-        viewContext.delete(quest)
+        if quest.isDone {
+            UserDefaultsManager.shared.doneQuestsCount -= 1
+        }
         UserDefaultsManager.shared.allQuestsCount -= 1
+        
+        viewContext.delete(quest)
         saveContext()
     }
     

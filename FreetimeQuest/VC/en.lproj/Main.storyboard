@@ -159,6 +159,7 @@
                         <outlet property="progressBar" destination="ArM-ne-2GO" id="UQG-qU-2UQ"/>
                         <outlet property="rightPlaceholderView" destination="tg9-9W-bp9" id="II7-NE-x5g"/>
                         <outlet property="rightStarImageView" destination="ajc-9H-pyH" id="fi0-Xf-9Qk"/>
+                        <outlet property="titleLabel" destination="Qd3-XD-aOO" id="XUc-Pb-hdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

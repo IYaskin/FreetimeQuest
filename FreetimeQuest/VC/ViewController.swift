@@ -10,6 +10,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var leftCheckImageView: UIImageView!
     @IBOutlet private weak var leftPlaceholderView: UIView!
     @IBOutlet private weak var currentStarsLabel: UILabel!
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
                                 forCellWithReuseIdentifier: "QuestCell")
     }
     
-    private func updateUI() {
+    private func updateUI(animation: Animation? = nil) {
         let doneQuests = UserDefaultsManager.shared.doneQuestsCount
         let maxQuests = UserDefaultsManager.shared.allQuestsCount
         
@@ -98,6 +99,35 @@ class ViewController: UIViewController {
             print(error)
         }
         collectionView.reloadData()
+        
+        
+        guard let animation = animation else {
+            return
+        }
+        animate(animation)
+    }
+    
+    private func animate(_ animation: Animation) {
+        UIView.animate(withDuration: 1, delay: 0, options: .transitionCrossDissolve) {[weak self] in
+            switch animation {
+            case .doneQuest:
+                self?.leftPlaceholderView.backgroundColor = .green
+            case .undoneQuest:
+                self?.leftPlaceholderView.backgroundColor = .red
+            case .deleteDoneQuest:
+                self?.leftPlaceholderView.backgroundColor = .red
+                self?.rightPlaceholderView.backgroundColor = .red
+            case .deleteUndoneQuest:
+                self?.rightPlaceholderView.backgroundColor = .red
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 1, delay: 0, options: .transitionCrossDissolve) {[weak self] in
+                self?.leftPlaceholderView.backgroundColor = .white
+                self?.rightPlaceholderView.backgroundColor = .white
+            }
+        }
     }
     
 }
@@ -127,8 +157,8 @@ extension ViewController: UICollectionViewDelegate {
         let quest = fetchedResultsController.object(at: indexPath)
         vc.quest = quest
         
-        vc.updateHandler = { [weak self] in
-            self?.updateUI()
+        vc.updateHandler = { [weak self] animation in
+            self?.updateUI(animation: animation)
         }
 
         self.present(vc, animated: true)

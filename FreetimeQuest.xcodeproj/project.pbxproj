@@ -36,6 +36,7 @@
 		93463F1E2718419400199BF0 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F1C2718419400199BF0 /* QuestCell.swift */; };
 		93463F1F2718419400199BF0 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93463F1D2718419400199BF0 /* QuestCell.xib */; };
 		93463F2127188E0D00199BF0 /* Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F2027188E0D00199BF0 /* Quests.swift */; };
+		93472FDA27CA59F400A0FEBE /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93472FD927CA59F400A0FEBE /* Animation.swift */; };
 		9350968627C29B2E00651835 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350968527C29B2E00651835 /* QuestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		93463F1C2718419400199BF0 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
 		93463F1D2718419400199BF0 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
 		93463F2027188E0D00199BF0 /* Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests.swift; sourceTree = "<group>"; };
+		93472FD927CA59F400A0FEBE /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		934814FA27C97D440074997D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		934814FB27C97D440074997D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9350968527C29B2E00651835 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				846799882629AC38007FA801 /* Text.swift */,
 				846BBF01266B788E00BC58D1 /* Sound.swift */,
 				84544F8A25BDD0E9000683FC /* Category.swift */,
+				93472FD927CA59F400A0FEBE /* Animation.swift */,
 				840748D125F961010087F387 /* Quests */,
 				8455584425DDB60C0026F66D /* QuestObject */,
 			);
@@ -325,6 +328,7 @@
 				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
 				93463F2127188E0D00199BF0 /* Quests.swift in Sources */,
+				93472FDA27CA59F400A0FEBE /* Animation.swift in Sources */,
 				84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
