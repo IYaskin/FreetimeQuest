@@ -21,4 +21,5 @@ extension QuestObject {
     @NSManaged public var category: Int16
     @NSManaged public var image: Data
     @NSManaged public var isDone: Bool
+    @NSManaged public var note: String
 }

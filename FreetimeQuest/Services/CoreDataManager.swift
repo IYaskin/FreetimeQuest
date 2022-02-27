@@ -78,6 +78,11 @@ class CoreDataManager {
         saveContext()
     }
 
+    func setQuestNote(_ quest: QuestObject, note: String) {
+        quest.note = note
+        saveContext()
+    }
+
     func saveContext() {
         guard viewContext.hasChanges else {
             return

@@ -17,6 +17,8 @@ class QuestViewController: UIViewController {
     @IBOutlet private weak var photoButton: UIButton!
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var doneButton: UIButton!
+    @IBOutlet private weak var commentLabel: UILabel!
+    @IBOutlet private weak var commentTextView: UITextView!
     
     var quest: QuestObject?
     var updateHandler: ((Animation?)->())?
@@ -27,8 +29,12 @@ class QuestViewController: UIViewController {
         super.viewDidLoad()
         let dismissTap = UITapGestureRecognizer(target: self, action: #selector (bgTapped))
         bgView.addGestureRecognizer(dismissTap)
+        let endEditingTap = UITapGestureRecognizer(target: self, action: #selector (contentViewTapped))
+        contentView.addGestureRecognizer(endEditingTap)
+
         imagePicker.delegate = self
         imagePicker.presentingViewController = self
+        commentTextView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +45,7 @@ class QuestViewController: UIViewController {
         }
 
         titleLabel.text = NSLocalizedString(quest.title, comment: "")
+        configureTextView(quest.note)
         
         if quest.isDone {
             doneButton.setImage(UIImage.init(systemName: "arrow.counterclockwise"), for: .normal)
@@ -53,15 +60,40 @@ class QuestViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+    }
+    
     override func viewDidLayoutSubviews() {
         contentView.layer.cornerRadius = 20
+    }
+    
+    private func configureTextView(_ note: String) {
+        commentTextView.layer.cornerRadius = 20
+        commentTextView.layer.borderWidth = 1
+        commentTextView.layer.borderColor = UIColor.lightGray.cgColor
+
+        if note.isEmpty {
+            commentTextView.text = "Заметки"
+            commentTextView.textColor = .lightGray
+        } else {
+            commentTextView.text = note
+            commentTextView.textColor = .darkViolet
+        }
+        
     }
     
     @objc private func bgTapped() {
         dismiss(animated: true)
     }
     
+    @objc private func contentViewTapped() {
+        view.endEditing(true)
+    }
+
     @IBAction private func shareButtonTapped(_ sender: UIButton) {
+        view.endEditing(true)
         guard let title = quest?.title else {
             return
         }
@@ -72,6 +104,7 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction private func photoButtonTapped(_ sender: UIButton) {
+        view.endEditing(true)
         guard let quest = quest else {
             return
         }
@@ -106,6 +139,7 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction private func deleteButtonTapped(_ sender: UIButton) {
+        view.endEditing(true)
         guard let quest = quest else {
             return
         }
@@ -124,6 +158,7 @@ class QuestViewController: UIViewController {
     }
     
     @IBAction private func doneButtonTapped(_ sender: UIButton) {
+        view.endEditing(true)
         guard let quest = quest else {
             return
         }
@@ -161,6 +196,32 @@ extension QuestViewController: ImagePickerServiceDelegate {
     
     func imagePickerService(_ service: ImagePickerService,
                             finishWith error: String) {
-        showOkAlert(title: "Не удалось получить фото :(", okButtonTitle: "Ок")
+        showOkAlert(title: Text.FailPhoto, okButtonTitle: Text.Ok)
     }
+}
+
+extension QuestViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Заметки" {
+            commentTextView.text = ""
+            commentTextView.textColor = .darkViolet
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            commentTextView.text = "Заметки"
+            commentTextView.textColor = .lightGray
+        }
+
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        guard let quest = quest else {
+            return
+        }
+        CoreDataManager.shared.setQuestNote(quest, note: textView.text)
+    }
+   
 }

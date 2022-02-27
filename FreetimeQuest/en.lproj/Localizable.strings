@@ -25,7 +25,7 @@
 "AddGallery" = "Gallery";
 "DeletePhoto" = "Delete photo";
 "SetPhoto" = "Set a photo on the cover of the quest";
-
+"FailPhoto" = "Failed to get photo";
 // Onboarding
 "Hello" = "Welcome!";
 "OnboardingText" = "Complete quests in your free time\n\nCall friends for help\n\n🔥Add colors to your life!🔥";

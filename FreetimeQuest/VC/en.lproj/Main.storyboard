@@ -264,7 +264,7 @@
                                 <gestureRecognizers/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGE-7S-RNg">
-                                <rect key="frame" x="40" y="385.5" width="334" height="135"/>
+                                <rect key="frame" x="40" y="348" width="334" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h4-TZ-NWS">
                                         <rect key="frame" x="20" y="35" width="294" height="30"/>
@@ -340,15 +340,29 @@
                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xow-f4-ptF">
+                                        <rect key="frame" x="15" y="135" width="304" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="black"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="prR-Da-NeW"/>
+                                        </constraints>
+                                        <color key="textColor" name="black"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="0Ud-xY-WsC" firstAttribute="centerX" secondItem="DGE-7S-RNg" secondAttribute="centerX" id="2Co-K4-CGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xow-f4-ptF" secondAttribute="trailing" constant="15" id="5Qh-Ar-nwV"/>
                                     <constraint firstItem="9h4-TZ-NWS" firstAttribute="centerX" secondItem="DGE-7S-RNg" secondAttribute="centerX" id="DvE-Wa-s0d"/>
                                     <constraint firstItem="8v7-bJ-D1a" firstAttribute="top" secondItem="DGE-7S-RNg" secondAttribute="top" constant="8" id="Jzi-4x-h23"/>
+                                    <constraint firstItem="Xow-f4-ptF" firstAttribute="top" secondItem="0Ud-xY-WsC" secondAttribute="bottom" id="LuK-qu-FVC"/>
+                                    <constraint firstItem="Xow-f4-ptF" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="15" id="MG9-Yq-nN4"/>
                                     <constraint firstItem="9h4-TZ-NWS" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="20" id="PMo-i2-weM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xow-f4-ptF" secondAttribute="bottom" constant="15" id="QAw-uu-edS"/>
                                     <constraint firstItem="0Ud-xY-WsC" firstAttribute="top" secondItem="9h4-TZ-NWS" secondAttribute="bottom" constant="10" id="T6Y-Bq-MEX"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Ud-xY-WsC" secondAttribute="bottom" id="ar5-U5-U1b"/>
                                     <constraint firstAttribute="trailing" secondItem="8v7-bJ-D1a" secondAttribute="trailing" constant="20" symbolic="YES" id="eZf-53-J07"/>
                                     <constraint firstItem="9h4-TZ-NWS" firstAttribute="top" secondItem="DGE-7S-RNg" secondAttribute="top" constant="35" id="l4o-WG-F9Q"/>
                                     <constraint firstItem="0Ud-xY-WsC" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" id="ztf-eA-GGn"/>
@@ -370,6 +384,7 @@
                     <connections>
                         <outlet property="bgView" destination="JxV-us-On0" id="hqo-HR-BZ7"/>
                         <outlet property="categoryLabel" destination="8v7-bJ-D1a" id="Fzb-bY-R1E"/>
+                        <outlet property="commentTextView" destination="Xow-f4-ptF" id="qMz-9v-g3k"/>
                         <outlet property="contentView" destination="DGE-7S-RNg" id="ui0-GK-eAS"/>
                         <outlet property="deleteButton" destination="6sb-RK-ak4" id="qST-xU-BIx"/>
                         <outlet property="doneButton" destination="eOh-QA-MDM" id="CmX-kd-zjc"/>
@@ -380,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xl0-Fi-7sf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="76"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
