@@ -20,7 +20,7 @@
 "Cancel" = "Cancel";
 "DeleteQuest" = "Delete quest?";
 
-"Notes" = "Notes";
+"Notes" = "Notes:";
 
 //Photo
 "AddCamera" = "Camera";
@@ -34,8 +34,9 @@
 "Start" = "Start";
 
 //Share
-"ShareTextStart" = "Hey! Do you want to complete the quest ";
-"ShareTextEnd" = " together?";
+"ShareUndoneTextStart" = "Hey! Do you want to complete the quest ";
+"ShareUndoneTextEnd" = " together?";
+"ShareDoneText" = "I've done quest: ";
 
 //GoOut
 "GoOut.Cinema" = "Cinema";

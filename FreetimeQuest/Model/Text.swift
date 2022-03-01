@@ -21,6 +21,7 @@ class Text {
 
     static let DeleteQuest = NSLocalizedString("DeleteQuest", comment: "")
     static let Notes = NSLocalizedString("Notes", comment: "")
+    static let Copyright = "\n©FreetimeQuest"
 
     //Onboarding
     static let Hello = NSLocalizedString("Hello", comment: "")
@@ -35,7 +36,8 @@ class Text {
     static let FailPhoto = NSLocalizedString("FailPhoto", comment: "")
 
     //Share
-    static let ShareTextStart = NSLocalizedString("ShareTextStart", comment: "")
-    static let ShareTextEnd = NSLocalizedString("ShareTextEnd", comment: "")
+    static let ShareUndoneTextStart = NSLocalizedString("ShareUndoneTextStart", comment: "")
+    static let ShareUndoneTextEnd = NSLocalizedString("ShareUndoneTextEnd", comment: "")
+    static let ShareDoneText = NSLocalizedString("ShareDoneText", comment: "")
 
 }

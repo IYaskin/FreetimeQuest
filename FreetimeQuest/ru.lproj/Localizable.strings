@@ -19,7 +19,7 @@
 "Cancel" = "Отмена";
 "DeleteQuest" = "Удалить квест?";
 
-"Notes" = "Заметки";
+"Notes" = "Заметки:";
 
 //Photo
 "AddCamera" = "Камера";
@@ -35,8 +35,9 @@
 "Start" = "Начать";
 
 //Share
-"ShareTextStart" = "Привет! Хочешь выполнить квест ";
-"ShareTextEnd" = " вместе?";
+"ShareUndoneTextStart" = "Привет! Хочешь выполнить квест ";
+"ShareUndoneTextEnd" = " вместе?";
+"ShareDoneText" = "Выполнен квест: ";
 
 //GoOut
 

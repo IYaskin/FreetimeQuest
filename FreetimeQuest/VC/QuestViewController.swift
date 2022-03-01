@@ -72,14 +72,12 @@ class QuestViewController: UIViewController {
     private func configureTextView(_ note: String) {
         commentTextView.layer.cornerRadius = 20
         commentTextView.layer.borderWidth = 1
-        commentTextView.layer.borderColor = UIColor.lightGray.cgColor
+        commentTextView.layer.borderColor = UIColor.darkViolet.cgColor
 
         if note.isEmpty {
             commentTextView.text = Text.Notes
-            commentTextView.textColor = .lightGray
         } else {
             commentTextView.text = note
-            commentTextView.textColor = .darkViolet
         }
         
     }
@@ -94,12 +92,20 @@ class QuestViewController: UIViewController {
 
     @IBAction private func shareButtonTapped(_ sender: UIButton) {
         view.endEditing(true)
-        guard let title = quest?.title else {
+        guard let quest = quest else {
             return
         }
-        let text = Text.ShareTextStart + "\"" + NSLocalizedString(title, comment: "") + "\"" + Text.ShareTextEnd
+        let title = NSLocalizedString(quest.title, comment: "")
+        var text = ""
+        
+        if quest.isDone {
+            text = Text.ShareDoneText + "\"" + title + "\" !"  + Text.Copyright
+        } else {
+            text = Text.ShareUndoneTextStart + "\"" + title + "\"" + Text.ShareUndoneTextEnd + Text.Copyright
+        }
+
         let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
-        activityVC.excludedActivityTypes = [.message, .mail]
+        activityVC.excludedActivityTypes = [.message, .mail, .postToFacebook, .postToTwitter]
         self.present(activityVC, animated: true, completion: nil)
     }
     
@@ -205,14 +211,12 @@ extension QuestViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == Text.Notes {
             commentTextView.text = ""
-            commentTextView.textColor = .darkViolet
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
             commentTextView.text = Text.Notes
-            commentTextView.textColor = .lightGray
         }
 
     }
