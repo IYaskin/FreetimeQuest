@@ -20,7 +20,8 @@ class Text {
     
 
     static let DeleteQuest = NSLocalizedString("DeleteQuest", comment: "")
-    
+    static let Notes = NSLocalizedString("Notes", comment: "")
+
     //Onboarding
     static let Hello = NSLocalizedString("Hello", comment: "")
     static let OnboardingText = NSLocalizedString("OnboardingText", comment: "")

@@ -19,6 +19,8 @@
 "Cancel" = "Отмена";
 "DeleteQuest" = "Удалить квест?";
 
+"Notes" = "Заметки";
+
 //Photo
 "AddCamera" = "Камера";
 "AddGallery" = "Галерея";

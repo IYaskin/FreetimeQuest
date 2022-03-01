@@ -75,7 +75,7 @@ class QuestViewController: UIViewController {
         commentTextView.layer.borderColor = UIColor.lightGray.cgColor
 
         if note.isEmpty {
-            commentTextView.text = "Заметки"
+            commentTextView.text = Text.Notes
             commentTextView.textColor = .lightGray
         } else {
             commentTextView.text = note
@@ -203,7 +203,7 @@ extension QuestViewController: ImagePickerServiceDelegate {
 extension QuestViewController: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Заметки" {
+        if textView.text == Text.Notes {
             commentTextView.text = ""
             commentTextView.textColor = .darkViolet
         }
@@ -211,7 +211,7 @@ extension QuestViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
-            commentTextView.text = "Заметки"
+            commentTextView.text = Text.Notes
             commentTextView.textColor = .lightGray
         }
 
