@@ -28,8 +28,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freetime Quest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qd3-XD-aOO">
-                                        <rect key="frame" x="20" y="10" width="374" height="33"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
+                                        <rect key="frame" x="20" y="10" width="374" height="32.5"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="28"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -264,16 +264,16 @@
                                 <gestureRecognizers/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGE-7S-RNg">
-                                <rect key="frame" x="40" y="348" width="334" height="210"/>
+                                <rect key="frame" x="40" y="351" width="334" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h4-TZ-NWS">
-                                        <rect key="frame" x="20" y="35" width="294" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="20" y="35" width="294" height="29"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Ud-xY-WsC">
-                                        <rect key="frame" x="0.0" y="75" width="334" height="60"/>
+                                        <rect key="frame" x="0.0" y="69" width="334" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-WX-XoN">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
@@ -341,14 +341,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xow-f4-ptF">
-                                        <rect key="frame" x="15" y="135" width="304" height="60"/>
+                                        <rect key="frame" x="15" y="129" width="304" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="black"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="prR-Da-NeW"/>
                                         </constraints>
                                         <color key="textColor" name="black"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -362,7 +362,7 @@
                                     <constraint firstItem="Xow-f4-ptF" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="15" id="MG9-Yq-nN4"/>
                                     <constraint firstItem="9h4-TZ-NWS" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" constant="20" id="PMo-i2-weM"/>
                                     <constraint firstAttribute="bottom" secondItem="Xow-f4-ptF" secondAttribute="bottom" constant="15" id="QAw-uu-edS"/>
-                                    <constraint firstItem="0Ud-xY-WsC" firstAttribute="top" secondItem="9h4-TZ-NWS" secondAttribute="bottom" constant="10" id="T6Y-Bq-MEX"/>
+                                    <constraint firstItem="0Ud-xY-WsC" firstAttribute="top" secondItem="9h4-TZ-NWS" secondAttribute="bottom" constant="5" id="T6Y-Bq-MEX"/>
                                     <constraint firstAttribute="trailing" secondItem="8v7-bJ-D1a" secondAttribute="trailing" constant="20" symbolic="YES" id="eZf-53-J07"/>
                                     <constraint firstItem="9h4-TZ-NWS" firstAttribute="top" secondItem="DGE-7S-RNg" secondAttribute="top" constant="35" id="l4o-WG-F9Q"/>
                                     <constraint firstItem="0Ud-xY-WsC" firstAttribute="leading" secondItem="DGE-7S-RNg" secondAttribute="leading" id="ztf-eA-GGn"/>
