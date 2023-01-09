@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "zakalka.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

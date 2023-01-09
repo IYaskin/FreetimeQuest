@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  FreetimeQuest
+
+  Created by Igor Yaskin on 04.06.2021.
+  
+*/
+"NSCameraUsageDescription" = "Нужно для добавления фото на обложку квеста";
+"NSPhotoLibraryUsageDescription" = "Нужно для добавления фото на обложку квеста";
+"NSPhotoLibraryAddUsageDescription" = "Нужно для сохранения фото в галерею, при использовании камеры";

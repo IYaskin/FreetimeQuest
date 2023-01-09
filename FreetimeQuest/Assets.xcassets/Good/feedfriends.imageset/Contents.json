@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "feedfriends.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

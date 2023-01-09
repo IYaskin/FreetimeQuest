@@ -7,39 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */; };
-		8411DC2D25C73DF5001CD30B /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */; };
+		840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840748E325F96A7E0087F387 /* UserDefaultsManager.swift */; };
 		8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444244125CD7507003ED6AC /* ImagePicker.swift */; };
-		8445523525CD5C6D002585D2 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445523425CD5C6D002585D2 /* CollectionCell.swift */; };
-		8445523825CD5C7B002585D2 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8445523725CD5C7B002585D2 /* CollectionCell.xib */; };
+		84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84484E692607579D007EF415 /* CustomProgressBar.swift */; };
 		8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */; };
 		8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450FE2025BDBC0F00814F81 /* ViewController.swift */; };
 		8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2225BDBC0F00814F81 /* Main.storyboard */; };
 		8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2525BDBC1000814F81 /* Assets.xcassets */; };
 		8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */; };
-		84544F8825BDCF50000683FC /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8725BDCF50000683FC /* Quest.swift */; };
-		84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* QuestType.swift */; };
-		84544F8F25BDD850000683FC /* QuestsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8E25BDD850000683FC /* QuestsList.swift */; };
-		8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456106E25C6FBC7000840CA /* ViewController+Prints.swift */; };
+		8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */; };
+		8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */; };
+		84544F8B25BDD0E9000683FC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84544F8A25BDD0E9000683FC /* Category.swift */; };
+		8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455583C25DDAC020026F66D /* CoreDataManager.swift */; };
+		8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458E84825E2607C00C233B6 /* UIView+Alert.swift */; };
+		845E7C4F2622F86600B33170 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 845E7C512622F86600B33170 /* Localizable.strings */; };
+		846799892629AC38007FA801 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846799882629AC38007FA801 /* Text.swift */; };
+		8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */; };
+		846BBEFC266B727500BC58D1 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BBEFB266B727500BC58D1 /* 2.mp3 */; };
+		846BBEFF266B783500BC58D1 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BBEFE266B783500BC58D1 /* 1.mp3 */; };
+		846BBF02266B788F00BC58D1 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BBF01266B788E00BC58D1 /* Sound.swift */; };
+		846BE1822641A8C200E28AAA /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1812641A8C200E28AAA /* 3.mp3 */; };
+		846BE1852641A8C800E28AAA /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 846BE1842641A8C800E28AAA /* 4.mp3 */; };
+		846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */; };
+		847978582620C55800817123 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847978572620C55800817123 /* UIView+Shadow.swift */; };
+		84D2915A266A1B2600A66C4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D2915C266A1B2600A66C4D /* InfoPlist.strings */; };
+		84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */; };
+		93211C772717926800E68D4B /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93211C752717926800E68D4B /* CoreDataModel.xcdatamodeld */; };
+		93463F1E2718419400199BF0 /* QuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F1C2718419400199BF0 /* QuestCell.swift */; };
+		93463F1F2718419400199BF0 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93463F1D2718419400199BF0 /* QuestCell.xib */; };
+		93463F2127188E0D00199BF0 /* Quests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93463F2027188E0D00199BF0 /* Quests.swift */; };
+		93472FDA27CA59F400A0FEBE /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93472FD927CA59F400A0FEBE /* Animation.swift */; };
+		9350968627C29B2E00651835 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350968527C29B2E00651835 /* QuestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Quests.swift"; sourceTree = "<group>"; };
-		8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		840748E325F96A7E0087F387 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		8444244125CD7507003ED6AC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		8445523425CD5C6D002585D2 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
-		8445523725CD5C7B002585D2 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		84484E692607579D007EF415 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		8450FE1925BDBC0F00814F81 /* FreetimeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreetimeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450FE2025BDBC0F00814F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8450FE2325BDBC0F00814F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8450FE2525BDBC1000814F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8450FE2825BDBC1000814F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450FE2A25BDBC1000814F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84544F8725BDCF50000683FC /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
-		84544F8A25BDD0E9000683FC /* QuestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestType.swift; sourceTree = "<group>"; };
-		84544F8E25BDD850000683FC /* QuestsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestsList.swift; sourceTree = "<group>"; };
-		8456106E25C6FBC7000840CA /* ViewController+Prints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Prints.swift"; sourceTree = "<group>"; };
+		84544F8A25BDD0E9000683FC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8455583C25DDAC020026F66D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8458E84825E2607C00C233B6 /* UIView+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Alert.swift"; sourceTree = "<group>"; };
+		845E7C502622F86600B33170 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		845E7C522622F86A00B33170 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		846799882629AC38007FA801 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		846BBEFB266B727500BC58D1 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		846BBEFE266B783500BC58D1 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		846BBF01266B788E00BC58D1 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		846BE1812641A8C200E28AAA /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		846BE1842641A8C800E28AAA /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
+		846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemSoundID+PlayFileNamed.swift"; sourceTree = "<group>"; };
+		847978572620C55800817123 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		84D2915B266A1B2600A66C4D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84D2915E266A27A600A66C4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		93211C762717926800E68D4B /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		93463F1C2718419400199BF0 /* QuestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCell.swift; sourceTree = "<group>"; };
+		93463F1D2718419400199BF0 /* QuestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
+		93463F2027188E0D00199BF0 /* Quests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quests.swift; sourceTree = "<group>"; };
+		93472FD927CA59F400A0FEBE /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		934814FA27C97D440074997D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		934814FB27C97D440074997D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9350968527C29B2E00651835 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +89,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8445523325CD5C4A002585D2 /* CollectionCell */ = {
+		840748D125F961010087F387 /* Quests */ = {
 			isa = PBXGroup;
 			children = (
-				8445523425CD5C6D002585D2 /* CollectionCell.swift */,
-				8445523725CD5C7B002585D2 /* CollectionCell.xib */,
+				93463F2027188E0D00199BF0 /* Quests.swift */,
 			);
-			path = CollectionCell;
+			path = Quests;
+			sourceTree = "<group>";
+		};
+		84484E6826075787007EF415 /* CustomProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				84484E692607579D007EF415 /* CustomProgressBar.swift */,
+			);
+			path = CustomProgressBar;
+			sourceTree = "<group>";
+		};
+		84507A1D25E10F4A0060EDE5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8455583C25DDAC020026F66D /* CoreDataManager.swift */,
+				840748E325F96A7E0087F387 /* UserDefaultsManager.swift */,
+				8444244125CD7507003ED6AC /* ImagePicker.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84507A1F25E10F550060EDE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93463F1B2718417000199BF0 /* QuestCell */,
+				84484E6826075787007EF415 /* CustomProgressBar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84507A2025E10F5C0060EDE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				846BE1802641A8B600E28AAA /* Sounds */,
+				846799882629AC38007FA801 /* Text.swift */,
+				846BBF01266B788E00BC58D1 /* Sound.swift */,
+				84544F8A25BDD0E9000683FC /* Category.swift */,
+				93472FD927CA59F400A0FEBE /* Animation.swift */,
+				840748D125F961010087F387 /* Quests */,
+				8455584425DDB60C0026F66D /* QuestObject */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84507A2225E10F9A0060EDE5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				84507A1F25E10F550060EDE5 /* Views */,
+				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
+				8467DC0026427D7B00A5F234 /* OnboardingViewController.swift */,
+				9350968527C29B2E00651835 /* QuestViewController.swift */,
+				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		84507A2625E111560060EDE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8458E84825E2607C00C233B6 /* UIView+Alert.swift */,
+				847978572620C55800817123 /* UIView+Shadow.swift */,
+				846BE1872641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift */,
+				84F860E12662AAAF009E11A9 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8450FE1025BDBC0F00814F81 = {
@@ -67,6 +166,7 @@
 			children = (
 				8450FE1B25BDBC0F00814F81 /* FreetimeQuest */,
 				8450FE1A25BDBC0F00814F81 /* Products */,
+				846799BA262A1F06007FA801 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,29 +182,54 @@
 			isa = PBXGroup;
 			children = (
 				8450FE1C25BDBC0F00814F81 /* AppDelegate.swift */,
-				8444244125CD7507003ED6AC /* ImagePicker.swift */,
-				84544F8D25BDD840000683FC /* Quest */,
-				8445523325CD5C4A002585D2 /* CollectionCell */,
-				8450FE2025BDBC0F00814F81 /* ViewController.swift */,
-				8456106E25C6FBC7000840CA /* ViewController+Prints.swift */,
-				8411DC2925C73ACB001CD30B /* ViewController+Quests.swift */,
-				8411DC2C25C73DF5001CD30B /* ViewController+CollectionView.swift */,
-				8450FE2225BDBC0F00814F81 /* Main.storyboard */,
+				845E7C512622F86600B33170 /* Localizable.strings */,
+				84507A2625E111560060EDE5 /* Extensions */,
+				84507A1D25E10F4A0060EDE5 /* Services */,
+				84507A2025E10F5C0060EDE5 /* Model */,
+				84507A2225E10F9A0060EDE5 /* VC */,
 				8450FE2525BDBC1000814F81 /* Assets.xcassets */,
 				8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */,
 				8450FE2A25BDBC1000814F81 /* Info.plist */,
+				93211C752717926800E68D4B /* CoreDataModel.xcdatamodeld */,
+				84D2915C266A1B2600A66C4D /* InfoPlist.strings */,
 			);
 			path = FreetimeQuest;
 			sourceTree = "<group>";
 		};
-		84544F8D25BDD840000683FC /* Quest */ = {
+		8455584425DDB60C0026F66D /* QuestObject */ = {
 			isa = PBXGroup;
 			children = (
-				84544F8A25BDD0E9000683FC /* QuestType.swift */,
-				84544F8725BDCF50000683FC /* Quest.swift */,
-				84544F8E25BDD850000683FC /* QuestsList.swift */,
+				8455583F25DDB5F30026F66D /* QuestObject+CoreDataClass.swift */,
+				8455584025DDB5F30026F66D /* QuestObject+CoreDataProperties.swift */,
 			);
-			path = Quest;
+			path = QuestObject;
+			sourceTree = "<group>";
+		};
+		846799BA262A1F06007FA801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		846BE1802641A8B600E28AAA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				846BBEFE266B783500BC58D1 /* 1.mp3 */,
+				846BBEFB266B727500BC58D1 /* 2.mp3 */,
+				846BE1812641A8C200E28AAA /* 3.mp3 */,
+				846BE1842641A8C800E28AAA /* 4.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		93463F1B2718417000199BF0 /* QuestCell */ = {
+			isa = PBXGroup;
+			children = (
+				93463F1C2718419400199BF0 /* QuestCell.swift */,
+				93463F1D2718419400199BF0 /* QuestCell.xib */,
+			);
+			path = QuestCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +272,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 8450FE1025BDBC0F00814F81;
 			productRefGroup = 8450FE1A25BDBC0F00814F81 /* Products */;
@@ -166,8 +291,14 @@
 			files = (
 				8450FE2925BDBC1000814F81 /* LaunchScreen.storyboard in Resources */,
 				8450FE2625BDBC1000814F81 /* Assets.xcassets in Resources */,
+				84D2915A266A1B2600A66C4D /* InfoPlist.strings in Resources */,
+				93463F1F2718419400199BF0 /* QuestCell.xib in Resources */,
+				846BBEFC266B727500BC58D1 /* 2.mp3 in Resources */,
+				846BBEFF266B783500BC58D1 /* 1.mp3 in Resources */,
+				845E7C4F2622F86600B33170 /* Localizable.strings in Resources */,
+				846BE1822641A8C200E28AAA /* 3.mp3 in Resources */,
 				8450FE2425BDBC0F00814F81 /* Main.storyboard in Resources */,
-				8445523825CD5C7B002585D2 /* CollectionCell.xib in Resources */,
+				846BE1852641A8C800E28AAA /* 4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,16 +309,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84544F8F25BDD850000683FC /* QuestsList.swift in Sources */,
-				8411DC2A25C73ACB001CD30B /* ViewController+Quests.swift in Sources */,
-				8445523525CD5C6D002585D2 /* CollectionCell.swift in Sources */,
+				84F860E22662AAAF009E11A9 /* UIColor+Extension.swift in Sources */,
+				93211C772717926800E68D4B /* CoreDataModel.xcdatamodeld in Sources */,
+				8451B58D2605F00D00BD0A65 /* QuestObject+CoreDataClass.swift in Sources */,
+				93463F1E2718419400199BF0 /* QuestCell.swift in Sources */,
 				8450FE2125BDBC0F00814F81 /* ViewController.swift in Sources */,
-				84544F8825BDCF50000683FC /* Quest.swift in Sources */,
-				84544F8B25BDD0E9000683FC /* QuestType.swift in Sources */,
-				8456106F25C6FBC7000840CA /* ViewController+Prints.swift in Sources */,
+				8455583D25DDAC020026F66D /* CoreDataManager.swift in Sources */,
+				84544F8B25BDD0E9000683FC /* Category.swift in Sources */,
+				846799892629AC38007FA801 /* Text.swift in Sources */,
+				9350968627C29B2E00651835 /* QuestViewController.swift in Sources */,
+				840748E425F96A7E0087F387 /* UserDefaultsManager.swift in Sources */,
+				8458E84925E2607C00C233B6 /* UIView+Alert.swift in Sources */,
 				8444244225CD7507003ED6AC /* ImagePicker.swift in Sources */,
-				8411DC2D25C73DF5001CD30B /* ViewController+CollectionView.swift in Sources */,
+				847978582620C55800817123 /* UIView+Shadow.swift in Sources */,
+				8467DC0126427D7B00A5F234 /* OnboardingViewController.swift in Sources */,
+				846BBF02266B788F00BC58D1 /* Sound.swift in Sources */,
+				846BE1882641A95100E28AAA /* SystemSoundID+PlayFileNamed.swift in Sources */,
+				8451B58F2605F00F00BD0A65 /* QuestObject+CoreDataProperties.swift in Sources */,
 				8450FE1D25BDBC0F00814F81 /* AppDelegate.swift in Sources */,
+				93463F2127188E0D00199BF0 /* Quests.swift in Sources */,
+				93472FDA27CA59F400A0FEBE /* Animation.swift in Sources */,
+				84484E6A2607579D007EF415 /* CustomProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +339,7 @@
 		8450FE2225BDBC0F00814F81 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8450FE2325BDBC0F00814F81 /* Base */,
+				934814FA27C97D440074997D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -205,9 +347,27 @@
 		8450FE2725BDBC1000814F81 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8450FE2825BDBC1000814F81 /* Base */,
+				934814FB27C97D440074997D /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		845E7C512622F86600B33170 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				845E7C502622F86600B33170 /* en */,
+				845E7C522622F86A00B33170 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		84D2915C266A1B2600A66C4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D2915B266A1B2600A66C4D /* ru */,
+				84D2915E266A27A600A66C4D /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -217,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -264,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -319,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -338,14 +500,14 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 32FHL9M78J;
 				INFOPLIST_FILE = FreetimeQuest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaskin.FreetimeQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = FreetimeQuestProvProfile240121;
+				PROVISIONING_PROFILE_SPECIFIER = FQProvProfile250221;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -360,14 +522,14 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 32FHL9M78J;
 				INFOPLIST_FILE = FreetimeQuest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaskin.FreetimeQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = FreetimeQuestProvProfile240121;
+				PROVISIONING_PROFILE_SPECIFIER = FQProvProfile250221;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -395,6 +557,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93211C752717926800E68D4B /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93211C762717926800E68D4B /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 93211C762717926800E68D4B /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8450FE1125BDBC0F00814F81 /* Project object */;
 }

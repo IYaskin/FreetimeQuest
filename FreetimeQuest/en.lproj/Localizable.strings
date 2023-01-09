@@ -1,0 +1,174 @@
+/* 
+  Localizable.strings
+  FreetimeQuest
+
+  Created by Igor Yaskin on 11.04.2021.
+  
+*/
+
+// Common
+"lang" = "en";
+
+"GoOut" = "Visit places";
+"Good" = "Good";
+"Hobby" = "Hobby";
+"Social" = "Social";
+"Charisma" = "Development";
+"Adventure" = "Adventure";
+
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"DeleteQuest" = "Delete quest?";
+
+"Notes" = "Notes:";
+
+//Photo
+"AddCamera" = "Camera";
+"AddGallery" = "Gallery";
+"DeletePhoto" = "Delete photo";
+"SetPhoto" = "Set a photo on the cover of the quest";
+"FailPhoto" = "Failed to get photo";
+// Onboarding
+"Hello" = "Welcome!";
+"OnboardingText" = "Complete quests in your free time\n\nCall friends for help\n\n🔥Add colors to your life!🔥";
+"Start" = "Start";
+
+//Share
+"ShareUndoneTextStart" = "Hey! Do you want to complete the quest ";
+"ShareUndoneTextEnd" = " together?";
+"ShareDoneText" = "I've done quest: ";
+
+//GoOut
+"GoOut.Cinema" = "Cinema";
+"GoOut.Museum" = "Museum";
+"GoOut.Theater" = "Theatre";
+"GoOut.Gallery" = "Gallery";
+"GoOut.Zoo" = "Zoo";
+"GoOut.SportMatch" = "Sport match";
+"GoOut.Bowling" = "Bowling";
+"GoOut.Billiards" = "Billiards";
+"GoOut.Concert" = "Concert";
+"GoOut.Quest" = "Quest";
+"GoOut.IceRink" = "Ice rink";
+"GoOut.Karting" = "Karting";
+"GoOut.Trampoline" = "Trampoline";
+"GoOut.Aquapark" = "Aquapark";
+"GoOut.Excursion" = "Excursion";
+"GoOut.Degustation" = "Degustation";
+"GoOut.Bar" = "Bar (18+)";
+"GoOut.NightClub" = "Night club (18+)";
+"GoOut.StandUp" = "Stand Up";
+"GoOut.Sauna" = "Sauna";
+"GoOut.Show" = "Show";
+
+//Good
+
+"Good.CarryBag" = "Help someone carry the bag";
+"Good.FeedDuck" = "Feed ducks";
+"Good.PetAnimals" = "Pet a cat or dog";
+"Good.OldStuff" = "Give old things to needy";
+"Good.HelpFond" = "Transfer some money to the aid fund";
+"Good.Gift" = "Buy gift for the close person";
+"Good.AppMark" = "Rate this app";
+"Good.Blood" = "Donate blood";
+"Good.Trash" = "Pick up trash";
+"Good.HelpBabushka" = "Take grandma across the street";
+"Good.BirdHouse" = "Make and hang a birdhouse";
+"Good.FamilyDinner" = "Arrange a family dinner";
+"Good.FeedFriends" = "Treat friends";
+"Good.FixHouse" = "Fix something at home";
+"Good.SteetMusician" = "Give money to a street musician";
+"Good.FeedHomeless" = "Buy food for the homeless";
+
+//Hobby
+
+"Hobby.Chess" = "Play chess or checkers";
+"Hobby.Backgammon" = "Play backgammon";
+"Hobby.Poker" = "Play poker";
+"Hobby.Darts" = "Play darts";
+"Hobby.BoardGame" = "Play a board game";
+"Hobby.Puzzle" = "Collect the puzzle";
+"Hobby.ComputerGame" = "Complete the computer game";
+"Hobby.DrawPicture" = "Draw a picture";
+"Hobby.MoldClay" = "Mold something out of clay or plaster";
+"Hobby.ReadBook" = "Read a book";
+"Hobby.LearnPoem" = "Learn a poem";
+"Hobby.MakePhoto" = "Make a beautiful photo, insert into a frame";
+"Hobby.NoGadgets" = "Spend a day without gadgets";
+"Hobby.Plant" = "To plant a herb";
+"Hobby.FlyKite" = "Fly a kite";
+"Hobby.Cook" = "Сook a new dish";
+"Hobby.OrderPortrait" = "Order your portrait";
+"Hobby.FreeSection" = "Go to a trial lesson";
+
+//Social
+
+"Social.Smile" = "Smile to stranger";
+"Social.Wink" = "Wink to stranger";
+"Social.Ugly" = "Make a face to stranger";
+"Social.Hello" = "Say \"Hello!\" to stranger";
+"Social.Compliment" = "Make compliment to stranger";
+"Social.Questions" = "Ask 10 questions to strangers during a walk";
+"Social.Call" = "Call somebody and tell a joke";
+//"Social.AskPhoto" = "Ask a stranger to take a picture of you";
+"Social.Selfie" = "Take a selfie with somebody";
+"Social.Oboznalsya" = "Pretend you know the person";
+"Social.ExchangeNumbers" = "Exchange phone numbers";
+"Social.LoveLetter" = "Send a love letter by mail";
+"Social.TellPoem" = "Tell someone a poem";
+"Social.Sing" = "Sing for someone";
+"Social.MeetSomeone" = "Make an acquaintance";
+"Social.AskSalt" = "Borrow salt from neighbors";
+"Social.Wish" = "Wish everyone a pleasant journey in transport";
+"Social.Fountain" = "Take a dip in the fountain";
+"Social.Dance" = "Dance with somebody";
+"Social.Party" = "Make a party";
+"Social.Picnic" = "Make a picnic";
+"Social.Stage" = "Perform on stage";
+
+//Charisma
+
+"Charisma.Teeth" = "Visit dentist";
+"Charisma.Massage" = "Get massage";
+"Charisma.Yoga" = "Yoga (7 days)";
+"Charisma.Meditation" = "Meditation (7 days)";
+"Charisma.Speech" = "Develop speech (7 days)";
+"Charisma.Posture" = "Develop posture (7 days)";
+"Charisma.Temper" = "Temper (7 days)";
+"Charisma.Morning" = "Do morning exercises (14 days)";
+"Charisma.Food" = "Eat right (14 days)";
+"Charisma.Books" = "Read 5 books on development or work";
+"Charisma.Income" = "Increase your income";
+"Charisma.Fotosession" = "Order yourself a photo session";
+"Charisma.Psychologist" = "Go to a session with a psychologist";
+"Charisma.Buy" = "Buy yourself what you really want";
+"Charisma.Weight" = "Reach your ideal weight";
+"Charisma.Marathon" = "Run a half marathon";
+"Charisma.BadHabit" = "Get rid of the bad habit";
+
+//Adventure
+
+"Adventure.Sunrise" = "See the sunrise";
+"Adventure.Bet" = "Place a bet on a match (18+)";
+"Adventure.NightCity" = "Take a ride in the city at night";
+"Adventure.ParkAttractions" = "Visit the amusement park";
+"Adventure.Snowboard" = "Go snowboarding";
+"Adventure.Stars" = "See five constellations";
+
+"Adventure.Horse" = "Ride a horse";
+"Adventure.RopeJumping" = "Bungee jumping";
+"Adventure.Tents" = "Camping with tents";
+"Adventure.Waterfall" = "Stand under the waterfall";
+"Adventure.Cruise" = "Boat cruise";
+"Adventure.Island" = "Visit the island";
+"Adventure.Cold" = "Swim in the ice hole";
+
+"Adventure.Lights" = "See the northern lights";
+"Adventure.Surfing" = "Go surfing";
+"Adventure.Scuba" = "Scuba diving";
+"Adventure.SmallPlane" = "Fly on the biplane";
+"Adventure.Balloon" = "Fly in a hot air balloon";
+"Adventure.Tatoo" = "Get a tattoo (18+)";
+"Adventure.Autostop" = "Hitchhiking";
+"Adventure.Parachute" = "Jump with a parachute";
+
